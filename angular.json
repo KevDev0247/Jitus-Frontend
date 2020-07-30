@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Jitus-Frontend"
+    }
+  },
+  "defaultProject": "Jitus-Frontend",
+  "cli": {
+    "analytics": "f18187e9-3800-4787-884d-ade7d195044c"
+  }
 }
