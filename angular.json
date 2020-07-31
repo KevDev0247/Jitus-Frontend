@@ -24,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/theme.less",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,10 +119,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "Jitus-Frontend",
-  "cli": {
-    "analytics": "f18187e9-3800-4787-884d-ade7d195044c"
-  }
+    }},
+  "defaultProject": "Jitus-Frontend"
 }
