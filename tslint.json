@@ -38,10 +38,7 @@
     "eofline": true,
     "import-blacklist": [
       true,
-      "rxjs/Rx",
-      "ng-zorro-antd",
-      "@delon/abc",
-      "@delon/chart"
+      "rxjs/Rx"
     ],
     "import-spacing": true,
     "indent": {

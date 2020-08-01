@@ -1,28 +1,15 @@
-import { NzModalService } from 'ng-zorro-antd';
+export const url = 'http://localhost:8080';
+export const PAGESIZE = 20;
 
-export abstract class BaseComponent {
+export const FILE_DOWNLOAD_URL = url + '/resources/upload';
+export const IMAGE_DOWNLOAD_URL = url + '/resources/image';
 
-  constructor(public modalService: NzModalService) { }
+export const DOMAIN_SERVER_URL = url;
+export const USER_URL = '/user';
 
-  showDeleteConfirm(id: number, content?: string): void {
-    if (!content) {
-      content = '';
-    }
-    this.modalService.confirm({
-      nzTitle: 'Are you sure to delete?',
-      nzContent: '<b>' + content + '</b> <br/> <font color="red"><b>This operation cannot be reversed</b></font>',
+export const UPLOAD_IMAGE_URL = DOMAIN_SERVER_URL + '/file/batch/upload';
+export const UPLOAD_MULTI_URL = DOMAIN_SERVER_URL + '/upload/multiple';
 
-      nzOkText: 'OK',
-      nzOkType: 'danger',
-      nzOnOk: () => {
-        console.log('OK');
-        this.remove(id);
-      },
+export const IMAGE_SIZE = 5242880; // Size of uploaded image  5M
 
-      nzCancelText: 'Cancel',
-      nzOnCancel: () => console.log('Cancel')
-    });
-  }
-
-  remove(id?: number) { }
-}
+export const FILE_PATH = 'assets/img';
