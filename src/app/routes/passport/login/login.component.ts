@@ -7,6 +7,8 @@ import { DA_SERVICE_TOKEN, ITokenService, SocialOpenType, SocialService } from '
 import { SettingsService, _HttpClient } from '@delon/theme';
 import { environment } from '@env/environment';
 import { NzMessageService } from 'ng-zorro-antd/message';
+import { NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
+import { UserService } from '../../../common/service/UserService';
 
 @Component({
   selector: 'passport-login',
@@ -17,6 +19,7 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 export class UserLoginComponent implements OnDestroy {
   constructor(
     fb: FormBuilder,
+    modalService: NzModalService,
     private router: Router,
     private settingsService: SettingsService,
     private socialService: SocialService,
@@ -27,6 +30,7 @@ export class UserLoginComponent implements OnDestroy {
     private startupSrv: StartupService,
     public http: _HttpClient,
     public msg: NzMessageService,
+    private userService: UserService
   ) {
     this.form = fb.group({
       userName: [null, [Validators.required, Validators.pattern(/^(admin|user)$/)]],
@@ -35,6 +39,7 @@ export class UserLoginComponent implements OnDestroy {
       captcha: [null, [Validators.required]],
       remember: [true],
     });
+    modalService.closeAll();
   }
 
   // #region fields
@@ -105,12 +110,13 @@ export class UserLoginComponent implements OnDestroy {
 
     // 默认配置中对所有HTTP请求都会强制 [校验](https://ng-alain.com/auth/getting-started) 用户 Token
     // 然一般来说登录请求不需要校验，因此可以在请求URL加上：`/login?_allow_anonymous=true` 表示不触发用户 Token 校验
-    this.http
-      .post('/login/account?_allow_anonymous=true', {
-        type: this.type,
-        userName: this.userName.value,
-        password: this.password.value,
-      })
+    // this.http
+    //   .post('/login/account?_allow_anonymous=true', {
+    //     type: this.type,
+    //     userName: this.userName.value,
+    //     password: this.password.value,
+    //   })
+    this.userService.login(this.userName.value, this.password.value)
       .subscribe((res) => {
         if (res.msg !== 'ok') {
           this.error = res.msg;
@@ -144,7 +150,9 @@ export class UserLoginComponent implements OnDestroy {
     }
     switch (type) {
       case 'auth0':
-        url = `//cipchk.auth0.com/login?client=8gcNydIDzGBYxzqV0Vm1CX_RXH-wsWo5&redirect_uri=${decodeURIComponent(callback)}`;
+        url = `//cipchk.auth0.com/login?client=8gcNydIDzGBYxzqV0Vm1CX_RXH-wsWo5&redirect_uri=${decodeURIComponent(
+          callback,
+        )}`;
         break;
       case 'github':
         url = `//github.com/login/oauth/authorize?client_id=9d6baae4b04a23fcafa2&response_type=code&redirect_uri=${decodeURIComponent(
@@ -152,7 +160,9 @@ export class UserLoginComponent implements OnDestroy {
         )}`;
         break;
       case 'weibo':
-        url = `https://api.weibo.com/oauth2/authorize?client_id=1239507802&response_type=code&redirect_uri=${decodeURIComponent(callback)}`;
+        url = `https://api.weibo.com/oauth2/authorize?client_id=1239507802&response_type=code&redirect_uri=${decodeURIComponent(
+          callback,
+        )}`;
         break;
     }
     if (openType === 'window') {
