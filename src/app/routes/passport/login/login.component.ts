@@ -7,8 +7,7 @@ import { DA_SERVICE_TOKEN, ITokenService, SocialOpenType, SocialService } from '
 import { SettingsService, _HttpClient } from '@delon/theme';
 import { environment } from '@env/environment';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
-import { UserService } from '../../../common/service/UserService';
+import {UserService} from '../../../common/service/UserService';
 
 @Component({
   selector: 'passport-login',
@@ -19,7 +18,6 @@ import { UserService } from '../../../common/service/UserService';
 export class UserLoginComponent implements OnDestroy {
   constructor(
     fb: FormBuilder,
-    modalService: NzModalService,
     private router: Router,
     private settingsService: SettingsService,
     private socialService: SocialService,
@@ -39,7 +37,6 @@ export class UserLoginComponent implements OnDestroy {
       captcha: [null, [Validators.required]],
       remember: [true],
     });
-    modalService.closeAll();
   }
 
   // #region fields
@@ -150,9 +147,7 @@ export class UserLoginComponent implements OnDestroy {
     }
     switch (type) {
       case 'auth0':
-        url = `//cipchk.auth0.com/login?client=8gcNydIDzGBYxzqV0Vm1CX_RXH-wsWo5&redirect_uri=${decodeURIComponent(
-          callback,
-        )}`;
+        url = `//cipchk.auth0.com/login?client=8gcNydIDzGBYxzqV0Vm1CX_RXH-wsWo5&redirect_uri=${decodeURIComponent(callback)}`;
         break;
       case 'github':
         url = `//github.com/login/oauth/authorize?client_id=9d6baae4b04a23fcafa2&response_type=code&redirect_uri=${decodeURIComponent(
@@ -160,9 +155,7 @@ export class UserLoginComponent implements OnDestroy {
         )}`;
         break;
       case 'weibo':
-        url = `https://api.weibo.com/oauth2/authorize?client_id=1239507802&response_type=code&redirect_uri=${decodeURIComponent(
-          callback,
-        )}`;
+        url = `https://api.weibo.com/oauth2/authorize?client_id=1239507802&response_type=code&redirect_uri=${decodeURIComponent(callback)}`;
         break;
     }
     if (openType === 'window') {
