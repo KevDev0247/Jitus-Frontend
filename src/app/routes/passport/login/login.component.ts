@@ -6,8 +6,8 @@ import { ReuseTabService } from '@delon/abc/reuse-tab';
 import { DA_SERVICE_TOKEN, ITokenService, SocialOpenType, SocialService } from '@delon/auth';
 import { SettingsService, _HttpClient } from '@delon/theme';
 import { environment } from '@env/environment';
-import { NzMessageService } from 'ng-zorro-antd/message';
-import {NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import { NzMessageService} from 'ng-zorro-antd';
+import { NzModalService } from 'ng-zorro-antd';
 import { UserService } from 'src/app/common/service/UserService';
 
 @Component({
@@ -67,8 +67,8 @@ export class UserLoginComponent implements OnDestroy {
 
   // #endregion
 
-  switch({ index }: { index: number }): void {
-    this.type = index;
+  switch(ret: any): void {
+    this.type = ret.index;
   }
 
   getCaptcha() {
