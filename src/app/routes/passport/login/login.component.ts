@@ -6,9 +6,8 @@ import { ReuseTabService } from '@delon/abc/reuse-tab';
 import { DA_SERVICE_TOKEN, ITokenService, SocialOpenType, SocialService } from '@delon/auth';
 import { SettingsService, _HttpClient } from '@delon/theme';
 import { environment } from '@env/environment';
-import { NzMessageService } from 'ng-zorro-antd/message';
-import { NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
-import { UserService } from '../../../common/service/UserService';
+import { NzMessageService, NzModalService } from 'ng-zorro-antd';
+import { UserService } from 'src/app/common/service/UserService';
 
 @Component({
   selector: 'passport-login',
@@ -33,8 +32,8 @@ export class UserLoginComponent implements OnDestroy {
     private userService: UserService
   ) {
     this.form = fb.group({
-      userName: [null, [Validators.required, Validators.pattern(/^(admin|user)$/)]],
-      password: [null, [Validators.required, Validators.pattern(/^(ng\-alain\.com)$/)]],
+      userName: [null, [Validators.required, Validators.minLength(4)]],
+      password: [null, Validators.required],
       mobile: [null, [Validators.required, Validators.pattern(/^1\d{10}$/)]],
       captcha: [null, [Validators.required]],
       remember: [true],
@@ -67,8 +66,8 @@ export class UserLoginComponent implements OnDestroy {
 
   // #endregion
 
-  switch({ index }: { index: number }): void {
-    this.type = index;
+  switch(ret: any) {
+    this.type = ret.index;
   }
 
   getCaptcha() {
