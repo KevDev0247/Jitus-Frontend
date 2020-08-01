@@ -14,12 +14,15 @@
         "statements"
       ]
     },
-    "arrow-return-shorthand": true,
     "array-type": false,
-    "arrow-parens": false,
+    "arrow-return-shorthand": true,
+    "curly": true,
     "deprecation": {
-      "severity": "warn"
+      "severity": "warning"
     },
+    "component-class-suffix": true,
+    "contextual-lifecycle": true,
+    "directive-class-suffix": true,
     "directive-selector": [
       true,
       "attribute",
@@ -35,7 +38,10 @@
     "eofline": true,
     "import-blacklist": [
       true,
-      "rxjs/Rx"
+      "rxjs/Rx",
+      "ng-zorro-antd",
+      "@delon/abc",
+      "@delon/chart"
     ],
     "import-spacing": true,
     "indent": {
@@ -116,6 +122,13 @@
         }
       ]
     },
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        // "check-format",
+        "allow-pascal-case"
+      ]
+    },
     "whitespace": {
       "options": [
         "check-branch",
@@ -144,20 +157,6 @@
         "import-sources-order": "case-insensitive",
         "named-imports-order": "case-insensitive"
       }
-    ],
-    // Custom parts
-    "no-submodule-imports": false,
-    "no-implicit-dependencies": false,
-    "curly": false,
-    "variable-name": false,
-    "no-this-assignment": false,
-    "ban-types": [
-      true,
-      ["Object", "Use {} instead."],
-      ["String", "Use string instead."],
-      ["Number", "Use number instead."],
-      ["Boolean", "Use boolean instead."],
-      ["Function", "Use specific callable interface instead."]
     ]
   }
 }
