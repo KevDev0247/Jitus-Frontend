@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import { NzModalService } from 'ng-zorro-antd';
 
 @Component({
   selector: 'exception-500',
