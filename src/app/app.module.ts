@@ -97,6 +97,7 @@ import { LayoutModule } from './layout/layout.module';
 import { RoutesModule } from './routes/routes.module';
 import { SharedModule } from './shared/shared.module';
 import { STWidgetModule } from './shared/st-widget/st-widget.module';
+import { UserService } from './common/service/UserService';
 
 @NgModule({
   declarations: [
@@ -122,6 +123,7 @@ import { STWidgetModule } from './shared/st-widget/st-widget.module';
     ...INTERCEPTOR_PROVIDES,
     ...I18NSERVICE_PROVIDES,
     ...APPINIT_PROVIDES,
+    UserService,
     { provide: NZ_I18N, useValue: en_US }
   ],
   bootstrap: [AppComponent]
