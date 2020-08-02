@@ -1,14 +1,16 @@
-/**
- * Created by syg on 5/31/18.
- */
 import { Injectable } from "@angular/core";
 import { DOMAIN_SERVER_URL, USER_URL } from "../constants";
 import { _HttpClient } from '@delon/theme';
+
+/**
+ * The service class for user module
+ *
+ * @Author: Kevin Zhijun Wang
+ */
 @Injectable()
 export class UserService {
-    constructor(private http: _HttpClient) {
 
-    }
+    constructor(private http: _HttpClient) { }
 
     getServiceUrl(): string {
         return DOMAIN_SERVER_URL + USER_URL;
@@ -18,7 +20,7 @@ export class UserService {
         return this.http.post(this.getServiceUrl() + '/create', user)
     }
     delete(userId: number) {
-        return this.http.get(this.getServiceUrl() + '/delete', { userId: userId })
+        return this.http.get(this.getServiceUrl() + '/delete', { userId })
     }
     update(user: any) {
         return this.http.post(this.getServiceUrl() + '/update', user)
@@ -30,16 +32,16 @@ export class UserService {
         return this.http.get(this.getServiceUrl() + '/detailByName?name=' + name)
     }
     updatePasswd(userId: number, password: string, newPasswd: string) {
-        return this.http.get(this.getServiceUrl() + '/updatePasswd', { userId: userId, passwd: password, newPasswd: newPasswd })
+        return this.http.get(this.getServiceUrl() + '/updatePasswd', { userId, passwd: password, newPassword: newPasswd })
     }
     getQueryList(name?: string, email?: string) {
-        return this.http.get(this.getServiceUrl() + '/queryList', { name: name, email: email })
+        return this.http.get(this.getServiceUrl() + '/queryList', { name, email })
     }
 
     updateRole(userId: number, roleId: number) {
-        return this.http.get(this.getServiceUrl() + '/updateRole', { userId: userId, roleId: roleId })
+        return this.http.get(this.getServiceUrl() + '/updateRole', { userId, roleId })
     }
     login(name?: string, password?: string) {
-        return this.http.post(this.getServiceUrl() + '/login?_allow_anonymous=true', { name: name, password: password })
+        return this.http.post(this.getServiceUrl() + '/login?_allow_anonymous=true', { name, password })
     }
 }
