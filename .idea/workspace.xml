@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="New project files">
+      <change afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/_ci/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/_ci/delon.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/_ci/deploy-mac.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/_ci/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/_ci/travis.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/delon.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/color.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/colors/colors.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/colors/colors.component.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/colors/colors.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/gridmasonry/gridmasonry.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/gridmasonry/gridmasonry.component.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/gridmasonry/gridmasonry.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/style-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/style.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/typography/typography.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/style/typography/typography.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/json-schema/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/demo.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/demo.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/demo.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/demo.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/demo.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lintstagedrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nvmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README-zh_CN.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/proxy.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/component/base.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/component/base.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/model/BaseCriteria.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/model/BaseCriteria.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/model/BaseModule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/model/BaseModule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/service/UserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/service/UserService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/i18n/i18n.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/i18n/i18n.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/i18n/i18n.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/i18n/i18n.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/module-import-guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/module-import-guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/net/default.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/net/default.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/startup/startup.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/startup/startup.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/global-config.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/default.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/default.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/fullscreen.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/fullscreen.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/i18n.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/i18n.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/icon.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/icon.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/notify.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/notify.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/search.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/storage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/storage.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/task.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/task.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer-item.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer-item.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer-item.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/fullscreen/fullscreen.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/fullscreen/fullscreen.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/fullscreen/fullscreen.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/fullscreen/fullscreen.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/layout.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/layout.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/passport/passport.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/passport/passport.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/passport/passport.component.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/passport/passport.component.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/passport/passport.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/passport/passport.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/callback/callback.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/dashboard.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/dashboard.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/exception/403.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/exception/403.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/exception/404.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/exception/404.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/exception/500.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/exception/500.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/exception/exception-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/exception/exception-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/exception/exception.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/exception/exception.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/exception/trigger.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/exception/trigger.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/lock/lock.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/lock/lock.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/lock/lock.component.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/lock/lock.component.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/lock/lock.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/lock/lock.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/register-result/register-result.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/register-result/register-result.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/register-result/register-result.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/register-result/register-result.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/register/register.component.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/register/register.component.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/routes.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/color.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/colors/colors.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/colors/colors.component.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/colors/colors.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/gridmasonry/gridmasonry.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/gridmasonry/gridmasonry.component.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/gridmasonry/gridmasonry.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/style-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/style.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/typography/typography.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/styles/typography/typography.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/json-schema/json-schema.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/json-schema/json-schema.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/shared-delon.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/shared-zorro.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/st-widget/st-widget.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/utils/yuan.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/utils/yuan.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/alain-default.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo-color.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo-color.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo-full.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo-full.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/app-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/app-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/el-GR.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/el-GR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/en-US.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/hr-HR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/ko-KR.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/ko-KR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/pl-PL.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/pl-PL.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/sl-SI.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/tr-TR.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/tr-TR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/zh-CN.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/zh-CN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/zh-TW.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/zh-TW.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/zorro.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/zorro.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.hmr.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.hmr.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hmr.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hmr.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style-icons-auto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/style-icons-auto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style-icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/style-icons.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/typings.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/typings.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+    </list>
+    <list id="bad51255-29bb-491f-b4f2-c2b46ab2f8b9" name="Revert &quot;Create constants and renaming&quot;" comment="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99" />
+    <list id="e5b0e1db-b220-4c3e-80cc-fa80486f1e2a" name="Revert &quot;Json package update&quot;" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
+    <list id="e73bbe40-a8d2-4609-abfc-014d31cf49e1" name="Revert &quot;Json package update&quot;-2" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
+    <list id="450fef24-ce2e-4b8c-bcf5-9270523c3397" name="Revert &quot;Tslint configurations&quot;" comment="Revert &quot;Tslint configurations&quot;&#10;&#10;This reverts commit 82b50dae" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/KevDev0247/Jitus-Frontend" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fR2krBmECA7UlBBbTchYmUwmqg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\Jitus-Frontend\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="ts.external.directory.path" value="D:\Jitus-Frontend\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Jitus-Frontend\src\app\common\component" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (Jitus-Frontend)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (Jitus-Frontend)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="" />
+      <created>1596166730965</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596166730965</updated>
+      <workItem from="1596166732581" duration="600000" />
+      <workItem from="1596167895297" duration="2848000" />
+      <workItem from="1596170835932" duration="294000" />
+      <workItem from="1596171173876" duration="620000" />
+      <workItem from="1596201234120" duration="27895000" />
+      <workItem from="1596295118089" duration="17322000" />
+      <workItem from="1596376386068" duration="6051000" />
+      <workItem from="1596389257747" duration="4840000" />
+      <workItem from="1596394162746" duration="1398000" />
+      <workItem from="1596396206033" duration="1871000" />
+      <workItem from="1596398213448" duration="494000" />
+      <workItem from="1596398734508" duration="374000" />
+    </task>
+    <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
+      <created>1596308068948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596308068949</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab">
+      <created>1596308186031</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596308186031</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;Add modalService module&quot;&#10;&#10;This reverts commit 712466ae">
+      <created>1596308220884</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596308220884</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Revert &quot;Current changes&quot;&#10;&#10;This reverts commit d369fa91">
+      <created>1596308245680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596308245680</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Revert &quot;New version&quot;&#10;&#10;This reverts commit 120c6674">
+      <created>1596309214293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596309214293</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab">
+      <created>1596309420039</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596309420039</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab">
+      <created>1596309786965</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596309786965</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99" />
+    <MESSAGE value="Revert &quot;Add modalService module&quot;&#10;&#10;This reverts commit 712466ae" />
+    <MESSAGE value="Revert &quot;Current changes&quot;&#10;&#10;This reverts commit d369fa91" />
+    <MESSAGE value="Revert &quot;New version&quot;&#10;&#10;This reverts commit 120c6674" />
+    <MESSAGE value="New project files" />
+    <MESSAGE value="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="896" y="350" key="#TSLint" timestamp="1596210729237">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="896" y="350" key="#TSLint/0.0.1368.872@0.0.1368.872" timestamp="1596210729237" />
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1596213764468">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1596213764468" />
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596390533201">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1596390533201" />
+    <state x="272" y="2" key="CommitChangelistDialog2" timestamp="1596309784204">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="272" y="2" key="CommitChangelistDialog2/0.0.1368.872@0.0.1368.872" timestamp="1596309784204" />
+    <state x="111" y="9" width="1181" height="685" key="DiffContextDialog" timestamp="1596391399698">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="111" y="9" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1596391399698" />
+    <state x="466" y="192" key="FileChooserDialogImpl" timestamp="1596389311148">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596389311148" />
+    <state width="1348" height="675" key="GridCell.Tab.0.bottom" timestamp="1596399009427">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="675" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596399009427" />
+    <state width="1348" height="675" key="GridCell.Tab.0.center" timestamp="1596399009427">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="675" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1596399009427" />
+    <state width="1348" height="675" key="GridCell.Tab.0.left" timestamp="1596399009426">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="675" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1596399009426" />
+    <state width="1348" height="675" key="GridCell.Tab.0.right" timestamp="1596399009427">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="675" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1596399009427" />
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1596335652626">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596335652626" />
+    <state width="1348" height="281" key="GridCell.Tab.1.center" timestamp="1596335652626">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1596335652626" />
+    <state width="1348" height="281" key="GridCell.Tab.1.left" timestamp="1596335652626">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1596335652626" />
+    <state width="1348" height="281" key="GridCell.Tab.1.right" timestamp="1596335652626">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1596335652626" />
+    <state width="1348" height="281" key="GridCell.Tab.2.bottom" timestamp="1596335652627">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.2.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596335652627" />
+    <state width="1348" height="281" key="GridCell.Tab.2.center" timestamp="1596335652627">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.2.center/0.0.1368.872@0.0.1368.872" timestamp="1596335652627" />
+    <state width="1348" height="281" key="GridCell.Tab.2.left" timestamp="1596335652627">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.2.left/0.0.1368.872@0.0.1368.872" timestamp="1596335652627" />
+    <state width="1348" height="281" key="GridCell.Tab.2.right" timestamp="1596335652627">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.2.right/0.0.1368.872@0.0.1368.872" timestamp="1596335652627" />
+    <state width="1348" height="281" key="GridCell.Tab.3.bottom" timestamp="1596335652629">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.3.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596335652629" />
+    <state width="1348" height="281" key="GridCell.Tab.3.center" timestamp="1596335652628">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.3.center/0.0.1368.872@0.0.1368.872" timestamp="1596335652628" />
+    <state width="1348" height="281" key="GridCell.Tab.3.left" timestamp="1596335652628">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.3.left/0.0.1368.872@0.0.1368.872" timestamp="1596335652628" />
+    <state width="1348" height="281" key="GridCell.Tab.3.right" timestamp="1596335652628">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state width="1348" height="281" key="GridCell.Tab.3.right/0.0.1368.872@0.0.1368.872" timestamp="1596335652628" />
+    <state x="131" y="71" key="MergeDialog" timestamp="1596307879599">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="131" y="71" key="MergeDialog/0.0.1368.872@0.0.1368.872" timestamp="1596307879599" />
+    <state x="323" y="198" key="MultipleFileMergeDialog" timestamp="1596310056893">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="323" y="198" key="MultipleFileMergeDialog/0.0.1368.872@0.0.1368.872" timestamp="1596310056893" />
+    <state x="186" y="81" key="SettingsEditor" timestamp="1596390454046">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1596390454046" />
+    <state x="691" y="225" key="VcsDiffUtil.ChangesDialog" timestamp="1596391154221">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="691" y="225" key="VcsDiffUtil.ChangesDialog/0.0.1368.872@0.0.1368.872" timestamp="1596391154221" />
+    <state x="689" y="188" width="672" height="678" key="search.everywhere.popup" timestamp="1596214438260">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="689" y="188" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1596214438260" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

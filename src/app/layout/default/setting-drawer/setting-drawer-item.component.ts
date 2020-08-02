@@ -11,7 +11,6 @@ import { Component, Input } from '@angular/core';
 })
 export class SettingDrawerItemComponent {
   i: any = {};
-
   @Input()
   set data(val: any) {
     this.i = val;
@@ -24,5 +23,5 @@ export class SettingDrawerItemComponent {
   pxChange(val: number) {
     this.i.value = `${val}px`;
   }
-  format = (value) => `${value} px`;
+  format = value => `${value} px`;
 }

@@ -1,12 +1,11 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'layout-passport',
   templateUrl: './passport.component.html',
   styleUrls: ['./passport.component.less'],
 })
-export class LayoutPassportComponent implements OnInit {
+export class LayoutPassportComponent {
   links = [
     {
       title: '帮助',
@@ -21,10 +20,4 @@ export class LayoutPassportComponent implements OnInit {
       href: '',
     },
   ];
-
-  constructor(@Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService) {}
-
-  ngOnInit(): void {
-    this.tokenService.clear();
-  }
 }

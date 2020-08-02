@@ -1,14 +1,19 @@
-import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { Component, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
+import { SettingsService } from '@delon/theme';
 import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
-import { SettingsService, User } from '@delon/theme';
 
 @Component({
   selector: 'header-user',
   template: `
-    <div class="alain-default__nav-item d-flex align-items-center px-sm" nz-dropdown nzPlacement="bottomRight" [nzDropdownMenu]="userMenu">
-      <nz-avatar [nzSrc]="user.avatar" nzSize="small" class="mr-sm"></nz-avatar>
-      {{ user.name }}
+    <div
+      class="alain-default__nav-item d-flex align-items-center px-sm"
+      nz-dropdown
+      nzPlacement="bottomRight"
+      [nzDropdownMenu]="userMenu"
+    >
+      <nz-avatar [nzSrc]="settings.user.avatar" nzSize="small" class="mr-sm"></nz-avatar>
+      {{ settings.user.name }}
     </div>
     <nz-dropdown-menu #userMenu="nzDropdownMenu">
       <div nz-menu class="width-sm">
@@ -35,14 +40,14 @@ import { SettingsService, User } from '@delon/theme';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderUserComponent {
-  get user(): User {
-    return this.settings.user;
-  }
-
-  constructor(private settings: SettingsService, private router: Router, @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService) {}
+  constructor(
+    public settings: SettingsService,
+    private router: Router,
+    @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService,
+  ) {}
 
   logout() {
     this.tokenService.clear();
-    this.router.navigateByUrl(this.tokenService.login_url);
+    this.router.navigateByUrl(this.tokenService.login_url!);
   }
 }

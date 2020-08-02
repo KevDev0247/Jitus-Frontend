@@ -1,4 +1,4 @@
-@import '~@delon/theme/index';
+@import '~@delon/theme/styles/default';
 :host {
   display: block;
   width: 368px;
@@ -14,7 +14,7 @@
       line-height: 24px;
     }
     .ant-input-affix-wrapper .ant-input:not(:first-child) {
-      padding-left: 4px;
+      padding-left: 34px;
     }
     .icon {
       margin-left: 16px;
@@ -36,17 +36,6 @@
       }
       .register {
         float: right;
-      }
-    }
-  }
-}
-
-[data-theme='dark'] {
-  :host ::ng-deep {
-    .icon {
-      color: rgba(255, 255, 255, 0.2);
-      &:hover {
-        color: #fff;
       }
     }
   }

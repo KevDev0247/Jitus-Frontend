@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
-import { NoticeIconList, NoticeIconSelect, NoticeItem } from '@delon/abc/notice-icon';
-import add from 'date-fns/add';
-import formatDistanceToNow from 'date-fns/formatDistanceToNow';
-import parse from 'date-fns/parse';
-import { NzI18nService } from 'ng-zorro-antd/i18n';
-import { NzMessageService } from 'ng-zorro-antd/message';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import * as distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+import { NzMessageService } from 'ng-zorro-antd';
+import { NoticeItem, NoticeIconList } from '@delon/abc';
 
+/**
+ * 菜单通知
+ */
 @Component({
   selector: 'header-notify',
   template: `
@@ -49,60 +49,55 @@ export class HeaderNotifyComponent {
   count = 5;
   loading = false;
 
-  constructor(private msg: NzMessageService, private nzI18n: NzI18nService, private cdr: ChangeDetectorRef) {}
+  constructor(private msg: NzMessageService, private cdr: ChangeDetectorRef) {}
 
   private updateNoticeData(notices: NoticeIconList[]): NoticeItem[] {
     const data = this.data.slice();
-    data.forEach((i) => (i.list = []));
+    data.forEach(i => (i.list = []));
 
-    notices.forEach((item) => {
+    notices.forEach(item => {
       const newItem = { ...item };
-      if (typeof newItem.datetime === 'string') {
-        newItem.datetime = parse(newItem.datetime, 'yyyy-MM-dd', new Date());
-      }
-      if (newItem.datetime) {
-        newItem.datetime = formatDistanceToNow(newItem.datetime as Date, { locale: this.nzI18n.getDateLocale() });
-      }
+      if (newItem.datetime)
+        newItem.datetime = distanceInWordsToNow(item.datetime!, {
+          locale: (window as any).__locale__,
+        });
       if (newItem.extra && newItem.status) {
-        newItem.color = ({
+        newItem.color = {
           todo: undefined,
           processing: 'blue',
           urgent: 'red',
           doing: 'gold',
-        } as { [key: string]: string | undefined })[newItem.status];
+        }[newItem.status];
       }
-      data.find((w) => w.title === newItem.type).list.push(newItem);
+      data.find(w => w.title === newItem.type)!.list.push(newItem);
     });
     return data;
   }
 
-  loadData(): void {
-    if (this.loading) {
-      return;
-    }
+  loadData() {
+    if (this.loading) return;
     this.loading = true;
     setTimeout(() => {
-      const now = new Date();
       this.data = this.updateNoticeData([
         {
           id: '000000001',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
           title: '你收到了 14 份新周报',
-          datetime: add(now, { days: 10 }),
+          datetime: '2017-08-09',
           type: '通知',
         },
         {
           id: '000000002',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/OKJXDXrmkNshAMvwtvhu.png',
           title: '你推荐的 曲妮妮 已通过第三轮面试',
-          datetime: add(now, { days: -3 }),
+          datetime: '2017-08-08',
           type: '通知',
         },
         {
           id: '000000003',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/kISTdvpyTAhtGxpovNWd.png',
           title: '这种模板可以区分多种通知类型',
-          datetime: add(now, { months: -3 }),
+          datetime: '2017-08-07',
           read: true,
           type: '通知',
         },
@@ -110,7 +105,7 @@ export class HeaderNotifyComponent {
           id: '000000004',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/GvqBnKhFgObvnSGkDsje.png',
           title: '左侧图标用于区分不同的类型',
-          datetime: add(now, { years: -1 }),
+          datetime: '2017-08-07',
           type: '通知',
         },
         {
@@ -177,17 +172,16 @@ export class HeaderNotifyComponent {
           type: '待办',
         },
       ]);
-
       this.loading = false;
       this.cdr.detectChanges();
-    }, 500);
+    }, 1000);
   }
 
-  clear(type: string): void {
+  clear(type: string) {
     this.msg.success(`清空了 ${type}`);
   }
 
-  select(res: NoticeIconSelect): void {
+  select(res: any) {
     this.msg.success(`点击了 ${res.title} 的 ${res.item.title}`);
   }
 }

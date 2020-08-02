@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'header-task',
@@ -20,7 +20,13 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
         <div *ngIf="loading" class="mx-lg p-lg"><nz-spin></nz-spin></div>
         <nz-card *ngIf="!loading" nzTitle="Notifications" nzBordered="false" class="ant-card__body-nopadding">
           <ng-template #extra><i nz-icon nzType="plus"></i></ng-template>
-          <div nz-row [nzType]="'flex'" [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm point">
+          <div
+            nz-row
+            [nzType]="'flex'"
+            [nzJustify]="'center'"
+            [nzAlign]="'middle'"
+            class="py-sm bg-grey-lighter-h point"
+          >
             <div nz-col [nzSpan]="4" class="text-center">
               <nz-avatar [nzSrc]="'./assets/tmp/img/1.png'"></nz-avatar>
             </div>
@@ -29,7 +35,13 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
               <p class="mb0">Please tell me what happened in a few words, don't go into details.</p>
             </div>
           </div>
-          <div nz-row [nzType]="'flex'" [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm point">
+          <div
+            nz-row
+            [nzType]="'flex'"
+            [nzJustify]="'center'"
+            [nzAlign]="'middle'"
+            class="py-sm bg-grey-lighter-h point"
+          >
             <div nz-col [nzSpan]="4" class="text-center">
               <nz-avatar [nzSrc]="'./assets/tmp/img/2.png'"></nz-avatar>
             </div>
@@ -38,7 +50,13 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
               <p class="mb0">ハルカソラトキヘダツヒカリ</p>
             </div>
           </div>
-          <div nz-row [nzType]="'flex'" [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm point">
+          <div
+            nz-row
+            [nzType]="'flex'"
+            [nzJustify]="'center'"
+            [nzAlign]="'middle'"
+            class="py-sm bg-grey-lighter-h point"
+          >
             <div nz-col [nzSpan]="4" class="text-center">
               <nz-avatar [nzSrc]="'./assets/tmp/img/3.png'"></nz-avatar>
             </div>
@@ -47,7 +65,13 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
               <p class="mb0">请告诉我，我应该说点什么好？</p>
             </div>
           </div>
-          <div nz-row [nzType]="'flex'" [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm point">
+          <div
+            nz-row
+            [nzType]="'flex'"
+            [nzJustify]="'center'"
+            [nzAlign]="'middle'"
+            class="py-sm bg-grey-lighter-h point"
+          >
             <div nz-col [nzSpan]="4" class="text-center">
               <nz-avatar [nzSrc]="'./assets/tmp/img/4.png'"></nz-avatar>
             </div>
@@ -56,7 +80,13 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
               <p class="mb0">Please tell me what happened in a few words, don't go into details.</p>
             </div>
           </div>
-          <div nz-row [nzType]="'flex'" [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm point">
+          <div
+            nz-row
+            [nzType]="'flex'"
+            [nzJustify]="'center'"
+            [nzAlign]="'middle'"
+            class="py-sm bg-grey-lighter-h point"
+          >
             <div nz-col [nzSpan]="4" class="text-center">
               <nz-avatar [nzSrc]="'./assets/tmp/img/5.png'"></nz-avatar>
             </div>

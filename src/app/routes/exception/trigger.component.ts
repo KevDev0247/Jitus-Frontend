@@ -1,5 +1,4 @@
-import { Component, Inject } from '@angular/core';
-import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
+import { Component } from '@angular/core';
 import { _HttpClient } from '@delon/theme';
 
 @Component({
@@ -8,7 +7,6 @@ import { _HttpClient } from '@delon/theme';
     <div class="pt-lg">
       <nz-card>
         <button *ngFor="let t of types" (click)="go(t)" nz-button nzType="danger">触发{{ t }}</button>
-        <button nz-button nzType="link" (click)="refresh()">触发刷新Token</button>
       </nz-card>
     </div>
   `,
@@ -16,20 +14,9 @@ import { _HttpClient } from '@delon/theme';
 export class ExceptionTriggerComponent {
   types = [401, 403, 404, 500];
 
-  constructor(private http: _HttpClient, @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService) {}
+  constructor(private http: _HttpClient) {}
 
-  go(type: number): void {
+  go(type: number) {
     this.http.get(`/api/${type}`).subscribe();
-  }
-
-  refresh(): void {
-    this.tokenService.set({ token: 'invalid-token' });
-    // 必须提供一个后端地址，无法通过 Mock 来模拟
-    this.http.post(`https://localhost:5001/auth`).subscribe(
-      (res) => console.warn('成功', res),
-      (err) => {
-        console.log('最后结果失败', err);
-      },
-    );
   }
 }

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import * as screenfull from 'screenfull';
 
 @Component({
@@ -26,7 +26,7 @@ export class HeaderFullScreenComponent {
 
   @HostListener('click')
   _click() {
-    if (this.sf.isEnabled) {
+    if (this.sf.enabled) {
       this.sf.toggle();
     }
   }

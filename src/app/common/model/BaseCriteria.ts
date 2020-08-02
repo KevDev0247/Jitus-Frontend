@@ -1,5 +1,5 @@
 export class BaseCriteria {
-  id?: number;
-  skip = 0;
-  page_size = 10;
+    id?: number;
+    skip = 0;
+    pagesize = 10;
 }

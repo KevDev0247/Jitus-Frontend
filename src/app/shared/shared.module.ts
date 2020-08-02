@@ -2,25 +2,27 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+// delon
 import { AlainThemeModule } from '@delon/theme';
+import { DelonABCModule } from '@delon/abc';
+import { DelonChartModule } from '@delon/chart';
 import { DelonACLModule } from '@delon/acl';
 import { DelonFormModule } from '@delon/form';
+// i18n
 import { TranslateModule } from '@ngx-translate/core';
 
-import { SHARED_DELON_MODULES } from './shared-delon.module';
-import { SHARED_ZORRO_MODULES } from './shared-zorro.module';
-
 // #region third libs
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { CountdownModule } from 'ngx-countdown';
+import { UEditorModule } from 'ngx-ueditor';
+import { NgxTinymceModule } from 'ngx-tinymce';
 
-const THIRDMODULES = [ ];
-
+const THIRDMODULES = [NgZorroAntdModule, CountdownModule, UEditorModule, NgxTinymceModule];
 // #endregion
 
 // #region your componets & directives
-
 const COMPONENTS = [];
 const DIRECTIVES = [];
-
 // #endregion
 
 @NgModule({
@@ -30,17 +32,17 @@ const DIRECTIVES = [];
     RouterModule,
     ReactiveFormsModule,
     AlainThemeModule.forChild(),
+    DelonABCModule,
+    DelonChartModule,
     DelonACLModule,
     DelonFormModule,
-    ...SHARED_DELON_MODULES,
-    ...SHARED_ZORRO_MODULES,
     // third libs
-    ...THIRDMODULES
+    ...THIRDMODULES,
   ],
   declarations: [
     // your components
     ...COMPONENTS,
-    ...DIRECTIVES
+    ...DIRECTIVES,
   ],
   exports: [
     CommonModule,
@@ -48,16 +50,17 @@ const DIRECTIVES = [];
     ReactiveFormsModule,
     RouterModule,
     AlainThemeModule,
+    DelonABCModule,
+    DelonChartModule,
     DelonACLModule,
     DelonFormModule,
+    // i18n
     TranslateModule,
-    ...SHARED_DELON_MODULES,
-    ...SHARED_ZORRO_MODULES,
     // third libs
     ...THIRDMODULES,
     // your components
     ...COMPONENTS,
-    ...DIRECTIVES
-  ]
+    ...DIRECTIVES,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
