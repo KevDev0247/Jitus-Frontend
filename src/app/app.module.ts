@@ -91,13 +91,13 @@ const APPINIT_PROVIDES = [
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { UserService } from './common/service/UserService';
 import { CoreModule } from './core/core.module';
 import { GlobalConfigModule } from './global-config.module';
 import { LayoutModule } from './layout/layout.module';
 import { RoutesModule } from './routes/routes.module';
 import { SharedModule } from './shared/shared.module';
 import { STWidgetModule } from './shared/st-widget/st-widget.module';
-import { UserService } from './common/service/UserService';
 
 @NgModule({
   declarations: [
