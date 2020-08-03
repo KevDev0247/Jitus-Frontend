@@ -24,14 +24,14 @@ export class UserDetailComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private msg: NzMessageService, private cdr: ChangeDetectorRef,
               private http: _HttpClient, public activatedRoute: ActivatedRoute, private router: Router) {
-
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params.user;
     });
     if (this.id) {
-      this.http.get('http://localhost:8080/user/detail', {id: this.id}).subscribe((res: any) => {
-        this.user = res.data;
-      });
+      this.http.get('http://localhost:8080/user/detail', {id: this.id})
+        .subscribe((res: any) => {
+          this.user = res.data;
+        });
     }
   }
 
