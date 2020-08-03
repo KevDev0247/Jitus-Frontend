@@ -1,0 +1,22 @@
+<page-header [title]="user.id? 'Edit User':'Create User'">
+</page-header>
+<nz-card [nzBordered]="false">
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="name" error="Please enter your name" required>
+      <input nz-input formControlName="name" placeholder="Please enter your name" [(ngModel)]="user.name"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="email" error="Please enter your email" required>
+      <input nz-input formControlName="email" placeholder="Please enter your email" [(ngModel)]="user.email"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="password" error="Please enter your password" required>
+      <input nz-input formControlName="password" placeholder="Please enter your password" [(ngModel)]="user.password"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se>
+      <button *ngIf="user.id" nz-button nzType="primary" (click)="update()">Edit</button>
+      <button *ngIf="!user.id" nz-button class="ml-sm">Save</button>
+    </se>
+  </form>
+</nz-card>
