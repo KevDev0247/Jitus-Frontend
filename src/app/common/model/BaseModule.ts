@@ -4,5 +4,5 @@ export class BaseModule {
     updater?: string;
     createTime?: Date;
     updateTime?: Date;
-    is_delete?: number
+    isDelete?: number
 }
