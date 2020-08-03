@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="New project files" />
+    <list default="true" id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="New project files">
+      <change afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Jitus-Frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/karma.conf.js" afterDir="false" />
+    </list>
     <list id="bad51255-29bb-491f-b4f2-c2b46ab2f8b9" name="Revert &quot;Create constants and renaming&quot;" comment="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99" />
     <list id="e5b0e1db-b220-4c3e-80cc-fa80486f1e2a" name="Revert &quot;Json package update&quot;" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
     <list id="e73bbe40-a8d2-4609-abfc-014d31cf49e1" name="Revert &quot;Json package update&quot;-2" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
@@ -71,7 +79,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Jitus-Frontend\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
     <property name="ts.external.directory.path" value="D:\Jitus-Frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -130,6 +138,9 @@
       <workItem from="1596396206033" duration="1871000" />
       <workItem from="1596398213448" duration="494000" />
       <workItem from="1596398734508" duration="13813000" />
+      <workItem from="1596431267276" duration="89000" />
+      <workItem from="1596460342981" duration="9092000" />
+      <workItem from="1596478243421" duration="535000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -213,10 +224,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="896" y="350" key="#TSLint/0.0.1368.872@0.0.1368.872" timestamp="1596210729237" />
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1596413243393">
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1596471062398">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1596413243393" />
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1596471062398" />
     <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596390533201">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -229,26 +240,26 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="111" y="9" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1596391399698" />
-    <state x="466" y="192" key="FileChooserDialogImpl" timestamp="1596389311148">
+    <state x="466" y="192" key="FileChooserDialogImpl" timestamp="1596474308846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596389311148" />
-    <state width="1348" height="477" key="GridCell.Tab.0.bottom" timestamp="1596423727198">
+    <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596474308846" />
+    <state width="1348" height="472" key="GridCell.Tab.0.bottom" timestamp="1596478408366">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="477" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596423727198" />
-    <state width="1348" height="477" key="GridCell.Tab.0.center" timestamp="1596423727197">
+    <state width="1348" height="472" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596478408366" />
+    <state width="1348" height="472" key="GridCell.Tab.0.center" timestamp="1596478408365">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="477" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1596423727197" />
-    <state width="1348" height="477" key="GridCell.Tab.0.left" timestamp="1596423727197">
+    <state width="1348" height="472" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1596478408365" />
+    <state width="1348" height="472" key="GridCell.Tab.0.left" timestamp="1596478408365">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="477" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1596423727197" />
-    <state width="1348" height="477" key="GridCell.Tab.0.right" timestamp="1596423727198">
+    <state width="1348" height="472" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1596478408365" />
+    <state width="1348" height="472" key="GridCell.Tab.0.right" timestamp="1596478408365">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="477" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1596423727198" />
+    <state width="1348" height="472" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1596478408365" />
     <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1596335652626">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -305,10 +316,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="323" y="198" key="MultipleFileMergeDialog/0.0.1368.872@0.0.1368.872" timestamp="1596310056893" />
-    <state x="186" y="81" key="SettingsEditor" timestamp="1596390454046">
+    <state x="186" y="81" key="SettingsEditor" timestamp="1596474480653">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1596390454046" />
+    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1596474480653" />
     <state x="691" y="225" key="VcsDiffUtil.ChangesDialog" timestamp="1596391154221">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
