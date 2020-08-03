@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="New project files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/model/BaseModule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/model/BaseModule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/system/user/user-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/system/user/user-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-update.component.html" afterDir="false" />
     </list>
     <list id="bad51255-29bb-491f-b4f2-c2b46ab2f8b9" name="Revert &quot;Create constants and renaming&quot;" comment="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99" />
     <list id="e5b0e1db-b220-4c3e-80cc-fa80486f1e2a" name="Revert &quot;Json package update&quot;" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
@@ -135,7 +135,7 @@
       <workItem from="1596398734508" duration="13813000" />
       <workItem from="1596431267276" duration="89000" />
       <workItem from="1596460342981" duration="9092000" />
-      <workItem from="1596478243421" duration="6462000" />
+      <workItem from="1596478243421" duration="6843000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
