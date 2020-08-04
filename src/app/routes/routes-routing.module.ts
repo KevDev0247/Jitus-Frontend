@@ -25,6 +25,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard/v1', pathMatch: 'full' },
       { path: 'dashboard', redirectTo: 'dashboard/v1', pathMatch: 'full' },
       { path: 'dashboard/v1', component: DashboardV1Component },
+      { path: 'sys', loadChildren: () => import('./system/sys.module').then(m => m.SysModule)}
     ],
   },
   // passport
