@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/img/Map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tmp/img/login-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +62,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/tmp/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,6 +79,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
       <recent name="D:\Jitus-Frontend\src\app\common\component" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -109,7 +117,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="" />
+      <changelist id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
       <created>1596166730965</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -129,6 +137,7 @@
       <workItem from="1596431267276" duration="89000" />
       <workItem from="1596460342981" duration="9092000" />
       <workItem from="1596478243421" duration="14818000" />
+      <workItem from="1596547176205" duration="7034000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -220,38 +229,38 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1596471062398" />
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596390533201">
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596563148039">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1596390533201" />
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1596563148039" />
     <state x="272" y="2" key="CommitChangelistDialog2" timestamp="1596309784204">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="272" y="2" key="CommitChangelistDialog2/0.0.1368.872@0.0.1368.872" timestamp="1596309784204" />
-    <state x="111" y="9" width="1181" height="685" key="DiffContextDialog" timestamp="1596391399698">
+    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog" timestamp="1596506494811">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="111" y="9" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1596391399698" />
+    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1596506494811" />
     <state x="466" y="192" key="FileChooserDialogImpl" timestamp="1596474308846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596474308846" />
-    <state width="661" height="533" key="GridCell.Tab.0.bottom" timestamp="1596504798129">
+    <state width="661" height="533" key="GridCell.Tab.0.bottom" timestamp="1596563258664">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="533" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596504798129" />
-    <state width="661" height="533" key="GridCell.Tab.0.center" timestamp="1596504798129">
+    <state width="661" height="533" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1596563258664" />
+    <state width="661" height="533" key="GridCell.Tab.0.center" timestamp="1596563258664">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="533" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1596504798129" />
-    <state width="661" height="533" key="GridCell.Tab.0.left" timestamp="1596504798128">
+    <state width="661" height="533" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1596563258664" />
+    <state width="661" height="533" key="GridCell.Tab.0.left" timestamp="1596563258664">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="533" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1596504798128" />
-    <state width="661" height="533" key="GridCell.Tab.0.right" timestamp="1596504798129">
+    <state width="661" height="533" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1596563258664" />
+    <state width="661" height="533" key="GridCell.Tab.0.right" timestamp="1596563258664">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="533" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1596504798129" />
+    <state width="661" height="533" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1596563258664" />
     <state width="1348" height="281" key="GridCell.Tab.1.bottom" timestamp="1596335652626">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
