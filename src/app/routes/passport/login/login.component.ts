@@ -108,25 +108,24 @@ export class UserLoginComponent implements OnDestroy {
       }
     }
 
-    // 默认配置中对所有HTTP请求都会强制 [校验](https://ng-alain.com/auth/getting-started) 用户 Token
-    // 然一般来说登录请求不需要校验，因此可以在请求URL加上：`/login?_allow_anonymous=true` 表示不触发用户 Token 校验
-    // this.http
-    //   .post('/login/account?_allow_anonymous=true', {
-    //     type: this.type,
-    //     userName: this.userName.value,
-    //     password: this.password.value,
-    //   })
-    this.userService.login(this.userName.value, this.password.value)
-      .subscribe((res: any) => {
+    // Default configurations will have certain requirements on all HTTP requests [test](https://ng-alain.com/auth/getting-started) user Token
+    // In most cases, login will not need authentication. Therefore, it is suggested to add '/login?_allow_anonymous=true' on url
+    // meaning token authentication is not required
+    this.http
+      .post('/login/account?_allow_anonymous=true', {
+        type: this.type,
+        userName: this.userName.value,
+        password: this.password.value,
+      }).subscribe((res: any) => {
         if (res.msg !== 'ok') {
           this.error = res.msg;
           return;
         }
-        // 清空路由复用信息
+        // Clear url reuse info
         this.reuseTabService.clear();
-        // 设置用户Token信息
+        // Set user Token info
         this.tokenService.set(res.user);
-        // 重新获取 StartupService 内容，我们始终认为应用信息一般都会受当前用户授权范围而影响
+        // Retrieve StartupService, to avoid the situation when user info is impacted by user authorization
         this.startupSrv.load().then(() => {
           let url = this.tokenService.referrer!.url || '/';
           if (url.includes('/passport')) {
