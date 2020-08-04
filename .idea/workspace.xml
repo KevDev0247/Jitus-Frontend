@@ -19,13 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0033ade9-99e7-47a3-811e-13d339de5bbf" name="Default Changelist" comment="New project files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <list id="bad51255-29bb-491f-b4f2-c2b46ab2f8b9" name="Revert &quot;Create constants and renaming&quot;" comment="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99" />
-    <list id="e5b0e1db-b220-4c3e-80cc-fa80486f1e2a" name="Revert &quot;Json package update&quot;" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
-    <list id="e73bbe40-a8d2-4609-abfc-014d31cf49e1" name="Revert &quot;Json package update&quot;-2" comment="Revert &quot;Json package update&quot;&#10;&#10;This reverts commit 7b0675dc" />
-    <list id="450fef24-ce2e-4b8c-bcf5-9270523c3397" name="Revert &quot;Tslint configurations&quot;" comment="Revert &quot;Tslint configurations&quot;&#10;&#10;This reverts commit 82b50dae" />
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
