@@ -1,0 +1,77 @@
+<page-header [title]="'User Management'"></page-header>
+
+<nz-card [nzBordered]="false" style="float: right; width: 100%">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48}">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.name" name="name" placeholder="Please enter your name" id="user_list_name"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="email">Email</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.email" name="email" placeholder="Please enter your email" id="user_list_email"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="no">Province</nz-form-label>
+          <nz-select [ngModel]="selectedProvince" name="province">
+            <nz-option *ngFor="let p of provinceData" [nzValue]="p" [nzLabel]="p"></nz-option>
+          </nz-select>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+        <a (click)="expandForm =! expandForm">
+          {{ expandForm? 'Collapse' : 'Expand'}}
+          <i nz-icon [nzType]="expandForm ? 'up' : 'down'"></i>
+        </a>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="add(modalContent)" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>Create</span>
+  </button>
+  <ng-container *ngIf="selectedRows.length > 0">
+    <button nz-button nz-dropdown [nzDropdownMenu]="batchMenu" nzPlacement="bottomLeft">
+      More Actions <i nz-icon nzType="down"></i>
+    </button>
+    <nz-dropdown-menu #batchMenu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item (click)="remove()">Delete</li>
+        <li nz-menu-item (click)="approval()">Batch Approval</li>
+      </ul>
+    </nz-dropdown-menu>
+  </ng-container>
+  <st #st [columns]="columns" [data]="data" [loading]="loading" [total]="total" (change)="stChange($event)">
+    <ng-template st-row="status" let-i>
+      <nz-badge [nzStatus]="i.statusType" [nzText]="i.statusText"></nz-badge>
+    </ng-template>
+  </st>
+</nz-card>
+
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="name">Name</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="user.name" name="name" placeholder="Please enter your name" id="template_name"/>
+    </nz-form-control>
+    <nz-form-label nzFor="email">Email</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="user.email" name="email" placeholder="Please enter your email" id="template_email"/>
+    </nz-form-control>
+    <nz-form-label nzFor="password">Password</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="user.password" name="password" placeholder="Please enter your password" id="template_password"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
