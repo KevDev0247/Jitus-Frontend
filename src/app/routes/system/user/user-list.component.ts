@@ -148,10 +148,10 @@ export class UserListComponent implements OnInit {
       })
   }
 
-  stChange(e: STChange) {
-    switch (e.type) {
+  stChange(event: STChange) {
+    switch (event.type) {
       case 'checkbox':
-        this.selectedRows = e.checkbox;
+        this.selectedRows = event.checkbox;
         this.totalCallNo = this.selectedRows
           .reduce((total, cv) => total + cv.callNo, 0);
         break;
@@ -206,6 +206,8 @@ export class UserListComponent implements OnInit {
       ],
     });
   }
+
+  approval() { }
 
   url () {
     this.isVisible = true;
