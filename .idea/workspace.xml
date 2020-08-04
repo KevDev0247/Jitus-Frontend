@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
