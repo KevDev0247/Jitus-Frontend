@@ -19,21 +19,14 @@
           </nz-form-control>
         </nz-form-item>
       </div>
-      <div nz-col nzMd="8" nzSm="24">
-        <nz-form-item>
-          <nz-form-label nzFor="no">Province</nz-form-label>
-          <nz-select [ngModel]="selectedProvince" name="province">
-            <nz-option *ngFor="let p of provinceData" [nzValue]="p" [nzLabel]="p"></nz-option>
-          </nz-select>
-        </nz-form-item>
-      </div>
+      
       <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
         <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
         <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
-        <a (click)="expandForm =! expandForm">
-          {{ expandForm? 'Collapse' : 'Expand'}}
-          <i nz-icon [nzType]="expandForm ? 'up' : 'down'"></i>
-        </a>
+<!--        <a (click)="expandForm =! expandForm">-->
+<!--          {{ expandForm? 'Collapse' : 'Expand'}}-->
+<!--          <i nz-icon [nzType]="expandForm ? 'up' : 'down'"></i>-->
+<!--        </a>-->
       </div>
     </div>
   </form>
