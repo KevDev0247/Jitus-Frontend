@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, Template
 import { Router } from '@angular/router';
 import { STChange, STColumn, STComponent, STData, XlsxService } from '@delon/abc/public_api';
 import { NzMessageService, NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
-import { User } from '../../../common/model/User';
-import { UserService } from '../../../common/service/userService';
+import { User } from '../../../common/model/user';
+import { UserService } from '../../../common/service/user.service';
 
 /**
  * The component class that define and control the views of the user list.

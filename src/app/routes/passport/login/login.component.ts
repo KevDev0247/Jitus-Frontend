@@ -7,7 +7,7 @@ import { SocialService, SocialOpenType, ITokenService, DA_SERVICE_TOKEN } from '
 import { ReuseTabService } from '@delon/abc';
 import { environment } from '@env/environment';
 import { StartupService } from '@core';
-import { UserService } from 'src/app/common/service/userService';
+import { UserService } from 'src/app/common/service/user.service';
 
 @Component({
   selector: 'passport-login',

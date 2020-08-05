@@ -2,8 +2,8 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
-import {User} from '../../../common/model/User';
-import {UserService} from '../../../common/service/userService';
+import {User} from '../../../common/model/user';
+import {UserService} from '../../../common/service/user.service';
 
 @Component({
   selector: 'app-user-update',

@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {_HttpClient} from '@delon/theme';
 import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
-import {User} from '../../../common/model/User';
+import {User} from '../../../common/model/user';
 
 /**
  * The service class for user module
