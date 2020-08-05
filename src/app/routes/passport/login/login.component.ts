@@ -17,6 +17,14 @@ import { UserService } from 'src/app/common/service/user.service';
 })
 export class UserLoginComponent implements OnDestroy {
 
+  user = {
+    token: '123456789',
+    name: 'admin',
+    email: `admin@gmail.com`,
+    id: 10000,
+    time: + new Date(),
+  }
+
   constructor(
     fb: FormBuilder,
     modalSrv: NzModalService,
@@ -111,20 +119,25 @@ export class UserLoginComponent implements OnDestroy {
     // Default configurations will have certain requirements on all HTTP requests [test](https://ng-alain.com/auth/getting-started) user Token
     // In most cases, login will not need authentication. Therefore, it is suggested to add '/login?_allow_anonymous=true' on url
     // meaning token authentication is not required
-    this.http
-      .post('/login/account?_allow_anonymous=true', {
-        type: this.type,
-        userName: this.userName.value,
-        password: this.password.value,
-      }).subscribe((res: any) => {
-        if (res.msg !== 'ok') {
-          this.error = res.msg;
+    // this.http
+    //   .post('/login/account?_allow_anonymous=true', {
+    //     type: this.type,
+    //     userName: this.userName.value,
+    //     password: this.password.value,
+    //   })
+    this.userService.login(this.userName.value, this.password.value)
+      .subscribe((response: any) => {
+        console.log(">>>>>response", response)
+        if (response.msg !== 'ok') {
+          // this.error = "登录失败";
+          // this.msg.error(this.error)
           return;
         }
+        const token = response.token;
         // Clear url reuse info
         this.reuseTabService.clear();
         // Set user Token info
-        this.tokenService.set(res.user);
+        this.tokenService.set(response.user);
         // Retrieve StartupService, to avoid the situation when user info is impacted by user authorization
         this.startupSrv.load().then(() => {
           let url = this.tokenService.referrer!.url || '/';
