@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { STChange, STColumn, STComponent, STData, XlsxService } from '@delon/abc/public_api';
-import { NzMessageService, NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
+import { STChange, STColumn, STComponent, STData, XlsxService } from '@delon/abc';
+import { NzMessageService, NzModalService } from 'ng-zorro-antd';
 import { User } from '../../../common/model/user';
 import { UserService } from '../../../common/service/user.service';
 
@@ -39,11 +39,7 @@ export class UserListComponent implements OnInit {
     email: '',
   };
 
-  data_xslx_change: any;
   data: any[] = [];
-  data_xslx: any[] = [];
-  selectedProvince = 'Zhejiang';
-  provinceData = ['Zhejiang', 'Jiangsu'];
   loading = false;
   user: User = new User();
   total = 20;
@@ -53,7 +49,6 @@ export class UserListComponent implements OnInit {
     { id: 1, text: 'deleted', value: false, type: 'error', checked: false},
   ];
 
-  userId = 0;
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
@@ -85,8 +80,7 @@ export class UserListComponent implements OnInit {
         {
           text: 'view',
           click: (item: any) => {
-            this.router.navigate(
-              ['/user/user-update'], {queryParams: { user: item.id}})
+            this.router.navigate(['/sys/user/user-update'], {queryParams: { user: item.id}})
           }
         },
         {
@@ -106,17 +100,6 @@ export class UserListComponent implements OnInit {
   isCollapsed = false;
   theme = true;
 
-  item = [
-    { name: "Apple", type: "fruit"},
-    { name: "Carrot", type: "vegetable"},
-    { name: "Orange", type: "fruit"}
-  ];
-  droppedItems = []
-  onItemDrop(e: any) {
-    // get the dropped data here
-    this.droppedItems.push(e.dragData);
-  }
-
   constructor(
     public messageService: NzMessageService,
     private modalService: NzModalService,
@@ -134,7 +117,7 @@ export class UserListComponent implements OnInit {
     this.loading = true;
     this.userService.getQueryList(this.query.name, this.query.email)
       .subscribe((response: any) => {
-        this.data = response.list;
+        this.data = response.data;
         this.data.map(i => {
           const statusItem = this.status[+i.isDelete];
           if (statusItem) {
@@ -194,59 +177,13 @@ export class UserListComponent implements OnInit {
     this.getData();
   }
 
-  download() {
-    const data = [this.columns.map(i => i.title)];
-    this.data_xslx.forEach(i => data.push(this.columns.map(c => i[c.index as string])));
-    this.xlsx.export({
-      sheets: [
-        {
-          data,
-          name: 'sheet name',
-        }
-      ],
-    });
-  }
-
-  approval() { }
-
   url () {
     this.isVisible = true;
   }
 
-  change(event: Event): void {
-    const file = (event.target as HTMLInputElement).files![0];
-    this.xlsx.import(file).then(response => (this.data_xslx_change = response));
-  }
-
-  showModal(): void {
-    this.isVisible = true;
-  }
+  approval() { }
 
   toggleCollapsed(): void {
     this.isCollapsed = !this.isCollapsed;
-  }
-
-  handleOk(): void {
-    console.log('Button OK clicked!');
-    this.isVisible = false;
-  }
-
-  handleCancel(): void {
-    console.log('Button Cancel clicked!');
-    this.isVisible = false;
-  }
-
-  getChildEvent(index: any) {
-    if (index === 1) {
-      this.isVisible = false;
-    }
-  }
-
-  JumpToItem() {
-    console.log("Item>>>>>>1");
-  }
-
-  nzEvent(event: any): void {
-    console.log(">>>>tree>>>>", event)
   }
 }
