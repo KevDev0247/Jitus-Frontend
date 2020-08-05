@@ -10,14 +10,14 @@
           <nz-alert *ngIf="error" [nzType]="'error'" [nzMessage]="error" [nzShowIcon]="true" class="mb-lg"></nz-alert>
           <nz-form-item>
             <nz-form-control [nzErrorTip]="'Please enter mobile number!' | translate">
-              <nz-input-group nzSize="large" nzPrefix="user">
+              <nz-input-group nzSize="large">
                 <input nz-input formControlName="userName" placeholder="username" style="border: 0; border-bottom: 1px solid #000">
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
           <nz-form-item>
             <nz-form-control nzErrorTip="'Please enter password!' | translate">
-              <nz-input-group nzSize="large" nzPrefix="lock">
+              <nz-input-group nzSize="large">
                 <input nz-input formControlName="password" placeholder="password" style="border: 0; border-bottom: 1px solid #000">
               </nz-input-group>
             </nz-form-control>
@@ -26,7 +26,7 @@
         <nz-tab [nzTitle]="'app.login.tab-login-mobile' | translate">
           <nz-form-item>
             <nz-form-control [nzErrorTip]="mobileErrorTip">
-              <nz-input-group nzSize="large" nzPrefix="user">
+              <nz-input-group nzSize="large">
                 <input nz-input formControlName="mobile" placeholder="mobile number"/>
               </nz-input-group>
               <ng-template #mobileErrorTip let-i>
