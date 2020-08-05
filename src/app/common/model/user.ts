@@ -1,4 +1,4 @@
-import {BaseModule} from './BaseModule';
+import {BaseModule} from './base.module';
 
 export class User extends BaseModule {
   password?: string;
