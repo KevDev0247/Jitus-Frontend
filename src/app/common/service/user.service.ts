@@ -17,31 +17,38 @@ export class UserService {
     }
 
     create(user: any) {
-        return this.http.post(this.getServiceUrl() + '/create', user)
+        return this.http.post(this.getServiceUrl() + '/signUp', user)
     }
+
     delete(userId: number) {
         return this.http.get(this.getServiceUrl() + '/delete', { userId })
     }
+
     update(user: any) {
         return this.http.post(this.getServiceUrl() + '/update', user)
     }
+
     detail(id: number) {
         return this.http.get(this.getServiceUrl() + '/detail?id=' + id)
     }
+
     detailByName(name: string) {
         return this.http.get(this.getServiceUrl() + '/detailByName?name=' + name)
     }
+
     updatePasswd(userId: number, password: string, newPasswd: string) {
-        return this.http.get(this.getServiceUrl() + '/updatePasswd', { userId, passwd: password, newPassword: newPasswd })
+        return this.http.get(this.getServiceUrl() + '/updatePassword', { userId, passwd: password, newPassword: newPasswd })
     }
+
     getQueryList(name?: string, email?: string) {
-        return this.http.get(this.getServiceUrl() + '/queryList', { name, email })
+        return this.http.get(this.getServiceUrl() + '/queryUsersList', { name, email })
     }
 
     updateRole(userId: number, roleId: number) {
         return this.http.get(this.getServiceUrl() + '/updateRole', { userId, roleId })
     }
+
     login(name?: string, password?: string) {
-        return this.http.post(this.getServiceUrl() + '/login?_allow_anonymous=true', { name, password })
+        return this.http.post(DOMAIN_SERVER_URL + '/login?_allow_anonymous=true', { name, password })
     }
 }
