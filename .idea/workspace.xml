@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/assets/tmp/i18n/en-US.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/i18n/en-US.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/service/UserService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/startup/startup.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/startup/startup.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/passport/passport.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/passport/passport.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
