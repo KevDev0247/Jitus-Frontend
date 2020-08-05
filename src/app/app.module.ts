@@ -73,6 +73,8 @@ const INTERCEPTOR_PROVIDES = [
 
 // #region Startup Service
 import { StartupService } from '@core';
+import {NzMenuBaseService, NzMenuService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {RoleService} from './common/service/role.service';
 export function StartupServiceFactory(startupService: StartupService) {
   return () => startupService.load();
 }
@@ -110,8 +112,17 @@ import { UserService } from './common/service/user.service';
     ...GLOBAL_THIRD_MODULES,
     ...FORM_MODULES,
   ],
-  providers: [...LANG_PROVIDES, ...INTERCEPTOR_PROVIDES, ...I18NSERVICE_PROVIDES, ...APPINIT_PROVIDES,
-    UserService],
+  providers: [
+    ...LANG_PROVIDES,
+    ...INTERCEPTOR_PROVIDES,
+    ...I18NSERVICE_PROVIDES,
+    ...APPINIT_PROVIDES,
+    UserService,
+    RoleService,
+    NzMenuService,
+    NzMenuBaseService,
+  ],
+
   bootstrap: [AppComponent],
 })
 export class AppModule { }
