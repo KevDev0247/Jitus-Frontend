@@ -117,7 +117,7 @@ export class UserListComponent implements OnInit {
     this.loading = true;
     this.userService.getQueryList(this.query.name, this.query.email)
       .subscribe((response: any) => {
-        this.data = response.data;
+        this.data = response.list;
         this.data.map(i => {
           const statusItem = this.status[+i.isDelete];
           if (statusItem) {
