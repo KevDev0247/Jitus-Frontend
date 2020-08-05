@@ -1,9 +1,9 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
-import {NzMessageService} from 'ng-zorro-antd';
-import {User} from '../../../common/model/user';
-import {UserService} from '../../../common/service/user.service';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd';
+import { User } from '../../../common/model/user';
+import { UserService } from '../../../common/service/user.service';
 
 /**
  * The component class that define and control the views of the user list.
