@@ -6,7 +6,7 @@ import {UserService} from '../../../common/service/user.service';
 interface ItemData {
   id: number;
   roleName: string;
-  remark: string;
+  authority: string;
   createTime: string;
 }
 
@@ -61,13 +61,12 @@ export class RoleComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  operateData() {
+  handleData() {
     Object.keys(this.mapOfCheckedId).forEach(item => {
       if (this.mapOfCheckedId[item]) {
         this.roleId = +item;
       }
     });
-
     this.userService.updateRole(this.userId, this.roleId)
       .subscribe((response: any) => {
         if (response.data) {
