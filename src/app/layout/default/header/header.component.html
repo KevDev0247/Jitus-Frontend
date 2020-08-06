@@ -1,25 +1,43 @@
 <div class="alain-default__header-logo">
-  <a [routerLink]="['/']" class="alain-default__header-logo-link">
+  <!--<a [routerLink]="['/']" class="alain-default__header-logo-link">
     <img class="alain-default__header-logo-expanded" src="./assets/logo-full.svg" alt="{{ settings.app.name }}"
       style="max-height:40px;" />
     <img class="alain-default__header-logo-collapsed" src="./assets/logo.svg" alt="{{ settings.app.name }}"
       style="max-height:30px;" />
-  </a>
+  </a>-->
+  <ul nz-menu nzMode="horizontal" style="">
+    <li nz-submenu nzIcon="appstore" style="border-bottom: none; background: lightsalmon">
+      <ul>
+        <li nz-menu-item>
+          <a [routerLink]="['/dashboard/v1']">Main Page</a>
+        </li>
+        <li nz-submenu nzDisabled nzTitle="Project Management">
+        </li>
+        <li nz-submenu nzTitle="System Management">
+          <ul>
+            <li nz-menu-item> <a [routerLink]="['/sys/user/user-list']">User Management</a></li>
+            <li nz-menu-item nzDisabled>Role Management</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>
+
 <div class="alain-default__nav-wrap">
   <ul class="alain-default__nav">
-    <!-- Menu -->
+    <!--&lt;!&ndash; Menu &ndash;&gt;
     <li>
       <div class="alain-default__nav-item" (click)="toggleCollapsedSidebar()">
         <i nz-icon nzType="menu-{{ settings.layout.collapsed ? 'unfold' : 'fold' }}"></i>
       </div>
     </li>
-    <!-- Lock Page -->
+    &lt;!&ndash; Lock Page &ndash;&gt;
     <li class="hidden-mobile">
       <div class="alain-default__nav-item" routerLink="/passport/lock">
         <i nz-icon nzType="lock"></i>
       </div>
-    </li>
+    </li>-->
   </ul>
   <!-- <header-search class="alain-default__search" [toggleChange]="searchToggleStatus"></header-search> -->
   <ul class="alain-default__nav">
@@ -28,13 +46,16 @@
       <header-notify></header-notify>
     </li>
     <!-- Task -->
-    <li class="hidden-mobile">
+    <!--<li class="hidden-mobile">
       <header-task></header-task>
-    </li>
+    </li>-->
     <!-- Settings -->
     <li class="hidden-mobile">
-      <div class="alain-default__nav-item" nz-dropdown [nzDropdownMenu]="settingsMenu" nzTrigger="click"
-        nzPlacement="bottomRight">
+      <div class="alain-default__nav-item"
+           nz-dropdown
+           [nzDropdownMenu]="settingsMenu"
+           nzTrigger="click"
+           nzPlacement="bottomRight">
         <i nz-icon nzType="setting"></i>
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
