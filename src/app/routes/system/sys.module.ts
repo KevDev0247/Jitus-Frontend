@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
-import {SysRoutingModule} from './sys-routing.module';
+import { RoleListComponent } from './role/role-list.component';
+import { RoleComponent } from './role/role.component';
+import { SysRoutingModule } from './sys-routing.module';
 import { UserDetailComponent } from './user/user-detail.component';
 import { UserListComponent } from './user/user-list.component';
 import { UserUpdateComponent } from './user/user-update.component';
@@ -8,7 +10,9 @@ import { UserUpdateComponent } from './user/user-update.component';
 const COMPONENTS = [
   UserListComponent,
   UserDetailComponent,
-  UserUpdateComponent
+  UserUpdateComponent,
+  RoleListComponent,
+  RoleComponent
 ];
 const COMPONENTS_NOROUNT = [];
 
