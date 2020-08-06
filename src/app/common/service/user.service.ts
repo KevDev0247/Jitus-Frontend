@@ -5,7 +5,8 @@ import { _HttpClient } from '@delon/theme';
 /**
  * The service class for user module
  *
- * @Author: Kevin Zhijun Wang
+ * @Author Kevin Zhijun Wang
+ * @version 2020.0731
  */
 @Injectable()
 export class UserService {
@@ -36,8 +37,8 @@ export class UserService {
         return this.http.get(this.getServiceUrl() + '/detailByName?name=' + name)
     }
 
-    updatePasswd(userId: number, password: string, newPasswd: string) {
-        return this.http.get(this.getServiceUrl() + '/updatePassword', { userId, passwd: password, newPassword: newPasswd })
+    updatePassword(userId: number, password: string, newPassword: string) {
+        return this.http.get(this.getServiceUrl() + '/updatePassword', { userId, password, newPassword })
     }
 
     getQueryList(name?: string, email?: string) {
