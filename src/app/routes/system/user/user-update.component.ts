@@ -69,7 +69,7 @@ export class UserUpdateComponent implements OnInit {
   }
 
   updatePassword() {
-    this.userService.updatePasswd(this.id, this.password, this.newPassword)
+    this.userService.updatePassword(this.id, this.password, this.newPassword)
       .subscribe((res: any) => {
         if (res.data) {
           this.msgSrc.success(res.message);
