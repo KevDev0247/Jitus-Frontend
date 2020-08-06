@@ -1,24 +1,33 @@
-<div style="width: 900px; margin-left: -300px;">
+<div style="width: 900px; margin-left: -300px;" xmlns:border-bottom="http://www.w3.org/1999/xhtml">
   <div style="width: 600px; float: left; background: lightgray;">
-    <img src="assets/tmp/img/Map.png" style="width: 600px; height: 100%; margin-top: 120px;">
+    <img src="assets/tmp/img/Map.png" style="width: 600px; height: 100%; margin-top: 80px;">
   </div>
   <div style="width: 300px; float: left;">
-    <img src="../../../../assets/tmp/img/login-logo.png" style="width: 300px; height: 75px; margin-top: 120px;">
-    <form nz-form [formGroup]="form" (ngSubmit)="submit()" role="form">
+    <img src="../../../../assets/tmp/img/login-logo.png" style="width: 300px; height: 75px; margin-top: 80px;">
+    <form nz-form [formGroup]="form" (ngSubmit)="submit()" role="form" style="width: 400px">
       <nz-tabset [nzAnimated]="false" class="tabs" (nzSelectChange)="switch($event)">
         <nz-tab [nzTitle]="'app.login.tab-login-credentials'| translate">
           <nz-alert *ngIf="error" [nzType]="'error'" [nzMessage]="error" [nzShowIcon]="true" class="mb-lg"></nz-alert>
           <nz-form-item>
             <nz-form-control [nzErrorTip]="'Please enter mobile number!' | translate">
               <nz-input-group nzSize="large">
-                <input nz-input formControlName="userName" placeholder="username" style="border: 0; border-bottom: 1px solid #000">
+                <input
+                  nz-input
+                  formControlName="userName"
+                  placeholder="username"
+                  style="border: 0;
+                  border-bottom: 1px solid #000">
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
           <nz-form-item>
             <nz-form-control nzErrorTip="'Please enter password!' | translate">
               <nz-input-group nzSize="large">
-                <input nz-input formControlName="password" placeholder="password" style="border: 0; border-bottom: 1px solid #000">
+                <input
+                  nz-input
+                  formControlName="password"
+                  placeholder="password" style="border: 0;
+                  border-bottom: 1px solid #000">
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
@@ -27,7 +36,11 @@
           <nz-form-item>
             <nz-form-control [nzErrorTip]="mobileErrorTip">
               <nz-input-group nzSize="large">
-                <input nz-input formControlName="mobile" placeholder="mobile number"/>
+                <input
+                  nz-input
+                  formControlName="mobile"
+                  placeholder="mobile number"
+                  style="border: 0; border-bottom: 1px solid #000"/>
               </nz-input-group>
               <ng-template #mobileErrorTip let-i>
                 <ng-container *ngIf="i.errors.required">
@@ -44,12 +57,21 @@
               <nz-row [nzGutter]="8">
                 <nz-col [nzSpan]="16">
                   <nz-input-group nzSize="large" nzPrefixIcon="mail">
-                    <input nz-input formControlName="captcha" placeholder="captcha"/>
+                    <input
+                      nz-input
+                      formControlName="captcha"
+                      placeholder="captcha"
+                      style="border: 0; border-bottom: 1px solid #000"/>
                   </nz-input-group>
                 </nz-col>
                 <nz-col [nzSpan]="8">
-                  <button type="button" nz-button nzSize="large" (click)="getCaptcha()"
-                          [disabled]="count" nzBlock [nzLoading]="http.loading">
+                  <button
+                    type="button"
+                    nz-button nzSize="large"
+                    (click)="getCaptcha()"
+                    [disabled]="count"
+                    nzBlock
+                    [nzLoading]="http.loading">
                     {{ count ? count + 's' : ('app.register.get-verification-code' | translate) }}
                   </button>
                 </nz-col>
@@ -62,15 +84,23 @@
         <nz-col [nzSpan]="12">
           <label nz-checkbox formControlName="remember">{{ 'app.login.remember-me' | translate }}</label>
         </nz-col>
-        <nz-col [nzSpan]="12" class="text-right">
+        <nz-col [nzSpan]="12">
           <a class="forgot" (click)="msg.error('Please find the administrator')">{{ 'app.login.forgot-password' | translate }}</a>
         </nz-col>
       </nz-form-item>
       <nz-form-item>
-        <button nz-button type="submit" nzType="default" style="width: 140px; background: orange" [nzLoading]="http.loading">
+        <button
+          nz-button
+          type="submit"
+          nzType="default"
+          style="width: 140px; background: orange"
+          [nzLoading]="http.loading">
           {{ 'app.login.login' | translate }}
         </button>
-        <button nz-button nzType="default" style="width: 140px;" [nzLoading]="http.loading">
+        <button
+          nz-button nzType="default"
+          style="width: 190px; height: 50px"
+          [nzLoading]="http.loading">
           {{ 'app.login.signup' | translate }}
         </button>
       </nz-form-item>
@@ -91,3 +121,8 @@
   <i (click)="open('weibo', 'window')" nz-icon nzType="weibo-circle" class="icon"></i>
   <a class="register" routerLink="/passport/register">{{ 'app.login.signup' | translate }}</a>
 </div> -->
+<global-footer [links]="">
+  Copyright
+  <i nz-icon nzType="copyright"></i> 2020
+  <a href="" target="_blank">Jitlantis Team</a>
+</global-footer>
