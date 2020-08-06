@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // #region default language
 // 参考：https://ng-alain.com/docs/i18n
 import { default as ngLang } from '@angular/common/locales/zh';
-import { NZ_I18N, zh_CN as zorroLang } from 'ng-zorro-antd';
+import { NZ_I18N, zh_CN as zorroLang, NzMenuModule, NzMenuService, NzMenuBaseService } from 'ng-zorro-antd';
 import { DELON_LOCALE, zh_CN as delonLang } from '@delon/theme';
 const LANG = {
   abbr: 'zh',
@@ -73,7 +73,6 @@ const INTERCEPTOR_PROVIDES = [
 
 // #region Startup Service
 import { StartupService } from '@core';
-import {NzMenuBaseService, NzMenuService} from 'ng-zorro-antd/ng-zorro-antd.module';
 import {RoleService} from './common/service/role.service';
 export function StartupServiceFactory(startupService: StartupService) {
   return () => startupService.load();
@@ -108,6 +107,7 @@ import { UserService } from './common/service/user.service';
     SharedModule,
     LayoutModule,
     RoutesModule,
+    // NzMenuModule,
     ...I18NSERVICE_MODULES,
     ...GLOBAL_THIRD_MODULES,
     ...FORM_MODULES,
@@ -122,7 +122,6 @@ import { UserService } from './common/service/user.service';
     NzMenuService,
     NzMenuBaseService,
   ],
-
   bootstrap: [AppComponent],
 })
 export class AppModule { }
