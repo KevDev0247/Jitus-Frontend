@@ -1,0 +1,31 @@
+<nz-card [nzBordered]="false" style="float: right; width: 100%">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="roleName">Role Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.roleName" name="roleName" placeholder="Please enter role name" id="roleName"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="authority">Authority</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.authority" name="authority" placeholder="Please enter authority level" id="authority"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <st #st [columns]="columns" [data]="allDataList" [loading]="loading" [total]="total"></st>
+</nz-card>
+<nz-modal [nzVisible]="isAuthAssignmentsVisible" nzTitle="Assign Authorities" nzWidth="800" nzFooter=" " (nzOnCancel)="handleAssignmentsCancel()">
+</nz-modal>
+<nz-modal [nzVisible]="isAuthDetailsVisible" nzTitle="Authority Details" nzWidth="800" nzFooter=" " (nzOnCancel)="handleDetailsCancel()">
+</nz-modal>
