@@ -24,8 +24,8 @@ import { UserService } from '../../../common/service/user.service';
       button {
         margin-bottom: 12px;
       }
-    `
-  ]
+    `,
+  ],
 })
 export class UserListComponent implements OnInit {
 
@@ -43,6 +43,7 @@ export class UserListComponent implements OnInit {
   loading = false;
   user: User = new User();
   total = 20;
+  userId = 0;
 
   status = [
     { id: 0, text: 'normal', value: false, type: 'success', checked: false},
@@ -61,9 +62,7 @@ export class UserListComponent implements OnInit {
       render: 'status',
       filter: {
         menus: this.status,
-        fn: (filter: any, record: any) => (
-          record.isDelete === filter.id
-        ),
+        fn: (filter: any, record: any) => record.isDelete === filter.id,
       }
     },
     {
@@ -84,9 +83,15 @@ export class UserListComponent implements OnInit {
           }
         },
         {
+          text: 'Assign',
+          click: (item: any) => {
+            this.remove(item.id);
+          }
+        },
+        {
           text: 'delete',
           click: (item: any) => {
-            this.remove(item.id)
+            this.remove(item.id);
           },
         },
       ],
@@ -147,10 +152,14 @@ export class UserListComponent implements OnInit {
 
   add(templateRef: TemplateRef<{}>) {
     this.modalService.create({
-      nzTitle: '',
+      nzTitle: 'New User',
       nzContent: templateRef,
       nzOnOk: () => {
         this.loading = true;
+        if (!this.user.name || !this.user.password) {
+          this.messageService.error('Please fill in necessary information');
+          return;
+        }
         this.userService.create(this.user)
           .subscribe(() => this.getData());
       }
@@ -158,8 +167,7 @@ export class UserListComponent implements OnInit {
   }
 
   remove(userId: number) {
-    this.userService.delete(userId)
-      .subscribe((response) => {
+    this.userService.delete(userId).subscribe(response => {
         if (response.data) {
           this.messageService.success(response.message);
           this.getData();
@@ -179,6 +187,18 @@ export class UserListComponent implements OnInit {
 
   url () {
     this.isVisible = true;
+  }
+
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  getChildEvent(index: any) {
+    if (index === 1) {
+      const message = 'Role binding successful';
+      this.isVisible = false;
+      this.messageService.success(message);
+    }
   }
 
   approval() { }
