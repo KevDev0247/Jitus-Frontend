@@ -1,0 +1,28 @@
+<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="allDataList"
+          (nzCurrentPageDataChange)="currentPageDataChange($event)">
+  <thead>
+    <tr>
+      <th nzShowCheckbox [(nzChecked)]="isAllDisplayDataChecked" [nzDisabled]="true"></th>
+      <th>ID</th>
+      <th>Parent ID</th>
+      <th>Menu Level</th>
+      <th>Menu Name</th>
+      <th>Menu Code</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of rowSelectionTable.data">
+      <td nzShowCheckbox [(nzChecked)]="mapOfCheckedId[data.id" (nzCheckedChange)="refreshStatus(data.id)"></td>
+      <td>{{data.id}}</td>
+      <td>{{data.parentId}}</td>
+      <td>{{transferLevel(data.level)}}</td>
+      <td>{{data.text}}</td>
+      <td>{{data.i18n}}</td>
+      <td>{{data.link}}</td>
+    </tr>
+  </tbody>
+</nz-table>
+<button nz-button [nzType]="'primary'" (click)="handleData()">
+  OK
+</button>
