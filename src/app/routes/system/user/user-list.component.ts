@@ -206,4 +206,8 @@ export class UserListComponent implements OnInit {
   toggleCollapsed(): void {
     this.isCollapsed = !this.isCollapsed;
   }
+
+  handleCancel(): void {
+    this.isVisible = false;
+  }
 }
