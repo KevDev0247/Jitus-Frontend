@@ -34,7 +34,7 @@
     <i nz-icon nzType="plus"></i>
     <span>Create</span>
   </button>
-  <ng-container *ngIf="selectedRows.length > 0">
+  <!--<ng-container *ngIf="selectedRows.length > 0">
     <button nz-button nz-dropdown [nzDropdownMenu]="batchMenu" nzPlacement="bottomLeft">
       More Actions <i nz-icon nzType="down"></i>
     </button>
@@ -44,7 +44,7 @@
         <li nz-menu-item (click)="approval()">Batch Approval</li>
       </ul>
     </nz-dropdown-menu>
-  </ng-container>
+  </ng-container>-->
   <st #st [columns]="columns" [data]="data" [loading]="loading" [total]="total" (change)="stChange($event)">
     <ng-template st-row="status" let-i>
       <nz-badge [nzStatus]="i.statusType" [nzText]="i.statusText"></nz-badge>
@@ -54,7 +54,7 @@
 
 <ng-template #modalContent>
   <nz-form-item>
-    <nz-form-label nzFor="name">Name</nz-form-label>
+    <nz-form-label nzFor="name">Name<span style="color: red">*</span></nz-form-label>
     <nz-form-control>
       <input nz-input [(ngModel)]="user.name" name="name" placeholder="Please enter your name" id="template_name"/>
     </nz-form-control>
@@ -62,9 +62,12 @@
     <nz-form-control>
       <input nz-input [(ngModel)]="user.email" name="email" placeholder="Please enter your email" id="template_email"/>
     </nz-form-control>
-    <nz-form-label nzFor="password">Password</nz-form-label>
+    <nz-form-label nzFor="password">Password<span style="color: red; font-size: 16px;">*</span></nz-form-label>
     <nz-form-control>
       <input nz-input [(ngModel)]="user.password" name="password" placeholder="Please enter your password" id="template_password"/>
     </nz-form-control>
   </nz-form-item>
 </ng-template>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Assign Roles" nzWidth="800" nzFooter=" " (nzOnCancel)="handleCancel()">
+  <app-role *ngIf="userId !== 0" [userId]="userId" (childEvent)="getChildEvent($event)"></app-role>
+</nz-modal>
