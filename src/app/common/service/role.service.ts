@@ -2,6 +2,12 @@ import {Injectable} from '@angular/core';
 import {_HttpClient} from '@delon/theme';
 import {DOMAIN_SERVER_URL} from '../constants';
 
+/**
+ * The service class for role module
+ *
+ * @Author Yonggang Su
+ * @version 2020.0805
+ */
 @Injectable()
 export class RoleService {
 
