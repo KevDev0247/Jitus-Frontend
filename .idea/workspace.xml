@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +140,7 @@
       <workItem from="1596633051209" duration="5384000" />
       <workItem from="1596646427486" duration="24152000" />
       <workItem from="1596727329669" duration="210000" />
-      <workItem from="1596727557083" duration="19295000" />
+      <workItem from="1596727557083" duration="21277000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
