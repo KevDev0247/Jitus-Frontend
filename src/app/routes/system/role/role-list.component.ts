@@ -7,7 +7,7 @@ import {UserService} from '../../../common/service/user.service';
 interface ItemData {
   id: number;
   roleName: string;
-  authority: string;
+  remark: string;
   createTime: string;
 }
 
@@ -42,7 +42,7 @@ export class RoleListComponent implements OnInit {
 
   query: any = {
     roleName: '',
-    authority: '',
+    remark: '',
   }
 
   @ViewChild('st', { static: true}) stColumn: STColumn;
@@ -50,7 +50,7 @@ export class RoleListComponent implements OnInit {
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'ID', index: 'id'},
     { title: 'Role Name', index: 'roleName'},
-    { title: 'Authority', index: 'authority'},
+    { title: 'Remark', index: 'remark'},
     {
       title: 'Create Time',
       index: 'createTime',
@@ -63,14 +63,14 @@ export class RoleListComponent implements OnInit {
       title: 'Operations',
       buttons: [
         {
-          text: 'Authority Details',
+          text: 'Remark Details',
           click: (item: any) => {
             this.isAuthDetailsVisible = true;
             this.roleId = +item.id;
           },
         },
         {
-          text: 'Authority Assignments',
+          text: 'Remark Assignments',
           click: (item: any) => {
             this.isAuthAssignmentsVisible = true;
             this.roleId = +item.id;
@@ -129,7 +129,7 @@ export class RoleListComponent implements OnInit {
 
   reset() {
     this.query.roleName = '';
-    this.query.authority = '';
+    this.query.remark = '';
     this.getData();
   }
 

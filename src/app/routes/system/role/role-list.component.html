@@ -11,9 +11,9 @@
       </div>
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="authority">Authority</nz-form-label>
+          <nz-form-label nzFor="remark">Remark</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="query.authority" name="authority" placeholder="Please enter authority level" id="authority"/>
+            <input nz-input [(ngModel)]="query.remark" name="remark" placeholder="Please enter remark" id="remark"/>
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -27,5 +27,5 @@
 </nz-card>
 <nz-modal [nzVisible]="isAuthAssignmentsVisible" nzTitle="Assign Authorities" nzWidth="800" nzFooter=" " (nzOnCancel)="handleAssignmentsCancel()">
 </nz-modal>
-<nz-modal [nzVisible]="isAuthDetailsVisible" nzTitle="Authority Details" nzWidth="800" nzFooter=" " (nzOnCancel)="handleDetailsCancel()">
+<nz-modal [nzVisible]="isAuthDetailsVisible" nzTitle="Remark Details" nzWidth="800" nzFooter=" " (nzOnCancel)="handleDetailsCancel()">
 </nz-modal>
