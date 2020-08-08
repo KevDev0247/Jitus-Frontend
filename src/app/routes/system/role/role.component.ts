@@ -6,7 +6,7 @@ import {UserService} from '../../../common/service/user.service';
 interface ItemData {
   id: number;
   roleName: string;
-  authority: string;
+  remark: string;
   createTime: string;
 }
 
