@@ -53,11 +53,11 @@ export class UserListComponent implements OnInit {
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
-    { title: 'id', index: 'id'},
-    { title: 'name', index: 'name'},
-    { title: 'email', index: 'email'},
+    { title: 'ID', index: 'id'},
+    { title: 'Name', index: 'name'},
+    { title: 'Email', index: 'email'},
     {
-      title: 'status',
+      title: 'Status',
       index: 'isDelete',
       render: 'status',
       filter: {
@@ -66,7 +66,7 @@ export class UserListComponent implements OnInit {
       }
     },
     {
-      title: 'createTime',
+      title: 'Create Time',
       index: 'createTime',
       type: 'date',
       sort: {
@@ -74,7 +74,7 @@ export class UserListComponent implements OnInit {
       },
     },
     {
-      title: 'operation',
+      title: 'Operations',
       buttons: [
         {
           text: 'View',
