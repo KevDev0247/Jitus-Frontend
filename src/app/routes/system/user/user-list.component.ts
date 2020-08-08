@@ -77,7 +77,7 @@ export class UserListComponent implements OnInit {
       title: 'operation',
       buttons: [
         {
-          text: 'view',
+          text: 'View',
           click: (item: any) => {
             this.router.navigate(['/sys/user/user-update'], {queryParams: { user: item.id}})
           }
@@ -85,11 +85,12 @@ export class UserListComponent implements OnInit {
         {
           text: 'Assign',
           click: (item: any) => {
-            this.remove(item.id);
+            this.userId = item.id;
+            this.showModal();
           }
         },
         {
-          text: 'delete',
+          text: 'Delete',
           click: (item: any) => {
             this.remove(item.id);
           },
