@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/model/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/model/menu.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/system/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/system/menu/menu-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/menu/menu-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/system/sys-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/sys-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +143,7 @@
       <workItem from="1596646427486" duration="24152000" />
       <workItem from="1596727329669" duration="210000" />
       <workItem from="1596727557083" duration="22170000" />
-      <workItem from="1596812594541" duration="21225000" />
+      <workItem from="1596812594541" duration="21736000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -211,7 +211,7 @@
                   <entry key="text">
                     <value>
                       <list>
-                        <option value="role.service" />
+                        <option value="menu-list" />
                       </list>
                     </value>
                   </entry>
