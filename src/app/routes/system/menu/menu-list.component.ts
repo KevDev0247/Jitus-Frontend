@@ -86,6 +86,7 @@ export class MenuListComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getFirstMenuList();
   }
 
   getData() {
