@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/default.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
     </list>
@@ -143,7 +144,7 @@
       <workItem from="1596727557083" duration="22170000" />
       <workItem from="1596812594541" duration="22270000" />
       <workItem from="1596853028261" duration="47000" />
-      <workItem from="1596901989261" duration="3605000" />
+      <workItem from="1596901989261" duration="3954000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
