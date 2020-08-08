@@ -6,6 +6,12 @@ import { BaseComponent } from '../../../common/component/base.component';
 import { Menu } from '../../../common/model/menu';
 import { MenuService } from '../../../common/service/menu.service';
 
+/**
+ * The component class that define and control the views of the menu list.
+ *
+ * @Author Kevin Zhijun Wang
+ * @version 2020.0807
+ */
 @Component({
   selector: 'app-menu-list',
   templateUrl: './menu-list.component.html',
@@ -73,7 +79,7 @@ export class MenuListComponent extends BaseComponent implements OnInit {
     private changeDetectorRef: ChangeDetectorRef,
     private xlsx: XlsxService,
     private menuService: MenuService,
-    private router: Router
+    private router: Router,
   ) {
     super(modalService);
     this.getData();
