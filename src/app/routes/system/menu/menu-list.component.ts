@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { STChange, STColumn, STComponent, STData, XlsxService } from '@delon/abc/public_api';
-import { NzMessageService, NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
+import { STChange, STColumn, STComponent, STData, XlsxService } from '@delon/abc';
+import { NzMessageService, NzModalService } from 'ng-zorro-antd';
 import { BaseComponent } from '../../../common/component/base.component';
 import { Menu } from '../../../common/model/menu';
 import { MenuService } from '../../../common/service/menu.service';

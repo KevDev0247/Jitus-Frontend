@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {NzMessageService} from 'ng-zorro-antd';
 import {Menu} from '../../../common/model/menu';
 import {MenuService} from '../../../common/service/menu.service';
 
