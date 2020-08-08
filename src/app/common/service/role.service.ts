@@ -17,8 +17,8 @@ export class RoleService {
     return DOMAIN_SERVER_URL + '/role';
   }
 
-  getList() {
-    return this.http.get(this.getServiceUrl() + '/getRolesList');
+  getList(roleName: string, remark: string) {
+    return this.http.get(this.getServiceUrl() + '/getRolesList', { roleName, remark });
   }
 
   addMenu(role_id: number, menu_id: number) {
