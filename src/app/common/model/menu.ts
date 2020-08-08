@@ -6,5 +6,5 @@ export class Menu extends BaseModule {
   i18n?: string;
   link?: string;
   icon?: string;
-  orderNum?: number;
+  orderNumber?: number;
 }

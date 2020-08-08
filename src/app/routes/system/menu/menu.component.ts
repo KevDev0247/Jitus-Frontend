@@ -37,14 +37,14 @@ export class MenuComponent implements OnInit {
   selectOptions = [];
   mapOfCheckedId: { [key: string]: boolean } = {};
 
-  query: any = {
+  q: any = {
     parentId: '',
     text: ''
   }
 
   constructor(private userService: UserService, private msgService: NzMessageService,
     private menuService: MenuService, private roleService: RoleService) {
-    this.menuService.getQueryList(this.query.parentId, this.query.text)
+    this.menuService.getQueryList(this.q.parentId, this.q.text)
       .subscribe((res: any) => {
         this.allDataList = res.list;
       })
