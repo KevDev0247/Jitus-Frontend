@@ -11,12 +11,11 @@
         <li nz-menu-item>
           <a [routerLink]="['/dashboard/v1']">Main Page</a>
         </li>
-        <li nz-submenu nzDisabled nzTitle="Project Management">
-        </li>
+        <li nz-submenu nzDisabled nzTitle="Project Management"></li>
         <li nz-submenu nzTitle="System Management">
           <ul>
-            <li nz-menu-item> <a [routerLink]="['/sys/user/user-list']">User Management</a></li>
-            <li nz-menu-item nzDisabled>Role Management</li>
+            <li nz-menu-item><a [routerLink]="['/sys/user/user-list']">User Management</a></li>
+            <li nz-menu-item><a [routerLink]="['/sys/role/role-list']">Role Management</li>
           </ul>
         </li>
       </ul>
