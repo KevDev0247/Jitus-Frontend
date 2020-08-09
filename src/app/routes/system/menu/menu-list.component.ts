@@ -10,7 +10,7 @@ import { MenuService } from '../../../common/service/menu.service';
  * The component class that define and control the views of the menu list.
  *
  * @Author Kevin Zhijun Wang
- * @version 2020.0807
+ * Created on 2020/08/07
  */
 @Component({
   selector: 'app-menu-list',

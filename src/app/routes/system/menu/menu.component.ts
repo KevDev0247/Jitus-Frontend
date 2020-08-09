@@ -8,7 +8,7 @@ import {UserService} from '../../../common/service/user.service';
  * The component class that define and control the views of the menu.
  *
  * @Author Yonggang Su
- * @version 2020.0807
+ * Created on 2020/08/07
  */
 interface ItemData{
   id: number;

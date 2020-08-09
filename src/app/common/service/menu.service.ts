@@ -6,7 +6,7 @@ import {DOMAIN_SERVER_URL} from '../constants';
  * The service class for menu module
  *
  * @Author Kevin Zhijun Wang
- * @version 2020.0807
+ * Created on 2020/08/07
  */
 @Injectable()
 export class MenuService {

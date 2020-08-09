@@ -11,7 +11,7 @@ import { UserUpdateComponent } from './user/user-update.component';
  * The module that controls the routing of System section.
  *
  * @Author Kevin Zhijun Wang, Yonggang Su
- * @version 2020.0807
+ * Created on 2020/08/03
  */
 const routes: Routes = [
   {

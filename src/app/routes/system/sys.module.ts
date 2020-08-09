@@ -15,7 +15,7 @@ import { UserUpdateComponent } from './user/user-update.component';
  * The module that define the components and modules in System section.
  *
  * @Author Kevin Zhijun Wang, Yonggang Su
- * @version 2020.0807
+ * Created on 2020/08/03
  */
 const COMPONENTS = [
   UserListComponent,

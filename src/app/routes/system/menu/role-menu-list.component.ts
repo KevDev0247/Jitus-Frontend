@@ -20,7 +20,7 @@ import {MenuService} from '../../../common/service/menu.service';
  * The component class that define and control the views of the role-menu list.
  *
  * @Author Yonggang Su
- * @version 2020.0808
+ * Created on 2020/08/08
  */
 @Component({
   selector: 'app-role-menu-list',

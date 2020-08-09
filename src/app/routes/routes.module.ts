@@ -11,6 +11,12 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { UserLockComponent } from './passport/lock/lock.component';
 
+/**
+ * The module that controls the routes of the application.
+ *
+ * @Author Kevin Zhijun Wang, Yonggang Su
+ * Created on 2020/07/30
+ */
 const COMPONENTS = [
   DashboardV1Component,
   // passport pages

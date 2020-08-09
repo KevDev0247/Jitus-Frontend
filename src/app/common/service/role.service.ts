@@ -6,7 +6,7 @@ import {DOMAIN_SERVER_URL} from '../constants';
  * The service class for role module
  *
  * @Author Yonggang Su
- * @version 2020.0805
+ * Created on 2020/08/05
  */
 @Injectable()
 export class RoleService {

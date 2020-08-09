@@ -9,6 +9,7 @@ import { User } from '../../../common/model/user';
  * The service class for user module
  *
  * @Author: Yonggang Su
+ * Created on 2020/08/02
  */
 @Component({
   selector: 'app-user-detail',

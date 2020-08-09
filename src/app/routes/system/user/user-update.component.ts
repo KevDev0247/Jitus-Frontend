@@ -9,7 +9,7 @@ import { UserService } from '../../../common/service/user.service';
  * The component class that define and control the views of the user list.
  *
  * @Author Yonggang Su
- * @version 2020.0802
+ * created on 2020/08/02
  */
 @Component({
   selector: 'app-user-update',

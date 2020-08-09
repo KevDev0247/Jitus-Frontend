@@ -6,7 +6,7 @@ import { _HttpClient } from '@delon/theme';
  * The service class for user module
  *
  * @Author Kevin Zhijun Wang
- * @version 2020.0731
+ * Created on 2020/07/31
  */
 @Injectable()
 export class UserService {
