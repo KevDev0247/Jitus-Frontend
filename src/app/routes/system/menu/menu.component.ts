@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {NzMessageService} from 'ng-zorro-antd';
 import {MenuService} from '../../../common/service/menu.service';
 import {RoleService} from '../../../common/service/role.service';
 import {UserService} from '../../../common/service/user.service';
