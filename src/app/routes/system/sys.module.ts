@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
 import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
+import { MenuComponent } from './menu/menu.component';
+import { RoleMenuListComponent } from './menu/role-menu-list.component';
 import { RoleListComponent } from './role/role-list.component';
 import { RoleComponent } from './role/role.component';
 import { SysRoutingModule } from './sys-routing.module';
@@ -21,8 +23,10 @@ const COMPONENTS = [
   UserUpdateComponent,
   RoleListComponent,
   RoleComponent,
+  MenuComponent,
   MenuDetailComponent,
   MenuListComponent,
+  RoleMenuListComponent,
 ];
 const COMPONENTS_NOROUNT = [];
 
