@@ -73,8 +73,6 @@ const INTERCEPTOR_PROVIDES = [
 
 // #region Startup Service
 import { StartupService } from '@core';
-import {MenuService} from './common/service/menu.service';
-import {RoleService} from './common/service/role.service';
 export function StartupServiceFactory(startupService: StartupService) {
   return () => startupService.load();
 }
@@ -96,6 +94,8 @@ import { AppComponent } from './app.component';
 import { RoutesModule } from './routes/routes.module';
 import { LayoutModule } from './layout/layout.module';
 import { UserService } from './common/service/user.service';
+import { MenuService } from './common/service/menu.service';
+import { RoleService } from './common/service/role.service';
 
 @NgModule({
   declarations: [AppComponent],
