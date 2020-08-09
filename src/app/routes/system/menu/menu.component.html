@@ -13,7 +13,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let data of rowSelectionTable.data">
-      <td nzShowCheckbox [(nzChecked)]="mapOfCheckedId[data.id" (nzCheckedChange)="refreshStatus(data.id)"></td>
+      <td nzShowCheckbox [(nzChecked)]="mapOfCheckedId[data.id]" (nzCheckedChange)="refreshStatus(data.id)"></td>
       <td>{{data.id}}</td>
       <td>{{data.parentId}}</td>
       <td>{{transferLevel(data.level)}}</td>
