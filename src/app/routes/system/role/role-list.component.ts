@@ -4,19 +4,18 @@ import {STColumn} from '@delon/abc/public_api';
 import {RoleService} from '../../../common/service/role.service';
 import {UserService} from '../../../common/service/user.service';
 
-interface ItemData {
-  id: number;
-  roleName: string;
-  remark: string;
-  createTime: string;
-}
-
 /**
  * The component class that define and control the views of the roles list.
  *
  * @Author Kevin Zhijun Wang
  * @version 2020.0805
  */
+interface ItemData {
+  id: number;
+  roleName: string;
+  remark: string;
+  createTime: string;
+}
 @Component({
   selector: 'app-role-list',
   templateUrl: 'role-list.component.html',
@@ -63,14 +62,14 @@ export class RoleListComponent implements OnInit {
       title: 'Operations',
       buttons: [
         {
-          text: 'Remark Details',
+          text: 'View',
           click: (item: any) => {
             this.isAuthDetailsVisible = true;
             this.roleId = +item.id;
           },
         },
         {
-          text: 'Remark Assignments',
+          text: 'Assign',
           click: (item: any) => {
             this.isAuthAssignmentsVisible = true;
             this.roleId = +item.id;
@@ -84,8 +83,8 @@ export class RoleListComponent implements OnInit {
     private changeDetectorRef: ChangeDetectorRef,
     private router: Router,
     private roleService: RoleService,
-    private userService: UserService) {
-
+    private userService: UserService
+  ) {
     this.getData();
   }
 
