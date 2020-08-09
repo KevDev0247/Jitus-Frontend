@@ -3,19 +3,18 @@ import {_HttpClient} from '@delon/theme';
 import {RoleService} from '../../../common/service/role.service';
 import {UserService} from '../../../common/service/user.service';
 
+/**
+ * The component class that define and control the views of the role.
+ *
+ * @Author Yonggang Su
+ * @version 2020.0808
+ */
 interface ItemData {
   id: number;
   roleName: string;
   remark: string;
   createTime: string;
 }
-
-/**
- * The component class that define and control the views of the role.
- *
- * @Author Yonggang Su
- * @version 2020.0805
- */
 @Component({
   selector: 'app-role',
   templateUrl: 'role.component.html',
@@ -32,13 +31,8 @@ export class RoleComponent implements OnInit {
   mapOfCheckedId: { [key: string]: boolean } = {};
   selectedOptions = [];
 
-  constructor(
-    private http: _HttpClient,
-    private userService: UserService,
-    private roleService: RoleService) {
-
-    this.roleService.getList()
-      .subscribe((response: any) => {
+  constructor(private http: _HttpClient, private userService: UserService, private roleService: RoleService) {
+    this.roleService.getList('','').subscribe((response: any) => {
         this.allDataList = response.list
       });
   }
