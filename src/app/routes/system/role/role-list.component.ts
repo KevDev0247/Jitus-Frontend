@@ -90,7 +90,8 @@ export class RoleListComponent implements OnInit {
   }
 
   getData() {
-    this.roleService.getList().subscribe((response: any) => {
+    this.roleService.getList(this.query.roleName, this.query.remark)
+      .subscribe((response: any) => {
         this.allDataList = response.list;
     })
   }
