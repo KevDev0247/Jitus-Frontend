@@ -95,9 +95,9 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
 
   getData() {
     this.loading = true;
-    this.menuService.getQueryList(this.query.parentId, this.query.text)
+    this.menuService.getRoleMenuList(this.roleId)
       .subscribe((response: any) => {
-        this.data = response.list;
+        this.data = response.data;
         this.loading = false;
         this.changeDetectorRef.detectChanges();
       });
