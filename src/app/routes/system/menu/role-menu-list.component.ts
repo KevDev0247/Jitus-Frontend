@@ -15,6 +15,7 @@ import {NzMessageService, NzModalService} from 'ng-zorro-antd';
 import {BaseComponent} from '../../../common/component/base.component';
 import {Menu} from '../../../common/model/menu';
 import {MenuService} from '../../../common/service/menu.service';
+import {RoleService} from '../../../common/service/role.service';
 
 /**
  * The component class that define and control the views of the role-menu list.
@@ -70,23 +71,18 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
       buttons: [
         {
           text: 'Delete',
-          click: (item => {
+          click: (item: any) => {
             this.showDeleteConfirm(item.id)
-          })
-        }
+          },
+        },
       ],
     },
   ];
 
-  constructor(
-    public messageService: NzMessageService,
-    public modalService: NzModalService,
-    private changeDetectorRef: ChangeDetectorRef,
-    private xlsx: XlsxService,
-    private menuService: MenuService,
-    private router: Router,
-  ) {
-    super(modalService);
+  constructor(public msgSrc: NzMessageService, public modalSrc: NzModalService,
+              private cdr: ChangeDetectorRef, private xlsx: XlsxService,
+              private menuService: MenuService, private roleService: RoleService, private router: Router) {
+    super(modalSrc);
   }
 
   ngOnInit(): void {
@@ -99,7 +95,7 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
       .subscribe((response: any) => {
         this.data = response.data;
         this.loading = false;
-        this.changeDetectorRef.detectChanges();
+        this.cdr.detectChanges();
       });
   }
 
@@ -107,9 +103,8 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
     switch (event.type) {
       case 'checkbox':
         this.selectedRows = event.checkbox!;
-        this.totalCallNumber = this.selectedRows
-          .reduce((total, cv) => total + cv.callNo, 0);
-        this.changeDetectorRef.detectChanges();
+        this.totalCallNumber = this.selectedRows.reduce((total, cv) => total + cv.callNo, 0);
+        this.cdr.detectChanges();
         break;
       case 'filter':
         this.getData();
@@ -118,9 +113,16 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
   }
 
   remove(id: number) {
-    this.menuService.delete(id).subscribe(() => {
-      this.getData();
-      this.st.clearCheck();
+    this.roleService.deleteMenu(this.roleId, id).subscribe(res => {
+      if (res.data) {
+        this.msgSrc.success(res.message);
+        this.getData();
+        this.cdr.detectChanges();
+        this.st.clearCheck();
+        this.childEvent.emit(2);
+      } else {
+        this.msgSrc.error(res.message);
+      }
     });
   }
 
@@ -128,10 +130,10 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
     this.router.navigate(['/sys/menu/menu-detail']);
   }
 
-  add(templateRef: TemplateRef<{}>) {
-    this.modalService.create({
+  add(tpl: TemplateRef<{}>) {
+    this.modalSrc.create({
       nzTitle: '',
-      nzContent: templateRef,
+      nzContent: tpl,
       nzOnOk: () => {
         this.loading = true;
         if (this.parentId) {
@@ -139,12 +141,11 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
         } else {
           this.menu.parentId = 0;
         }
-
         this.menuService.create(this.menu)
           .subscribe(response =>{
             if (response.data) {
               this.getData();
-              this.messageService.success('Menu creation successful');
+              this.msgSrc.success('Menu creation successful');
             }
           })
       }
@@ -171,8 +172,8 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
   }
 
   getFirstMenuList() {
-    this.menuService.getFirstMenuList().subscribe(response => {
-      this.firstMenus = response.data;
+    this.menuService.getFirstMenuList().subscribe(res => {
+      this.firstMenus = res.data;
     })
   }
 
@@ -196,31 +197,31 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
     }
   }
 
-  change(event: Event) {
-    const file = (event.target as HTMLInputElement).files![0];
-    this.xlsx.import(file).then(response => (this.data_xslx = response));
+  change(e: Event) {
+    const file = (e.target as HTMLInputElement).files![0];
+    this.xlsx.import(file).then(res => (this.data_xslx = res));
   }
 
   import() {
     if (!this.data_xslx) {
-      this.messageService.error('Please select your file first');
+      this.msgSrc.error('Please select your file first');
       return;
     }
 
-    const preparedData = this.data_xslx['sheet name'];
-    for (let i = 1; i < preparedData.length; i++) {
+    const preData = this.data_xslx['sheet name'];
+    for (let i = 1; i < preData.length; i++) {
       const menu = new Menu();
-      menu.parentId = preparedData[i][0];
-      menu.text = preparedData[i][1];
-      menu.i18n = preparedData[i][2];
-      menu.link = preparedData[i][3];
-      menu.icon = preparedData[i][4];
+      menu.parentId = preData[i][0];
+      menu.text = preData[i][1];
+      menu.i18n = preData[i][2];
+      menu.link = preData[i][3];
+      menu.icon = preData[i][4];
       this.menuList.push(menu);
     }
 
     this.menuService.batchCreate(this.menuList).subscribe(response => {
       if (response.data) {
-        this.messageService.success('Batch creation successful');
+        this.msgSrc.success('Batch creation successful');
         this.getData();
       }
     });
