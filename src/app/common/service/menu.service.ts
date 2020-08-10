@@ -33,7 +33,7 @@ export class MenuService {
     return this.http.get(this.getServiceUrl() + '/deleteMenu?menuId=' + menuId);
   }
 
-  detail(menuId: number) {
+  getDetails(menuId: number) {
     return this.http.get(this.getServiceUrl() + '/detail?id=' + menuId);
   }
 
@@ -41,8 +41,8 @@ export class MenuService {
     return this.http.get(this.getServiceUrl() + '/queryMenusList', { parentId, text })
   }
 
-  getAverList(roleId: number) {
-    return this.http.get(this.getServiceUrl() + 'getAverList', { roleId })
+  getRoleMenuList(roleId: number) {
+    return this.http.get(this.getServiceUrl() + '/getRoleMenuList', { roleId })
   }
 
   getFirstMenuList() {
