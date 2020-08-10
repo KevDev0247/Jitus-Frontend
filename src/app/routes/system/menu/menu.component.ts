@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
     text: ''
   }
 
-  constructor(private userService: UserService, private msgService: NzMessageService,
+  constructor(private userService: UserService, private msgSrc: NzMessageService,
     private menuService: MenuService, private roleService: RoleService) {
     this.menuService.getQueryList(this.q.parentId, this.q.text)
       .subscribe((res: any) => {
@@ -74,13 +74,12 @@ export class MenuComponent implements OnInit {
         this.menuId = +item
       }
     })
-
     this.roleService.addMenu(this.roleId, this.menuId).subscribe(res => {
       if (res.data) {
-        this.msgService.success(res.message)
+        this.msgSrc.success(res.message)
         this.childEvent.emit(1)
       } else {
-        this.msgService.error(res.msg)
+        this.msgSrc.error(res.msg)
       }
     })
   }
