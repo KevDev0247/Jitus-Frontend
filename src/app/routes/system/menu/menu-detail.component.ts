@@ -33,7 +33,7 @@ export class MenuDetailComponent implements OnInit {
       this.id = params.id;
     });
     if (this.id) {
-      this.menuService.detail(this.id)
+      this.menuService.getDetails(this.id)
         .subscribe((response: any) => {
           this.menu = response.data;
         });
