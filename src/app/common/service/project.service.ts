@@ -29,11 +29,11 @@ export class ProjectService {
     return this.http.get(this.getServiceUrl() + '/deleteProject', { userId })
   }
 
-  getQueryList(contractId?: string, clientId?: string, name?: string) {
-    return this.http.get(this.getServiceUrl() + '/queryProjectsList', { contractId, clientId, name });
-  }
-
   getDetails(id: number) {
     return this.http.get(this.getServiceUrl() + '/detail?id=' + id)
+  }
+
+  getQueryList(contractId?: string, clientId?: string, name?: string) {
+    return this.http.get(this.getServiceUrl() + '/queryProjectsList', { contractId, clientId, name });
   }
 }
