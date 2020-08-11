@@ -29,11 +29,11 @@ export class UserService {
     return this.http.post(this.getServiceUrl() + '/update', user)
   }
 
-  detail(id: number) {
+  getDetails(id: number) {
     return this.http.get(this.getServiceUrl() + '/detail?id=' + id)
   }
 
-  detailByName(name: string) {
+  getDetailsByName(name: string) {
     return this.http.get(this.getServiceUrl() + '/detailByName?name=' + name)
   }
 

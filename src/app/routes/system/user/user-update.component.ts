@@ -31,7 +31,7 @@ export class UserUpdateComponent implements OnInit {
       this.id = params.user;
     });
     if (this.id) {
-      this.userService.detail(this.id)
+      this.userService.getDetails(this.id)
         .subscribe((res: any) => {
           this.user = res.data;
         });
