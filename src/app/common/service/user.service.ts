@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { DOMAIN_SERVER_URL, USER_URL } from "../constants";
+import { DOMAIN_SERVER_URL } from "../constants";
 import { _HttpClient } from '@delon/theme';
 
 /**
@@ -14,7 +14,7 @@ export class UserService {
   constructor(private http: _HttpClient) { }
 
   getServiceUrl(): string {
-    return DOMAIN_SERVER_URL + USER_URL;
+    return DOMAIN_SERVER_URL + "/user";
   }
 
   create(user: any) {
