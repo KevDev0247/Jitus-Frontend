@@ -6,7 +6,7 @@ import {Project} from '../../common/model/project';
 import {ProjectService} from '../../common/service/project.service';
 
 /**
- * The service class for ProjectList module
+ * The component class that define and control the views of the ProjectDetail component
  *
  * @Author Yonggang Su
  * Created on 2020/08/10
