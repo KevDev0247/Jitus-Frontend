@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/common/service/project.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routes/project/project-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routes/project/project-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/service/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/service/project.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -150,7 +146,7 @@
       <workItem from="1596992441274" duration="1626000" />
       <workItem from="1597007700804" duration="5000" />
       <workItem from="1597007827645" duration="605000" />
-      <workItem from="1597064887935" duration="22518000" />
+      <workItem from="1597064887935" duration="26366000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -248,10 +244,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="896" y="350" key="#TSLint/0.0.1368.872@0.0.1368.872" timestamp="1596838205513" />
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1597093561550">
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1597115535048">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1597093561550" />
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1597115535048" />
     <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596645059678">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
