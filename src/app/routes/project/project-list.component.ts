@@ -1,10 +1,9 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {Router} from '@angular/router';
-import {STData} from '@delon/abc';
-import {STChange, STColumn, STComponent} from '@delon/abc/public_api';
-import {NzMessageService, NzModalService} from 'ng-zorro-antd';
-import {Project} from '../../common/model/project';
-import {ProjectService} from '../../common/service/project.service';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { STChange, STColumn, STComponent, STData } from '@delon/abc';
+import { NzMessageService, NzModalService } from 'ng-zorro-antd';
+import { Project } from '../../common/model/project';
+import { ProjectService } from '../../common/service/project.service';
 
 /**
  * The service class for ProjectList module
