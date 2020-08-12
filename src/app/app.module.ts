@@ -73,6 +73,8 @@ const INTERCEPTOR_PROVIDES = [
 
 // #region Startup Service
 import { StartupService } from '@core';
+import {ProjectService} from './common/service/project.service';
+import {StaffService} from './common/service/staff.service';
 export function StartupServiceFactory(startupService: StartupService) {
   return () => startupService.load();
 }
@@ -121,6 +123,8 @@ import { RoleService } from './common/service/role.service';
     UserService,
     RoleService,
     MenuService,
+    ProjectService,
+    StaffService,
     NzMenuService,
     NzMenuBaseService,
   ],
