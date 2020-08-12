@@ -15,16 +15,24 @@ import { UserRegisterResultComponent } from './passport/register-result/register
 // single pages
 import { UserLockComponent } from './passport/lock/lock.component';
 
+/**
+ * The module that controls the routing of application.
+ *
+ * @Author Kevin Zhijun Wang, Yonggang Su
+ * Created on 2020/07/30
+ */
 const routes: Routes = [
   {
     path: '',
     component: LayoutDefaultComponent,
-    canActivate: [SimpleGuard],
-    canActivateChild: [SimpleGuard],
+    // canActivate: [SimpleGuard],
+    // canActivateChild: [SimpleGuard],
     children: [
       { path: '', redirectTo: 'dashboard/v1', pathMatch: 'full' },
       { path: 'dashboard', redirectTo: 'dashboard/v1', pathMatch: 'full' },
       { path: 'dashboard/v1', component: DashboardV1Component },
+      { path: 'sys', loadChildren: () => import('./system/sys.module').then(m => m.SysModule) },
+      { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
     ],
   },
   // passport

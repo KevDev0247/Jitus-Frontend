@@ -28,6 +28,27 @@
           ]
         }
       ]
+    },
+    {
+      "text": "Pro",
+      "i18n": "menu.pro",
+      "group": true,
+      "hideInBreadcrumb": true,
+      "children": [
+        {
+          "text": "Pro",
+          "i18n": "menu.pro",
+          "icon": "anticon-appstore",
+          "children": [
+            {
+              "text": "User List",
+              "link": "/sys/user/user-list",
+              "i18n": "menu.user.manage",
+              "shortcut": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }

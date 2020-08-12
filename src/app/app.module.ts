@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // #region default language
 // 参考：https://ng-alain.com/docs/i18n
 import { default as ngLang } from '@angular/common/locales/zh';
-import { NZ_I18N, zh_CN as zorroLang } from 'ng-zorro-antd';
+import { NZ_I18N, zh_CN as zorroLang, NzMenuModule, NzMenuService, NzMenuBaseService } from 'ng-zorro-antd';
 import { DELON_LOCALE, zh_CN as delonLang } from '@delon/theme';
 const LANG = {
   abbr: 'zh',
@@ -66,13 +66,15 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SimpleInterceptor } from '@delon/auth';
 import { DefaultInterceptor } from '@core';
 const INTERCEPTOR_PROVIDES = [
-  { provide: HTTP_INTERCEPTORS, useClass: SimpleInterceptor, multi: true },
+  // { provide: HTTP_INTERCEPTORS, useClass: SimpleInterceptor, multi: true },
   { provide: HTTP_INTERCEPTORS, useClass: DefaultInterceptor, multi: true },
 ];
 // #endregion
 
 // #region Startup Service
 import { StartupService } from '@core';
+import {ProjectService} from './common/service/project.service';
+import {StaffService} from './common/service/staff.service';
 export function StartupServiceFactory(startupService: StartupService) {
   return () => startupService.load();
 }
@@ -93,7 +95,9 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { RoutesModule } from './routes/routes.module';
 import { LayoutModule } from './layout/layout.module';
-import { UserService } from './common/service/userService';
+import { UserService } from './common/service/user.service';
+import { MenuService } from './common/service/menu.service';
+import { RoleService } from './common/service/role.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -106,12 +110,24 @@ import { UserService } from './common/service/userService';
     SharedModule,
     LayoutModule,
     RoutesModule,
+    // NzMenuModule,
     ...I18NSERVICE_MODULES,
     ...GLOBAL_THIRD_MODULES,
     ...FORM_MODULES,
   ],
-  providers: [...LANG_PROVIDES, ...INTERCEPTOR_PROVIDES, ...I18NSERVICE_PROVIDES, ...APPINIT_PROVIDES,
-    UserService],
+  providers: [
+    ...LANG_PROVIDES,
+    ...INTERCEPTOR_PROVIDES,
+    ...I18NSERVICE_PROVIDES,
+    ...APPINIT_PROVIDES,
+    UserService,
+    RoleService,
+    MenuService,
+    ProjectService,
+    StaffService,
+    NzMenuService,
+    NzMenuBaseService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,10 +1,16 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
-import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
-import {User} from '../../../common/model/User';
-import {UserService} from '../../../common/service/userService';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NzMessageService } from 'ng-zorro-antd';
+import { User } from '../../../common/model/user';
+import { UserService } from '../../../common/service/user.service';
 
+/**
+ * The component class that define and control the views of the user list.
+ *
+ * @Author Yonggang Su
+ * created on 2020/08/02
+ */
 @Component({
   selector: 'app-user-update',
   templateUrl: './user-update.component.html',
@@ -25,7 +31,7 @@ export class UserUpdateComponent implements OnInit {
       this.id = params.user;
     });
     if (this.id) {
-      this.userService.detail(this.id)
+      this.userService.getDetails(this.id)
         .subscribe((res: any) => {
           this.user = res.data;
         });
@@ -57,17 +63,17 @@ export class UserUpdateComponent implements OnInit {
   update() {
     this.userService.update(this.user).subscribe(res => {
       if (res.data) {
-        this.router.navigate(['/pro/list/table-list']);
+        this.router.navigate(['/sys/user/user-list']);
       }
     })
   }
 
   updatePassword() {
-    this.userService.updatePasswd(this.id, this.password, this.newPassword)
+    this.userService.updatePassword(this.id, this.password, this.newPassword)
       .subscribe((res: any) => {
         if (res.data) {
           this.msgSrc.success(res.message);
-          this.router.navigate(['/pro/table-list'])
+          this.router.navigate(['/sys/user/user-list'])
         } else {
           this.msgSrc.error(res.message);
         }

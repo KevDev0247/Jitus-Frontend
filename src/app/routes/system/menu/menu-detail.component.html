@@ -1,0 +1,39 @@
+<page-header [title]="menu.id? 'Edit Menu' : 'Create Menu'"></page-header>
+<nz-card [nzBordered]="false">
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="Menu Name" error="Please enter menu name" required>
+      <input nz-input formControlName="text" placeholder="Please enter menu name" [(ngModel)]="menu.text"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Menu Code" error="Please enter menu code" required>
+      <input nz-input formControlName="code" placeholder="Please enter menu code" [(ngModel)]="menu.i18n"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Menu Link" error="Please enter menu link" required>
+      <input nz-input formControlName="link" placeholder="Please enter menu link" [(ngModel)]="menu.link"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Menu Icon" error="Please enter menu icon" required>
+      <input nz-input formControlName="text" placeholder="Please enter menu icon" [(ngModel)]="menu.icon"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Menu Order" error="Please enter menu order number" required>
+      <input nz-input formControlName="orderNumber" placeholder="Please enter menu order number" [(ngModel)]="menu.orderNumber"
+             style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se label="Create Time" error="Please pick the create time">
+      <nz-date-picker formControlName="createTime" nzShowTime nzFormat="YYYY-MM-DD HH:MM:SS" nzDisabled=true
+                      [(ngModel)]="menu.createTime">
+      </nz-date-picker>
+    </se>
+    <se label="Update Time" error="Please pick the update time">
+      <nz-date-picker formControlName="updateTime" nzShowTime nzFormat="YYYY-MM-DD HH:MM:SS" nzDisabled=true
+                      [(ngModel)]="menu.updateTime">
+      </nz-date-picker>
+    </se>
+    <se>
+      <button nz-button nzType="primary" (click)="save()" [disabled]="form.invalid">Submit</button>
+      <button nz-button (click)="goBack()">Go Back</button>
+    </se>
+  </form>
+</nz-card>

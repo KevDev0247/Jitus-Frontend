@@ -1,14 +1,15 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
-import {_HttpClient} from '@delon/theme';
-import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
-import {User} from '../../../common/model/User';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { _HttpClient } from '@delon/theme';
+import { NzMessageService } from 'ng-zorro-antd';
+import { User } from '../../../common/model/user';
 
 /**
  * The service class for user module
  *
  * @Author: Yonggang Su
+ * Created on 2020/08/02
  */
 @Component({
   selector: 'app-user-detail',

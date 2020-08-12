@@ -1,0 +1,45 @@
+<page-header [title]="staff.id? 'Edit Staff':'Create Staff'">
+</page-header>
+<nz-card [nzBordered]="false">
+  <form nz-form [formGroup]="formGroup" se-container="1" labelWidth="200">
+    <se label="EmployeeId" error="Please enter your Employee ID">
+      <input nz-input formControlName="sCode" placeholder="Please enter your Employee ID" [(ngModel)]="staff.id"
+             style="width: calc(100% - 400px)"/>
+    </se>
+    <se label="Name" error="Please enter your name">
+      <input nz-input formControlName="name" placeholder="Please enter your name" [(ngModel)]="staff.name"
+             style="width: calc(100% - 400px)"/>
+    </se>
+    <se label="Company" error="Please enter your company">
+      <input nz-input formControlName="company" placeholder="Please enter your company" [(ngModel)]="staff.company"
+             style="width: calc(100% - 400px)"/>
+    </se>
+    <se label="Email" error="Please enter your email">
+      <input nz-input formControlName="email" placeholder="Please enter your email" [(ngModel)]="staff.email"
+             style="width: calc(100% - 400px)"/>
+    </se>
+    <se label="Telephone Number" error="Please enter your telephone number">
+      <input nz-input formControlName="email" placeholder="Please enter your telephone number" [(ngModel)]="staff.telno"
+             style="width: calc(100% - 400px)"/>
+    </se>
+    <se label="Address" error="Please enter your address">
+      <input nz-input formControlName="address" placeholder="Please enter your address" [(ngModel)]="staff.address"
+             style="width: calc(100% - 400px)"/>
+    </se>
+    <se label="" error="Please enter">
+      <nz-date-picker formControlName="createTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="staff.createTime">
+      </nz-date-picker>
+    </se>
+    <se label="" error="Please enter">
+      <nz-date-picker formControlName="updateTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="staff.updateTime">
+      </nz-date-picker>
+    </se>
+    <se>
+      <button *ngIf="staff.id" nz-button nzType="primary" (click)="update()" [disabled]="formGroup.invalid">Submit</button>
+      <button *ngIf="staff.id" nz-button class="ml-sm">Save</button>
+      <button nz-button (click)="goBack()">Back</button>
+    </se>
+  </form>
+</nz-card>

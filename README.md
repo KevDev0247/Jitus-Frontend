@@ -11,7 +11,10 @@ Contributions:
 - Product Management: Feng Yuan
 - Marketing: Feng Yuan
 - Requirement Analysis: Feng Yuan, Yongggang Su, Kevin Zhijun Wang
-- System Architecture design: Yonggang Su
+- Business Logic Design: Feng Yuan
+- System Design: Yonggang Su
+- Database Design: Yonggang Su, Kevin Zhijun Wang
 - Web Frontend Development: Yonggang Su, Kevin Zhijun Wang
 - Web Backend Development: Kevin Zhijun Wang
+- QA and Testing: Yonggang Su
 - UI & UX design: Ying Quan

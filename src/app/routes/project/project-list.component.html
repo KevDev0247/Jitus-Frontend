@@ -1,0 +1,167 @@
+<nz-card [nzBordered]="false">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Project Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.projectName" name="param1" placeholder="Please enter" id="param1"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Filter</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.filterKeyword" name="param2" placeholder="Please enter" id="param2">
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+
+  <st #st [columns]="columns" [data]="data" [loading]="loading" [total]="total" (change)="stChange($event)"></st>
+</nz-card>
+
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="name">Name</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.name"
+        name="name"
+        placeholder="Please enter"
+        id="name"/>
+    </nz-form-control>
+    <nz-form-label nzFor="contractId">Contract Id</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.contractId"
+        name="contractId" placeholder="Please enter"
+        id="contractId"
+        type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="description">Description</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.description"
+        name="description"
+        placeholder="Please enter"
+        id="description"/>
+    </nz-form-control>
+    <nz-form-label nzFor="address">Address</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.address"
+        name="description"
+        placeholder="Please enter"
+        id="address"/>
+    </nz-form-control>
+    <nz-form-label nzFor="clientId">Client</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.clientId"
+        name="clientId"
+        placeholder="Please enter"
+        id="clientId"
+        type="number">
+    </nz-form-control>
+    <nz-form-label nzFor="contractStartTime">Contract Start Time</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="contractStartTime"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled=false
+        [(ngModel)]="project.contractStartTime">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="contractEndTime">Contract End Time</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="contractEndTime"
+        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled=false
+        [(ngModel)]="project.contractEndTime">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="deliveryTime">Delivery End Time</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="deliveryTime"
+        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled=false
+        [(ngModel)]="project.deliveryTime">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="acceptTime"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled=false
+        [(ngModel)]="project.acceptTime">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="guaranteeType">Guarantee Type</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.guaranteeType"
+        name="guaranteeType"
+        placeholder="Please enter"
+        id="guaranteeType"/>
+    </nz-form-control>
+    <nz-form-label nzFor="guaranteeType">Guarantee Month</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.guaranteeMonth"
+        name="guaranteeMonth"
+        placeholder="Please enter"
+        id="guaranteeMonth"
+        type="number"/>
+    </nz-form-control>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="guaranteeDueTime"
+        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled=false
+        [(ngModel)]="project.guaranteeDueTime">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="staffId">Staff</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.staffId"
+        name="staffId"
+        placeholder="Please enter"
+        id="staffId"
+        type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="fileId">fileId</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="project.fileId"
+        name="fileId"
+        placeholder="Please enter"
+        id="fileId"
+        type="number"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
