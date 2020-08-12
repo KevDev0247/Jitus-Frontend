@@ -20,6 +20,8 @@ export class ProjectDetailComponent implements OnInit {
   formGroup: FormGroup;
   id: any;
   project: Project = new Project();
+  contractStartTime?: Date;
+  contractEndTime?: Date;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService,
               private cdr: ChangeDetectorRef, public activatedRoute: ActivatedRoute,
