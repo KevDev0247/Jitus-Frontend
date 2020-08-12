@@ -61,7 +61,7 @@ export class ProjectListComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/project/project-detail'], { queryParams: { id: item.id } });
+            this.router.navigate(['/project/detail'], { queryParams: { id: item.id } });
           }
         },
         {
@@ -79,7 +79,7 @@ export class ProjectListComponent implements OnInit {
     private modalService: NzModalService,
     private changeDetectorRef: ChangeDetectorRef,
     private projectService: ProjectService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -111,7 +111,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/project/project-detail']);
+    this.router.navigate(['/project/detail']);
   }
 
   add(tpl: TemplateRef<{}>) {
@@ -144,7 +144,7 @@ export class ProjectListComponent implements OnInit {
         this.remove(id);
       },
       nzCancelText: 'Cancel',
-      nzOnCancel: () => console.log('Cancel')
+      nzOnCancel: () => console.log('Cancel'),
     })
   }
 
