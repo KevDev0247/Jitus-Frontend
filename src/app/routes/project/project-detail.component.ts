@@ -1,3 +1,4 @@
+import {HttpClient} from '@angular/common/http';
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -23,9 +24,15 @@ export class ProjectDetailComponent implements OnInit {
   contractStartTime?: Date;
   contractEndTime?: Date;
 
+  listOfOption: Array<{ value: string; text: string}> = [];
+  listOfTagOption: any;
+  selectedValue = null;
+  nzFilterOption = () => true;
+
   constructor(private fb: FormBuilder, private msg: NzMessageService,
               private cdr: ChangeDetectorRef, public activatedRoute: ActivatedRoute,
-              private router: Router, private projectService: ProjectService) {
+              private router: Router, private projectService: ProjectService,
+              private httpClient: HttpClient) {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params.id;
     });
@@ -41,6 +48,7 @@ export class ProjectDetailComponent implements OnInit {
       name: [null, []],
       contractId: [null, []],
       description: [null, []],
+      listOfTagOption: [null, []],
       address: [null, []],
       clientId: [null, []],
       createTime: [null, []],
@@ -55,6 +63,23 @@ export class ProjectDetailComponent implements OnInit {
       staffId: [null, []],
       fileId: [null, []],
     });
+
+    // const children: Array<{ label: string; value: string }> = [];
+    // for (let i = 10; i < 36; i++) {
+    //   children.push({ label: i.toString(36) + i, value: i.toString(36) + i });
+    // }
+    // this.listOfOption = children;
+  }
+
+  create() {
+    console.log('>>>>>res options>>>>', this.listOfTagOption);
+    // this.project.contractStartTime = this.transFormDateTimeStr(this.contractStartTime);
+    // this.project.contractEndTime = this.transFormDateTimeStr(this.contractEndTime);
+    // this.projectService.create(this.project).subscribe(res => {
+    //   if (res.data) {
+    //     this.router.navigate(['/pro/list']);
+    //   }
+    // });
   }
 
   transformDateTimeStr(d: Date) {
@@ -62,10 +87,12 @@ export class ProjectDetailComponent implements OnInit {
       + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
   }
 
-  update() {
-    this.projectService.update(this.project).subscribe(res => {
-      this.router.navigate(['/project/project-list']);
-    });
+  search(value: string): void {
+    const children: Array<{ value: string; text: string}> = [];
+    for (let i = 10; i < 36; i++) {
+      children.push({ value: i.toString(36) + '66', text: i.toString(36) + i })
+    }
+    this.listOfOption = children;
   }
 
   goBack() {
