@@ -1,6 +1,6 @@
 import {BaseModule} from './base.module';
 
-export class ProFollow extends BaseModule {
+export class ProjectFollowup extends BaseModule {
   operation?: string;
   type?: string;
   contactDate?: Date;

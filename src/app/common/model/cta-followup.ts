@@ -1,12 +1,12 @@
 import {BaseModule} from './base.module';
 
 /**
- * The data model class for CtaFollow
+ * The data model class for CtaFollowup
  *
  * @Author Yonggang Su
  * Created on 2020/08/10
  */
-export class CtaFollow extends BaseModule {
+export class CtaFollowup extends BaseModule {
   operation?: string;
   type?: string;
   contactDate?: Date;
