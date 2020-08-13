@@ -10,12 +10,32 @@
         [(ngModel)]="project.name"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Contract" error="Please enter contract">
+    <!--<se label="Contract" error="Please enter contract">
       <input
         nz-input formControlName="contractId"
         placeholder="Please enter contract"
         [(ngModel)]="project.contractId"
         style="width: calc(100% - 400px);"/>
+    </se>-->
+    <se label="Accounts Receivable" error="Please enter your accounts receivable" required>
+      <nz-input-group>
+        <nz-select
+          formControlName="listOfTagOption"
+          nzShowSearch
+          nzServerSearch
+          nzPlaceHolder="input search text"
+          [(ngModel)]="listOfTagOption"
+          [nzShowArrow]="false"
+          [nzFilterOption]="nzFilterOption"
+          (nzOnSearch)="search($event)"
+          style="width: calc(100% - 400px);">
+          <nz-option
+            *ngFor="let o of listOfOption"
+            [nzLabel]="o.text"
+            [nzValue]="o.value">
+          </nz-option>
+        </nz-select>
+      </nz-input-group>
     </se>
     <se label="Description" error="Please enter description">
       <input
