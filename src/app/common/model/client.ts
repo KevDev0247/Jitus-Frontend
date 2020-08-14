@@ -12,4 +12,5 @@ export class Client extends BaseModule {
   area?: string;
   address?: string;
   remark?: string;
+  orgId?: string;
 }
