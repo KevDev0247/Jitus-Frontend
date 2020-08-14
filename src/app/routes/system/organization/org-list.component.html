@@ -1,0 +1,134 @@
+<nz-card style="float: left; width: 20%">
+  <nz-tree [nzData]="nodes" nzShowLine (nzClick)="nzEvent($event)"></nz-tree>
+</nz-card>
+<nz-card [nzBordered]="false" style="float: right; width: 80%">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.param1" name="param1" placeholder="Please enter" id="param1">
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="abbreviation">Abbreviation</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.param2" name="param2" placeholder="Please enter" id="param2">
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="add(modalContent)" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+  <st
+    #st
+    [columns]="columns"
+    [data]="data" [loading]="loading"
+    [total]="total"
+    (change)="stChange($event)">
+  </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="orgNo">Number</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgNo"
+        name="orgNo"
+        placeholder="Please enter"
+        id="orgNo"/>
+    </nz-form-control>
+    <nz-form-label nzFor="orgName">Name</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgName"
+        name="orgName"
+        placeholder="Please enter"
+        id="orgName"/>
+    </nz-form-control>
+    <nz-form-label nzFor="orgAbr">Abbreviation</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgAbr"
+        name="orgAbr"
+        placeholder="Please enter"
+        id="orgAbr"/>
+    </nz-form-control>
+    <nz-form-label nzFor="orgType">Type</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgType"
+        name="orgType"
+        placeholder="Please enter"
+        id="orgType"/>
+    </nz-form-control>
+    <nz-form-label nzFor="orgStatus">Status, 1 Out of Service, 2 In Service, 3 Suspended, 4 Dissolved 5 Delisted </nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgStatus"
+        name="orgStatus"
+        placeholder="Please enter"
+        id="orgStatus"/>
+    </nz-form-control>
+    <nz-form-label nzFor="orgParentNo">Parent Number</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgType"
+        name="orgParentNo"
+        placeholder="Please enter"
+        id="orgParentNo"/>
+    </nz-form-control>
+    <nz-form-label nzFor="sort">Order</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgType"
+        name="sort"
+        placeholder="Please enter"
+        id="sort"/>
+    </nz-form-control>
+    <nz-form-label nzFor="remark">Remark</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="organization.orgType"
+        name="remark"
+        placeholder="Please enter"
+        id="remark"/>
+    </nz-form-control>
+    <nz-form-label nzFor="orgFoundDate">Found Date</nz-form-label>
+    <nz-form-label>
+      <nz-date-picker
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled
+        [(ngModel)]="orgFoundDate">
+      </nz-date-picker>
+    </nz-form-label>
+    <nz-form-label nzFor="orgDissolveDate">Dissolve Date</nz-form-label>
+    <nz-form-label>
+      <nz-date-picker
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled
+        [(ngModel)]="orgDissolveDate">
+      </nz-date-picker>
+    </nz-form-label>
+  </nz-form-item>
+</ng-template>
