@@ -1,0 +1,99 @@
+<nz-card [nzBordered]="false">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Search 1</nz-form-label>
+          <nz-form-control>
+            <input
+              nz-input
+              [(ngModel)]="query.param1"
+              name="param1"
+              placeholder="Please enter"
+              id="param1"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Search 2</nz-form-label>
+          <nz-form-control>
+            <input
+              nz-input
+              [(ngModel)]="query.param2"
+              name="param2"
+              placeholder="Please enter"
+              id="param2"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    [total]="total"
+    (change)="stChange($event)">
+  </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="name">Name</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="client.name"
+        name="name"
+        placeholder="Please enter"
+        id="name"/>
+    </nz-form-control>
+    <nz-form-label nzFor="name">Phone</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="client.telNo"
+        name="telno"
+        placeholder="Please enter"
+        id="telno"/>
+    </nz-form-control>
+    <nz-form-label nzFor="name">Area</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="client.area"
+        name="area"
+        placeholder="Please enter"
+        id="area"/>
+    </nz-form-control>
+    <nz-form-label nzFor="name">Address</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="client.address"
+        name="address"
+        placeholder="Please enter"
+        id="address"/>
+    </nz-form-control>
+    <nz-form-label nzFor="name">Remark</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="client.remark"
+        name="remark"
+        placeholder="Please enter"
+        id="remark"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
+
