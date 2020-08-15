@@ -45,7 +45,7 @@ export class ClientListComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/client/client-detail'], { queryParams: { id: item.id } });
+            this.router.navigate(['/client/detail'], { queryParams: { id: item.id } });
           },
         },
         {
@@ -106,7 +106,7 @@ export class ClientListComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/client/client-detail']);
+    this.router.navigate(['/client/detail']);
   }
 
   remove(id: number) {
