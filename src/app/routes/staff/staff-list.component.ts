@@ -26,6 +26,7 @@ export class StaffListComponent implements OnInit {
     statusList: [],
     param1: '',
     param2: '',
+    param3: '',
   };
 
   data: any[] = [];
@@ -40,7 +41,7 @@ export class StaffListComponent implements OnInit {
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
-    { title: 'Work Order', index: 'sCode' },
+    { title: 'Work Order', index: 'scode' },
     { title: 'Name', index: 'name' },
     { title: 'Department', index: 'dept' },
     { title: 'Company', index: 'company' },
@@ -53,7 +54,7 @@ export class StaffListComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/staff/staff-list'],
+            this.router.navigate(['/staff/detail'],
               { queryParams: { id: item.id } });
           },
         },
@@ -72,7 +73,7 @@ export class StaffListComponent implements OnInit {
     private modalService: NzModalService,
     private changeDetectorRef: ChangeDetectorRef,
     private staffService: StaffService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -90,7 +91,7 @@ export class StaffListComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/staff/staff-detail']);
+    this.router.navigate(['/staff/detail']);
   }
 
   add(tpl: TemplateRef<{}>) {
