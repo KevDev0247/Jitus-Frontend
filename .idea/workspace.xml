@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/system/menu/menu-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/menu/menu-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/system/user/user-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/system/user/user-detail.component.ts" afterDir="false" />
@@ -156,7 +158,7 @@
       <workItem from="1597333903561" duration="16218000" />
       <workItem from="1597411839745" duration="17936000" />
       <workItem from="1597456547163" duration="31000" />
-      <workItem from="1597506044024" duration="4619000" />
+      <workItem from="1597506044024" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
