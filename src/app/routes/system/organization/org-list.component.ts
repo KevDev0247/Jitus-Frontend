@@ -60,7 +60,7 @@ export class OrgListComponent extends BaseComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/organization/org-detail'], { queryParams: { id: item.id } })
+            this.router.navigate(['/organization/detail'], { queryParams: { id: item.id } })
           },
         },
         {
@@ -135,7 +135,7 @@ export class OrgListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/organization/org-list']);
+    this.router.navigate(['/organization/list']);
   }
 
   remove(id?: number) {
