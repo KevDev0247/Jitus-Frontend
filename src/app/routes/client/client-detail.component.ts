@@ -48,7 +48,7 @@ export class ClientDetailComponent implements OnInit{
   update() {
     this.clientService.update(this.client).subscribe(res => {
       if (res.data) {
-        this.router.navigate(['/client/client-list']);
+        this.router.navigate(['/client/list']);
       }
     })
   }
