@@ -23,5 +23,5 @@ Contributions:
 ![System Design](https://user-images.githubusercontent.com/58012125/90318570-5f974f80-deff-11ea-908b-413f72bf750d.png)
 
 ## Architecture
-![Architecture](https://user-images.githubusercontent.com/58012125/90318624-bac94200-deff-11ea-8a9f-c25600823eaf.png)
+![Architecture](https://user-images.githubusercontent.com/58012125/90318700-47740000-df00-11ea-98ee-29f74af087fe.png)
 
