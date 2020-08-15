@@ -18,25 +18,25 @@ const routes: Routes = [
   {
     path: 'user',
     children: [
-      { path: 'user-list', component: UserListComponent },
-      { path: 'user-detail', component: UserDetailComponent },
-      { path: 'user-update', component: UserUpdateComponent },
+      { path: 'list', component: UserListComponent },
+      { path: 'detail', component: UserDetailComponent },
+      { path: 'update', component: UserUpdateComponent },
     ],
   },
   {
     path: 'role',
-    children: [{ path: 'role-list', component: RoleListComponent}],
+    children: [{ path: 'list', component: RoleListComponent}],
   },
   {
     path: 'menu',
     children: [
-      { path: 'menu-list', component: MenuListComponent },
-      { path: 'menu-detail', component: MenuDetailComponent },
+      { path: 'list', component: MenuListComponent },
+      { path: 'detail', component: MenuDetailComponent },
     ],
   },
   {
     path: 'org',
-    children: [{ path: 'org-list', component: OrgListComponent }],
+    children: [{ path: 'list', component: OrgListComponent }],
   }
 ];
 
