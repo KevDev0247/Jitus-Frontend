@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
-import {NzMessageService, NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {STChange, STColumn, STComponent, STData} from '@delon/abc';
+import {NzMessageService, NzModalService} from 'ng-zorro-antd';
 import {BaseComponent} from '../../../common/component/base.component';
 import {Organization} from '../../../common/model/organization';
 import {OrganizationService} from '../../../common/service/organization.service';
