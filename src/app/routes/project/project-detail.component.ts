@@ -82,6 +82,14 @@ export class ProjectDetailComponent implements OnInit {
     // });
   }
 
+  update() {
+    this.projectService.update(this.project).subscribe(res => {
+      if (res.data) {
+        this.router.navigate(['/project/project-list']);
+      }
+    })
+  }
+
   transformDateTimeStr(d: Date) {
     return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' '
       + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
