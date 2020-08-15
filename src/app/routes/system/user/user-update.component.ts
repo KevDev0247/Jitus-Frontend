@@ -8,7 +8,7 @@ import { UserService } from '../../../common/service/user.service';
 /**
  * The component class that define and control the views of the user list.
  *
- * @Author Yonggang Su
+ * @Author Yonggang Su, Kevin Zhijun Wang
  * created on 2020/08/02
  */
 @Component({
@@ -51,9 +51,8 @@ export class UserUpdateComponent implements OnInit {
   }
 
   dateTimeToString(date: Date) {
-    const dateTimeString = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+    return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
       + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-    return dateTimeString;
   }
 
   onChange(result: Date): void {
@@ -63,7 +62,7 @@ export class UserUpdateComponent implements OnInit {
   update() {
     this.userService.update(this.user).subscribe(res => {
       if (res.data) {
-        this.router.navigate(['/sys/user/user-list']);
+        this.router.navigate(['/sys/user/list']);
       }
     })
   }
@@ -73,7 +72,7 @@ export class UserUpdateComponent implements OnInit {
       .subscribe((res: any) => {
         if (res.data) {
           this.msgSrc.success(res.message);
-          this.router.navigate(['/sys/user/user-list'])
+          this.router.navigate(['/sys/user/list'])
         } else {
           this.msgSrc.error(res.message);
         }
