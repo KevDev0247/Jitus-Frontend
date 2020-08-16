@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {STChange, STColumn, STComponent, STData} from '@delon/abc';
 import {NzMessageService, NzModalService} from 'ng-zorro-antd';
@@ -81,7 +81,7 @@ export class OrgListComponent extends BaseComponent implements OnInit {
   constructor(
     public messageService: NzMessageService,
     public modalService: NzModalService,
-    private changeDetectorRef,
+    private changeDetectorRef: ChangeDetectorRef,
     private organizationService: OrganizationService,
     private router: Router
   ) {
