@@ -55,7 +55,15 @@ export class StaffDetailComponent implements OnInit {
   update() {
     this.staffService.update(this.staff).subscribe(res =>{
       if (res.data) {
-        this.router.navigate(['/staff/staff-list']);
+        this.router.navigate(['/staff/list']);
+      }
+    })
+  }
+
+  save() {
+    this.staffService.create(this.staff).subscribe(res => {
+      if (res.data) {
+        this.router.navigate(['/staff/list'])
       }
     })
   }

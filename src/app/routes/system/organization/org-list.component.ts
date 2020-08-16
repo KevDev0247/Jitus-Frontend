@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
-import {NzMessageService, NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {STChange, STColumn, STComponent, STData} from '@delon/abc';
+import {NzMessageService, NzModalService} from 'ng-zorro-antd';
 import {BaseComponent} from '../../../common/component/base.component';
 import {Organization} from '../../../common/model/organization';
 import {OrganizationService} from '../../../common/service/organization.service';
@@ -60,7 +60,7 @@ export class OrgListComponent extends BaseComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/organization/org-detail'], { queryParams: { id: item.id } })
+            this.router.navigate(['/organization/detail'], { queryParams: { id: item.id } })
           },
         },
         {
@@ -135,7 +135,7 @@ export class OrgListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/organization/org-list']);
+    this.router.navigate(['/organization/list']);
   }
 
   remove(id?: number) {

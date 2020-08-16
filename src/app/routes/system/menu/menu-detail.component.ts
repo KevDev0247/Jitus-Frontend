@@ -56,14 +56,14 @@ export class MenuDetailComponent implements OnInit {
     if (!this.id) {
       this.menuService.create(this.menu).subscribe(response => {
         if (response.data) {
-          this.router.navigate(['/menu/menu-list']);
+          this.router.navigate(['/menu/list']);
         }
         return;
       });
     }
     this.menuService.update(this.menu).subscribe(response => {
       if (response.data) {
-        this.router.navigate(['/menu/menu-list']);
+        this.router.navigate(['/menu/list']);
       }
     });
   }

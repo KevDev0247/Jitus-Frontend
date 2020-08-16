@@ -4,6 +4,7 @@ import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
 import { MenuComponent } from './menu/menu.component';
 import { RoleMenuListComponent } from './menu/role-menu-list.component';
+import {OrgListComponent} from './organization/org-list.component';
 import { RoleListComponent } from './role/role-list.component';
 import { RoleComponent } from './role/role.component';
 import { SysRoutingModule } from './sys-routing.module';
@@ -27,6 +28,7 @@ const COMPONENTS = [
   MenuDetailComponent,
   MenuListComponent,
   RoleMenuListComponent,
+  OrgListComponent,
 ];
 const COMPONENTS_NOROUNT = [];
 

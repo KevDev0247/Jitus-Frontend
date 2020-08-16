@@ -127,7 +127,7 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/sys/menu/menu-detail']);
+    this.router.navigate(['/sys/menu/detail']);
   }
 
   add(tpl: TemplateRef<{}>) {
@@ -219,11 +219,12 @@ export class RoleMenuListComponent extends BaseComponent implements OnInit {
       this.menuList.push(menu);
     }
 
-    this.menuService.batchCreate(this.menuList).subscribe(response => {
-      if (response.data) {
-        this.msgSrc.success('Batch creation successful');
-        this.getData();
-      }
-    });
+    this.menuService.batchCreate(this.menuList)
+      .subscribe(response => {
+        if (response.data) {
+          this.msgSrc.success('Batch creation successful');
+          this.getData();
+        }
+      });
   }
 }

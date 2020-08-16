@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {_HttpClient} from '@delon/theme';
-import {DOMAIN_SERVER_URL} from '../constants';
+import { Injectable } from '@angular/core';
+import { _HttpClient } from '@delon/theme';
+import { DOMAIN_SERVER_URL } from '../constants';
 
 /**
  * The service class for Staff module

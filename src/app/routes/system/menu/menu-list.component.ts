@@ -59,7 +59,7 @@ export class MenuListComponent extends BaseComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/sys/menu/menu-detail'],
+            this.router.navigate(['/sys/menu/detail'],
               { queryParams: {id: item.id}});
           }
         },
@@ -121,7 +121,7 @@ export class MenuListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/sys/menu/menu-detail']);
+    this.router.navigate(['/sys/menu/detail']);
   }
 
   add(templateRef: TemplateRef<{}>) {

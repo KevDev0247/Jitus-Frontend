@@ -52,7 +52,7 @@ export class UserDetailComponent implements OnInit {
   update() {
     this.http.post('http://localhost:8080/user/detail', this.user).subscribe((res: any) => {
       if (res.data) {
-        this.router.navigate(['/sys/user/user-list']);
+        this.router.navigate(['/sys/user/list']);
       }
     })
   }
