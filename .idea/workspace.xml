@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,6 +157,7 @@
       <workItem from="1597411839745" duration="17936000" />
       <workItem from="1597456547163" duration="31000" />
       <workItem from="1597506044024" duration="8197000" />
+      <workItem from="1597591192460" duration="4252000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -262,30 +267,30 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="272" y="2" key="CommitChangelistDialog2/0.0.1368.872@0.0.1368.872" timestamp="1596309784204" />
-    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog" timestamp="1596933185942">
+    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog" timestamp="1597595105190">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1596933185942" />
+    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1597595105190" />
     <state x="466" y="192" key="FileChooserDialogImpl" timestamp="1596474308846">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596474308846" />
-    <state width="1348" height="413" key="GridCell.Tab.0.bottom" timestamp="1597518385048">
+    <state width="1348" height="338" key="GridCell.Tab.0.bottom" timestamp="1597595198420">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="413" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597518385047" />
-    <state width="1348" height="413" key="GridCell.Tab.0.center" timestamp="1597518385047">
+    <state width="1348" height="338" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597595198420" />
+    <state width="1348" height="338" key="GridCell.Tab.0.center" timestamp="1597595198419">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="413" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1597518385047" />
-    <state width="1348" height="413" key="GridCell.Tab.0.left" timestamp="1597518385045">
+    <state width="1348" height="338" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1597595198419" />
+    <state width="1348" height="338" key="GridCell.Tab.0.left" timestamp="1597595198419">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="413" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1597518385045" />
-    <state width="1348" height="413" key="GridCell.Tab.0.right" timestamp="1597518385047">
+    <state width="1348" height="338" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1597595198419" />
+    <state width="1348" height="338" key="GridCell.Tab.0.right" timestamp="1597595198419">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="413" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1597518385047" />
+    <state width="1348" height="338" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1597595198419" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597456533186">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -350,6 +355,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="691" y="225" key="VcsDiffUtil.ChangesDialog/0.0.1368.872@0.0.1368.872" timestamp="1596391154221" />
+    <state x="93" y="93" width="1181" height="685" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597594001238">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="93" y="93" width="1181" height="685" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1368.872@0.0.1368.872" timestamp="1597594001238" />
     <state x="21" y="85" width="989" height="738" key="dock-window-1" timestamp="1597066051611">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
