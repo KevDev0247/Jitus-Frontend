@@ -1,10 +1,15 @@
-import {ChangeDetectorRef, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
 import {NzMessageService, NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
 import {Contact} from '../../common/model/contact';
 import {ContactService} from '../../common/service/contact.service';
 
+@Component({
+  selector: 'app-contact-list',
+  templateUrl: './contact-list.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
 export class ContactListComponent implements OnInit {
 
   query: any = {
