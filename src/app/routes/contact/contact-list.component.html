@@ -1,0 +1,93 @@
+<nz-card [nzBordered]="false">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Name</nz-form-label>
+          <nz-form-control>
+            <input
+              nz-input
+              [(ngModel)]="query.param1"
+              name="param1"
+              placeholder="Please enter"
+              id="param1"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Department</nz-form-label>
+          <nz-form-control>
+            <input
+              nz-input
+              [(ngModel)]="query.param2"
+              name="param2"
+              placeholder="Please enter"
+              id="param2"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Position</nz-form-label>
+          <nz-form-control>
+            <input
+              nz-input
+              [(ngModel)]="query.param3"
+              name="param3"
+              placeholder="Please enter"
+              id="param3"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Filter</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    [total]="total"
+    (change)="stChange($event)">
+  </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="name">Client</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.name" placeholder="Please enter" id="name"/>
+    </nz-form-control>
+    <nz-form-label nzFor="dept">Department</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.dept" placeholder="Please enter" id="dept"/>
+    </nz-form-control>
+    <nz-form-label nzFor="profession">Position</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.profession" placeholder="Please enter" id="profession"/>
+    </nz-form-control>
+    <nz-form-label nzFor="telno">Phone</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.telNo" placeholder="Please enter" id="telNo"/>
+    </nz-form-control>
+    <nz-form-label nzFor="email">Email</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.email" placeholder="Please enter" id="email"/>
+    </nz-form-control>
+    <nz-form-label nzFor="qq">QQ</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.qq" placeholder="Please enter" id="qq"/>
+    </nz-form-control>
+    <nz-form-label nzFor="wechat">WeChat</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="contact.wechat" placeholder="Please enter" id="wechat"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
