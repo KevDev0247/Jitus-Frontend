@@ -10,4 +10,5 @@ export class User extends BaseModule {
   password?: string;
   name?: string;
   email?: string;
+  orgId?: string;
 }

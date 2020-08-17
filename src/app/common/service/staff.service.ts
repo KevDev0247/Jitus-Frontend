@@ -1,12 +1,14 @@
-import {_HttpClient} from '@delon/theme';
-import {DOMAIN_SERVER_URL} from '../constants';
+import { Injectable } from '@angular/core';
+import { _HttpClient } from '@delon/theme';
+import { DOMAIN_SERVER_URL } from '../constants';
 
 /**
  * The service class for Staff module
  *
  * @Author Kevin Zhijun Wang
- * Created on 2020/07/31
+ * Created on 2020/08/11
  */
+@Injectable()
 export class StaffService {
 
   constructor(private http: _HttpClient) { }
@@ -24,7 +26,7 @@ export class StaffService {
   }
 
   delete(staffId: number) {
-    return this.http.get(this.getServiceUrl() + '/deleteStaff?id=' + staffId);
+    return this.http.get(this.getServiceUrl() + '/deleteStaff?StaffId=' + staffId);
   }
 
   getDetails(staffId: number) {
@@ -32,6 +34,6 @@ export class StaffService {
   }
 
   getQueryList(param1: string, param2: string) {
-    return this.http.get(this.getServiceUrl() + '/queryStaffList', {param1, param2})
+    return this.http.get(this.getServiceUrl() + '/queryStaffList', { param1, param2 });
   }
 }

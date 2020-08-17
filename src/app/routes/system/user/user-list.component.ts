@@ -79,7 +79,7 @@ export class UserListComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/sys/user/user-update'], {queryParams: { user: item.id}})
+            this.router.navigate(['/sys/user/update'], {queryParams: { user: item.id}})
           }
         },
         {

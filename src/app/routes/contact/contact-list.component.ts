@@ -2,25 +2,19 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateR
 import {Router} from '@angular/router';
 import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
 import {NzMessageService, NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
-import {Staff} from '../../common/model/staff';
-import {StaffService} from '../../common/service/staff.service';
+import {Contact} from '../../common/model/contact';
+import {ContactService} from '../../common/service/contact.service';
 
-/**
- * The service class for StaffList module
- *
- * @Author Kevin Zhijun Wang
- * Created on 2020/08/11
- */
 @Component({
-  selector: 'app-staff-list',
-  templateUrl: './staff-list.component.html',
+  selector: 'app-contact-list',
+  templateUrl: './contact-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StaffListComponent implements OnInit {
+export class ContactListComponent implements OnInit {
 
   query: any = {
     pi: 0,
-    ps: 0,
+    ps: 10,
     sorter: '',
     status: null,
     statusList: [],
@@ -29,41 +23,34 @@ export class StaffListComponent implements OnInit {
     param3: '',
   };
 
+  contact: Contact = new Contact();
   data: any[] = [];
-  loading = false;
-  staff: Staff = new Staff();
-
   selectedRows: STData[] = [];
+
+  expandForm = false;
+  loading = false;
   totalCallNo = 0;
   total = 0;
-  expandForm = 0;
 
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
-    { title: '', index: 'key', type: 'checkbox' },
-    { title: 'Work Order', index: 'scode' },
-    { title: 'Name', index: 'name' },
-    { title: 'Department', index: 'dept' },
-    { title: 'Company', index: 'company' },
-    { title: 'Email', index: 'email' },
-    { title: 'Phone', index: 'telno' },
-    { title: 'Address', index: 'address' },
+    { title: '', index: 'key', type: 'checkbox'},
+    { title: 'Client', index: 'name'},
+    { title: 'Department', index: 'dept'},
+    { title: 'Position', index: 'profession'},
+    { title: 'Phone', index: 'telno'},
+    { title: 'Email', index: 'email'},
+    { title: 'QQ', index: 'qq'},
+    { title: 'WeChat', index: 'wechat'},
     {
       title: 'Operations',
       buttons: [
         {
           text: 'View',
           click: (item: any) => {
-            this.router.navigate(['/staff/detail'],
-              { queryParams: { id: item.id } });
-          },
-        },
-        {
-          text: 'Delete',
-          click: (item: any) => {
-            this.showDeleteConfirm(item.id);
-          },
-        },
+
+          }
+        }
       ],
     },
   ];
@@ -72,17 +59,16 @@ export class StaffListComponent implements OnInit {
     public messageService: NzMessageService,
     private modalService: NzModalService,
     private changeDetectorRef: ChangeDetectorRef,
-    private staffService: StaffService,
-    private router: Router,
+    private contactService: ContactService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.getData();
   }
 
   getData() {
     this.loading = true;
-    this.staffService.getQueryList(this.query.param1, this.query.param2)
+    this.contactService.getQueryList(this.query.param1, this.query.param2, this.query.param3)
       .subscribe((response: any) => {
         this.data = response.list;
         this.loading = false;
@@ -90,8 +76,21 @@ export class StaffListComponent implements OnInit {
       });
   }
 
+  stChange(event: STChange) {
+    switch (event.type) {
+      case 'checkbox':
+        this.selectedRows = event.checkbox;
+        this.totalCallNo = this.selectedRows.reduce((total, cv) => total + cv.callNo, 0);
+        this.changeDetectorRef.detectChanges();
+        break;
+      case 'filter':
+        this.getData();
+        break;
+    }
+  }
+
   create() {
-    this.router.navigate(['/staff/detail']);
+    this.router.navigate(['/contact/detail']);
   }
 
   add(tpl: TemplateRef<{}>) {
@@ -100,37 +99,24 @@ export class StaffListComponent implements OnInit {
       nzContent: tpl,
       nzOnOk: () => {
         this.loading = true;
-        this.staffService.create(this.staff)
+        this.contactService.create(this.contact)
           .subscribe(() => this.getData());
       },
     });
   }
 
-  reset() {
-    this.query.param1 = '';
-    this.query.param2 = '';
-    this.getData();
-  }
-
   remove(id: number) {
-    this.staffService.delete(id).subscribe(() => {
+    this.contactService.delete(id).subscribe(() => {
       this.getData();
       this.st.clearCheck();
     })
   }
 
-  stChange(event: STChange) {
-    switch (event.type) {
-      case 'checkbox':
-        this.selectedRows = event.checkbox;
-        this.totalCallNo = this.selectedRows
-          .reduce((total, cv) => total + cv.callNo, 0);
-        this.changeDetectorRef.detectChanges();
-        break;
-      case 'filter':
-        this.getData();
-        break;
-    }
+  reset() {
+    this.query.param1 = '';
+    this.query.param2 = '';
+    this.query.param3 = '';
+    this.getData();
   }
 
   showDeleteConfirm(id: number): void {

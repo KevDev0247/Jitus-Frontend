@@ -3,7 +3,7 @@
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="name">Name</nz-form-label>
+          <nz-form-label nzFor="name">Search 1</nz-form-label>
           <nz-form-control>
             <input
               nz-input
@@ -16,7 +16,7 @@
       </div>
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="text">Company</nz-form-label>
+          <nz-form-label nzFor="name">Search 2</nz-form-label>
           <nz-form-control>
             <input
               nz-input
@@ -28,7 +28,7 @@
         </nz-form-item>
       </div>
       <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
-        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Filter</button>
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
         <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
       </div>
     </div>
@@ -37,6 +37,7 @@
     <i nz-icon nzType="plus"></i>
     <span>New</span>
   </button>
+
   <st
     #st
     [columns]="columns"
@@ -48,33 +49,51 @@
 </nz-card>
 <ng-template #modalContent>
   <nz-form-item>
-    <nz-form-label nzFor="sCode">Employee ID</nz-form-label>
-    <nz-form-control>
-      <input nz-input [(ngModel)]="staff.scode" placeholder="Please enter" id="sCode"/>
-    </nz-form-control>
     <nz-form-label nzFor="name">Name</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="staff.name" placeholder="Please enter" id="name"/>
+      <input
+        nz-input
+        [(ngModel)]="client.name"
+        name="name"
+        placeholder="Please enter"
+        id="name"/>
     </nz-form-control>
-    <nz-form-label nzFor="dept">Department</nz-form-label>
+    <nz-form-label nzFor="name">Phone</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="staff.dept" placeholder="Please enter" id="department"/>
+      <input
+        nz-input
+        [(ngModel)]="client.telNo"
+        name="telno"
+        placeholder="Please enter"
+        id="telno"/>
     </nz-form-control>
-    <nz-form-label nzFor="dept">Company</nz-form-label>
+    <nz-form-label nzFor="name">Area</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="staff.company" placeholder="Please enter" id="company"/>
+      <input
+        nz-input
+        [(ngModel)]="client.area"
+        name="area"
+        placeholder="Please enter"
+        id="area"/>
     </nz-form-control>
-    <nz-form-label nzFor="dept">Email</nz-form-label>
+    <nz-form-label nzFor="name">Address</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="staff.email" placeholder="Please enter" id="email"/>
+      <input
+        nz-input
+        [(ngModel)]="client.address"
+        name="address"
+        placeholder="Please enter"
+        id="address"/>
     </nz-form-control>
-    <nz-form-label nzFor="dept">Phone</nz-form-label>
+    <nz-form-label nzFor="name">Remark</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="staff.telno" placeholder="Please enter" id="phone"/>
-    </nz-form-control>
-    <nz-form-label nzFor="dept">Address</nz-form-label>
-    <nz-form-control>
-      <input nz-input [(ngModel)]="staff.address" placeholder="Please enter" id="address"/>
+      <input
+        nz-input
+        [(ngModel)]="client.remark"
+        name="remark"
+        placeholder="Please enter"
+        id="remark"/>
     </nz-form-control>
   </nz-form-item>
 </ng-template>
+

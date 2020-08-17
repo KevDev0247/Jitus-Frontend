@@ -10,34 +10,36 @@
         [(ngModel)]="project.name"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Contract" error="Please enter contract">
+    <!--<se label="Contract" error="Please enter contract">
       <input
         nz-input formControlName="contractId"
         placeholder="Please enter contract"
         [(ngModel)]="project.contractId"
         style="width: calc(100% - 400px);"/>
+    </se>-->
+    <se label="Accounts Receivable" error="Please enter your accounts receivable" required>
+      <nz-input-group>
+        <nz-select formControlName="listOfTagOption" nzShowSearch nzServerSearch nzPlaceHolder="input search text"
+                   [(ngModel)]="listOfTagOption" [nzShowArrow]="false" [nzFilterOption]="nzFilterOption" (nzOnSearch)="search($event)"
+                   style="width: calc(100% - 400px);">
+          <nz-option
+            *ngFor="let o of listOfOption"
+            [nzLabel]="o.text"
+            [nzValue]="o.value">
+          </nz-option>
+        </nz-select>
+      </nz-input-group>
     </se>
     <se label="Description" error="Please enter description">
-      <input
-        nz-input
-        formControlName="description"
-        placeholder="Please enter description"
-        [(ngModel)]="project.description"
+      <input nz-input formControlName="description" placeholder="Please enter description" [(ngModel)]="project.description"
         style="width: calc(100% - 400px);"/>
     </se>
     <se label="Address" error="Please enter address">
-      <input
-        nz-input
-        formControlName="address"
-        placeholder="Please enter address"
-        [(ngModel)]="project.address"
+      <input nz-input formControlName="address" placeholder="Please enter address" [(ngModel)]="project.address"
         style="width: calc(100% - 400px);"/>
     </se>
     <se label="Client" error="Please enter client">
-      <input
-        nz-input formControlName="clientId"
-        placeholder="Please enter client"
-        [(ngModel)]="project.clientId"
+      <input nz-input formControlName="clientId" placeholder="Please enter client" [(ngModel)]="project.clientId"
         style="width: calc(100% - 400px);"/>
     </se>
 <!--    <se label="" error="Please enter">
@@ -57,81 +59,50 @@
       </nz-date-picker>
     </se>-->
     <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="contractStartTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.contractStartTime">
+      <nz-date-picker formControlName="contractStartTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="project.contractStartTime">
       </nz-date-picker>
     </se>
     <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="contractEndTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.contractEndTime">
+      <nz-date-picker formControlName="contractEndTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="project.contractEndTime">
       </nz-date-picker>
     </se>
     <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="deliveryTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.deliveryTime">
+      <nz-date-picker formControlName="deliveryTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="project.deliveryTime">
       </nz-date-picker>
     </se>
     <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="acceptTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.acceptTime">
+      <nz-date-picker formControlName="acceptTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="project.acceptTime">
       </nz-date-picker>
     </se>
     <se label="Guarantee Type" error="Please enter guarantee type">
-      <input
-        nz-input
-        formControlName="guaranteeType"
-        placeholder="Please enter guarantee type"
-        [(ngModel)]="project.guaranteeType"
+      <input nz-input formControlName="guaranteeType" placeholder="Please enter guarantee type" [(ngModel)]="project.guaranteeType"
         style="width: calc(100% - 400px);"/>
     </se>
     <se label="Guarantee Month" error="Please enter guarantee month">
-      <input
-        nz-input
-        formControlName="guaranteeMonth"
-        placeholder="Please enter guarantee month"
-        [(ngModel)]="project.guaranteeMonth"
+      <input nz-input formControlName="guaranteeMonth" placeholder="Please enter guarantee month" [(ngModel)]="project.guaranteeMonth"
         style="width: calc(100% - 400px);"/>
     </se>
     <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="guaranteeDueTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.guaranteeDueTime">
+      <nz-date-picker formControlName="guaranteeDueTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="project.guaranteeDueTime">
       </nz-date-picker>
     </se>
     <se label="Staff" error="Please enter staff">
-      <input
-        nz-input
-        formControlName="staffId"
-        placeholder="Please enter guarantee staff"
-        [(ngModel)]="project.staffId"
+      <input nz-input formControlName="staffId" placeholder="Please enter guarantee staff" [(ngModel)]="project.staffId"
         style="width: calc(100% - 400px);"/>
     </se>
     <se label="File" error="Please input file">
-      <input
-        nz-input
-        formControlName="fileId"
-        placeholder="Please enter file"
-        [(ngModel)]="project.fileId"
+      <input nz-input formControlName="fileId" placeholder="Please enter file" [(ngModel)]="project.fileId"
         style="width: calc(100% - 400px);"/>
     </se>
     <se>
       <button *ngIf="project.id" nz-button nzType="primary" (click)="update()" [disabled]="formGroup.invalid">Submit</button>
       <button *ngIf="!project.id" nz-button class="ml-sm">Save</button>
-      <button nz-button (click)="goBack()">Back</button>
+      <button nz-button (click)="goBack()">Return</button>
     </se>
   </form>
 </nz-card>
