@@ -1,7 +1,7 @@
 <!--<nz-card style="float: left; width: 20%">
   <nz-tree [nzData]="nodes" nzShowLine (nzClick)="nzEvent($event)"></nz-tree>
 </nz-card>-->
-<nz-card [nzBordered]="false" style="float: right; width: 80%">
+<nz-card [nzBordered]="false" style="float: right; width: 100%">
   <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
       <div nz-col nzMd="8" nzSm="24">
@@ -113,22 +113,22 @@
         id="remark"/>
     </nz-form-control>
     <nz-form-label nzFor="orgFoundDate">Found Date</nz-form-label>
-    <nz-form-label>
+    <nz-form-control>
       <nz-date-picker
         nzShowTime
         nzFormat="YYYY-MM-DD HH:mm:ss"
         nzDisabled
         [(ngModel)]="orgFoundDate">
       </nz-date-picker>
-    </nz-form-label>
+    </nz-form-control>
     <nz-form-label nzFor="orgDissolveDate">Dissolve Date</nz-form-label>
-    <nz-form-label>
+    <nz-form-control>
       <nz-date-picker
         nzShowTime
         nzFormat="YYYY-MM-DD HH:mm:ss"
         nzDisabled
         [(ngModel)]="orgDissolveDate">
       </nz-date-picker>
-    </nz-form-label>
+    </nz-form-control>
   </nz-form-item>
 </ng-template>
