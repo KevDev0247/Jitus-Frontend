@@ -5,7 +5,12 @@
         <nz-form-item>
           <nz-form-label nzFor="roleName">Role Name</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="query.roleName" name="roleName" placeholder="Please enter role name" id="roleName"/>
+            <input
+              nz-input
+              [(ngModel)]="query.roleName"
+              name="roleName"
+              placeholder="Please enter role name"
+              id="roleName"/>
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -13,7 +18,12 @@
         <nz-form-item>
           <nz-form-label nzFor="remark">Remark</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="query.remark" name="remark" placeholder="Please enter authorization" id="remark"/>
+            <input
+              nz-input
+              [(ngModel)]="query.remark"
+              name="remark"
+              placeholder="Please enter authorization"
+              id="remark"/>
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -23,11 +33,44 @@
       </div>
     </div>
   </form>
-  <st #st [columns]="columns" [data]="allDataList" [loading]="loading" [total]="total"></st>
+  <button nz-button (click)="add(modalContent)" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+  <st
+    #st
+    [columns]="columns"
+    [data]="allDataList"
+    [loading]="loading"
+    [total]="total"></st>
 </nz-card>
 <nz-modal [nzVisible]="isAuthAssignmentsVisible" nzTitle="Assign Authorizations" nzWidth="800" nzFooter=" " (nzOnCancel)="handleAssignmentsCancel()">
-  <app-menu *ngIf="roleId !== 0" [roleId]="roleId" (childEvent)="getChildEvent($event)"></app-menu>
+  <app-menu *ngIf="roleId !== 0" [roleId]="roleId" (childEvent)="getChildEvent($event)">
+  </app-menu>
 </nz-modal>
 <nz-modal [nzVisible]="isAuthDetailsVisible" nzTitle="View Details" nzWidth="800" nzFooter=" " (nzOnCancel)="handleDetailsCancel()">
   <app-role-menu-list *ngIf="roleId !== 0" [roleId]="roleId" (childEvent)="getChildEvent($event)"></app-role-menu-list>
 </nz-modal>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="roleName">Role Name<span style="color: red">*</span></nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="role.roleName"
+        name="roleName"
+        placeholder="Please enter"
+        id="roleNameCreate"/>
+    </nz-form-control>
+    <nz-form-label nzFor="remark">Remark<span style="color: red">*</span></nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="role.remark"
+        name="remark"
+        placeholder="Please enter"
+        id="remarkCreate"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
+
