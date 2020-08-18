@@ -17,6 +17,10 @@ export class RoleService {
     return DOMAIN_SERVER_URL + '/role';
   }
 
+  create(role: any) {
+    return this.http.post(this.getServiceUrl() + '/createRole', role);
+  }
+
   getList(roleName: string, remark: string) {
     return this.http.get(this.getServiceUrl() + '/getRolesList', { roleName, remark });
   }
