@@ -1,8 +1,18 @@
-import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {Router} from '@angular/router';
-import {STColumn} from '@delon/abc/public_api';
-import {RoleService} from '../../../common/service/role.service';
-import {UserService} from '../../../common/service/user.service';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild, TemplateRef
+} from '@angular/core';
+import { Router } from '@angular/router';
+import { STColumn } from '@delon/abc/public_api';
+import {NzMessageService, NzModalService} from 'ng-zorro-antd';
+import {Role} from '../../../common/model/role';
+import { RoleService } from '../../../common/service/role.service';
+import { UserService } from '../../../common/service/user.service';
 
 /**
  * The component class that define and control the views of the roles list.
@@ -27,6 +37,7 @@ export class RoleListComponent implements OnInit {
   roleId = 0;
   total = 20;
 
+  role: Role = new Role();
   displayDataList: ItemData[] = [];
   allDataList: ItemData[] = [];
   mapOfCheckedId: { [key: string]: boolean } = {};
@@ -80,6 +91,8 @@ export class RoleListComponent implements OnInit {
   ];
 
   constructor(
+    public messageService: NzMessageService,
+    private modalService: NzModalService,
     private changeDetectorRef: ChangeDetectorRef,
     private router: Router,
     private roleService: RoleService,
@@ -92,6 +105,7 @@ export class RoleListComponent implements OnInit {
     this.roleService.getList(this.query.roleName, this.query.remark)
       .subscribe((response: any) => {
         this.allDataList = response.list;
+        this.loading = false;
     })
   }
 
@@ -112,6 +126,21 @@ export class RoleListComponent implements OnInit {
   }
 
   ngOnInit(): void { }
+
+  add(tpl: TemplateRef<{}>) {
+    this.modalService.create({
+      nzTitle: 'Create',
+      nzContent: tpl,
+      nzOnOk: () => {
+        this.loading = true;
+        if (!this.role.roleName || ! this.role.remark) {
+          this.messageService.error('Please fill in necessary information');
+          return;
+        }
+        this.roleService.create(this.role).subscribe(() => this.getData());
+      },
+    });
+  }
 
   handleData() {
     Object.keys(this.mapOfCheckedId).forEach(item => {
