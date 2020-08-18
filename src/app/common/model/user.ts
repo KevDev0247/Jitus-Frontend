@@ -11,4 +11,13 @@ export class User extends BaseModule {
   name?: string;
   email?: string;
   orgId?: string;
+  roleId?: string;
+  profession?: string;
+  telno?: number;
+  qq?: number;
+  wechat?: number;
+  scode?: number;
+  realName?: number;
+  company?: number;
+  address?: number;
 }
