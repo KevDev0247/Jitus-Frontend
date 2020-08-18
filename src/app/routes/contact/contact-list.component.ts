@@ -48,9 +48,15 @@ export class ContactListComponent implements OnInit {
         {
           text: 'View',
           click: (item: any) => {
-
+            this.router.navigate(['/contact/detail'], { queryParams: { id: item.id} });
           }
-        }
+        },
+        {
+          text: 'Delete',
+          click: (item: any) => {
+            this.showDeleteConfirm(item.id);
+          },
+        },
       ],
     },
   ];
@@ -64,6 +70,7 @@ export class ContactListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getData();
   }
 
   getData() {
