@@ -30,7 +30,7 @@ export class BasecodeService {
   }
 
   getDetail(basecodeId: number) {
-    return this.http.get(this.getServiceUrl() + 'detail?id=', basecodeId);
+    return this.http.get(this.getServiceUrl() + '/getBasecodeDetail?id=', basecodeId);
   }
 
   getQueryList(param1: string, param2: string) {
