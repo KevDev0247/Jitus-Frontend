@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SettingsService } from '@delon/theme';
+import {NzDrawerPlacement} from 'ng-zorro-antd/ng-zorro-antd.module';
 
 @Component({
   selector: 'layout-header',
@@ -8,6 +9,8 @@ import { SettingsService } from '@delon/theme';
 })
 export class HeaderComponent {
   searchToggleStatus: boolean;
+  visible = false;
+  placement: NzDrawerPlacement = 'left';
 
   constructor(public settings: SettingsService) {}
 
@@ -17,5 +20,13 @@ export class HeaderComponent {
 
   searchToggleChange() {
     this.searchToggleStatus = !this.searchToggleStatus;
+  }
+
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    this.visible = false;
   }
 }
