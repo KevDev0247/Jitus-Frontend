@@ -36,7 +36,6 @@ export class BasecodeListComponent implements OnInit {
     { title: '', index: 'key', type: 'checkbox'},
     { title: 'Data Type ID', index: 'typeId'},
     { title: 'Data Type Name', index: 'typename'},
-    { title: 'Data Type ID', index: 'typeId'},
     { title: 'Field ID', index: 'basecode'},
     { title: 'Field Name', index: 'basecodename'},
     {
