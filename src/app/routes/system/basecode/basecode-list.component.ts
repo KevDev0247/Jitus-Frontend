@@ -1,10 +1,18 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
-import {NzMessageService, NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {STChange, STColumn, STComponent, STData} from '@delon/abc';
+import {NzMessageService, NzModalService} from 'ng-zorro-antd';
 import {Basecode} from '../../../common/model/basecode';
 import {BasecodeService} from '../../../common/service/basecode.service';
 
+/**
+ * The component class that define and control the views of the Basecode component
+ * Basecode or Basic Data is a term we invented to describe the static data
+ * that doesn't change in comparison to business data which is more dynamic such as regions, dimensions
+ *
+ * @Author Kevin Zhijun Wang
+ * Created on 2020/08/18
+ */
 @Component({
   selector: 'app-basecode-list',
   templateUrl: './basecode-list.component.html',
