@@ -128,7 +128,7 @@ export class UserLoginComponent implements OnDestroy {
     this.userService.login(this.userName.value, this.password.value)
       .subscribe((response: any) => {
         console.log(">>>>>response", response)
-        if (response.msg !== 'ok') {
+        if (!response.token) {
           // this.error = "登录失败";
           // this.msg.error(this.error)
           return;
