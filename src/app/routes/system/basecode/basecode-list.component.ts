@@ -34,8 +34,8 @@ export class BasecodeListComponent implements OnInit {
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox'},
-    { title: 'Data Type ID', index: 'typeId'},
-    { title: 'Data Type Name', index: 'typename'},
+    { title: 'Type ID', index: 'typeId'},
+    { title: 'Type Name', index: 'typename'},
     { title: 'Field ID', index: 'basecode'},
     { title: 'Field Name', index: 'basecodename'},
     {
@@ -131,7 +131,7 @@ export class BasecodeListComponent implements OnInit {
         this.remove(id);
       },
       nzCancelText: 'Cancel',
-      nzOnCancel: () => console.log('Cancel')
+      nzOnCancel: () => console.log('Cancel'),
     });
   }
 }

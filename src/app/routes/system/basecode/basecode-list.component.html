@@ -3,7 +3,7 @@
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="name">Search 1</nz-form-label>
+          <nz-form-label nzFor="name">Type Name</nz-form-label>
           <nz-form-control>
             <input
               nz-input
@@ -16,7 +16,7 @@
       </div>
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="name">Search 2</nz-form-label>
+          <nz-form-label nzFor="name">Field Name</nz-form-label>
           <nz-form-control>
             <input
               nz-input
@@ -37,7 +37,6 @@
     <i nz-icon nzType="plus"></i>
     <span>New</span>
   </button>
-
   <st
     #st
     [columns]="columns"
@@ -49,11 +48,11 @@
 </nz-card>
 <ng-template #modalContent>
   <nz-form-item>
-    <nz-form-label nzFor="typeid">Data Type ID</nz-form-label>
+    <nz-form-label nzFor="typeid">Type ID</nz-form-label>
     <nz-form-control>
       <input nz-input [(ngModel)]="basecode.typeid" name="typeid" placeholder="Please enter" id="typeid"/>
     </nz-form-control>
-    <nz-form-label nzFor="typename">Data Type Name</nz-form-label>
+    <nz-form-label nzFor="typename">Type Name</nz-form-label>
     <nz-form-control>
       <input nz-input [(ngModel)]="basecode.typename" name="typename" placeholder="Please enter" id="typename"/>
     </nz-form-control>
