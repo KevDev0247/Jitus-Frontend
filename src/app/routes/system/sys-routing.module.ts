@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {BasecodeDetailComponent} from './basecode/basecode-detail.component';
+import {BasecodeListComponent} from './basecode/basecode-list.component';
 import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
 import {OrgListComponent} from './organization/org-list.component';
@@ -32,6 +34,13 @@ const routes: Routes = [
     children: [
       { path: 'list', component: MenuListComponent },
       { path: 'detail', component: MenuDetailComponent },
+    ],
+  },
+  {
+    path: 'basecode',
+    children: [
+      { path: 'list', component: BasecodeListComponent },
+      { path: 'detail', component: BasecodeDetailComponent },
     ],
   },
   {
