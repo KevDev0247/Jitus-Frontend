@@ -22,7 +22,6 @@
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +166,7 @@
       <workItem from="1597851022476" duration="14090000" />
       <workItem from="1597877415227" duration="504000" />
       <workItem from="1597930533810" duration="9680000" />
-      <workItem from="1597963087254" duration="934000" />
+      <workItem from="1597963087254" duration="3852000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
