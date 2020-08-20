@@ -12,7 +12,7 @@ import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
       nzPlacement="bottomRight"
       [nzDropdownMenu]="userMenu"
     >
-      <nz-avatar [nzSrc]="settings.user.avatar" nzSize="small" class="mr-sm"></nz-avatar>
+      <nz-avatar [nzSrc]="avatar" nzSize="small" class="mr-sm"></nz-avatar>
       {{ settings.user.name }}
     </div>
     <nz-dropdown-menu #userMenu="nzDropdownMenu">
@@ -40,6 +40,9 @@ import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderUserComponent {
+
+  avatar = 'src/assets/imgs/user.png';
+
   constructor(
     public settings: SettingsService,
     private router: Router,
