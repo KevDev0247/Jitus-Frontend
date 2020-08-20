@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/tmp/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,12 +74,14 @@
     <property name="ts.external.directory.path" value="D:\Jitlantis-Frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
       <recent name="D:\Jitus-Frontend\src\app\common\component" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -162,7 +164,8 @@
       <workItem from="1597670057896" duration="4420000" />
       <workItem from="1597757240197" duration="14293000" />
       <workItem from="1597851022476" duration="14090000" />
-      <workItem from="1597877415227" duration="335000" />
+      <workItem from="1597877415227" duration="504000" />
+      <workItem from="1597930533810" duration="3877000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -284,22 +287,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596474308846" />
-    <state width="1348" height="349" key="GridCell.Tab.0.bottom" timestamp="1597877399173">
+    <state width="1348" height="539" key="GridCell.Tab.0.bottom" timestamp="1597932685166">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="349" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597877399173" />
-    <state width="1348" height="349" key="GridCell.Tab.0.center" timestamp="1597877399173">
+    <state width="1348" height="539" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597932685166" />
+    <state width="1348" height="539" key="GridCell.Tab.0.center" timestamp="1597932685164">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="349" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1597877399173" />
-    <state width="1348" height="349" key="GridCell.Tab.0.left" timestamp="1597877399172">
+    <state width="1348" height="539" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1597932685164" />
+    <state width="1348" height="539" key="GridCell.Tab.0.left" timestamp="1597932685160">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="349" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1597877399172" />
-    <state width="1348" height="349" key="GridCell.Tab.0.right" timestamp="1597877399173">
+    <state width="1348" height="539" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1597932685160" />
+    <state width="1348" height="539" key="GridCell.Tab.0.right" timestamp="1597932685164">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="349" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1597877399173" />
+    <state width="1348" height="539" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1597932685164" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -376,22 +379,6 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="692" y="188" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1597622291848" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts</url>
-          <line>100</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/routes/passport/login/login.component.ts</url>
-          <line>108</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
