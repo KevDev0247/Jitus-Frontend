@@ -1,85 +1,101 @@
-<!--<div class="alain-default__content-title">
-  <h1>
-    Dashboard
-    <small>Welcome !</small>
-  </h1>
-</div>-->
-<!--<quick-menu>
-  <nz-list [nzBordered]="false" [nzSplit]="false">
-    <nz-list-item>
-      <a routerLink="/">Home</a>
-    </nz-list-item>
-    <nz-list-item>
-      <a routerLink="/widgets">Widgets</a>
-    </nz-list-item>
-    <nz-list-item>
-      <a routerLink="/style/typography">typography</a>
-    </nz-list-item>
-    <nz-list-item>
-      <a routerLink="/style/gridmasonry">gridmasonry</a>
-    </nz-list-item>
-    <nz-list-item>
-      <a routerLink="/pro/result/success">success result</a>
-    </nz-list-item>
-  </nz-list>
-</quick-menu>-->
-
-<div nz-row nzGutter="16">
-  <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-    <div nz-row nzType="flex" nzAlign="middle" class="bg-primary rounded-md" style="height: 151px;">
-      <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
-        <div class="h1 mt0"><img src="assets/tmp/img/order.png" width="80px" height="80px"/></div>
-        <p class="text-nowrap mb0">Work Order</p>
-      </div>
-    </div>
-  </div>
-  <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-    <a routerLink="/sys/user/list">
-      <div nz-row nzType="flex" nzAlign="middle" class="bg-success rounded-md" style="height: 151px;">
-        <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
-          <div class="h1 mt0"><img src="assets/tmp/img/client.png" width="80px" height="80px"/></div>
-          <p class="text-nowrap mb0">User</p>
+<nz-collapse [nzBordered]="false">
+  <nz-badge nzStatus="default" nzText="Services"></nz-badge>
+  <img src="assets/imgs/down.png">
+  <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
+    <div nz-row nzGutter="16">
+      <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+        <div nz-row nzType="flex" nzAlign="middle" class="bg-primary rounded-md" style="height: 151px;">
+          <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
+            <div class="h1 mt0"><img src="assets/tmp/img/order.png" width="80px" height="80px"/></div>
+            <p class="text-nowrap mb0">Work Order</p>
+          </div>
         </div>
       </div>
-    </a>
-  </div>
-  <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-    <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-  </div>
-  <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-    <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-  </div>
-  <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-    <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-  </div>
-  <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-    <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-  </div>
-</div>
-<nz-divider></nz-divider>
-<div nz-row nzGutter="16">
-  <div nz-col nzXs="24" nzMd="12">
-    <nz-card [nzBordered]="false" [nzTitle]="salesTitle">
-      <ng-template #salesTitle>
-        Statistics
-        <small class="text-sm font-weight-normal">2020</small>
-      </ng-template>
-      <g2-bar *ngIf="salesData" height="275" [data]="salesData"></g2-bar>
-    </nz-card>
-  </div>
-  <div nz-col nzXs="24" nzMd="12">
-    <nz-card [nzTitle]="growthTitle" [nzBordered]="false">
-      <ng-template #growthTitle>
-        Growth Rate
-        <small class="text-sm font-weight-normal">2020</small>
-      </ng-template>
-      <g2-timeline
-        *ngIf="offlineChartData"
-        [data]="offlineChartData"
-        [height]="239"
-        [padding]="[0, 0, 0, 0]"
-        [titleMap]="{ y1: '客流量', y2: '支付笔数' }"
-      ></g2-timeline>
-    </nz-card>
-  </div>
-</div>
+      <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+        <a routerLink="/sys/user/list">
+          <div nz-row nzType="flex" nzAlign="middle" class="bg-success rounded-md" style="height: 151px;">
+            <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
+              <div class="h1 mt0"><img src="assets/tmp/img/client.png" width="80px" height="80px"/></div>
+              <p class="text-nowrap mb0">User</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+        <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+      </div>
+      <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+        <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+      </div>
+      <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+        <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+      </div>
+      <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+        <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+      </div>
+    </div>
+  </nz-collapse-panel>
+</nz-collapse>
+<nz-collapse [nzBordered]="false">
+  <nz-badge nzStatus="default" nzText="Notification"></nz-badge>
+  <img src="assets/imgs/down.png">
+  <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
+    <div class="gutter-example">
+      <div nz-row [nzGutter]="[16, 16]">
+        <div nz-col class="gutter-row" [nzSpan]="6">
+          <div class="grid-config">
+            <img src="assets/imgs/warning.png" style="float: left;"/>
+            <img src="assets/imgs/warning_icon.png" style="float: right; margin-top: 5px; margin-right: 10px">
+            <div style="vertical-align: middle; display: inline-block;">
+              <img src="assets/imgs/ts.png"/>
+              <span style="background: #D5E2F0; margin-left: 2px;">Client</span>
+              <img src="assets/imgs/ts.png"/>
+              <span style="background: #D5E2F0; margin-left: 2px;">Equipment</span>
+            </div>
+          </div>
+        </div>
+        <div nz-col class="gutter-row" [nzSpan]="6">
+          <div class="grid-config">Columns</div>
+        </div>
+        <div nz-col class="gutter-row" [nzSpan]="6">
+          <div class="grid-config">Columns</div>
+        </div>
+        <div nz-col class="gutter-row" [nzSpan]="6">
+          <div class="grid-config">Columns</div>
+        </div>
+      </div>
+    </div>
+  </nz-collapse-panel>
+</nz-collapse>
+<nz-collapse [nzBordered]="false">
+  <nz-badge nzStatus="default" nzText="Work Order Status"></nz-badge>
+  <img src="assets/imgs/down.png">
+  <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
+    <div nz-row nzGutter="16">
+      <div nz-col nzXs="24" nzMd="12">
+        <nz-card [nzBordered]="false" [nzTitle]="salesTitle">
+          <ng-template #salesTitle>
+            Statistics
+            <small class="text-sm font-weight-normal">2020</small>
+          </ng-template>
+          <g2-bar *ngIf="salesData" height="275" [data]="salesData"></g2-bar>
+        </nz-card>
+      </div>
+      <div nz-col nzXs="24" nzMd="12">
+        <nz-card [nzTitle]="growthTitle" [nzBordered]="false">
+          <ng-template #growthTitle>
+            Growth Rate
+            <small class="text-sm font-weight-normal">2020</small>
+          </ng-template>
+          <g2-timeline
+            *ngIf="offlineChartData"
+            [data]="offlineChartData"
+            [height]="239"
+            [padding]="[0, 0, 0, 0]"
+            [titleMap]="{ y1: '客流量', y2: '支付笔数' }"
+          ></g2-timeline>
+        </nz-card>
+      </div>
+    </div>
+  </nz-collapse-panel>
+</nz-collapse>
