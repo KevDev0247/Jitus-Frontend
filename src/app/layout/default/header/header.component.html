@@ -5,7 +5,7 @@
     <img class="alain-default__header-logo-collapsed" src="./assets/logo.svg" alt="{{ settings.app.name }}"
       style="max-height:30px;" />
   </a>-->
-  <button nz-button nzType="primary" (click)="open()">Open</button>
+<!--  <button nz-button nzType="primary" (click)="open()">Open</button>-->
   <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzTitle="Basic Drawer" (nzOnClose)="close()">
     <ul nz-menu nzMode="inline" style="width: 232px">
       <li nz-submenu nzTitle="Navigation One" nzIcon="mail" nzOpen>
@@ -52,8 +52,8 @@
     </ul>
   </nz-drawer>
 
-  <ul nz-menu nzMode="horizontal" style="border-bottom: none; background: lightsalmon">
-    <li nz-submenu nzIcon="appstore" style="border-bottom: none; background: lightsalmon">
+  <ul nz-menu nzMode="horizontal" style="border-bottom: none; background: #b1c3d5">
+    <li nz-submenu nzIcon="appstore" (mouseover)="open()" style="border-bottom: none; background: #b1c3d5">
       <ul>
         <li nz-menu-item>
           <a [routerLink]="['/dashboard/v1']">Main Page</a>
@@ -92,22 +92,34 @@
   </ul>
   <!-- <header-search class="alain-default__search" [toggleChange]="searchToggleStatus"></header-search> -->
   <ul class="alain-default__nav">
-    <!-- Notify -->
-    <li>
-      <header-notify></header-notify>
+    <li class="hidden-mobile">
+      <div class="alain-default__nav-item">
+        <img src="assets/imgs/home.png"/>
+      </div>
     </li>
-    <!-- Task -->
-    <!--<li class="hidden-mobile">
-      <header-task></header-task>
+    <li class="hidden-mobile">
+      <div class="alain-default__nav-item">
+        <img src="assets/imgs/contact.png"/>
+      </div>
+    </li>
+    <!-- Notify -->
+    <!--<li>
+      <header-notify></header-notify>
     </li>-->
+    <!-- Task -->
+    <li class="hidden-mobile">
+      <header-task></header-task>
+    </li>
     <!-- Settings -->
     <li class="hidden-mobile">
-      <div class="alain-default__nav-item"
-           nz-dropdown
-           [nzDropdownMenu]="settingsMenu"
-           nzTrigger="click"
-           nzPlacement="bottomRight">
-        <i nz-icon nzType="setting"></i>
+      <div
+        class="alain-default__nav-item"
+        nz-dropdown
+        [nzDropdownMenu]="settingsMenu"
+        nzTrigger="click"
+        nzPlacement="bottomRight">
+<!--        <i nz-icon nzType="setting"></i>-->
+        <img src="assets/imgs/setting.png"/>
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
         <div nz-menu style="width:200px;">
@@ -124,7 +136,15 @@
       </nz-dropdown-menu>
     </li>
     <li class="hidden-mobile">
+      <div class="alain-default__nav-item">
+        <img src="assets/imgs/help.png"/>
+      </div>
+    </li>
+    <li class="hidden-mobile">
       <header-user></header-user>
+    </li>
+    <li class="hidden-mobile">
+      <img src="assets/imgs/login-logo.png" style="width: 150px; height: 40px"/>
     </li>
   </ul>
 </div>
