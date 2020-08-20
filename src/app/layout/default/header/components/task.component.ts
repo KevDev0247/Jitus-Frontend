@@ -13,7 +13,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
     >
       <nz-badge [nzDot]="true">
 <!--        <i nz-icon nzType="bell" class="alain-default__nav-item-icon"></i>-->
-        <img src="src/assets/imgs/message.png"/>
+        <img src="assets/imgs/message.png"/>
       </nz-badge>
     </div>
     <nz-dropdown-menu #taskMenu="nzDropdownMenu">
