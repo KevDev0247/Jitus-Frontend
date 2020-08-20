@@ -5,11 +5,24 @@ import { _HttpClient } from '@delon/theme';
   selector: 'app-dashboard-v1',
   templateUrl: './v1.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [
+    `
+      .grid-config {
+        height: 120px;
+        width: 250px;
+        font-size: 14px;
+        line-height: 120px;
+        border-radius: 4px;
+      }
+    `,
+  ],
 })
 export class DashboardV1Component implements OnInit {
+
   webSite: any[];
   salesData: any[];
   offlineChartData: any[];
+  chart = '';
 
   constructor(private http: _HttpClient, private cdr: ChangeDetectorRef) {}
 
