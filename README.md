@@ -1,4 +1,4 @@
-# Jitlantis-Backend
+# Jitlantis-Frontend
 
 ## Jitlantis Team
 - Feng Yuan: Cofounder, Product Manager
