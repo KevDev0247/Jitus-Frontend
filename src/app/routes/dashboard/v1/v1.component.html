@@ -75,37 +75,38 @@
   </nz-collapse>
 
   <nz-collapse [nzBordered]="false">
-    <nz-badge nzStatus="default" nzText="Work Order Status"></nz-badge>
-    <img src="assets/imgs/down.png">
-    <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
-      <div nz-row nzGutter="16">
-        <div nz-col nzXs="24" nzMd="12">
-          <nz-card [nzBordered]="false" [nzTitle]="salesTitle">
-            <ng-template #salesTitle>
-              Statistics
-              <small class="text-sm font-weight-normal">2020</small>
-            </ng-template>
-            <g2-bar *ngIf="salesData" height="275" [data]="salesData"></g2-bar>
-          </nz-card>
+    <div style="padding-left: 50px;">
+      <nz-badge nzStatus="default" nzText="Work Order Status"></nz-badge>
+      <img src="assets/imgs/down.png">
+      <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
+        <div nz-row nzGutter="16">
+          <div nz-col nzXs="24" nzMd="12">
+            <nz-card [nzBordered]="false" [nzTitle]="salesTitle">
+              <ng-template #salesTitle>
+                Statistics
+                <small class="text-sm font-weight-normal">2020</small>
+              </ng-template>
+              <g2-bar *ngIf="salesData" height="275" [data]="salesData"></g2-bar>
+            </nz-card>
+          </div>
+          <div nz-col nzXs="24" nzMd="12">
+            <nz-card [nzTitle]="growthTitle" [nzBordered]="false">
+              <ng-template #growthTitle>
+                Growth Rate
+                <small class="text-sm font-weight-normal">2020</small>
+              </ng-template>
+              <g2-timeline
+                *ngIf="offlineChartData"
+                [data]="offlineChartData"
+                [height]="239"
+                [padding]="[0, 0, 0, 0]"
+                [titleMap]="{ y1: 'Traffic', y2: 'Deals' }"
+              ></g2-timeline>
+            </nz-card>
+          </div>
         </div>
-        <div nz-col nzXs="24" nzMd="12">
-          <nz-card [nzTitle]="growthTitle" [nzBordered]="false">
-            <ng-template #growthTitle>
-              Growth Rate
-              <small class="text-sm font-weight-normal">2020</small>
-            </ng-template>
-            <g2-timeline
-              *ngIf="offlineChartData"
-              [data]="offlineChartData"
-              [height]="239"
-              [padding]="[0, 0, 0, 0]"
-              [titleMap]="{ y1: '客流量', y2: '支付笔数' }"
-            ></g2-timeline>
-          </nz-card>
-        </div>
-      </div>
-    </nz-collapse-panel>
+      </nz-collapse-panel>
+    </div>
   </nz-collapse>
-
 </div>
 
