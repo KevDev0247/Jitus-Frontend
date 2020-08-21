@@ -23,6 +23,11 @@ export class DashboardV1Component implements OnInit {
   salesData: any[];
   offlineChartData: any[];
   chart = '';
+  customStyle = {
+    'border-radius': '4px',
+    'margin-bottom': '24px',
+    border: '0px',
+  };
 
   constructor(private http: _HttpClient, private cdr: ChangeDetectorRef) {}
 
