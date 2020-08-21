@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/work_orders.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/default.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/default.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +167,7 @@
       <workItem from="1597877415227" duration="504000" />
       <workItem from="1597930533810" duration="9680000" />
       <workItem from="1597963087254" duration="4660000" />
-      <workItem from="1598018159933" duration="4389000" />
+      <workItem from="1598018159933" duration="5512000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
