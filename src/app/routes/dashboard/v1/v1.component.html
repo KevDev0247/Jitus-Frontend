@@ -1,41 +1,43 @@
 <div>
   <nz-collapse [nzBordered]="false">
-    <nz-badge nzStatus="default" nzText="Services"></nz-badge>
-    <img src="assets/imgs/down.png">
-    <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
-      <div nz-row nzGutter="16">
-        <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-          <div nz-row nzType="flex" nzAlign="middle" class="bg-primary rounded-md" style="height: 151px;">
-            <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
-              <div class="h1 mt0"><img src="assets/tmp/img/order.png" width="80px" height="80px"/></div>
-              <p class="text-nowrap mb0">Work Order</p>
-            </div>
-          </div>
-        </div>
-        <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-          <a routerLink="/sys/user/list">
-            <div nz-row nzType="flex" nzAlign="middle" class="bg-success rounded-md" style="height: 151px;">
+    <div style="padding-left: 30px;">
+      <nz-badge nzStatus="default" nzText="Services"></nz-badge>
+      <img src="assets/imgs/down.png">
+      <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">
+        <div nz-row nzGutter="16">
+          <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+            <div nz-row nzType="flex" nzAlign="middle" class="bg-primary rounded-md" style="height: 151px;">
               <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
-                <div class="h1 mt0"><img src="assets/tmp/img/client.png" width="80px" height="80px"/></div>
-                <p class="text-nowrap mb0">User</p>
+                <div class="h1 mt0"><img src="assets/tmp/img/order.png" width="80px" height="80px"/></div>
+                <p class="text-nowrap mb0">Work Order</p>
               </div>
             </div>
-          </a>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+            <a routerLink="/sys/user/list">
+              <div nz-row nzType="flex" nzAlign="middle" class="bg-success rounded-md" style="height: 151px;">
+                <div nz-col nzSpan="12" class="p-md text-white" style="margin-left: 50px; align-content: center">
+                  <div class="h1 mt0"><img src="assets/tmp/img/client.png" width="80px" height="80px"/></div>
+                  <p class="text-nowrap mb0">User</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+            <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+            <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+            <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+          </div>
+          <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
+            <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
+          </div>
         </div>
-        <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-          <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-        </div>
-        <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-          <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-        </div>
-        <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-          <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-        </div>
-        <div nz-col nzXs="24" nzSm="12" nzMd="4" class="mb-md">
-          <div nz-row nzType="flex" nzAlign="middle" class="bg-orange rounded-md" style="height: 151px;"></div>
-        </div>
-      </div>
-    </nz-collapse-panel>
+      </nz-collapse-panel>
+    </div>
   </nz-collapse>
 
   <nz-collapse [nzBordered]="false">
@@ -68,6 +70,8 @@
         </div>
       </div>
     </nz-collapse-panel>
+    </div>
+
   </nz-collapse>
 
   <nz-collapse [nzBordered]="false">
