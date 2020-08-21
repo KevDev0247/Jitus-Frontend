@@ -11,6 +11,7 @@ export class HeaderComponent {
   searchToggleStatus: boolean;
   visible = false;
   placement: NzDrawerPlacement = 'left';
+  customStyle = { background: '#6789AD'}
 
   constructor(public settings: SettingsService) {}
 
