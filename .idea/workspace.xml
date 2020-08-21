@@ -20,8 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/exception_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/exception_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/exceptions.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/exception.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/failure_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/failure_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/failures.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/failure.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/more.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/upcoming_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/upcoming_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/warning_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/warning_icon.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +184,7 @@
       <workItem from="1597877415227" duration="504000" />
       <workItem from="1597930533810" duration="9680000" />
       <workItem from="1597963087254" duration="4660000" />
-      <workItem from="1598018159933" duration="7138000" />
+      <workItem from="1598018159933" duration="16005000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -269,10 +286,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1597852681422" />
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596645059678">
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598043539217">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1596645059678" />
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1598043539217" />
     <state x="440" y="139" key="#xdebugger.evaluate" timestamp="1597873517869">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -289,22 +306,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1596474308846" />
-    <state width="663" height="134" key="GridCell.Tab.0.bottom" timestamp="1598031511074">
+    <state width="661" height="131" key="GridCell.Tab.0.bottom" timestamp="1598043712657">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="134" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598031511074" />
-    <state width="663" height="134" key="GridCell.Tab.0.center" timestamp="1598031511074">
+    <state width="661" height="131" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598043712657" />
+    <state width="661" height="131" key="GridCell.Tab.0.center" timestamp="1598043712657">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="134" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598031511074" />
-    <state width="663" height="134" key="GridCell.Tab.0.left" timestamp="1598031511074">
+    <state width="661" height="131" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598043712657" />
+    <state width="661" height="131" key="GridCell.Tab.0.left" timestamp="1598043712657">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="134" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598031511074" />
-    <state width="663" height="134" key="GridCell.Tab.0.right" timestamp="1598031511074">
+    <state width="661" height="131" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598043712657" />
+    <state width="661" height="131" key="GridCell.Tab.0.right" timestamp="1598043712657">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="134" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598031511074" />
+    <state width="661" height="131" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598043712657" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
