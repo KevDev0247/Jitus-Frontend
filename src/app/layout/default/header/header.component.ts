@@ -6,6 +6,13 @@ import {NzDrawerPlacement} from 'ng-zorro-antd/ng-zorro-antd.module';
   selector: 'layout-header',
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [
+    `
+      li:hover {
+        background-color: white;
+      }
+    `
+  ],
 })
 export class HeaderComponent {
   searchToggleStatus: boolean;
