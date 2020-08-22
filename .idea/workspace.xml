@@ -84,16 +84,16 @@
     <property name="ts.external.directory.path" value="D:\Jitlantis-Frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
       <recent name="D:\Jitus-Frontend\src\app\common\component" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
