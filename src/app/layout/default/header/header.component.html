@@ -10,7 +10,7 @@
     <ul nz-menu nzMode="inline" style="width: 232px">
       <li nz-submenu>
         <span title>
-          <img src="assets/imgs/work_orders.png">
+          <img src="assets/imgs/menu/form.png">
           <span style="color: #23282E;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Orders</span>
         </span>
         <ul>
@@ -40,7 +40,47 @@
       <li nz-submenu nzTitle="Navigation Three" nzIcon="setting"></li>
     </ul>
   </nz-drawer>
-  <img src="assets/imgs/menu.png" (mouseover)="open()">
+<!--  <img src="assets/imgs/menu.png" (mouseover)="open()">-->
+  <a nz-dropdown [nzDropdownMenu]="menu" (nzVisibleChange)="change($event)">
+    <img src="assets/imgs/menu.png"/>
+  </a>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu style="background-color: #b1c3d5;">
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/form.png">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Form</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/work_order.png">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Order</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/client.png">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/project.png">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project</span>
+        </span>
+      </li>
+      <li nz-menu-item>1st menu item</li>
+      <li nz-menu-item>2nd menu item</li>
+      <li nz-submenu nzTitle="sub menu">
+        <ul>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item>4th menu item</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-dropdown-menu>
+  <div></div>
 
   <!--<ul nz-menu nzMode="horizontal" style="border-bottom: none; background: #b1c3d5">
     <li nz-submenu nzIcon="appstore" (mouseover)="open()" style="border-bottom: none; background: #b1c3d5">
