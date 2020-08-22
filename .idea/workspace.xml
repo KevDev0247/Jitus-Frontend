@@ -19,7 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/accessory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/client.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/knowledge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/system.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/work_order.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/work_orders.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/menu/form.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +70,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/menu" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,14 +84,16 @@
     <property name="ts.external.directory.path" value="D:\Jitlantis-Frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
       <recent name="D:\Jitus-Frontend\src\app\common\component" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
