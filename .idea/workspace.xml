@@ -59,7 +59,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/MatthewJiao-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/services" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,16 +73,17 @@
     <property name="ts.external.directory.path" value="D:\Jitlantis-Frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
       <recent name="D:\Jitus-Frontend\src\app\common\component" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -170,7 +171,7 @@
       <workItem from="1597963087254" duration="4660000" />
       <workItem from="1598018159933" duration="18447000" />
       <workItem from="1598111698471" duration="3872000" />
-      <workItem from="1598189011174" duration="9255000" />
+      <workItem from="1598189011174" duration="10337000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -292,22 +293,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598133635223" />
-    <state width="1348" height="136" key="GridCell.Tab.0.bottom" timestamp="1598200739923">
+    <state width="1348" height="136" key="GridCell.Tab.0.bottom" timestamp="1598203808868">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="136" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598200739923" />
-    <state width="1348" height="136" key="GridCell.Tab.0.center" timestamp="1598200739923">
+    <state width="1348" height="136" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598203808868" />
+    <state width="1348" height="136" key="GridCell.Tab.0.center" timestamp="1598203808868">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="136" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598200739923" />
-    <state width="1348" height="136" key="GridCell.Tab.0.left" timestamp="1598200739921">
+    <state width="1348" height="136" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598203808868" />
+    <state width="1348" height="136" key="GridCell.Tab.0.left" timestamp="1598203808868">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="136" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598200739921" />
-    <state width="1348" height="136" key="GridCell.Tab.0.right" timestamp="1598200739923">
+    <state width="1348" height="136" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598203808868" />
+    <state width="1348" height="136" key="GridCell.Tab.0.right" timestamp="1598203808868">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="136" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598200739923" />
+    <state width="1348" height="136" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598203808868" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
