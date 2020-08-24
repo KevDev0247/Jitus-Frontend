@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="92.007" viewBox="0 0 120 92.007">
+  <g id="Group_686" data-name="Group 686" transform="translate(-985 -156)">
+    <g id="群发通知" transform="translate(985 166.007)">
+      <text id="Communications" transform="translate(0 79)" fill="#203e5d" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="0">Communications</tspan></text>
+      <g id="Group_655" data-name="Group 655" transform="translate(23.005)">
+        <path id="Path_1597" data-name="Path 1597" d="M340.433,169h-3.968v23.809a3.968,3.968,0,0,1-3.968,3.968H308.2l-7.2,7.688h19.717l12.028,11.971V204.465h7.688A3.968,3.968,0,0,0,344.4,200.5V172.968A3.968,3.968,0,0,0,340.433,169Z" transform="translate(-281.407 -153.375)" fill="#3fa9f5"/>
+        <path id="Path_1598" data-name="Path 1598" d="M268.942,106H229.509a3.955,3.955,0,0,0-2.8,1.157l10.682,10.6c.043,0,.085-.007.128-.007a3.968,3.968,0,0,1,3.968,3.968c0,.033,0,.064,0,.1L261.3,141.465h7.645a3.968,3.968,0,0,0,3.968-3.968V109.968A3.968,3.968,0,0,0,268.942,106Zm-19.767,19.683a3.968,3.968,0,1,1,3.968-3.968A3.968,3.968,0,0,1,249.175,125.683Zm11.9,0a3.968,3.968,0,1,1,3.968-3.968A3.968,3.968,0,0,1,261.08,125.683Z" transform="translate(-225.54 -106)" fill="#66aad7"/>
+        <path id="Path_1599" data-name="Path 1599" d="M233.978,129.192a3.966,3.966,0,0,1-.128-7.93l-10.682-10.6A3.955,3.955,0,0,0,222,113.478v27.529a3.968,3.968,0,0,0,3.968,3.968h7.688v11.971l12.028-11.971h12.072l-19.815-19.654A3.966,3.966,0,0,1,233.978,129.192Z" transform="translate(-222 -109.51)" fill="#0071bc"/>
+      </g>
+    </g>
+    <g id="Rectangle_523" data-name="Rectangle 523" transform="translate(985 156)" fill="rgba(255,255,255,0)" stroke="rgba(255,255,255,0)" stroke-width="1">
+      <rect width="119" height="10" stroke="none"/>
+      <rect x="0.5" y="0.5" width="118" height="9" fill="none"/>
+    </g>
+  </g>
+</svg>

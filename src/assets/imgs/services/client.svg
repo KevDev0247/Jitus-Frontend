@@ -1,0 +1,9 @@
+<svg id="客户管理" xmlns="http://www.w3.org/2000/svg" width="52.188" height="93.673" viewBox="0 0 52.188 93.673">
+  <text id="Client" transform="translate(5.399 90.673)" fill="#203e5d" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="0">Client</tspan></text>
+  <g id="Group_669" data-name="Group 669" transform="translate(-222.416 -96.061)">
+    <circle id="Ellipse_442" data-name="Ellipse 442" cx="14.917" cy="14.917" r="14.917" transform="translate(231.024 125.453) rotate(-80.136)" fill="#f7931e"/>
+    <path id="Path_1617" data-name="Path 1617" d="M322.062,121.224c0,7.587-5.613,14.446-13,14.794-2.586.122-9.705-5.456-9.705-15.192,0-9.478,6.6-14.753,9.607-14.409A14.875,14.875,0,0,1,322.062,121.224Z" transform="translate(-58.87 -7.912)" fill="#f4db8c" opacity="0.7"/>
+    <path id="Path_1618" data-name="Path 1618" d="M274.6,266.658C273.459,250.6,262.215,238,248.51,238s-24.949,12.6-26.094,28.658Z" transform="translate(0 -108.597)" fill="#f7931e"/>
+    <path id="Path_1619" data-name="Path 1619" d="M314.477,266.664c-.83-16.054-13.527-28.656-24.359-28.656-5.681,0-14.757,12.6-15.587,28.656Z" transform="translate(-39.873 -108.603)" fill="#f4db8c" opacity="0.7"/>
+  </g>
+</svg>

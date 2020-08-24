@@ -1,0 +1,9 @@
+<svg id="客户管理" xmlns="http://www.w3.org/2000/svg" width="52.188" height="92" viewBox="0 0 52.188 92">
+  <text id="Client" transform="translate(5.399 89)" fill="#203e5d" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="0">Client</tspan></text>
+  <g id="Group_669" data-name="Group 669">
+    <circle id="Ellipse_442" data-name="Ellipse 442" cx="14.65" cy="14.65" r="14.65" transform="translate(8.454 28.867) rotate(-80.136)" fill="#f7931e"/>
+    <path id="Path_1617" data-name="Path 1617" d="M321.657,120.959c0,7.452-5.513,14.188-12.764,14.53-2.54.12-9.532-5.358-9.532-14.92,0-9.309,6.487-14.49,9.435-14.152A14.609,14.609,0,0,1,321.657,120.959Z" transform="translate(-281.609 -104.016)" fill="#f4db8c" opacity="0.7"/>
+    <path id="Path_1618" data-name="Path 1618" d="M273.672,266.146C272.548,250.379,261.5,238,248.044,238s-24.5,12.379-25.628,28.146Z" transform="translate(-222.416 -205.254)" fill="#f7931e"/>
+    <path id="Path_1619" data-name="Path 1619" d="M313.763,266.152c-.815-15.768-13.286-28.144-23.924-28.144-5.579,0-14.493,12.377-15.308,28.144Z" transform="translate(-262.508 -205.26)" fill="#f4db8c" opacity="0.7"/>
+  </g>
+</svg>

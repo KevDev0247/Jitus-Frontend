@@ -1,0 +1,19 @@
+<svg id="工程管理" xmlns="http://www.w3.org/2000/svg" width="59.028" height="93" viewBox="0 0 59.028 93">
+  <text id="Projects" transform="translate(0.682 89)" fill="#203e5d" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="0">Projects</tspan></text>
+  <g id="Group_639" data-name="Group 639">
+    <path id="Path_1548" data-name="Path 1548" d="M554.94,270.652l-5.94,5.94V261l5.94,5.94Z" transform="translate(-549 -261)" fill="#00b4ff"/>
+    <path id="Path_1549" data-name="Path 1549" d="M835,317.986l5.94,5.94V261L835,266.94Z" transform="translate(-781.912 -261)" fill="#00b4ff"/>
+    <path id="Path_1550" data-name="Path 1550" d="M782,350.5l5.94,5.94V313L782,318.94Z" transform="translate(-738.75 -303.348)" fill="#00b4ff"/>
+    <path id="Path_1551" data-name="Path 1551" d="M602.088,266.94H554.94L549,261h59.028Z" transform="translate(-549 -261)" fill="#0071bc"/>
+    <path id="Path_1552" data-name="Path 1552" d="M575.94,404.31,570,410.25V367l5.94,5.94Z" transform="translate(-566.102 -347.324)" fill="#00b4ff"/>
+    <path id="Path_1553" data-name="Path 1553" d="M729,384.449l5.94,5.94V367L729,372.94Z" transform="translate(-695.588 -347.324)" fill="#00b4ff"/>
+    <path id="Path_1554" data-name="Path 1554" d="M599.514,372.94H575.94L570,367h35.454Z" transform="translate(-566.102 -347.324)" fill="#0071bc"/>
+    <path id="Path_1555" data-name="Path 1555" d="M676,433.55l5.94-5.94V420L676,425.94Z" transform="translate(-652.426 -390.486)" fill="#00b4ff"/>
+    <path id="Path_1556" data-name="Path 1556" d="M632.838,425.94h-3.9L623,420h15.778Z" transform="translate(-609.264 -390.486)" fill="#0071bc"/>
+    <path id="Path_1557" data-name="Path 1557" d="M598.19,313H554.94L549,318.94h43.25Z" transform="translate(-549 -303.348)" fill="#0071bc"/>
+    <path id="Path_1558" data-name="Path 1558" d="M628.94,437.634l-5.94,5.94V420l5.94,5.94Z" transform="translate(-609.264 -390.486)" fill="#00b4ff"/>
+    <path id="Path_1559" data-name="Path 1559" d="M652.514,515H628.94L623,520.94h35.454Z" transform="translate(-609.264 -467.852)" fill="#0071bc"/>
+    <path id="Path_1560" data-name="Path 1560" d="M685.838,461h-3.9L676,466.94h15.778Z" transform="translate(-652.426 -423.875)" fill="#0071bc"/>
+    <path id="Path_1561" data-name="Path 1561" d="M619.19,568H575.94L570,573.94h55.13Z" transform="translate(-566.102 -511.014)" fill="#0071bc"/>
+  </g>
+</svg>
