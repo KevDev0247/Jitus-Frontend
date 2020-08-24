@@ -28,6 +28,8 @@ export class DashboardV1Component implements OnInit {
     'margin-bottom': '24px',
     border: '0px',
   };
+  hGutter = 32;
+  vGutter = 32;
 
   constructor(private http: _HttpClient, private cdr: ChangeDetectorRef) {}
 
