@@ -20,32 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/accessories.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/analysis.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/billings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/clients.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/communications.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/departments.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/equipments.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/help.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/information.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/knowledge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/monitoring.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/projects.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/work_orders.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/accessory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/analysis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/client.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/form.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/help.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/knowledge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/message.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/notification.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/project.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/system.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/work_order.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,19 +74,19 @@
     <property name="ts.external.directory.path" value="D:\Jitlantis-Frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\information" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
       <recent name="D:\Jitus-Frontend\src\app\common\component" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\information" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\tmp\img" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -204,7 +180,8 @@
       <workItem from="1598360869283" duration="3704000" />
       <workItem from="1598456391543" duration="1437000" />
       <workItem from="1598534688114" duration="1218000" />
-      <workItem from="1598715278228" duration="1327000" />
+      <workItem from="1598715278228" duration="2366000" />
+      <workItem from="1598734686350" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -306,10 +283,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1597852681422" />
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598043539217">
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598717949280">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1598043539217" />
+    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1598717949280" />
     <state x="440" y="139" key="#xdebugger.evaluate" timestamp="1597873517869">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -326,22 +303,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598133635223" />
-    <state width="1348" height="241" key="GridCell.Tab.0.bottom" timestamp="1598591405969">
+    <state width="1348" height="463" key="GridCell.Tab.0.bottom" timestamp="1598735299488">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="241" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598591405969" />
-    <state width="1348" height="241" key="GridCell.Tab.0.center" timestamp="1598591405968">
+    <state width="1348" height="463" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1598735299488" />
+    <state width="1348" height="463" key="GridCell.Tab.0.center" timestamp="1598735299488">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="241" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598591405968" />
-    <state width="1348" height="241" key="GridCell.Tab.0.left" timestamp="1598591405967">
+    <state width="1348" height="463" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1598735299488" />
+    <state width="1348" height="463" key="GridCell.Tab.0.left" timestamp="1598735299487">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="241" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598591405967" />
-    <state width="1348" height="241" key="GridCell.Tab.0.right" timestamp="1598591405969">
+    <state width="1348" height="463" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1598735299487" />
+    <state width="1348" height="463" key="GridCell.Tab.0.right" timestamp="1598735299488">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="241" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598591405968" />
+    <state width="1348" height="463" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1598735299488" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
