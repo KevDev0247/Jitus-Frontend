@@ -20,7 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/accessories.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/analysis.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/billings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/clients.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/communications.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/departments.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/equipments.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/help.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/information.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/knowledge.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/monitoring.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/projects.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/settings.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/menu/work_orders.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/accessory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/analysis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/client.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/form.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/knowledge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/message.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/notification.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/system.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/menu/work_order.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +84,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/menu" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -179,6 +204,7 @@
       <workItem from="1598360869283" duration="3704000" />
       <workItem from="1598456391543" duration="1437000" />
       <workItem from="1598534688114" duration="1218000" />
+      <workItem from="1598715278228" duration="1327000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
