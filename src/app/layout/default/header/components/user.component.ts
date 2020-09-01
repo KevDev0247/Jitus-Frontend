@@ -41,7 +41,7 @@ import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
 })
 export class HeaderUserComponent {
 
-  avatar = 'assets/imgs/user.png';
+  avatar = 'assets/imgs/header/user.svg';
 
   constructor(
     public settings: SettingsService,
