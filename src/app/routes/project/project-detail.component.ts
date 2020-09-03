@@ -24,7 +24,10 @@ export class ProjectDetailComponent implements OnInit {
   contractStartTime?: Date;
   contractEndTime?: Date;
 
-  listOfOption: Array<{ value: string; text: string}> = [];
+  listOfOption: Array<{ value: string; text: string}> = [
+    { value: '11', text: '11' },
+    { value: '22', text: '22' },
+  ];
   listOfTagOption: any;
   selectedValue = null;
   nzFilterOption = () => true;
