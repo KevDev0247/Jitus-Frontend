@@ -23,13 +23,42 @@ export class DashboardV1Component implements OnInit {
   salesData: any[];
   offlineChartData: any[];
   chart = '';
-  customStyle = {
-    'border-radius': '4px',
-    'margin-bottom': '24px',
-    border: '0px',
-  };
   hGutter = 32;
   vGutter = 32;
+
+  customStyle = {
+    border: '0px',
+    'border-top': '0px solid #d9d9d9',
+  };
+
+  panels = [
+    {
+      active: true,
+      disabled: false,
+      name: 'This is panel header 1',
+      customStyle: {
+        border: '0px',
+      },
+    },
+    {
+      active: false,
+      disabled: true,
+      name: 'This is panel header 2',
+      icon: 'double-right',
+      customStyle: {
+        'border-top': '0px',
+      },
+    },
+    {
+      active: false,
+      disabled: false,
+      name: 'This is panel header 2',
+      icon: 'double-right',
+      customStyle: {
+        border: '0px',
+      },
+    },
+  ];
 
   constructor(private http: _HttpClient, private cdr: ChangeDetectorRef) {}
 
