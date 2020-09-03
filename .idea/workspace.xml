@@ -24,6 +24,9 @@
       <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +192,7 @@
       <workItem from="1599054479613" duration="1000000" />
       <workItem from="1599068089869" duration="26000" />
       <workItem from="1599079647714" duration="5133000" />
-      <workItem from="1599147617266" duration="9661000" />
+      <workItem from="1599147617266" duration="11827000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -311,22 +314,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598133635223" />
-    <state width="661" height="176" key="GridCell.Tab.0.bottom" timestamp="1599165590190">
+    <state width="1348" height="175" key="GridCell.Tab.0.bottom" timestamp="1599167129952">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="176" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599165590190" />
-    <state width="661" height="176" key="GridCell.Tab.0.center" timestamp="1599165590190">
+    <state width="1348" height="175" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599167129952" />
+    <state width="1348" height="175" key="GridCell.Tab.0.center" timestamp="1599167129951">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="176" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599165590190" />
-    <state width="661" height="176" key="GridCell.Tab.0.left" timestamp="1599165590190">
+    <state width="1348" height="175" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599167129951" />
+    <state width="1348" height="175" key="GridCell.Tab.0.left" timestamp="1599167129951">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="176" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599165590190" />
-    <state width="661" height="176" key="GridCell.Tab.0.right" timestamp="1599165590190">
+    <state width="1348" height="175" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599167129951" />
+    <state width="1348" height="175" key="GridCell.Tab.0.right" timestamp="1599167129952">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="661" height="176" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599165590190" />
+    <state width="1348" height="175" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599167129952" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -391,6 +394,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="691" y="225" key="VcsDiffUtil.ChangesDialog/0.0.1368.872@0.0.1368.872" timestamp="1597603353653" />
+    <state x="896" y="281" key="cloudConfig.SelfSettingsDialog" timestamp="1599167973372">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="896" y="281" key="cloudConfig.SelfSettingsDialog/0.0.1368.872@0.0.1368.872" timestamp="1599167973372" />
     <state x="93" y="93" width="1181" height="685" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597594001238">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
