@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, Template
 import { Router } from '@angular/router';
 import { STChange, STColumn, STComponent, STData } from '@delon/abc';
 import { NzMessageService, NzModalService } from 'ng-zorro-antd';
-import { Client } from '../../common/model/client';
+import {User} from '../../common/model/user';
 import { ClientService } from '../../common/service/client.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class ClientListComponent implements OnInit {
     param2: '',
   };
 
-  client: Client = new Client();
+  client: User = new User();
   data: any[] = [];
   selectedRows: STData[] = [];
 
@@ -38,7 +38,7 @@ export class ClientListComponent implements OnInit {
     { title: 'Phone', index: 'telno' },
     { title: 'Area', index: 'area' },
     { title: 'Address', index: 'address' },
-    { title: 'Remark', index: 'remark' },
+    { title: 'Client Type', index: 'roleId' },
     {
       title: 'Operations',
       buttons: [
@@ -133,7 +133,7 @@ export class ClientListComponent implements OnInit {
         this.remove(id);
       },
       nzCancelText: 'Cancel',
-      nzOnCancel: () => console.log('Cancel')
+      nzOnCancel: () => console.log('Cancel'),
     });
   }
 }
