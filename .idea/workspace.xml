@@ -67,6 +67,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Jitus-Frontend\node_modules\prettier" />
@@ -92,6 +93,7 @@
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (Jitus-Frontend)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
@@ -100,6 +102,7 @@
     <configuration name="E2E Tests (Jitus-Frontend)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
       <protractor-options value="" />
       <envs />
       <scope-kind value="ALL" />
@@ -187,7 +190,9 @@
       <workItem from="1599054479613" duration="1000000" />
       <workItem from="1599068089869" duration="26000" />
       <workItem from="1599079647714" duration="5133000" />
-      <workItem from="1599147617266" duration="18951000" />
+      <workItem from="1599147617266" duration="19003000" />
+      <workItem from="1599200226522" duration="8000" />
+      <workItem from="1599248713317" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -309,22 +314,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598133635223" />
-    <state width="1348" height="314" key="GridCell.Tab.0.bottom" timestamp="1599199882221">
+    <state width="1348" height="287" key="GridCell.Tab.0.bottom" timestamp="1599200203621">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="314" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599199882221" />
-    <state width="1348" height="314" key="GridCell.Tab.0.center" timestamp="1599199882220">
+    <state width="1348" height="287" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599200203621" />
+    <state width="1348" height="287" key="GridCell.Tab.0.center" timestamp="1599200203621">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="314" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599199882220" />
-    <state width="1348" height="314" key="GridCell.Tab.0.left" timestamp="1599199882220">
+    <state width="1348" height="287" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599200203621" />
+    <state width="1348" height="287" key="GridCell.Tab.0.left" timestamp="1599200203620">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="314" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599199882220" />
-    <state width="1348" height="314" key="GridCell.Tab.0.right" timestamp="1599199882221">
+    <state width="1348" height="287" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599200203620" />
+    <state width="1348" height="287" key="GridCell.Tab.0.right" timestamp="1599200203621">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1348" height="314" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599199882221" />
+    <state width="1348" height="287" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599200203621" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
