@@ -244,7 +244,19 @@
   <nz-collapse [nzBordered]="false">
     <div style="padding-left: 30px; padding-top: 10px">
       <nz-badge nzStatus="default" nzText="Notifications"></nz-badge>
-      <img src="assets/imgs/down.png">
+      <nz-table #basicTable [nzData]="dataset">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Content</th>
+            <th>Agency</th>
+            <th>Personnel</th>
+            <th>Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </nz-table>
     </div>
   </nz-collapse>
 </div>
