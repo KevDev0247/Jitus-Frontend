@@ -20,13 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/common/model/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/model/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/staff/staff-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/staff/staff-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/staff/staff-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/staff/staff-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/complete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/create.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/dispatch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/feedback.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/receive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/request.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/review.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/sign_in.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/workflow/workflow_background.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/workflow" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -192,7 +195,7 @@
       <workItem from="1599054479613" duration="1000000" />
       <workItem from="1599068089869" duration="26000" />
       <workItem from="1599079647714" duration="5133000" />
-      <workItem from="1599147617266" duration="14693000" />
+      <workItem from="1599147617266" duration="15346000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
