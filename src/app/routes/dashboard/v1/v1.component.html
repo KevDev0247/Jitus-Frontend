@@ -1,7 +1,6 @@
 <div>
   <nz-collapse [nzBordered]="false">
-    <div style="padding-left: 30px; padding-top: 20px">
-      <div style="height: 10px"></div>
+    <div style="padding-left: 30px; padding-top: 20px; padding-bottom: -20px">
       <nz-badge nzStatus="default" nzText="Services"></nz-badge>
       <img src="assets/imgs/down.png"/>
 <!--      <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false" style="margin-left: 30px">-->
@@ -119,7 +118,7 @@
       <nz-badge nzStatus="default" nzText="Information"></nz-badge>
       <img src="assets/imgs/down.png"/>
 <!--      <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">-->
-        <div style="padding-left: 15px; padding-top: 20px; overflow: hidden;">
+        <div style="padding-top: 20px; overflow: hidden;">
           <div class="gutter-example">
             <div nz-row [nzGutter]="[16, 16]">
               <div nz-col class="gutter-row" [nzSpan]="6">
@@ -220,18 +219,22 @@
 
   <nz-collapse [nzBordered]="false">
     <div style="padding-left: 30px;">
-      <nz-badge nzStatus="default" nzText="Work Order Status"></nz-badge>
+      <nz-badge nzStatus="default" nzText="Workflow"></nz-badge>
       <img src="assets/imgs/down.png">
 <!--      <nz-collapse-panel [nzHeader]="chart" [nzActive]="true" [nzShowArrow]="false">-->
-        <div nz-row nzGutter="16">
-          <div nz-col nzXs="24" nzMd="12">
-            <nz-card [nzBordered]="false" [nzTitle]="salesTitle">
-              <ng-template #salesTitle>
-                Statistics
-                <small class="text-sm font-weight-normal">2020</small>
-              </ng-template>
-              <g2-bar *ngIf="salesData" height="275" [data]="salesData"></g2-bar>
-            </nz-card>
+        <div nz-row nzGutter="16" style="padding-top: 30px;">
+          <div nz-col nzXs="24" nzMd="24">
+            <div style="background: url('assets/imgs/workflow/workflow_background.svg') no-repeat; background-size: 100% 110%; padding-bottom: 20px; margin-right: 20px">
+              <img src="assets/imgs/workflow/request.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/create.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/dispatch.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/receive.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/sign_in.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/complete.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/feedback.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/review.svg" height="97" style="margin-right: 2%"/>
+              <img src="assets/imgs/workflow/close.svg" height="97" style="margin-right: 2%"/>
+            </div>
           </div>
         </div>
 <!--      </nz-collapse-panel>-->
@@ -239,7 +242,7 @@
   </nz-collapse>
 
   <nz-collapse [nzBordered]="false">
-    <div style="padding-left: 30px;">
+    <div style="padding-left: 30px; padding-top: 10px">
       <nz-badge nzStatus="default" nzText="Notifications"></nz-badge>
       <img src="assets/imgs/down.png">
     </div>
