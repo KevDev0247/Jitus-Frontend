@@ -1,6 +1,10 @@
-<page-header [title]="project.id? 'Edit Project':'Create Project'">
-</page-header>
 <nz-card [nzBordered]="false">
+  <nz-page-header
+    class="site-page-header"
+    (nzBack)="onBack()"
+    nzBackIcon
+    [title]="project.id? 'Edit Project':'Create Project'">
+  </nz-page-header>
   <form nz-form [formGroup]="formGroup" se-container="1" labelWidth="200">
     <se label="Name" error="Please enter name">
       <input
