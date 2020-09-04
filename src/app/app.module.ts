@@ -80,6 +80,7 @@ const INTERCEPTOR_PROVIDES = [
 // #region Startup Service
 import { StartupService } from '@core';
 import {BasecodeService} from './common/service/basecode.service';
+import {ClientService} from './common/service/client.service';
 import {OrganizationService} from './common/service/organization.service';
 import {ProjectService} from './common/service/project.service';
 import {StaffService} from './common/service/staff.service';
@@ -133,6 +134,7 @@ import { RoleService } from './common/service/role.service';
     MenuService,
     ProjectService,
     StaffService,
+    ClientService,
     OrganizationService,
     BasecodeService,
     NzMenuService,
