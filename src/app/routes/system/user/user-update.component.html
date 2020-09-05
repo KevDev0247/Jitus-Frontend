@@ -1,15 +1,33 @@
-<page-header [title]="user.id?'Edit user': 'Create user'"></page-header>
 <nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a routerLink="/sys/user/list">Users</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        User Details
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
   <nz-tabset>
     <nz-tab nzTitle="User Details">
       <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
         <se label="Name" error="Please enter your name" required>
-          <input nz-input formControlName="name" placeholder="Please enter your name" [(ngModel)]="user.name"
-                 style="width: calc(100% - 400px);"/>
+          <input
+            nz-input
+            formControlName="name"
+            placeholder="Please enter your name"
+            [(ngModel)]="user.name"
+            style="width: calc(100% - 400px);"/>
         </se>
         <se label="Email" error="Please enter your email" required>
-          <input nz-input formControlName="email" placeholder="Please enter your email" [(ngModel)]="user.email"
-                 style="width: calc(100% - 400px);"/>
+          <input
+            nz-input
+            formControlName="email"
+            placeholder="Please enter your email"
+            [(ngModel)]="user.email"
+            style="width: calc(100% - 400px);"/>
         </se>
         <se>
           <button *ngIf="user.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
@@ -21,12 +39,22 @@
     <nz-tab nzTitle="Change password">
       <form nz-form [formGroup]="passwordForm" se-container="1" labelWidth="200">
         <se label="Previous Password" error="Please enter previous password" required>
-          <input nz-input formControlName="password" placeholder="Please enter previous password" type="password" [(ngModel)]="password"
-                 style="width: calc(100% - 400px);"/>
+          <input
+            nz-input
+            formControlName="password"
+            placeholder="Please enter previous password"
+            type="password"
+            [(ngModel)]="password"
+            style="width: calc(100% - 400px);"/>
         </se>
         <se label="New Password" error="Please enter new password" required>
-          <input nz-input formControlName="newPassword" placeholder="Please enter new password" type="password" [(ngModel)]="newPassword"
-                 style="width: calc(100% - 400px);"/>
+          <input
+            nz-input
+            formControlName="newPassword"
+            placeholder="Please enter new password"
+            type="password"
+            [(ngModel)]="newPassword"
+            style="width: calc(100% - 400px);"/>
         </se>
         <se>
           <button nz-button nzType="primary" (click)="updatePassword()" [disabled]="passwordForm.invalid">Submit</button>
