@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,7 @@
       <workItem from="1599079647714" duration="5133000" />
       <workItem from="1599147617266" duration="19003000" />
       <workItem from="1599200226522" duration="8000" />
-      <workItem from="1599248713317" duration="3112000" />
+      <workItem from="1599248713317" duration="8380000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -315,22 +316,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598133635223" />
-    <state width="663" height="98" key="GridCell.Tab.0.bottom" timestamp="1599252560782">
+    <state width="663" height="96" key="GridCell.Tab.0.bottom" timestamp="1599264212475">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="98" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599252560782" />
-    <state width="663" height="98" key="GridCell.Tab.0.center" timestamp="1599252560782">
+    <state width="663" height="96" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599264212475" />
+    <state width="663" height="96" key="GridCell.Tab.0.center" timestamp="1599264212474">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="98" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599252560782" />
-    <state width="663" height="98" key="GridCell.Tab.0.left" timestamp="1599252560782">
+    <state width="663" height="96" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599264212474" />
+    <state width="663" height="96" key="GridCell.Tab.0.left" timestamp="1599264212474">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="98" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599252560782" />
-    <state width="663" height="98" key="GridCell.Tab.0.right" timestamp="1599252560782">
+    <state width="663" height="96" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599264212474" />
+    <state width="663" height="96" key="GridCell.Tab.0.right" timestamp="1599264212474">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="663" height="98" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599252560782" />
+    <state width="663" height="96" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599264212474" />
     <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
