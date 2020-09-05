@@ -1,9 +1,9 @@
 # Jitlantis-Frontend
 
 ## Jitlantis Team
-- Feng Yuan: Cofounder, Product Manager
-- Yonggang Su: Cofounder, System Architect, Frontend Developer, Mobile Developer
-- Kevin Zhijun Wang: Cofounder, Web Full stack developer, Mobile Developer
+- Feng Yuan: Cofounder, Product Manager, Marketing Director
+- Yonggang Su: Cofounder, System Architect, Full stack developer, Mobile Developer
+- Kevin Zhijun Wang: Cofounder, Full stack developer
 - Ying Quan: UI & UX designer
 
 ## System Design
@@ -20,7 +20,7 @@
 - System Design: Yonggang Su
 - Database Design: Yonggang Su, Kevin Zhijun Wang
 - Web Frontend Development: Yonggang Su, Kevin Zhijun Wang
-- Web Backend Development: Kevin Zhijun Wang
+- Web Backend Development: Kevin Zhijun Wang, Yonggang Su
 - QA and Testing: Yonggang Su
 - UI & UX design: Ying Quan
 
