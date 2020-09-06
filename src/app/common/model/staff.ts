@@ -7,7 +7,7 @@ import {BaseModule} from './base.module';
  * Created on 2020/08/10
  */
 export class Staff extends BaseModule {
-  scode?: string;
+  sCode?: string;
   name?: string;
   dept?: string;
   company?: string;
