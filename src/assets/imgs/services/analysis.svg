@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="93" viewBox="0 0 64 93">
+  <g id="数据分析" transform="translate(1)">
+    <text id="Analysis" transform="translate(0 89)" fill="#203e5d" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="0">Analysis</tspan></text>
+    <g id="Group_645" data-name="Group 645" transform="translate(0.5)">
+      <path id="Path_1579" data-name="Path 1579" d="M396,400.1l7.035,7.952,15.333-24.993-3.52-13.6Z" transform="translate(-396 -345.552)" fill="#009245"/>
+      <path id="Path_1580" data-name="Path 1580" d="M474.412,369.46l3.519,13.6.034-.056,19.017,13.254.02-.048-4.054-13.783Z" transform="translate(-455.563 -345.552)" fill="#39b54a"/>
+      <path id="Path_1581" data-name="Path 1581" d="M571.784,295.734,567.937,270l-22.8,13.728,11.43,1.729-9.893,21.418,4.054,13.783L564.15,288.05Z" transform="translate(-509.284 -270)" fill="#009245"/>
+    </g>
+  </g>
+</svg>

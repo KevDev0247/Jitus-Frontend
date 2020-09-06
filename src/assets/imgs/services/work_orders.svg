@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="92" viewBox="0 0 83 92">
+  <g id="Group_680" data-name="Group 680" transform="translate(-367 -179.124)">
+    <text id="Work_Order" data-name="Work Order" transform="translate(367 268.124)" fill="#203e5d" font-size="16" font-family="ArialMT, Arial"><tspan x="0" y="0">Work Order</tspan></text>
+    <g id="Group_679" data-name="Group 679" transform="translate(379 179.124)">
+      <g id="Group_649" data-name="Group 649">
+        <path id="Path_1588" data-name="Path 1588" d="M264.067,247H224.873l9.853,14.688h21.507v7.442H239.718l4.861,7.246h11.654v7.442h-6.662l2.2,3.28a16.713,16.713,0,0,1,15.429-2.654V250.134A3.134,3.134,0,0,0,264.067,247Z" transform="translate(-215.889 -247)" fill="#cfbf9a"/>
+        <path id="Path_1589" data-name="Path 1589" d="M189.967,283.819v-7.442H207.69l-4.861-7.246H189.967v-7.442h7.87L187.984,247h-5.851A3.134,3.134,0,0,0,179,250.134v55.558l11.009-7.386,7.378,7.3,7.269-7.3,3.8,3.694c-.054-.549-.083-1.105-.083-1.668a16.689,16.689,0,0,1,6.506-13.233l-2.2-3.28Z" transform="translate(-179 -247)" fill="#b6ad99"/>
+        <path id="Path_1590" data-name="Path 1590" d="M363.472,463.184V453h-5.288v10.184H348v5.288h10.184v10.184h5.288V468.472h10.184v-5.288Z" transform="translate(-314.902 -412.656)" fill="#c78a03"/>
+      </g>
+    </g>
+  </g>
+</svg>

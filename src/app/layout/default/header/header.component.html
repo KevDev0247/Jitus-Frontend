@@ -6,7 +6,7 @@
       style="max-height:30px;" />
   </a>-->
 <!--  <button nz-button nzType="primary" (click)="open()">Open</button>-->
-  <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzTitle="Basic Drawer" (nzOnClose)="close()">
+  <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzTitle="" (nzOnClose)="close()">
     <ul nz-menu nzMode="inline" style="width: 232px">
       <li nz-submenu>
         <span title>
@@ -42,41 +42,118 @@
   </nz-drawer>
 <!--  <img src="assets/imgs/menu.png" (mouseover)="open()">-->
   <a nz-dropdown [nzDropdownMenu]="menu" (nzVisibleChange)="change($event)">
-    <img src="assets/imgs/menu.png"/>
+    <img src="assets/imgs/menu/menu.svg"/>
   </a>
   <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu style="background-color: #b1c3d5;">
       <li nz-menu-item>
         <span title>
-          <img src="assets/imgs/menu/form.png">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Form</span>
+          <img src="assets/imgs/menu/repair_orders.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Repair Orders</span>
         </span>
       </li>
       <li nz-menu-item>
         <span title>
-          <img src="assets/imgs/menu/work_order.png">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Order</span>
+          <img src="assets/imgs/menu/work_orders.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Orders</span>
         </span>
       </li>
       <li nz-menu-item>
         <span title>
-          <img src="assets/imgs/menu/client.png">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Client</span>
+          <img src="assets/imgs/menu/clients.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clients</span>
+        </span>
+      </li>
+      <a [routerLink]="['/project']">
+        <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/projects.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</span>
+        </span>
+        </li>
+      </a>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/departments.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Departments</span>
         </span>
       </li>
       <li nz-menu-item>
         <span title>
-          <img src="assets/imgs/menu/project.png">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project</span>
+          <img src="assets/imgs/menu/knowledge.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Knowledge</span>
         </span>
       </li>
-      <li nz-menu-item>1st menu item</li>
-      <li nz-menu-item>2nd menu item</li>
-      <li nz-submenu nzTitle="sub menu">
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/accessories.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/communications.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Communications</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/equipments.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Equipments</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/analysis.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analysis</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/monitoring.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monitoring</span>
+        </span>
+      </li>
+      <li nz-menu-item nz-submenu>
+        <span title>
+          <img src="assets/imgs/menu/work_orders.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Management</span>
+        </span>
         <ul>
-          <li nz-menu-item>3rd menu item</li>
-          <li nz-menu-item>4th menu item</li>
+          <li nz-menu-item>
+            <a [routerLink]="['/sys/basecode/list']">Data Dictionary</a>
+          </li>
+          <li nz-menu-item>
+            <a [routerLink]="['/sys/user/list']">Users</a>
+          </li>
+          <li nz-menu-item>
+            <a [routerLink]="['/sys/org/list']">Organizations</a>
+          </li>
         </ul>
+      </li>
+      <li nz-menu-item nz-submenu>
+        <span title>
+          <img src="assets/imgs/menu/settings.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings</span>
+        </span>
+        <ul>
+          <li nz-menu-item>
+            <a [routerLink]="['/sys/role/list']">Roles</a>
+          </li>
+          <li nz-menu-item>Change Password</li>
+        </ul>
+      </li>
+      <li nz-menu-item nz-submenu>
+        <span title>
+          <img src="assets/imgs/menu/information.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information</span>
+        </span>
+      </li>
+      <li nz-menu-item>
+        <span title>
+          <img src="assets/imgs/menu/help.svg">
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Help</span>
+        </span>
       </li>
     </ul>
   </nz-dropdown-menu>
@@ -124,12 +201,12 @@
   <ul class="alain-default__nav">
     <li class="hidden-mobile">
       <div class="alain-default__nav-item">
-        <img src="assets/imgs/home.png"/>
+        <img src="assets/imgs/header/home.svg"/>
       </div>
     </li>
     <li class="hidden-mobile">
       <div class="alain-default__nav-item">
-        <img src="assets/imgs/contact.png"/>
+        <img src="assets/imgs/header/contact.svg"/>
       </div>
     </li>
     <!-- Notify -->
@@ -149,7 +226,7 @@
         nzTrigger="click"
         nzPlacement="bottomRight">
 <!--        <i nz-icon nzType="setting"></i>-->
-        <img src="assets/imgs/setting.png"/>
+        <img src="assets/imgs/header/settings.svg"/>
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
         <div nz-menu style="width:200px;">
@@ -167,14 +244,14 @@
     </li>
     <li class="hidden-mobile">
       <div class="alain-default__nav-item">
-        <img src="assets/imgs/help.png"/>
+        <img src="assets/imgs/header/help.svg"/>
       </div>
     </li>
     <li class="hidden-mobile">
       <header-user></header-user>
     </li>
     <li class="hidden-mobile">
-      <img src="assets/imgs/login-logo.png" style="width: 150px; height: 40px"/>
+      <img src="assets/imgs/logo.svg" style="width: 150px; height: 40px"/>
     </li>
   </ul>
 </div>

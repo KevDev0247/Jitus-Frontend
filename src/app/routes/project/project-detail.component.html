@@ -1,6 +1,10 @@
-<page-header [title]="project.id? 'Edit Project':'Create Project'">
-</page-header>
 <nz-card [nzBordered]="false">
+  <nz-page-header
+    class="site-page-header"
+    (nzBack)="onBack()"
+    nzBackIcon
+    [title]="project.id? 'Edit Project':'Create Project'">
+  </nz-page-header>
   <form nz-form [formGroup]="formGroup" se-container="1" labelWidth="200">
     <se label="Name" error="Please enter name">
       <input
@@ -19,13 +23,10 @@
     </se>-->
     <se label="Accounts Receivable" error="Please enter your accounts receivable" required>
       <nz-input-group>
-        <nz-select formControlName="listOfTagOption" nzShowSearch nzServerSearch nzPlaceHolder="input search text"
-                   [(ngModel)]="listOfTagOption" [nzShowArrow]="false" [nzFilterOption]="nzFilterOption" (nzOnSearch)="search($event)"
-                   style="width: calc(100% - 400px);">
+        <nz-select formControlName="listOfTagOption" nzPlaceHolder="input search text"
+                   [(ngModel)]="listOfTagOption" style="width: calc(100% - 400px);">
           <nz-option
-            *ngFor="let o of listOfOption"
-            [nzLabel]="o.text"
-            [nzValue]="o.value">
+            *ngFor="let o of listOfOption" [nzLabel]="o.text" [nzValue]="o.value">
           </nz-option>
         </nz-select>
       </nz-input-group>

@@ -1,6 +1,12 @@
-<!--<page-header [title]="'User Management'"></page-header>-->
-
 <nz-card [nzBordered]="false" style="float: right; width: 100%">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a routerLink="/sys/user/list">Users</a>
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
   <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48}">
       <div nz-col nzMd="8" nzSm="24">

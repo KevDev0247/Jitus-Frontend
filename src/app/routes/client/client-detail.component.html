@@ -1,6 +1,10 @@
-<page-header [title]="client.id? 'Edit Client':'Create Client'">
-</page-header>
 <nz-card [nzBordered]="false">
+  <nz-page-header
+    class="site-page-header"
+    (nzBack)="onBack()"
+    nzBackIcon
+    [title]="client.id ? 'Edit Client':'Create Client'">
+  </nz-page-header>
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Name" error="Please enter the name">
       <input nz-input formControlName="name" placeholder="Please enter the name" [(ngModel)]="client.name"
@@ -10,15 +14,18 @@
       <input nz-input formControlName="telno" placeholder="Please enter the phone number" [(ngModel)]="client.telNo"
              style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Area" error="Please enter the area">
+<!--    <se label="Area" error="Please enter the area">
       <input nz-input formControlName="Area" placeholder="Please enter the area" [(ngModel)]="client.area"
              style="width: calc(100% - 400px);"/>
+    </se>-->
+    <se>
+
     </se>
     <se label="Address" error="Please enter the address">
       <input nz-input formControlName="address" placeholder="Please enter the address" [(ngModel)]="client.address"
              style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Remark" error="Please enter the remark">
+<!--    <se label="Remark" error="Please enter the remark">
       <input nz-input formControlName="remark" placeholder="Please enter the remark" [(ngModel)]="client.remark"
              style="width: calc(100% - 400px);"/>
     </se>
@@ -31,7 +38,7 @@
       <nz-date-picker formControlName="updateTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
                       [(ngModel)]="client.updateTime">
       </nz-date-picker>
-    </se>
+    </se>-->
     <se>
       <button *ngIf="client.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
       <button *ngIf="!client.id" nz-button class="ml-sm">Save</button>

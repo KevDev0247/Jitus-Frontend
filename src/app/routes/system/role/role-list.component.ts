@@ -137,7 +137,10 @@ export class RoleListComponent implements OnInit {
           this.messageService.error('Please fill in necessary information');
           return;
         }
-        this.roleService.create(this.role).subscribe(() => this.getData());
+        this.roleService.create(this.role).subscribe(() => {
+          this.getData();
+          this.role = new Role();
+        });
       },
     });
   }
