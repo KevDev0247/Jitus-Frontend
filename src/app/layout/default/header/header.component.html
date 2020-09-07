@@ -41,17 +41,19 @@
     </ul>
   </nz-drawer>
 <!--  <img src="assets/imgs/menu.png" (mouseover)="open()">-->
-  <a nz-dropdown [nzDropdownMenu]="menu" (nzVisibleChange)="change($event)">
+  <a nz-dropdown [nzDropdownMenu]="menu">
     <img src="assets/imgs/menu/menu.svg"/>
   </a>
   <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu style="background-color: #b1c3d5;">
-      <li nz-menu-item>
+      <a [routerLink]="['/repair/contract/list']">
+        <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/repair_orders.svg">
           <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Repair Orders</span>
         </span>
-      </li>
+        </li>
+      </a>
       <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/work_orders.svg">
