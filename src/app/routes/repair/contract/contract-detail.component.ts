@@ -5,6 +5,12 @@ import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
 import {Contract} from '../../../common/model/contract';
 import {ContractService} from '../../../common/service/contract.service';
 
+/**
+ * The component class that define and control the views of the ContractDetail Component
+ *
+ * @Author Yonggang Su
+ * Created on 2020/09/06
+ */
 @Component({
   selector: 'app-contract-detail',
   templateUrl: './contract-detail.component.html',
