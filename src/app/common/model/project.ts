@@ -12,8 +12,8 @@ export class Project extends BaseModule {
   description?: string;
   address?: string;
   clientId?: number;
-  contractStartTime?: Date;
-  contractEndTime?: Date;
+  contractStartTime?: string;
+  contractEndTime?: string;
   deliveryTime?: Date;
   acceptTime?: Date;
   guaranteeType?: string;
