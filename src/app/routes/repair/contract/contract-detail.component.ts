@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
-import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {NzMessageService} from 'ng-zorro-antd';
 import {Contract} from '../../../common/model/contract';
 import {ContractService} from '../../../common/service/contract.service';
 
@@ -72,7 +72,7 @@ export class ContractDetailComponent implements OnInit {
     if (!d) {
       return;
     }
-    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' '
+    return d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate() + ' '
       + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
   }
 

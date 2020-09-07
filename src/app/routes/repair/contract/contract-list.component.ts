@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
-import {NzMessageService, NzModalService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {STChange, STColumn, STComponent, STData} from '@delon/abc';
+import {NzMessageService, NzModalService} from 'ng-zorro-antd';
 import {Contract} from '../../../common/model/contract';
 import {ContractService} from '../../../common/service/contract.service';
 
@@ -27,7 +27,7 @@ export class ContractListComponent implements OnInit {
   contract: Contract = new Contract();
   totalCallNo = 0;
   total = 0;
-  loading: false;
+  loading = false;
   expandForm = false;
 
   @ViewChild('st', { static: true }) st: STComponent;

@@ -62,7 +62,7 @@
     </se>
     <se>
       <button *ngIf="contract.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
-      <button *ngIf="contract.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Save</button>
+      <button *ngIf="!contract.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Save</button>
       <button nz-button (click)="goBack()">Back</button>
     </se>
   </form>
