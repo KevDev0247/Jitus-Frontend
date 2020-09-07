@@ -75,14 +75,14 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   create() {
-    console.log('>>>>>res options>>>>', this.listOfTagOption);
-    // this.project.contractStartTime = this.transFormDateTimeStr(this.contractStartTime);
-    // this.project.contractEndTime = this.transFormDateTimeStr(this.contractEndTime);
-    // this.projectService.create(this.project).subscribe(res => {
-    //   if (res.data) {
-    //     this.router.navigate(['/pro/list']);
-    //   }
-    // });
+    // console.log('>>>>>res options>>>>', this.listOfTagOption);
+    this.project.contractStartTime = this.transformDateTimeStr(this.contractStartTime);
+    this.project.contractEndTime = this.transformDateTimeStr(this.contractEndTime);
+    this.projectService.create(this.project).subscribe(res => {
+      if (res.data) {
+        this.router.navigate(['/pro/list']);
+      }
+    });
   }
 
   update() {
