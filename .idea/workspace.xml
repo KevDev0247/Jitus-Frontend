@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/model/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/model/project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -196,6 +197,7 @@
       <workItem from="1599275772672" duration="16000" />
       <workItem from="1599322888581" duration="8454000" />
       <workItem from="1599405783188" duration="3924000" />
+      <workItem from="1599442616047" duration="2680000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -293,10 +295,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="896" y="350" key="#TSLint/0.0.1368.872@0.0.1368.872" timestamp="1596838205513" />
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1597852681422">
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1599425470837">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1597852681422" />
+    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1599425470837" />
     <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598717949280">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
