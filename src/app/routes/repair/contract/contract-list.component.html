@@ -1,0 +1,186 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a>Request Orders</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        Contracts
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.param3" name="param3" placeholder="Contract Name" id="param3"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Content</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="query.param2" name="param3" placeholder="Contract Name" id="param2"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    [total]="total"
+    (change)="stChange($event)">
+  </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="signPlace">Sign Location</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.signPlace"
+        name="signPlace"
+        placeholder="Please enter"
+        id="signPlace"/>
+    </nz-form-control>
+    <nz-form-label nzFor="startDate">Start Date</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="startDate"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled="false"
+        [(ngModel)]="contract.startDate">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="endDate">End Date</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="endDate"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled="false"
+        [(ngModel)]="contract.endDate">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="projectId">Project</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.projectId"
+        name="projectId"
+        placeholder="Please enter"
+        id="projectId"
+        type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="startDate">Client</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.clientId"
+        name="clientId"
+        placeholder="Please enter"
+        id="clientId"/>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Content</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.content"
+        name="content"
+        placeholder="Please enter"
+        id="content"/>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Model</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.pattern"
+        name="pattern"
+        placeholder="Please enter"
+        id="pattern"/>
+    </nz-form-control>
+    <nz-form-label nzFor="name">Name</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.name"
+        name="name"
+        placeholder="Please enter"
+        id="name"/>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Address</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.address"
+        name="address"
+        placeholder="Please enter"
+        id="address"/>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Phone</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.telno"
+        name="telno"
+        placeholder="Please enter"
+        id="telno"/>
+    </nz-form-control>
+    <nz-form-label nzFor="signDate">Sign Date</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="signDate"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled="false"
+        [(ngModel)]="contract.signDate">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Signatory</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.telno"
+        name="signmanId"
+        placeholder="Please enter"
+        id="signmanId"
+        type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Status</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.status"
+        name="status"
+        placeholder="Please enter"
+        id="status"
+        type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="content">Price</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="contract.price"
+        name="price"
+        placeholder="Please enter"
+        id="price"
+        type="number"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
