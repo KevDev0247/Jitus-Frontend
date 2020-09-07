@@ -1,9 +1,5 @@
 <nz-card [nzBordered]="false">
-  <nz-page-header
-    class="site-page-header"
-    (nzBack)="onBack()"
-    nzBackIcon
-    [title]="client.id ? 'Edit Client':'Create Client'">
+  <nz-page-header class="site-page-header" nzBackIcon [nzTitle]="client.id ? 'Edit Client' : 'Create Client'">
   </nz-page-header>
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Name" error="Please enter the name">
