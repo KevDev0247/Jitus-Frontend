@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
+import {NzTableModule} from 'ng-zorro-antd/ng-zorro-antd.module';
 import {ContractDetailComponent} from './contract/contract-detail.component';
 import {ContractListComponent} from './contract/contract-list.component';
 import {RepairRoutingModule} from './repair-routing.module';
@@ -12,6 +13,7 @@ const COMPONENTS_NOROUNT = [ContractListComponent, ContractDetailComponent];
   imports: [
     SharedModule,
     RepairRoutingModule,
+    NzTableModule,
   ],
   declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT],
   entryComponents: COMPONENTS_NOROUNT,
