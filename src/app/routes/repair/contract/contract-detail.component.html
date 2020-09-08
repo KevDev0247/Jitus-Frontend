@@ -52,13 +52,21 @@
       <input nz-input formControlName="signmanId" placeholder="Please enter the sign location" [(ngModel)]="contract.signmanId"
              style="width: calc(100% - 400px);" type="number"/>
     </se>
-    <se label="Status" error="Please enter the status">
+    <!--<se label="Status" error="Please enter the status">
       <input nz-input formControlName="status" placeholder="Please enter the status type" [(ngModel)]="contract.status"
              style="width: calc(100% - 400px);" type="number"/>
+    </se>-->
+    <se label="Type" error="Please select contract type" required>
+      <nz-input-group>
+        <nz-select formControlName="status" nzPlaceHolder="Please select contract type" [(ngModel)]="contract.status"
+          style="width: calc(100% - 400px);">
+          <nz-option *ngFor="let o of statusList" [nzLabel]="o.text" [nzValue]="o.value"> </nz-option>
+        </nz-select>
+      </nz-input-group>
     </se>
     <se label="Price" error="Please enter the price">
       <input nz-input formControlName="price" placeholder="Please enter the price" [(ngModel)]="contract.price"
-             style="width: calc(100% - 400px);" type="number"/>
+             style="width: calc(100% - 400px);" type="text"/>
     </se>
     <se>
       <button *ngIf="contract.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
