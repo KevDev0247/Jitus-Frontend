@@ -25,6 +25,11 @@ export class ContractDetailComponent implements OnInit {
   endDate?: Date;
   signDate?: Date;
 
+  statusList: Array<{ value: number, text: string }> = [
+    { value: 0, text: 'Broker Agreement' },
+    { value: 1, text: 'Cooperation Agreement' },
+  ];
+
   constructor(private fb: FormBuilder, private msg: NzMessageService,
               private cdr: ChangeDetectorRef, public activatedRoute: ActivatedRoute,
               private router: Router, private contractService: ContractService) {
@@ -76,11 +81,14 @@ export class ContractDetailComponent implements OnInit {
       + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
   }
 
-  create() {
+  transformContractTime() {
     this.contract.startDate = this.transformDateTimeStr(this.startDate);
     this.contract.endDate = this.transformDateTimeStr(this.endDate);
     this.contract.signDate = this.transformDateTimeStr(this.signDate);
-    console.log('>>>>res ', this.contract);
+  }
+
+  create() {
+    this.transformContractTime();
     this.contractService.create(this.contract).subscribe(res => {
       if (res.data) {
         this.router.navigate(['/repair/contract/list']);
@@ -89,6 +97,7 @@ export class ContractDetailComponent implements OnInit {
   }
 
   update() {
+    this.transformContractTime();
     this.contractService.update(this.contract).subscribe(res => {
       if (res.data) {
         this.router.navigate(['repair/contract/list']);
