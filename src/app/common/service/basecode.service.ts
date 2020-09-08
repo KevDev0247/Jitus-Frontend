@@ -26,7 +26,7 @@ export class BasecodeService {
   }
 
   delete(basecodeId: number) {
-    return this.http.get(this.getServiceUrl() + '/delete?basecodeId=', basecodeId);
+    return this.http.get(this.getServiceUrl() + '/deleteBasecode?basecodeId=', basecodeId);
   }
 
   getDetail(basecodeId: number) {

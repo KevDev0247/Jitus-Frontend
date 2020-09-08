@@ -26,7 +26,7 @@ export class ContractService {
   }
 
   delete(contractId: number) {
-    return this.http.get(this.getServiceUrl() + '/delete?contractId=' + contractId);
+    return this.http.get(this.getServiceUrl() + '/deleteContract?contractId=' + contractId);
   }
 
   detail(contractId: number) {
@@ -34,6 +34,6 @@ export class ContractService {
   }
 
   getQueryList(param1: number, param2: number, param3: number) {
-    return this.http.get(this.getServiceUrl() + '/queryList', { status: param1, content: param2, name: param3 });
+    return this.http.get(this.getServiceUrl() + '/queryContractList', { status: param1, content: param2, name: param3 });
   }
 }
