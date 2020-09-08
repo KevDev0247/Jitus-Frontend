@@ -10,7 +10,7 @@ export class Contract extends BaseModule {
   signPlace?: string;
   startDate?: string;
   endDate?: string;
-  projectId?: string;
+  projectId?: number;
   clientId?: string;
   content?: string;
   pattern?: string;
@@ -18,7 +18,7 @@ export class Contract extends BaseModule {
   address?: string;
   telno?: string;
   signDate?: string;
-  signmanId?: string;
-  status?: string;
+  signmanId?: number;
+  status?: number;
   price?: string;
 }
