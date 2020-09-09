@@ -38,13 +38,10 @@
     <i nz-icon nzType="plus"></i>
     <span>New</span>
   </button>
-  <st
-    #st
-    [columns]="columns"
-    [data]="data"
-    [loading]="loading"
-    [total]="total"
-    (change)="stChange($event)">
+  <st #st [columns]="columns" [data]="data" [loading]="loading" [total]="total" (change)="stChange($event)">
+    <ng-template st-row="status" let-i>
+      <nz-badge [nzStatus]="i.statusType" [nzText]="i.statusText"></nz-badge>
+    </ng-template>
   </st>
 </nz-card>
 <ng-template #modalContent>
