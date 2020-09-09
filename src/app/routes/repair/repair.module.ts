@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
-import {NzTableModule} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {NzTableModule} from 'ng-zorro-antd';
 import {ContractDetailComponent} from './contract/contract-detail.component';
 import {ContractListComponent} from './contract/contract-list.component';
 import {RepairRoutingModule} from './repair-routing.module';
