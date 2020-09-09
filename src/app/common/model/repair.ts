@@ -8,4 +8,7 @@ export class Repair extends BaseModule {
   name?: string;
   address?: string;
   telno?: string;
+  installId?: number;
+  status?: number;
+  staffId?: number;
 }
