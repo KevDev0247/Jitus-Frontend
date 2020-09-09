@@ -26,11 +26,28 @@ export class ContractListComponent implements OnInit {
   selectedRows: STData[] = [];
   contract: Contract = new Contract();
   totalCallNo = 0;
-  total = 0;
+  total = 200;
+  pageSize = 10;
   loading = false;
   expandForm = false;
 
   @ViewChild('st', { static: true }) st: STComponent;
+  status = [
+    {
+      id: 0,
+      text: 'Broker Agreement',
+      value: false,
+      type: 'info',
+      checked: false,
+    },
+    {
+      id: 1,
+      text: 'Cooperation Agreement',
+      value: false,
+      type: 'info',
+      checked: false,
+    }
+  ];
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'Location', index: 'signPlace' },
@@ -45,8 +62,16 @@ export class ContractListComponent implements OnInit {
     { title: 'Phone', index: 'telno' },
     { title: 'Sign Date', index: 'signDate' },
     { title: 'Signatory', index: 'signmanId' },
-    { title: 'Status', index: 'status' },
     { title: 'Price', index: 'price' },
+    {
+      title: 'Type',
+      index: 'status',
+      render: 'status',
+      filter: {
+        menus: this.status,
+        fn: (filter: any, record: any) => record.status === filter.id,
+      },
+    },
     {
       title: 'Operations',
       buttons: [
@@ -78,11 +103,23 @@ export class ContractListComponent implements OnInit {
     this.getData();
   }
 
+  changePage(event: any) {
+    console.log('>>>number>>>', event);
+  }
+
   getData() {
     this.loading = true;
     this.contractService.getQueryList(this.query.param1, this.query.param2, this.query.param3)
       .subscribe((res: any) => {
         this.data = res.list;
+        this.data.map(i => {
+          const statusItem = this.status[+i.status];
+          if (statusItem) {
+            i.statusText = statusItem.text;
+            i.statusType = statusItem.type;
+            return i;
+          }
+        });
         this.loading = false;
         this.changeDetectorRef.detectChanges();
       });
