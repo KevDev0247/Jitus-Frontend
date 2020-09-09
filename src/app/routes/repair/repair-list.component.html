@@ -1,0 +1,79 @@
+<nz-card [nzBordered]="false">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Search 1</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Search 2</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">查询</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">重置</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+
+  <st #st [columns]="columns" [data]="data" [loading]="loading" (change)="stChange($event)">
+  </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="repairUnit">Agency</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.repairUnit" name="repairUnit" placeholder="Please enter" id="repairUnit" />
+    </nz-form-control>
+    <nz-form-label nzFor="fixDate">Repair Date</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker formControlName="fixDate" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
+                      [(ngModel)]="repair.fixDate">
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="projectId">Project</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.projectId" name="projectId" placeholder="Please enter" id="projectId" type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="contactId">Contact</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.contactId" name="contactId" placeholder="Please enter" id="contactId" type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="name">Name</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.name" name="name" placeholder="Please enter" id="name" />
+    </nz-form-control>
+    <nz-form-label nzFor="address">Address</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.address" name="address" placeholder="Please enter" id="address" />
+    </nz-form-control>
+    <nz-form-label nzFor="telno">Phone</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.telno" name="telno" placeholder="Please enter" id="telno" />
+    </nz-form-control>
+    <nz-form-label nzFor="installId">Product</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.installId" name="installId" placeholder="Please enter" id="installId" type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="status">Status</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.status" name="status" placeholder="Please enter" id="status" type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="staffId">Staff</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="repair.staffId" name="staffId" placeholder="Please enter" id="staffId" type="number"/>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
