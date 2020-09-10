@@ -84,6 +84,7 @@ import {ClientService} from './common/service/client.service';
 import {ContractService} from './common/service/contract.service';
 import {OrganizationService} from './common/service/organization.service';
 import {ProjectService} from './common/service/project.service';
+import {RepairService} from './common/service/repair.service';
 import {StaffService} from './common/service/staff.service';
 export function StartupServiceFactory(startupService: StartupService) {
   return () => startupService.load();
@@ -120,7 +121,6 @@ import { RoleService } from './common/service/role.service';
     SharedModule,
     LayoutModule,
     RoutesModule,
-    // NzMenuModule,
     ...I18NSERVICE_MODULES,
     ...GLOBAL_THIRD_MODULES,
     ...FORM_MODULES,
@@ -137,6 +137,7 @@ import { RoleService } from './common/service/role.service';
     StaffService,
     ClientService,
     ContractService,
+    RepairService,
     OrganizationService,
     BasecodeService,
     NzMenuService,
