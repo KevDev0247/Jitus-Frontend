@@ -3,11 +3,13 @@ import {SharedModule} from '@shared';
 import {NzTableModule} from 'ng-zorro-antd';
 import {ContractDetailComponent} from './contract/contract-detail.component';
 import {ContractListComponent} from './contract/contract-list.component';
+import {RepairDetailComponent} from './repair-detail.component';
+import {RepairListComponent} from './repair-list.component';
 import {RepairRoutingModule} from './repair-routing.module';
 
 const COMPONENTS = [];
 
-const COMPONENTS_NOROUNT = [ContractListComponent, ContractDetailComponent];
+const COMPONENTS_NOROUNT = [RepairListComponent, RepairDetailComponent, ContractListComponent, ContractDetailComponent];
 
 @NgModule({
   imports: [
