@@ -1,6 +1,7 @@
 <page-header [title]="repair.id?'Edit Repair Order':'Create Repair Order'">
 </page-header>
 <nz-card [nzBordered]="false">
+  <page-header [title]="repair.id ? 'Edit Work Order' : 'Create Work Order'"></page-header>
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Agency" error="Please enter agency" >
       <input nz-input formControlName="repairUnit" placeholder="Please enter agency" [(ngModel)]="repair.repairUnit"
@@ -55,7 +56,7 @@
     </se>
     <se>
       <button *ngIf="repair.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
-      <button *ngIf="!repair.id" nz-button class="ml-sm">Save</button>
+      <button *ngIf="!repair.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Save</button>
       <button nz-button (click)="goBack()">Back</button>
     </se>
   </form>
