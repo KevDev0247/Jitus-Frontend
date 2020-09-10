@@ -1,17 +1,25 @@
 <nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        Work Orders
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
   <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="name">Search 1</nz-form-label>
+          <nz-form-label nzFor="name">Client</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+            <input nz-input [(ngModel)]="q.param3" name="param3" placeholder="Please enter" id="param3" />
           </nz-form-control>
         </nz-form-item>
       </div>
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="text">Search 2</nz-form-label>
+          <nz-form-label nzFor="text">Agency</nz-form-label>
           <nz-form-control>
             <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
           </nz-form-control>
@@ -27,8 +35,12 @@
     <i nz-icon nzType="plus"></i>
     <span>New</span>
   </button>
-
-  <st #st [columns]="columns" [data]="data" [loading]="loading" (change)="stChange($event)">
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    (change)="stChange($event)">
   </st>
 </nz-card>
 <ng-template #modalContent>
