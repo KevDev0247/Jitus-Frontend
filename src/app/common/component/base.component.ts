@@ -23,5 +23,6 @@ export abstract class BaseComponent {
             nzOnCancel: () => console.log('Cancel')
         });
     }
+
     remove(id?: number) { }
 }

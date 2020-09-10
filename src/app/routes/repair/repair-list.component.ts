@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateR
 import { Router } from '@angular/router';
 import {STChange, STColumn, STComponent, STData} from '@delon/abc/public_api';
 import { NzMessageService, NzModalService } from 'ng-zorro-antd/ng-zorro-antd.module';
+import {BaseComponent} from '../../common/component/base.component';
 import { Repair } from '../../common/model/repair';
 import { RepairService } from '../../common/service/repair.service';
 
@@ -10,7 +11,7 @@ import { RepairService } from '../../common/service/repair.service';
   templateUrl: './repair-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RepairListComponent implements OnInit {
+export class RepairListComponent extends BaseComponent implements OnInit {
 
   q: any = {
     pi: 0,
@@ -20,6 +21,7 @@ export class RepairListComponent implements OnInit {
     statusList: [],
     param1: '',
     param2: '',
+    param3: '',
   };
 
   repair: Repair = new Repair();
@@ -63,11 +65,13 @@ export class RepairListComponent implements OnInit {
 
   constructor(
     public messageService: NzMessageService,
-    private modalService: NzModalService,
+    public modalService: NzModalService,
     private changeDetectorRef: ChangeDetectorRef,
     private repairService: RepairService,
     private router: Router,
-  ) { }
+  ) {
+    super(modalService);
+  }
 
   ngOnInit(): void {
     this.getData();
@@ -122,21 +126,7 @@ export class RepairListComponent implements OnInit {
   reset() {
     this.q.param1 = '';
     this.q.param2 = '';
+    this.q.param3 = '';
     this.getData()
-  }
-
-  showDeleteConfirm(id: number): void {
-    this.modalService.confirm({
-      nzTitle: 'Are you sure to delete?',
-      nzContent: '<b style="color: red;"></b>',
-      nzOkText: 'OK',
-      nzOkType: 'danger',
-      nzOnOk: () => {
-        console.log('OK');
-        this.remove(id);
-      },
-      nzCancelText: 'Cancel',
-      nzOnCancel: ()  => console.log('Cancel'),
-    });
   }
 }
