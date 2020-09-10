@@ -2,7 +2,7 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
-import {Repair} from 'src/app/common/model/Repair';
+import {Repair} from 'src/app/common/model/repair';
 import {RepairService} from 'src/app/common/service/repair.service';
 import {CommonUtils} from '../../common/util/common.utils';
 
