@@ -2,7 +2,7 @@ import {BaseModule} from './base.module';
 
 export class Repair extends BaseModule {
   repairUnit?: string;
-  fixDate?: Date;
+  fixDate?: string;
   projectId?: number;
   contactId?: number;
   name?: string;
