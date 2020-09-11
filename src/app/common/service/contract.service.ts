@@ -5,7 +5,7 @@ import {DOMAIN_SERVER_URL} from '../constants';
 /**
  * The service class for Contract module
  *
- * @Author Kevin Zhijun Wang
+ * @Author Kevin Zhijun Wang, Yonggang Su
  * Created on 2020/09/06
  */
 @Injectable()
@@ -35,5 +35,9 @@ export class ContractService {
 
   getQueryList(param1: number, param2: number, param3: number) {
     return this.http.get(this.getServiceUrl() + '/queryContractList', { status: param1, content: param2, name: param3 });
+  }
+
+  getOptionList(param: string) {
+    return this.http.get(this.getServiceUrl() + '/optionList', { name: param });
   }
 }
