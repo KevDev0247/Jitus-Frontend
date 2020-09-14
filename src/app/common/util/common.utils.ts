@@ -14,4 +14,10 @@ export class CommonUtils {
         d.getSeconds();
     }
   }
+
+  convertDateFromString(dateString) {
+    if (dateString) {
+      return new Date(dateString.replace(/-/, '/'));
+    }
+  }
 }
