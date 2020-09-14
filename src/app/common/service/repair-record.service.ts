@@ -2,6 +2,12 @@ import {Injectable} from '@angular/core';
 import {_HttpClient} from '@delon/theme';
 import {DOMAIN_SERVER_URL} from '../constants';
 
+/**
+ * The service class for RepairRecord module that send out Http requests to the backend
+ *
+ * @Author Yonggang Su
+ * 2020/09/14
+ */
 @Injectable()
 export class RepairRecordService {
 
