@@ -17,19 +17,27 @@
         [(ngModel)]="project.contractId"
         style="width: calc(100% - 400px);"/>
     </se>-->
-    <se label="Accounts Receivable" error="Please enter your accounts receivable" required>
+    <se label="Contract" error="Please select contract" required>
       <nz-input-group>
-        <nz-select formControlName="listOfTagOption" nzPlaceHolder="input search text"
-                   [(ngModel)]="listOfTagOption" style="width: calc(100% - 400px);">
-          <nz-option
-            *ngFor="let o of listOfOption" [nzLabel]="o.text" [nzValue]="o.value">
-          </nz-option>
+        <nz-select
+          formControlName="contractId"
+          nzShowSearch
+          nzServerSearch
+          nzPlaceHolder="Please select contract"
+          [(ngModel)]="project.contractId"
+          [nzShowArrow]="false"
+          [nzFilterOption]="nzFilterOption"
+          (nzOnSearch)="search($event)"
+          style="width: calc(100% - 400px);"
+        >
+          <nz-option *ngFor="let o of contractOptions" [nzLabel]="o.name" [nzValue]="o.id"> </nz-option>
         </nz-select>
       </nz-input-group>
     </se>
     <se label="Description" error="Please enter description">
-      <input nz-input formControlName="description" placeholder="Please enter description" [(ngModel)]="project.description"
-        style="width: calc(100% - 400px);"/>
+      <textarea nz-input formControlName="description" placeholder="Please enter description" [(ngModel)]="project.description"
+        style="width: calc(100% - 400px);">
+      </textarea>
     </se>
     <se label="Address" error="Please enter address">
       <input nz-input formControlName="address" placeholder="Please enter address" [(ngModel)]="project.address"
