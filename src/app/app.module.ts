@@ -84,6 +84,7 @@ import {ClientService} from './common/service/client.service';
 import {ContractService} from './common/service/contract.service';
 import {OrganizationService} from './common/service/organization.service';
 import {ProjectService} from './common/service/project.service';
+import {RepairRecordService} from './common/service/repair-record.service';
 import {RepairService} from './common/service/repair.service';
 import {StaffService} from './common/service/staff.service';
 export function StartupServiceFactory(startupService: StartupService) {
@@ -138,6 +139,7 @@ import { RoleService } from './common/service/role.service';
     ClientService,
     ContractService,
     RepairService,
+    RepairRecordService,
     OrganizationService,
     BasecodeService,
     NzMenuService,
