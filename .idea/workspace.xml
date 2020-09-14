@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +203,9 @@
       <workItem from="1599572670538" duration="11419000" />
       <workItem from="1599657576918" duration="2832000" />
       <workItem from="1599772640069" duration="5991000" />
-      <workItem from="1599801075494" duration="383000" />
+      <workItem from="1599801075494" duration="428000" />
+      <workItem from="1599961924314" duration="599000" />
+      <workItem from="1600045016811" duration="1273000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
