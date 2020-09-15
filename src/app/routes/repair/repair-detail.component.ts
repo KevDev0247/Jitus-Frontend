@@ -17,6 +17,7 @@ export class RepairDetailComponent implements OnInit {
   repair: Repair = new Repair();
   commonUtils: CommonUtils = new CommonUtils();
   id: any;
+  current = 2;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService, private cdr: ChangeDetectorRef,
               public activedRoute: ActivatedRoute, private router: Router, private repairService: RepairService) {
