@@ -6,6 +6,7 @@ import {NzMessageService} from 'ng-zorro-antd';
 import {Project} from '../../common/model/project';
 import {ContractService} from '../../common/service/contract.service';
 import {ProjectService} from '../../common/service/project.service';
+import {CommonUtils} from '../../common/util/common.utils';
 
 /**
  * The component class that define and control the views of the ProjectDetail component
@@ -22,8 +23,10 @@ export class ProjectDetailComponent implements OnInit {
   formGroup: FormGroup;
   id: any;
   project: Project = new Project();
-  contractStartTime?: Date;
-  contractEndTime?: Date;
+  comUtils: CommonUtils = new CommonUtils();
+  deliveryTime?: Date;
+  acceptTime?: Date;
+  guaranteeDueTime?: Date;
 
   listOfOption: Array<{ value: string; text: string}> = [
     { value: '11', text: '11' },
@@ -73,28 +76,12 @@ export class ProjectDetailComponent implements OnInit {
     });
   }
 
-  create() {
-    console.log('>>>>>res options>>>>>', this.project);
-    // this.project.contractStartTime = this.transformDateTimeStr(this.contractStartTime);
-    // this.project.contractEndTime = this.transformDateTimeStr(this.contractEndTime);
-    // this.projectService.create(this.project).subscribe(res => {
-    //   if (res.data) {
-    //     this.router.navigate(['/pro/list']);
-    //   }
-    // });
-  }
-
   update() {
     this.projectService.update(this.project).subscribe(res => {
       if (res.data) {
         this.router.navigate(['/project/list']);
       }
     })
-  }
-
-  transformDateTimeStr(d: Date) {
-    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' '
-      + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
   }
 
   search(value: string): void {
@@ -105,6 +92,25 @@ export class ProjectDetailComponent implements OnInit {
     }
     this.listOfOption = children;
     this.getContractOptions(value);
+  }
+
+  save() {
+    this.project.deliveryTime = this.comUtils.transFormDateTimeStr(this.deliveryTime);
+    this.project.acceptTime = this.comUtils.transFormDateTimeStr(this.acceptTime);
+    this.project.guaranteeDueTime = this.comUtils.transFormDateTimeStr(this.guaranteeDueTime);
+    if (this.project.id) {
+      this.projectService.update(this.project).subscribe(res => {
+        if (res.data) {
+          this.router.navigate(['/project/list']);
+        }
+      });
+    } else {
+      this.projectService.create(this.project).subscribe(res => {
+        if (res.data) {
+          this.router.navigate(['/project/list']);
+        }
+      });
+    }
   }
 
   goBack() {
