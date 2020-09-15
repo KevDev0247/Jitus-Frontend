@@ -10,13 +10,6 @@
         [(ngModel)]="project.name"
         style="width: calc(100% - 400px);"/>
     </se>
-    <!--<se label="Contract" error="Please enter contract">
-      <input
-        nz-input formControlName="contractId"
-        placeholder="Please enter contract"
-        [(ngModel)]="project.contractId"
-        style="width: calc(100% - 400px);"/>
-    </se>-->
     <se label="Contract" error="Please select contract" required>
       <nz-input-group>
         <nz-select
@@ -47,40 +40,14 @@
       <input nz-input formControlName="clientId" placeholder="Please enter client" [(ngModel)]="project.clientId"
         style="width: calc(100% - 400px);"/>
     </se>
-<!--    <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="createTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.createTime">
-      </nz-date-picker>
-    </se>
-    <se label="" error="Please enter">
-      <nz-date-picker
-        formControlName="updateTime"
-        nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss"
-        nzDisabled=false
-        [(ngModel)]="project.updateTime">
-      </nz-date-picker>
-    </se>-->
-    <se label="" error="Please enter">
-      <nz-date-picker formControlName="contractStartTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
-                      [(ngModel)]="project.contractStartTime">
-      </nz-date-picker>
-    </se>
-    <se label="" error="Please enter">
-      <nz-date-picker formControlName="contractEndTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
-                      [(ngModel)]="project.contractEndTime">
-      </nz-date-picker>
-    </se>
     <se label="" error="Please enter">
       <nz-date-picker formControlName="deliveryTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
-                      [(ngModel)]="project.deliveryTime">
+                      [(ngModel)]="deliveryTime">
       </nz-date-picker>
     </se>
     <se label="" error="Please enter">
       <nz-date-picker formControlName="acceptTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
-                      [(ngModel)]="project.acceptTime">
+                      [(ngModel)]="acceptTime">
       </nz-date-picker>
     </se>
     <se label="Guarantee Type" error="Please enter guarantee type">
@@ -93,7 +60,7 @@
     </se>
     <se label="" error="Please enter">
       <nz-date-picker formControlName="guaranteeDueTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
-                      [(ngModel)]="project.guaranteeDueTime">
+                      [(ngModel)]="guaranteeDueTime">
       </nz-date-picker>
     </se>
     <se label="Staff" error="Please enter staff">
@@ -105,8 +72,8 @@
         style="width: calc(100% - 400px);"/>
     </se>
     <se>
-      <button *ngIf="project.id" nz-button nzType="primary" (click)="update()" [disabled]="formGroup.invalid">Submit</button>
-      <button *ngIf="!project.id" nz-button class="ml-sm">Save</button>
+      <button *ngIf="project.id" nz-button nzType="primary" (click)="save()" [disabled]="formGroup.invalid">Submit</button>
+      <button *ngIf="!project.id" nz-button class="ml-sm" nzType="primary" (click)="save()">Save</button>
       <button nz-button (click)="goBack()">Return</button>
     </se>
   </form>
