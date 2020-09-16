@@ -34,12 +34,9 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
-    { title: 'Agency', index: 'repairUnit' },
-    { title: 'Repair Date', index: 'fixDate' },
     { title: 'Project', index: 'projectId' },
     { title: 'Contact', index: 'contactId' },
     { title: 'Name', index: 'name' },
-    { title: 'Address', index: 'address' },
     { title: 'Phone', index: 'telno' },
     { title: 'Product', index: 'installId' },
     { title: 'Status', index: 'status' },
@@ -51,6 +48,18 @@ export class RepairListComponent extends BaseComponent implements OnInit {
           text: 'View',
           click: (item: any) => {
             this.router.navigate(['/repair/detail'], { queryParams: { id: item.id } })
+          },
+        },
+        {
+          text: 'Progress',
+          click: (item: any) => {
+            this.router.navigate(['/repair/progress'], { queryParams: { status: item.status } })
+          },
+        },
+        {
+          text: 'Dispatch',
+          click: (item: any) => {
+            this.router.navigate(['/repair/record/detail'], { queryParams: { id: item.id, status: item.status } })
           },
         },
         {
@@ -101,7 +110,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/repair/detail'])
+    this.router.navigate(['/repair/detail']);
   }
 
   add(tpl: TemplateRef<{}>) {
