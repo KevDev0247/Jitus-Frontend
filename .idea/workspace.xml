@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/progress/progress.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/progress/progress.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/repair-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/repair-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/repair-record/repair-record-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/repair-record/repair-record-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/repair-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/repair-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/common/model/evaluate.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -210,6 +206,7 @@
       <workItem from="1600045016811" duration="2310000" />
       <workItem from="1600094713436" duration="10733000" />
       <workItem from="1600230121508" duration="6031000" />
+      <workItem from="1600284760728" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
