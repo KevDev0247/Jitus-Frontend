@@ -47,11 +47,16 @@
   <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu style="background-color: #b1c3d5;">
       <a [routerLink]="['/repair']">
-        <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/work_orders.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Orders</span>
-        </span>
+        <li nz-menu-item nz-submenu>
+          <span title>
+            <img src="assets/imgs/menu/work_orders.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Orders</span>
+          </span>
+          <ul>
+            <li nz-menu-item>
+              <a [routerLink]="['/repair/contract/list']">Contracts</a>
+            </li>
+          </ul>
         </li>
       </a>
       <li nz-menu-item>
