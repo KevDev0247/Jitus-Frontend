@@ -82,6 +82,7 @@ import { StartupService } from '@core';
 import {BasecodeService} from './common/service/basecode.service';
 import {ClientService} from './common/service/client.service';
 import {ContractService} from './common/service/contract.service';
+import {EvaluateService} from './common/service/evaluate.service';
 import {OrganizationService} from './common/service/organization.service';
 import {ProjectService} from './common/service/project.service';
 import {RepairRecordService} from './common/service/repair-record.service';
@@ -140,6 +141,7 @@ import { RoleService } from './common/service/role.service';
     ContractService,
     RepairService,
     RepairRecordService,
+    EvaluateService,
     OrganizationService,
     BasecodeService,
     NzMenuService,
