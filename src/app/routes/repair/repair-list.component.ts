@@ -45,21 +45,27 @@ export class RepairListComponent extends BaseComponent implements OnInit {
       title: 'Operations',
       buttons: [
         {
-          text: 'View',
+          text: '<img src="assets/imgs/gcgl.png" />',
           click: (item: any) => {
-            this.router.navigate(['/repair/detail'], { queryParams: { id: item.id } })
+            this.router.navigate(['/repair/detail'], { queryParams: { id: item.id } });
           },
         },
         {
           text: 'Progress',
           click: (item: any) => {
-            this.router.navigate(['/repair/progress'], { queryParams: { status: item.status } })
+            this.router.navigate(['/repair/progress'], { queryParams: { status: item.status } });
           },
         },
         {
           text: 'Dispatch',
           click: (item: any) => {
-            this.router.navigate(['/repair/record/detail'], { queryParams: { id: item.id, status: item.status } })
+            this.router.navigate(['/repair/record/detail'], { queryParams: { id: item.id, status: item.status } });
+          },
+        },
+        {
+          text: 'Comments',
+          click: (item: any) => {
+            this.router.navigate(['/repair/evaluate'], { queryParams: { id: item.id } })
           },
         },
         {
