@@ -11,6 +11,9 @@ import {NzDrawerPlacement} from 'ng-zorro-antd/ng-zorro-antd.module';
       li:hover {
         background-color: white;
       }
+      li {
+        height: 40px;
+      }
     `
   ],
 })
