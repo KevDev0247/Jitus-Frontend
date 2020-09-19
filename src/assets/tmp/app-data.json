@@ -1,12 +1,12 @@
 {
   "app": {
-    "name": "kniot",
-    "description": "Kniot Web"
+    "name": "jitlantis",
+    "description": "Jitlantis Cloud"
   },
   "user": {
     "name": "Admin",
     "avatar": "./assets/tmp/img/avatar.jpg",
-    "email": "admin@knoit.com"
+    "email": "admin@jitlantis.com"
   },
   "menu": [
     {
