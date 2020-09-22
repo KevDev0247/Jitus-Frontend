@@ -87,3 +87,13 @@
     </nz-form-control>
   </nz-form-item>
 </ng-template>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="View Progress" nzWidth="900" (nzOnCancel)="handleCancel()">
+  <br />
+  <br />
+  <app-repair-progress [index]="status"></app-repair-progress>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div *nzModalFooter></div>
+</nz-modal>
