@@ -27,9 +27,13 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   repair: Repair = new Repair();
   selectedRows: STData[] = [];
   data: any[] = [];
+
   expandForm = false;
   loading = false;
+  isVisible = false;
+  isOkLoading = false;
   totalCallNo = 0;
+  status = 0;
 
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
@@ -53,7 +57,9 @@ export class RepairListComponent extends BaseComponent implements OnInit {
         {
           text: 'Progress',
           click: (item: any) => {
-            this.router.navigate(['/repair/progress'], { queryParams: { status: item.status } });
+            // this.router.navigate(['/repair/progress'], { queryParams: { status: item.status } });
+            this.status = item.status;
+            this.showModal();
           },
         },
         {
@@ -143,5 +149,21 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     this.q.param2 = '';
     this.q.param3 = '';
     this.getData()
+  }
+
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  handleOk(): void {
+    this.isOkLoading = true;
+    setTimeout(() => {
+      this.isVisible = false;
+      this.isOkLoading = false;
+    }, 3000);
+  }
+
+  handleCancel(): void {
+    this.isVisible = false;
   }
 }
