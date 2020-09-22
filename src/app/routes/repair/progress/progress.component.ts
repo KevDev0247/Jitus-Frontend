@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
@@ -18,8 +18,8 @@ export class ProgressComponent implements OnInit {
   fixDate: Date;
 
   id: any;
-  index: any;
   current = 2;
+  @Input() index = 0;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -29,9 +29,9 @@ export class ProgressComponent implements OnInit {
     private router: Router,
     private repairService: RepairService,
   ) {
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.index = params.status;
-    });
+    // this.activatedRoute.queryParams.subscribe(params => {
+    //   this.index = params.status;
+    // });
     if (this.id) {
       this.repairService.getDetails(this.id).subscribe((res: any) => {
         this.repair = res.data;
@@ -54,13 +54,5 @@ export class ProgressComponent implements OnInit {
       createTime: [null, []],
       updateTime: [null, []],
     });
-  }
-
-  goBack() {
-    window.history.back();
-  }
-
-  onIndexChange(event: number): void {
-    this.index = event;
   }
 }
