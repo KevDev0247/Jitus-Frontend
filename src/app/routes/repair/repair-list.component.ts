@@ -30,7 +30,8 @@ export class RepairListComponent extends BaseComponent implements OnInit {
 
   expandForm = false;
   loading = false;
-  isVisible = false;
+  progressIsVisible = false;
+  detailIsVisible = false;
   isOkLoading = false;
   totalCallNo = 0;
   status = 0;
@@ -38,12 +39,12 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
+    { title: 'ID', index: 'code' },
+    { title: 'Name', index: 'name' },
     { title: 'Project', index: 'projectId' },
     { title: 'Contact', index: 'contactId' },
-    { title: 'Name', index: 'name' },
     { title: 'Phone', index: 'telno' },
     { title: 'Product', index: 'installId' },
-    { title: 'Status', index: 'status' },
     { title: 'Staff', index: 'staffId' },
     {
       title: 'Operations',
@@ -51,7 +52,8 @@ export class RepairListComponent extends BaseComponent implements OnInit {
         {
           text: '<img src="assets/imgs/gcgl.png" />',
           click: (item: any) => {
-            this.router.navigate(['/repair/detail'], { queryParams: { id: item.id } });
+            // this.router.navigate(['/repair/detail'], { queryParams: { id: item.id } });
+            this.showModal(1);
           },
         },
         {
@@ -59,7 +61,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
           click: (item: any) => {
             // this.router.navigate(['/repair/progress'], { queryParams: { status: item.status } });
             this.status = item.status;
-            this.showModal();
+            this.showModal(0);
           },
         },
         {
@@ -151,19 +153,25 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     this.getData()
   }
 
-  showModal(): void {
-    this.isVisible = true;
+  showModal(status: number): void {
+    if (status === 0) {
+      this.progressIsVisible = true;
+    }
+    if (status === 1) {
+      this.detailIsVisible = true;
+    }
   }
 
   handleOk(): void {
     this.isOkLoading = true;
     setTimeout(() => {
-      this.isVisible = false;
+      this.progressIsVisible = false;
       this.isOkLoading = false;
     }, 3000);
   }
 
   handleCancel(): void {
-    this.isVisible = false;
+    this.progressIsVisible = false;
+    this.detailIsVisible = false;
   }
 }
