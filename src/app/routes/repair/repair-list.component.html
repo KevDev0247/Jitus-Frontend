@@ -11,7 +11,11 @@
         <nz-form-item>
           <nz-form-label nzFor="name">Client</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="q.param3" name="param3" placeholder="Please enter" id="param3" />
+            <input
+              nz-input
+              [(ngModel)]="q.param3"
+              name="param3"
+              placeholder="Please enter" id="param3"/>
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -19,7 +23,12 @@
         <nz-form-item>
           <nz-form-label nzFor="text">Agency</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+            <input
+              nz-input
+              [(ngModel)]="q.param2"
+              name="param2"
+              placeholder="Please enter"
+              id="param2" />
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -45,45 +54,96 @@
   <nz-form-item>
     <nz-form-label nzFor="repairUnit">Agency</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.repairUnit" name="repairUnit" placeholder="Please enter" id="repairUnit" />
+      <input
+        nz-input
+        [(ngModel)]="repair.repairUnit"
+        name="repairUnit"
+        placeholder="Please enter" id="repairUnit"/>
     </nz-form-control>
     <nz-form-label nzFor="fixDate">Repair Date</nz-form-label>
     <nz-form-control>
-      <nz-date-picker formControlName="fixDate" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
-                      [(ngModel)]="repair.fixDate">
+      <nz-date-picker
+        formControlName="fixDate"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled=false
+        [(ngModel)]="repair.fixDate">
       </nz-date-picker>
     </nz-form-control>
     <nz-form-label nzFor="projectId">Project</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.projectId" name="projectId" placeholder="Please enter" id="projectId" type="number"/>
+      <input
+        nz-input
+        [(ngModel)]="repair.projectId"
+        name="projectId"
+        placeholder="Please enter"
+        id="projectId"
+        type="number"/>
     </nz-form-control>
     <nz-form-label nzFor="contactId">Contact</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.contactId" name="contactId" placeholder="Please enter" id="contactId" type="number"/>
+      <input
+        nz-input
+        [(ngModel)]="repair.contactId"
+        name="contactId"
+        placeholder="Please enter contactId"
+        type="number"/>
     </nz-form-control>
     <nz-form-label nzFor="name">Name</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.name" name="name" placeholder="Please enter" id="name" />
+      <input
+        nz-input
+        [(ngModel)]="repair.name"
+        name="name"
+        placeholder="Please enter"
+        id="name"/>
     </nz-form-control>
     <nz-form-label nzFor="address">Address</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.address" name="address" placeholder="Please enter" id="address" />
+      <input
+        nz-input
+        [(ngModel)]="repair.address"
+        name="address"
+        placeholder="Please enter" id="address"/>
     </nz-form-control>
     <nz-form-label nzFor="telno">Phone</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.telno" name="telno" placeholder="Please enter" id="telno" />
+      <input
+        nz-input
+        [(ngModel)]="repair.telno"
+        name="telno"
+        placeholder="Please enter"
+        id="telno" />
     </nz-form-control>
     <nz-form-label nzFor="installId">Product</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.installId" name="installId" placeholder="Please enter" id="installId" type="number"/>
+      <input
+        nz-input
+        [(ngModel)]="repair.installId"
+        name="installId"
+        placeholder="Please enter"
+        id="installId"
+        type="number"/>
     </nz-form-control>
     <nz-form-label nzFor="status">Status</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.status" name="status" placeholder="Please enter" id="status" type="number"/>
+      <input
+        nz-input
+        [(ngModel)]="repair.status"
+        name="status"
+        placeholder="Please enter"
+        id="status"
+        type="number"/>
     </nz-form-control>
     <nz-form-label nzFor="staffId">Staff</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="repair.staffId" name="staffId" placeholder="Please enter" id="staffId" type="number"/>
+      <input
+        nz-input
+        [(ngModel)]="repair.staffId"
+        name="staffId"
+        placeholder="Please enter"
+        id="staffId"
+        type="number"/>
     </nz-form-control>
   </nz-form-item>
 </ng-template>
@@ -101,3 +161,4 @@
 <nz-modal [(nzVisible)]="detailIsVisible" nzTitle="Details" nzWidth="900" (nzOnCancel)="handleCancel()">
   <app-repair-detail></app-repair-detail>
 </nz-modal>
+
