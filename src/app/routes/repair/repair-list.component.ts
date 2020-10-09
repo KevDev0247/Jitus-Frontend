@@ -33,6 +33,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   progressIsVisible = false;
   detailIsVisible = false;
   isOkLoading = false;
+  isVisible = false;
   totalCallNo = 0;
   status = 0;
 
@@ -124,7 +125,8 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.router.navigate(['/repair/detail']);
+    this.isVisible = true;
+    // this.router.navigate(['/repair/detail']);
   }
 
   add(tpl: TemplateRef<{}>) {
@@ -173,5 +175,13 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   handleCancel(): void {
     this.progressIsVisible = false;
     this.detailIsVisible = false;
+  }
+
+  open(): void {
+    this.isVisible = true;
+  }
+
+  close(): void {
+    this.isVisible = false;
   }
 }
