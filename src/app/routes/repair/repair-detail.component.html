@@ -1,7 +1,5 @@
-<page-header [title]="repair.id?'Edit Repair Order':'Create Repair Order'">
-</page-header>
-<nz-card [nzBordered]="false">
-  <page-header [title]="repair.id ? 'Edit Work Order' : 'Create Work Order'"></page-header>
+<!--<nz-card [nzBordered]="false">
+  <page-header [title]="repair.id ? 'Edit Work Order' : 'Create Work Order'"></page-header>-->
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Agency" error="Please enter agency" >
       <input nz-input formControlName="repairUnit" placeholder="Please enter agency" [(ngModel)]="repair.repairUnit"
@@ -60,4 +58,4 @@
       <button nz-button (click)="goBack()">Back</button>
     </se>
   </form>
-</nz-card>
+<!--</nz-card>-->
