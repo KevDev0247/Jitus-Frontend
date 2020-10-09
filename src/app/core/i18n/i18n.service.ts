@@ -75,7 +75,6 @@ export class I18NService implements AlainI18NService {
     private delonLocaleService: DelonLocaleService,
     private translate: TranslateService,
   ) {
-    // `@ngx-translate/core` 预先知道支持哪些语言
     const lans = this._langs.map(item => item.code);
     translate.addLangs(lans);
 
@@ -106,19 +105,19 @@ export class I18NService implements AlainI18NService {
     this.updateLangData(lang);
     this.translate.use(lang).subscribe(() => this.change$.next(lang));
   }
-  /** 获取语言列表 */
+  /** Retrieve language list */
   getLangs() {
     return this._langs;
   }
-  /** 翻译 */
+  /** Translation */
   fanyi(key: string, interpolateParams?: {}) {
     return this.translate.instant(key, interpolateParams);
   }
-  /** 默认语言 */
+  /** Default language */
   get defaultLang() {
     return this._default;
   }
-  /** 当前语言 */
+  /** Current language */
   get currentLang() {
     return this.translate.currentLang || this.translate.getDefaultLang() || this._default;
   }

@@ -21,7 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/repair-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/repair-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_mock/_user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/_mock/_user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/common/component/base.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/common/component/base.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/i18n/i18n.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/i18n/i18n.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/net/default.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/net/default.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/startup/startup.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/startup/startup.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/delon.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/delon.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/notify.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/notify.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/task.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/task.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/setting-drawer/setting-drawer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/passport/passport.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/passport/passport.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/json-schema/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/json-schema/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/utils/yuan.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/utils/yuan.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tmp/app-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/tmp/app-data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +230,7 @@
       <workItem from="1601323662597" duration="1479000" />
       <workItem from="1602111646495" duration="3838000" />
       <workItem from="1602175260603" duration="616000" />
-      <workItem from="1602200298009" duration="1239000" />
+      <workItem from="1602200298009" duration="3202000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
