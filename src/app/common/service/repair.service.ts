@@ -27,7 +27,7 @@ export class RepairService {
     return this.http.get(this.getServiceUrl() + '/detail?id=' + id)
   }
 
-  getQueryList(contractId?: string, clientId?: string, name?: string) {
-    return this.http.get(this.getServiceUrl() + '/queryRepairList', { contractId, clientId, name });
+  getQueryList(info: string, code: string, name: string) {
+    return this.http.get(this.getServiceUrl() + '/queryRepairList', { info, code, name });
   }
 }
