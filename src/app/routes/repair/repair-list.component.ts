@@ -103,7 +103,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
 
   getData() {
     this.loading = true;
-    this.repairService.getQueryList(this.q.param1, this.q.param2)
+    this.repairService.getQueryList(this.q.param1, this.q.param2, this.q.param3)
       .subscribe((res: any) => {
         this.data = res.list;
         this.loading = false
