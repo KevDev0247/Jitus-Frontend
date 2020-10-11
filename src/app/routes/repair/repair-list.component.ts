@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
 import { STChange, STColumn, STComponent, STData } from '@delon/abc';
 import { NzMessageService, NzModalService } from 'ng-zorro-antd';
@@ -27,6 +28,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   repair: Repair = new Repair();
   selectedRows: STData[] = [];
   data: any[] = [];
+  form: FormGroup;
 
   expandForm = false;
   loading = false;
@@ -34,6 +36,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   detailIsVisible = false;
   isOkLoading = false;
   isVisible = false;
+  repairId: number = 0;
   totalCallNo = 0;
   status = 0;
 
@@ -42,18 +45,20 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'ID', index: 'code' },
     { title: 'Name', index: 'name' },
-    { title: 'Project', index: 'projectId' },
-    { title: 'Contact', index: 'contactId' },
+    { title: 'Project', index: 'projectName' },
+    { title: 'Contact', index: 'contactName' },
     { title: 'Phone', index: 'telno' },
-    { title: 'Product', index: 'installId' },
+    { title: 'Product', index: 'productName' },
     { title: 'Staff', index: 'staffId' },
     {
       title: 'Operations',
       buttons: [
         {
-          text: '<img src="assets/imgs/gcgl.png" />',
+          text: 'Details',
           click: (item: any) => {
             // this.router.navigate(['/repair/detail'], { queryParams: { id: item.id } });
+            this.repairId = item.id;
+            this.repair = item;
             this.showModal(1);
           },
         },
@@ -93,12 +98,27 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     private changeDetectorRef: ChangeDetectorRef,
     private repairService: RepairService,
     private router: Router,
+    private formBuilder: FormBuilder,
   ) {
     super(modalService);
   }
 
   ngOnInit(): void {
     this.getData();
+    this.form = this.formBuilder.group({
+      repairUnit: [null, []],
+      fixDate: [null, []],
+      projectId: [null, []],
+      contactId: [null, []],
+      name: [null, []],
+      address: [null, []],
+      telno: [null, []],
+      installId: [null, []],
+      status: [null, []],
+      staffId: [null, []],
+      createTime: [null, []],
+      updateTime: [null, []],
+    });
   }
 
   getData() {
@@ -125,8 +145,10 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   }
 
   create() {
-    this.isVisible = true;
+    // this.isVisible = true;
     // this.router.navigate(['/repair/detail']);
+    this.repair = new Repair();
+    this.showModal(1);
   }
 
   add(tpl: TemplateRef<{}>) {
@@ -165,11 +187,27 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   }
 
   handleOk(): void {
-    this.isOkLoading = true;
-    setTimeout(() => {
-      this.progressIsVisible = false;
-      this.isOkLoading = false;
-    }, 3000);
+    if (this.repairId) {
+      this.repairService.update(this.repair).subscribe(res => {
+        if (res.data) {
+          this.isVisible = false;
+          this.getData();
+          this.messageService.success("Edit Successful");
+        } else {
+          this.messageService.error('Edit Failed');
+        }
+      });
+    } else {
+      this.repairService.create(this.repair).subscribe(res => {
+        if (res.data) {
+          this.isVisible = false;
+          this.getData();
+          this.messageService.success("Creation Successful");
+        } else {
+          this.messageService.error('Creation Failed');
+        }
+      });
+    }
   }
 
   handleCancel(): void {
