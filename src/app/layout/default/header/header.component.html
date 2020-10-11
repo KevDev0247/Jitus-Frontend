@@ -141,7 +141,9 @@
           <li nz-menu-item>
             <a [routerLink]="['/sys/role/list']">Roles</a>
           </li>
-          <li nz-menu-item>Change Password</li>
+          <li nz-menu-item>
+            <a [routerLink]="['/sys/user/update']">Change Password</a>
+          </li>
         </ul>
       </li>
       <li nz-menu-item nz-submenu>
@@ -206,8 +208,18 @@
       </div>
     </li>
     <li class="hidden-mobile">
-      <div class="alain-default__nav-item">
+      <div class="alain-default__nav-item"  nz-dropdown [nzDropdownMenu]="contact">
         <img src="assets/imgs/header/contact.svg"/>
+        <nz-dropdown-menu #contact="nzDropdownMenu">
+          <div nz-menu>
+            <div nz-menu-item>
+              Toll Free
+            </div>
+            <div nz-menu-item>
+              Customer Service
+            </div>
+          </div>
+        </nz-dropdown-menu>
       </div>
     </li>
     <!-- Notify -->
@@ -220,25 +232,23 @@
     </li>
     <!-- Settings -->
     <li class="hidden-mobile">
-      <div
-        class="alain-default__nav-item"
-        nz-dropdown
-        [nzDropdownMenu]="settingsMenu"
-        nzTrigger="click"
-        nzPlacement="bottomRight">
+      <div class="alain-default__nav-item" nz-dropdown [nzDropdownMenu]="settingsMenu" nzPlacement="bottomRight">
 <!--        <i nz-icon nzType="setting"></i>-->
         <img src="assets/imgs/header/settings.svg"/>
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
-        <div nz-menu style="width:200px;">
+        <div nz-menu>
           <div nz-menu-item>
-            <header-fullscreen></header-fullscreen>
+            Departments
           </div>
           <div nz-menu-item>
-            <header-storage></header-storage>
+            Accounts
           </div>
           <div nz-menu-item>
-            <header-i18n></header-i18n>
+            Foundation Data
+          </div>
+          <div nz-menu-item>
+            Logs
           </div>
         </div>
       </nz-dropdown-menu>
