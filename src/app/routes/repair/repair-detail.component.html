@@ -34,14 +34,14 @@
       <input nz-input formControlName="installId" placeholder="Please enter installed product" [(ngModel)]="repair.installId"
              style="width: calc(100% - 400px);" type="number" />
     </se>
-    <se label="Status" error="Please select work order status"  >
+    <!--<se label="Status" error="Please select work order status"  >
       <input nz-input formControlName="status" placeholder="Please select work order status" [(ngModel)]="repair.status"
              style="width: calc(100% - 400px);" type="number" />
-    </se>
-    <se label="Staff" error="Please enter staff"  >
+    </se>-->
+    <!--<se label="Staff" error="Please enter staff"  >
       <input nz-input formControlName="staffId" placeholder="Please enter staff" [(ngModel)]="repair.staffId"
              style="width: calc(100% - 400px);" type="number" />
-    </se>
+    </se>-->
     <se label="" error="Please enter" >
       <nz-date-picker formControlName="createTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
                       [(ngModel)]="repair.createTime">
@@ -55,7 +55,7 @@
     <se>
       <button *ngIf="repair.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
       <button *ngIf="!repair.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Save</button>
-      <button nz-button (click)="goBack()">Back</button>
+<!--      <button nz-button (click)="goBack()">Back</button>-->
     </se>
   </form>
 <!--</nz-card>-->
