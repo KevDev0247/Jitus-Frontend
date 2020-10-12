@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
@@ -18,6 +18,7 @@ export class RepairDetailComponent implements OnInit {
   commonUtils: CommonUtils = new CommonUtils();
   id: any;
   current = 2;
+  @Input() repairId: number;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService, private cdr: ChangeDetectorRef,
               public activedRoute: ActivatedRoute, private router: Router, private repairService: RepairService) {
@@ -25,14 +26,19 @@ export class RepairDetailComponent implements OnInit {
       this.id = params.id;
     });
     if (this.id) {
-      this.repairService.getDetails(this.id)
-        .subscribe((res: any) => {
-          this.repair = res.data;
-        });
+      this.repairService.getDetails(this.repairId).subscribe((res: any) => {
+        this.repair = res.data;
+      });
     }
   }
 
   ngOnInit(): void {
+    console.log('>>>repairId 2>>>', this.repairId);
+    if (this.repairId) {
+      this.repairService.getDetails(this.repairId).subscribe((res: any) => {
+        this.repair = res.data;
+      })
+    }
     this.form = this.fb.group({
       repairUnit:  [null, []],
       fixDate:  [null, []],
