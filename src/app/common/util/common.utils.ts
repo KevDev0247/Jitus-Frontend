@@ -20,4 +20,41 @@ export class CommonUtils {
       return new Date(dateString.replace(/-/, '/'));
     }
   }
+
+  ConvertDateTimeStr = (d: Date) => {
+    if (!d) {
+      return '';
+    }
+
+    return d.getFullYear() +
+      '-' +
+      (d.getMonth() + 1) +
+      '-' +
+      d.getDate() +
+      '\xa0' +
+      d.getHours() +
+      ':' +
+      d.getMinutes() +
+      ':' +
+      d.getSeconds();
+  };
+
+//   export const ConvertDateTimeStr = (d: Date) => {
+//   if (!d) {
+//     return '';
+//   }
+//   var datetimeStr =
+//     d.getFullYear() +
+//     '-' +
+//     (d.getMonth() + 1) +
+//     '-' +
+//     d.getDate() +
+//     '\xa0' +
+//     d.getHours() +
+//     ':' +
+//     d.getMinutes() +
+//     ':' +
+//     d.getSeconds();
+//   return datetimeStr;
+// };
 }
