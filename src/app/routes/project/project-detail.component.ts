@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
 import {Project} from '../../common/model/project';
+import {ClientService} from '../../common/service/client.service';
 import {ContractService} from '../../common/service/contract.service';
 import {ProjectService} from '../../common/service/project.service';
 import {CommonUtils} from '../../common/util/common.utils';
@@ -33,15 +34,18 @@ export class ProjectDetailComponent implements OnInit {
     { value: '22', text: '22' },
   ];
   contractOptions: Array<{ id: number; name: string }> = [];
+  clientOptions: Array<{ id: number; name: string }> = [];
   listOfTagOption: any;
   contractOption: any;
+  clientOption: any;
   selectedValue = null;
   nzFilterOption = () => true;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService,
               private cdr: ChangeDetectorRef, public activatedRoute: ActivatedRoute,
               private router: Router, private projectService: ProjectService,
-              private contractService: ContractService, private httpClient: HttpClient) {
+              private contractService: ContractService, private clientService: ClientService,
+              private httpClient: HttpClient) {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params.id;
     });
@@ -51,6 +55,7 @@ export class ProjectDetailComponent implements OnInit {
       });
     }
     this.getContractOptions('');
+    this.getClientOptions('');
   }
 
   ngOnInit(): void {
@@ -84,14 +89,13 @@ export class ProjectDetailComponent implements OnInit {
     })
   }
 
-  search(value: string): void {
-    console.log('>>>>search value>>>>', value)
-    const children: Array<{ value: string; text: string}> = [];
-    for (let i = 10; i < 36; i++) {
-      children.push({ value: i.toString(36) + '66', text: i.toString(36) + i })
+  search(value: string, type: number): void {
+    if (type === 1) {
+      this.getContractOptions(value);
     }
-    this.listOfOption = children;
-    this.getContractOptions(value);
+    if (type === 2) {
+      this.getClientOptions(value);
+    }
   }
 
   save() {
@@ -120,6 +124,12 @@ export class ProjectDetailComponent implements OnInit {
   getContractOptions(name: string) {
     this.contractService.getOptionList(name).subscribe(res => {
       this.contractOptions = res.list;
+    });
+  }
+
+  getClientOptions(info: string) {
+    this.clientService.getOptionList(info).subscribe(res => {
+      this.clientOption = res.list;
     });
   }
 }
