@@ -3,26 +3,14 @@
   </nz-page-header>
   <form nz-form [formGroup]="formGroup" se-container="1" labelWidth="200">
     <se label="Name" error="Please enter name">
-      <input
-        nz-input
-        formControlName="name"
-        placeholder="Please enter name"
-        [(ngModel)]="project.name"
+      <input nz-input formControlName="name" placeholder="Please enter name" [(ngModel)]="project.name"
         style="width: calc(100% - 400px);"/>
     </se>
     <se label="Contract" error="Please select contract" required>
       <nz-input-group>
-        <nz-select
-          formControlName="contractId"
-          nzShowSearch
-          nzServerSearch
-          nzPlaceHolder="Please select contract"
-          [(ngModel)]="project.contractId"
-          [nzShowArrow]="false"
-          [nzFilterOption]="nzFilterOption"
-          (nzOnSearch)="search($event, 1)"
-          style="width: calc(100% - 400px);"
-        >
+        <nz-select formControlName="contractId" nzShowSearch nzServerSearch nzPlaceHolder="Please select contract" [(ngModel)]="project.contractId"
+                   [nzShowArrow]="false" [nzFilterOption]="nzFilterOption" (nzOnSearch)="search($event, 1)"
+                   style="width: calc(100% - 400px);">
           <nz-option *ngFor="let o of contractOptions" [nzLabel]="o.name" [nzValue]="o.id"> </nz-option>
         </nz-select>
       </nz-input-group>
