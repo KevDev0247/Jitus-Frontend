@@ -20,7 +20,7 @@
           [(ngModel)]="project.contractId"
           [nzShowArrow]="false"
           [nzFilterOption]="nzFilterOption"
-          (nzOnSearch)="search($event)"
+          (nzOnSearch)="search($event, 1)"
           style="width: calc(100% - 400px);"
         >
           <nz-option *ngFor="let o of contractOptions" [nzLabel]="o.name" [nzValue]="o.id"> </nz-option>
@@ -38,7 +38,15 @@
     </se>
     <se label="Client" error="Please enter client">
       <input nz-input formControlName="clientId" placeholder="Please enter client" [(ngModel)]="project.clientId"
-        style="width: calc(100% - 400px);"/>
+        style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se label="Client" error="Please select client" required>
+      <nz-input-group>
+        <nz-select formControlName="clientId" nzShowSearch nzPlaceHolder="Please select client" [(ngModel)]="project.clientId"
+                   [nzShowArrow]="false" [nzFilterOption]="nzFilterOption()" (nzOnSearch)="search($event, 2)" style="width: calc(100% - 400px);">
+          <nz-option *ngFor="let o of clientOptions" [nzLabel]="o.name" [nzValue]="o.id"></nz-option>
+        </nz-select>
+      </nz-input-group>
     </se>
     <se label="" error="Please enter">
       <nz-date-picker formControlName="deliveryTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
