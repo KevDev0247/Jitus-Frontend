@@ -1,0 +1,56 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a routerLink="/accessory/list">Accessories List</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        {{ accessory.id ? 'Edit Accessory' : 'Create Accessory' }}
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="Type" error="Please enter the type">
+      <input nz-input formControlName="type" placeholder="Please enter the type" [(ngModel)]="accessory.type"
+        style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se label="Name" error="Please enter the name">
+      <input nz-input formControlName="name" placeholder="Please enter the name" [(ngModel)]="accessory.name"
+        style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Code" error="Please enter the code">
+      <input nz-input formControlName="code" placeholder="Please enter the code" [(ngModel)]="accessory.code"
+        style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Spec" error="Please enter the spec">
+      <input nz-input formControlName="spec" placeholder="Please enter the spec" [(ngModel)]="accessory.spec"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Model" error="Please enter the model">
+      <input nz-input formControlName="model" placeholder="Please enter the model" [(ngModel)]="accessory.model"
+        style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Unit" error="Please enter the unit">
+      <input nz-input formControlName="unit" placeholder="Please enter the unit" [(ngModel)]="accessory.unit"
+        style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Count" error="Please enter the count">
+      <input nz-input formControlName="count" placeholder="Please enter the count" [(ngModel)]="accessory.count"
+        style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se label="Safe Count" error="Please enter safe count">
+      <input nz-input formControlName="safeCount" placeholder="Please enter safe count" [(ngModel)]="accessory.safeCount"
+        style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se label="Status" error="Please enter status">
+      <input nz-input formControlName="status" placeholder="Please enter status" [(ngModel)]="accessory.status"
+        style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se>
+      <button *ngIf="accessory.id" nz-button nzType="primary" (click)="save()" [disabled]="form.invalid">Submit</button>
+      <button *ngIf="!accessory.id" nz-button nzType="primary" class="ml-sm" (click)="save()">Save</button>
+      <button nz-button (click)="goBack()">Back</button>
+    </se>
+  </form>
+</nz-card>
