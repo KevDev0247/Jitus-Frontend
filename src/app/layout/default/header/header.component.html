@@ -1,11 +1,4 @@
 <div class="alain-default__header-logo">
-  <!--<a [routerLink]="['/']" class="alain-default__header-logo-link">
-    <img class="alain-default__header-logo-expanded" src="./assets/logo-full.svg" alt="{{ settings.app.name }}"
-      style="max-height:40px;" />
-    <img class="alain-default__header-logo-collapsed" src="./assets/logo.svg" alt="{{ settings.app.name }}"
-      style="max-height:30px;" />
-  </a>-->
-<!--  <button nz-button nzType="primary" (click)="open()">Open</button>-->
   <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzTitle="" (nzOnClose)="close()">
     <ul nz-menu nzMode="inline" style="width: 232px">
       <li nz-submenu>
@@ -40,7 +33,6 @@
       <li nz-submenu nzTitle="Navigation Three" nzIcon="setting"></li>
     </ul>
   </nz-drawer>
-<!--  <img src="assets/imgs/menu.png" (mouseover)="open()">-->
   <a nz-dropdown [nzDropdownMenu]="menu">
     <img src="assets/imgs/menu/menu.svg"/>
   </a>
@@ -161,46 +153,11 @@
     </ul>
   </nz-dropdown-menu>
   <div></div>
-
-  <!--<ul nz-menu nzMode="horizontal" style="border-bottom: none; background: #b1c3d5">
-    <li nz-submenu nzIcon="appstore" (mouseover)="open()" style="border-bottom: none; background: #b1c3d5">
-      <ul>
-        <li nz-menu-item>
-          <a [routerLink]="['/dashboard/v1']">Main Page</a>
-        </li>
-        <li nz-submenu nzTitle="Program">
-          <ul>
-            <li nz-menu-item><a [routerLink]="'/project'">Project</a></li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="System">
-          <ul>
-            <li nz-menu-item><a [routerLink]="['/sys/user/list']">User</a></li>
-            <li nz-menu-item><a [routerLink]="['/sys/role/list']">Role</a></li>
-            <li nz-menu-item><a [routerLink]="['/sys/org/list']">Organization</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>-->
 </div>
-
 <div class="alain-default__nav-wrap">
   <ul class="alain-default__nav">
-    <!--&lt;!&ndash; Menu &ndash;&gt;
-    <li>
-      <div class="alain-default__nav-item" (click)="toggleCollapsedSidebar()">
-        <i nz-icon nzType="menu-{{ settings.layout.collapsed ? 'unfold' : 'fold' }}"></i>
-      </div>
-    </li>
-    &lt;!&ndash; Lock Page &ndash;&gt;
-    <li class="hidden-mobile">
-      <div class="alain-default__nav-item" routerLink="/passport/lock">
-        <i nz-icon nzType="lock"></i>
-      </div>
-    </li>-->
+
   </ul>
-  <!-- <header-search class="alain-default__search" [toggleChange]="searchToggleStatus"></header-search> -->
   <ul class="alain-default__nav">
     <li class="hidden-mobile">
       <div class="alain-default__nav-item">
@@ -222,18 +179,11 @@
         </nz-dropdown-menu>
       </div>
     </li>
-    <!-- Notify -->
-    <!--<li>
-      <header-notify></header-notify>
-    </li>-->
-    <!-- Task -->
     <li class="hidden-mobile">
       <header-task></header-task>
     </li>
-    <!-- Settings -->
     <li class="hidden-mobile">
       <div class="alain-default__nav-item" nz-dropdown [nzDropdownMenu]="settingsMenu" nzPlacement="bottomRight">
-<!--        <i nz-icon nzType="setting"></i>-->
         <img src="assets/imgs/header/settings.svg"/>
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
