@@ -1,0 +1,54 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item><a>Logs</a></nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="param1">Start Time</nz-form-label>
+          <nz-form-control>
+            <nz-date-picker
+              nzShowTime
+              nzFormat="YYYY-MM-DD HH:mm:ss"
+              nzDisabled="false"
+              [(ngModel)]="fromTime"
+              name="param1"
+            >
+            </nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="param2">End Time</nz-form-label>
+          <nz-form-control>
+            <nz-date-picker
+              nzShowTime
+              nzFormat="YYYY-MM-DD HH:mm:ss"
+              nzDisabled="false"
+              [(ngModel)]="toTime"
+              name="param2"
+            >
+            </nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    [total]="total"
+    (change)="stChange($event)"
+  ></st>
+</nz-card>
