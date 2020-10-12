@@ -9,19 +9,19 @@
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="name">Client</nz-form-label>
+          <nz-form-label nzFor="name">Key Words</nz-form-label>
           <nz-form-control>
             <input
               nz-input
-              [(ngModel)]="q.param3"
+              [(ngModel)]="q.param1"
               name="param3"
-              placeholder="Please enter" id="param3"/>
+              placeholder="Please enter" id="param1"/>
           </nz-form-control>
         </nz-form-item>
       </div>
       <div nz-col nzMd="8" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="text">Agency</nz-form-label>
+          <nz-form-label nzFor="text">Work Order ID</nz-form-label>
           <nz-form-control>
             <input
               nz-input
@@ -159,8 +159,95 @@
 </nz-modal>
 
 <nz-modal [(nzVisible)]="detailIsVisible" nzTitle="Details" nzWidth="900" (nzOnCancel)="handleCancel()">
-  <app-repair-detail></app-repair-detail>
+<!--  <app-repair-detail></app-repair-detail>-->
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="Repair Company" error="Please enter the repair company">
+      <input
+        nz-input
+        formControlName="repairUnit"
+        placeholder="Please enter the repair company"
+        [(ngModel)]="repair.repairUnit"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Repair Date" error="Please enter the repair date">
+      <nz-date-picker
+        formControlName="fixDate"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled="false"
+        [(ngModel)]="repair.fixDate"
+      >
+      </nz-date-picker>
+    </se>
+    <se label="Project" error="Please enter the project">
+      <input
+        nz-input
+        formControlName="projectId"
+        placeholder="Please enter the project"
+        [(ngModel)]="repair.projectId"
+        style="width: calc(100% - 400px);"
+        type="number"
+      />
+    </se>
+    <se label="Contact" error="Please enter the contact">
+      <input
+        nz-input
+        formControlName="contactId"
+        placeholder="Please enter the contact"
+        [(ngModel)]="repair.contactId"
+        style="width: calc(100% - 400px);"
+        type="number"
+      />
+    </se>
+    <se label="Client" error="Please enter the client">
+      <input
+        nz-input
+        formControlName="name"
+        placeholder="Please enter the client"
+        [(ngModel)]="repair.name"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Address" error="Please enter the address">
+      <input
+        nz-input
+        formControlName="address"
+        placeholder="Please enter the address"
+        [(ngModel)]="repair.address"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Phone" error="Please enter the phone number">
+      <input
+        nz-input
+        formControlName="telno"
+        placeholder="Please enter the phone number"
+        [(ngModel)]="repair.telno"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Product" error="Please enter the product">
+      <input
+        nz-input
+        formControlName="installId"
+        placeholder="Please enter the product"
+        [(ngModel)]="repair.installId"
+        style="width: calc(100% - 400px);"
+        type="number"
+      />
+    </se>
+  </form>
+  <div *nzModalFooter>
+    <button
+      nz-button
+      nzType="primary"
+      (click)="handleOk()"
+      [nzLoading]="isOkLoading"
+    >OK</button>
+  </div>
 </nz-modal>
+
 <nz-drawer
   [nzBodyStyle]="{ height: 'calc(100% - 55px)', overflow: 'auto', 'padding-bottom': '53px' }"
   [nzMaskClosable]="false"
