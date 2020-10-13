@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ChangeDetectionStrategy, ChangeDetectorRe
 import { NzMessageService } from 'ng-zorro-antd';
 import { STComponent, STColumn, STData, STChange } from '@delon/abc';
 import { Log } from 'src/app/common/model/log';
-import { SysLogService } from 'src/app/common/service/log.service';
+import { LogService } from 'src/app/common/service/log.service';
 import {CommonUtils} from '../../../common/util/common.utils';
 
 @Component({
@@ -48,7 +48,7 @@ export class LogListComponent implements OnInit {
   constructor(
     public msg: NzMessageService,
     private cdr: ChangeDetectorRef,
-    private sysLogService: SysLogService
+    private sysLogService: LogService
   ) { }
 
   ngOnInit() {

@@ -3,7 +3,7 @@ import { DOMAIN_SERVER_URL } from "../constants";
 import { _HttpClient } from '@delon/theme';
 
 @Injectable()
-export class SysLogService {
+export class LogService {
   constructor(private http: _HttpClient) {
 
   }
