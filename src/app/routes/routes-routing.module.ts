@@ -35,7 +35,8 @@ const routes: Routes = [
       { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
       { path: 'staff', loadChildren: () => import('./staff/staff.module').then(m => m.StaffModule) },
       { path: 'client', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) },
-      { path: 'repair', loadChildren: () => import('./repair/repair.module').then(m => m.RepairModule)}
+      { path: 'repair', loadChildren: () => import('./repair/repair.module').then(m => m.RepairModule)},
+      { path: 'accessory', loadChildren: () => import('./accessory/accessory.module').then(m => m.AccessoryModule)},
     ],
   },
   // passport
