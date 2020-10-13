@@ -10,7 +10,7 @@ import {CommonUtils} from '../../../common/util/common.utils';
   templateUrl: './log-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SysLogListComponent implements OnInit {
+export class LogListComponent implements OnInit {
 
   q: any = {
     pi: 0,
