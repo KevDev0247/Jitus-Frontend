@@ -137,7 +137,7 @@ export class AccessoryListComponent implements OnInit {
         console.log('OK');
         this.remove(id);
       },
-      nzCancelText: '取消',
+      nzCancelText: 'Cancel',
       nzOnCancel: () => console.log('Cancel'),
     });
   }

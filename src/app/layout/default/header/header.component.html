@@ -51,38 +51,44 @@
           </ul>
         </li>
       </a>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/clients.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clients</span>
-        </span>
-      </li>
-      <a [routerLink]="['/project']">
+      <a [routerLink]="['/client']">
         <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/projects.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</span>
-        </span>
+          <span title>
+            <img src="assets/imgs/menu/clients.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clients</span>
+          </span>
         </li>
       </a>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/departments.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Departments</span>
-        </span>
-      </li>
+      <a [routerLink]="['/project']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/projects.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</span>
+          </span>
+        </li>
+      </a>
+      <a [routerLink]="['/sys/org/list']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/departments.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Departments</span>
+          </span>
+        </li>
+      </a>
       <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/knowledge.svg">
           <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Knowledge</span>
         </span>
       </li>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/accessories.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories</span>
-        </span>
-      </li>
+      <a [routerLink]="['/accessory']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/accessories.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories</span>
+          </span>
+        </li>
+      </a>
       <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/communications.svg">
@@ -188,15 +194,19 @@
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
         <div nz-menu>
-          <div nz-menu-item>
-            Departments
-          </div>
+          <a routerLink="['/sys/org/list']">
+            <div nz-menu-item>
+              Departments
+            </div>
+          </a>
           <div nz-menu-item>
             Accounts
           </div>
-          <div nz-menu-item>
-            Foundation Data
-          </div>
+          <a routerLink="['/sys/basecode/list']">
+            <div nz-menu-item>
+              Data Dictionary
+            </div>
+          </a>
           <div nz-menu-item>
             Logs
           </div>

@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Accessory } from 'src/app/common/model/Accessory';
+import { Accessory } from 'src/app/common/model/accessory';
 import { AccessoryService } from 'src/app/common/service/accessory.service';
 
 @Component({
