@@ -29,7 +29,7 @@ export class AccessoryListComponent implements OnInit {
   loading = false;
   expandForm = false;
   totalCallNo = 0;
-  total = 0;
+
 
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
