@@ -1,4 +1,10 @@
 <nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>Data Dictionary</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
   <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
     <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
       <div nz-col nzMd="8" nzSm="24">
@@ -33,7 +39,7 @@
       </div>
     </div>
   </form>
-  <button nz-button (click)="create()" [nzType]="'primary'">
+  <button nz-button (click)="add(modalContent)" [nzType]="'primary'">
     <i nz-icon nzType="plus"></i>
     <span>New</span>
   </button>
@@ -42,7 +48,6 @@
     [columns]="columns"
     [data]="data"
     [loading]="loading"
-    [total]="total"
     (change)="stChange($event)">
   </st>
 </nz-card>

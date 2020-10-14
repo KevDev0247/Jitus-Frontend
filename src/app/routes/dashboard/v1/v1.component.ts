@@ -19,8 +19,6 @@ import { _HttpClient } from '@delon/theme';
 })
 export class DashboardV1Component implements OnInit {
 
-  webSite: any[];
-  salesData: any[];
   offlineChartData: any[];
   chart = '';
   hGutter = 32;
@@ -62,12 +60,5 @@ export class DashboardV1Component implements OnInit {
 
   constructor(private http: _HttpClient, private cdr: ChangeDetectorRef) {}
 
-  ngOnInit() {
-    this.http.get('/chart').subscribe((response: any) => {
-      this.webSite = response.visitData.slice(0, 10);
-      this.salesData = response.data;
-      this.offlineChartData = response.offlineChartData;
-      this.cdr.detectChanges();
-    });
-  }
+  ngOnInit(): void { }
 }

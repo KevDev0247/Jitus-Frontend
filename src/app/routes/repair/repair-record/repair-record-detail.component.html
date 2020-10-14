@@ -1,0 +1,59 @@
+<nz-card [nzBordered]="false">
+  <page-header [title]="repairRecord.id ? 'Edit Repair Record' : 'Dispatch'"> </page-header>
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <div></div>
+    <se label="Description" error="Please enter the description of the exception">
+      <input
+        nz-input
+        formControlName="description"
+        placeholder="Please enter the description of the exception"
+        [(ngModel)]="repairRecord.description"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Exception Code" error="Please enter the exception code">
+      <input
+        nz-input
+        formControlName="dcode"
+        placeholder="Please enter the exception code"
+        [(ngModel)]="repairRecord.dcode"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Repair Service" error="Please enter the repair service">
+      <input
+        nz-input
+        formControlName="content"
+        placeholder="Please enter the repair service"
+        [(ngModel)]="repairRecord.content"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Repair Code" error="Please enter the repair code">
+      <input
+        nz-input
+        formControlName="ccode"
+        placeholder="Please enter the repair code"
+        [(ngModel)]="repairRecord.ccode"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Personnel" error="Please enter the repair personnel">
+      <input
+        nz-input
+        formControlName="repairmanId"
+        placeholder="Please enter the repair personnel"
+        [(ngModel)]="repairRecord.repairmanId"
+        style="width: calc(100% - 400px);"
+        type="number"
+      />
+    </se>
+    <se>
+      <button *ngIf="repairRecord.id" nz-button nzType="primary" (click)="save()" [disabled]="form.invalid">
+        Dispatch
+      </button>
+      <button *ngIf="!repairRecord.id" nz-button class="ml-sm" (click)="save()">Save</button>
+      <button nz-button (click)="goBack()">Back</button>
+    </se>
+  </form>
+</nz-card>

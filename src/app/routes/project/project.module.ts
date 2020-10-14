@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
+import {NzUploadModule} from 'ng-zorro-antd/ng-zorro-antd.module';
 import {ProjectDetailComponent} from './project-detail.component';
 import {ProjectListComponent} from './project-list.component';
 import {ProjectRoutingModule} from './project-routing.module';
@@ -14,7 +15,11 @@ const COMPONENTS = [];
 const COMPONENTS_NOROUNT = [ProjectListComponent, ProjectDetailComponent];
 
 @NgModule({
-  imports: [SharedModule, ProjectRoutingModule],
+  imports: [
+    SharedModule,
+    ProjectRoutingModule,
+    NzUploadModule,
+  ],
   declarations: [...COMPONENTS, ...COMPONENTS_NOROUNT],
   entryComponents: COMPONENTS_NOROUNT,
 })

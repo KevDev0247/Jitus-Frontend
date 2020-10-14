@@ -12,7 +12,6 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
       (nzVisibleChange)="change()"
     >
       <nz-badge [nzDot]="true">
-<!--        <i nz-icon nzType="bell" class="alain-default__nav-item-icon"></i>-->
         <img src="assets/imgs/message.png"/>
       </nz-badge>
     </div>
@@ -47,8 +46,8 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
               <nz-avatar [nzSrc]="'./assets/tmp/img/2.png'"></nz-avatar>
             </div>
             <div nz-col [nzSpan]="20">
-              <strong>はなさき</strong>
-              <p class="mb0">ハルカソラトキヘダツヒカリ</p>
+              <strong>Noah</strong>
+              <p class="mb0">Please tell me what happened in a few words, don't go into details.</p>
             </div>
           </div>
           <div
@@ -62,8 +61,8 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
               <nz-avatar [nzSrc]="'./assets/tmp/img/3.png'"></nz-avatar>
             </div>
             <div nz-col [nzSpan]="20">
-              <strong>苏先生</strong>
-              <p class="mb0">请告诉我，我应该说点什么好？</p>
+              <strong>Albert</strong>
+              <p class="mb0">Please tell me what happened in a few words, don't go into details.</p>
             </div>
           </div>
           <div

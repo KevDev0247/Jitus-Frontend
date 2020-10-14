@@ -25,11 +25,11 @@ export class BasecodeService {
     return this.http.post(this.getServiceUrl() + '/updateBasecode', basecode);
   }
 
-  delete(basecodeId: number) {
-    return this.http.get(this.getServiceUrl() + '/delete?basecodeId=', basecodeId);
+  delete(basecodeId: string) {
+    return this.http.get(this.getServiceUrl() + '/deleteBasecode?basecodeId=', basecodeId);
   }
 
-  getDetail(basecodeId: number) {
+  getDetail(basecodeId: string) {
     return this.http.get(this.getServiceUrl() + '/getBasecodeDetail?id=', basecodeId);
   }
 

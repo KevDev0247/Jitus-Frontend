@@ -44,112 +44,112 @@ const DEFAULT_COLORS = [
   },
 ];
 const DEFAULT_VARS = {
-  'primary-color': { label: '主颜色', type: 'color', default: '#1890ff' },
+  'primary-color': { label: 'Main color', type: 'color', default: '#1890ff' },
   'alain-default-header-hg': {
-    label: '高',
+    label: 'High',
     type: 'px',
     default: '64px',
     max: 300,
     min: 24,
   },
   'alain-default-header-bg': {
-    label: '背景色',
+    label: 'Background color',
     type: 'color',
     default: '@primary-color',
-    tip: '默认同主色系',
+    tip: 'default color theme',
   },
   'alain-default-header-padding': {
-    label: '顶部左右内边距',
+    label: 'default-header-padding',
     type: 'px',
     default: '16px',
   },
   // 侧边栏
   'alain-default-aside-wd': { label: '宽度', type: 'px', default: '200px' },
   'alain-default-aside-bg': {
-    label: '背景',
+    label: 'default-aside-bg',
     type: 'color',
     default: '#ffffff',
   },
   'alain-default-aside-collapsed-wd': {
-    label: '收缩宽度',
+    label: 'default-aside-collapsed-wd',
     type: 'px',
     default: '64px',
   },
   'alain-default-aside-nav-padding-top-bottom': {
-    label: '项上下内边距',
+    label: 'default-aside-nav-padding-top-bottom',
     type: 'px',
     default: '8px',
     step: 8,
   },
   // 主菜单
   'alain-default-aside-nav-fs': {
-    label: '菜单字号',
+    label: 'default-aside-nav-fs',
     type: 'px',
     default: '14px',
     min: 14,
     max: 30,
   },
   'alain-default-aside-collapsed-nav-fs': {
-    label: '收缩菜单字号',
+    label: 'default-aside-collapsed-nav-fs',
     type: 'px',
     default: '24px',
     min: 24,
     max: 32,
   },
   'alain-default-aside-nav-item-height': {
-    label: '菜单项高度',
+    label: 'default-aside-nav-item-height',
     type: 'px',
     default: '38px',
     min: 24,
     max: 64,
   },
   'alain-default-aside-nav-text-color': {
-    label: '菜单文本颜色',
+    label: 'default-aside-nav-text-color',
     type: 'color',
     default: 'rgba(0, 0, 0, 0.65)',
     rgba: true,
   },
   'alain-default-aside-nav-text-hover-color': {
-    label: '菜单文本悬停颜色',
+    label: 'default-aside-nav-text-hover-color',
     type: 'color',
     default: '@primary-color',
-    tip: '默认同主色系',
+    tip: 'default color theme',
   },
   'alain-default-aside-nav-group-text-color': {
-    label: '菜单分组文本颜色',
+    label: 'default-aside-nav-group-text-color',
     type: 'color',
     default: 'rgba(0, 0, 0, 0.43)',
     rgba: true,
   },
   'alain-default-aside-nav-selected-text-color': {
-    label: '菜单激活时文本颜色',
+    label: 'default-aside-nav-selected-text-color',
     type: 'color',
     default: '@primary-color',
-    tip: '默认同主色系',
+    tip: 'default color theme',
   },
   'alain-default-aside-nav-selected-bg': {
-    label: '菜单激活时背景颜色',
+    label: 'default-aside-nav-selected-bg',
     type: 'color',
     default: '#fcfcfc',
   },
   // 内容
   'alain-default-content-bg': {
-    label: '背景色',
+    label: 'content-bg',
     type: 'color',
     default: '#f5f7fa',
   },
   'alain-default-content-heading-bg': {
-    label: '标题背景色',
+    label: 'default-content-heading-bg',
     type: 'color',
     default: '#fafbfc',
   },
   'alain-default-content-heading-border': {
-    label: '标题底部边框色',
+    label: 'default-content-heading-border',
     type: 'color',
     default: '#efe3e5',
   },
   'alain-default-content-padding': {
-    label: '内边距',
+    label: 'default-content-padding',
     type: 'px',
     default: '24px',
     min: 0,
@@ -158,38 +158,38 @@ const DEFAULT_VARS = {
   },
   // zorro组件修正
   'form-state-visual-feedback-enabled': {
-    label: '开启表单元素的视觉反馈',
+    label: 'state-visual-feedback-enabled',
     type: 'switch',
     default: true,
   },
   'preserve-white-spaces-enabled': {
-    label: '开启 preserveWhitespaces',
+    label: 'white-spaces-enabled',
     type: 'switch',
     default: true,
   },
   'nz-table-img-radius': {
-    label: '表格中：图片圆角',
+    label: 'table-img-radius',
     type: 'px',
     default: '4px',
     min: 0,
     max: 128,
   },
   'nz-table-img-margin-right': {
-    label: '表格中：图片右外边距',
+    label: 'table-img-margin-right',
     type: 'px',
     default: '4px',
     min: 0,
     max: 128,
   },
   'nz-table-img-max-width': {
-    label: '表格中：图片最大宽度',
+    label: 'table-img-max-width',
     type: 'px',
     default: '32px',
     min: 8,
     max: 128,
   },
   'nz-table-img-max-height': {
-    label: '表格中：图片最大高度',
+    label: 'table-img-max-height',
     type: 'px',
     default: '32px',
     min: 8,
@@ -271,12 +271,12 @@ export class SettingDrawerComponent {
 
   private runLess() {
     const { zone, msg, cdr } = this;
-    const msgId = msg.loading(`正在编译主题！`, { nzDuration: 0 }).messageId;
+    const msgId = msg.loading(`Compiling theme！`, { nzDuration: 0 }).messageId;
     setTimeout(() => {
       zone.runOutsideAngular(() => {
         this.loadLess().then(() => {
           (window as any).less.modifyVars(this.genVars()).then(() => {
-            msg.success('成功');
+            msg.success('Success');
             msg.remove(msgId);
             zone.run(() => cdr.detectChanges());
           });

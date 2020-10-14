@@ -6,11 +6,11 @@
         <a routerLink="/sys/user/list">Users</a>
       </nz-breadcrumb-item>
       <nz-breadcrumb-item>
-        User Details
+        Change Password
       </nz-breadcrumb-item>
     </nz-breadcrumb>
   </nz-page-header>
-  <nz-tabset>
+  <!--<nz-tabset>
     <nz-tab nzTitle="User Details">
       <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
         <se label="Name" error="Please enter your name" required>
@@ -35,8 +35,8 @@
           <button nz-button (click)="goBack()">Return</button>
         </se>
       </form>
-    </nz-tab>
-    <nz-tab nzTitle="Change password">
+    </nz-tab>-->
+<!--    <nz-tab nzTitle="Change password">-->
       <form nz-form [formGroup]="passwordForm" se-container="1" labelWidth="200">
         <se label="Previous Password" error="Please enter previous password" required>
           <input
@@ -60,6 +60,6 @@
           <button nz-button nzType="primary" (click)="updatePassword()" [disabled]="passwordForm.invalid">Submit</button>
         </se>
       </form>
-    </nz-tab>
-  </nz-tabset>
+<!--    </nz-tab>
+  </nz-tabset>-->
 </nz-card>

@@ -13,9 +13,9 @@ for (let i = 0; i < total; i += 1) {
       'https://gw.alipayobjects.com/zos/rmsportal/udxAbMEhpwthVVcjLXik.png',
     ][i % 2],
     no: `TradeCode ${i}`,
-    title: `一个任务名称 ${i}`,
-    owner: '曲丽丽',
-    description: '这是一段描述',
+    title: `task ${i}`,
+    owner: 'ABC',
+    description: 'description',
     callNo: Math.floor(Math.random() * 1000),
     status: Math.floor(Math.random() * 10) % 4,
     updatedAt: new Date(`2017-07-${Math.floor(i / 2) + 1}`),
@@ -39,7 +39,7 @@ function genData(params: any) {
 
 function saveData(id: number, value: any) {
   const item = list.find(w => w.id === id);
-  if (!item) { return { msg: '无效用户信息' }; }
+  if (!item) { return { msg: 'useless info' }; }
   Object.assign(item, value);
   return { msg: 'ok' };
 }
@@ -53,49 +53,49 @@ export const USERS = {
     avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
     userid: '00000001',
     email: 'cipchk@qq.com',
-    signature: '海纳百川，有容乃大',
-    title: '交互专家',
-    group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+    signature: 'A',
+    title: 'a',
+    group: 'aa',
     tags: [
       {
         key: '0',
-        label: '很有想法的',
+        label: '00',
       },
       {
         key: '1',
-        label: '专注撩妹',
+        label: '11',
       },
       {
         key: '2',
-        label: '帅~',
+        label: '22',
       },
       {
         key: '3',
-        label: '通吃',
+        label: '33',
       },
       {
         key: '4',
-        label: '专职后端',
+        label: '44',
       },
       {
         key: '5',
-        label: '海纳百川',
+        label: '55',
       },
     ],
     notifyCount: 12,
-    country: 'China',
+    country: 'Canada',
     geographic: {
       province: {
-        label: '上海',
+        label: 'Toronto',
         key: '330000',
       },
       city: {
-        label: '市辖区',
+        label: 'Richmond Hill',
         key: '330100',
       },
     },
-    address: 'XX区XXX路 XX 号',
-    phone: '你猜-你猜你猜猜猜',
+    address: 'king street',
+    phone: '123456',
   },
   'POST /user/avatar': 'ok',
   'POST /login/account': (req: MockRequest) => {

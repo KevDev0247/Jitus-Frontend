@@ -36,4 +36,8 @@ export class ClientService {
   getQueryList(param1: string, param2: string) {
     return this.http.get(this.getServiceUrl() + '/queryClientList', { param1, param2})
   }
+
+  getOptionList(param: string) {
+    return this.http.get(this.getServiceUrl() + '/optionList', { info: param });
+  }
 }

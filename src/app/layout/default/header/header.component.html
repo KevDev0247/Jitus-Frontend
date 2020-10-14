@@ -1,11 +1,4 @@
 <div class="alain-default__header-logo">
-  <!--<a [routerLink]="['/']" class="alain-default__header-logo-link">
-    <img class="alain-default__header-logo-expanded" src="./assets/logo-full.svg" alt="{{ settings.app.name }}"
-      style="max-height:40px;" />
-    <img class="alain-default__header-logo-collapsed" src="./assets/logo.svg" alt="{{ settings.app.name }}"
-      style="max-height:30px;" />
-  </a>-->
-<!--  <button nz-button nzType="primary" (click)="open()">Open</button>-->
   <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="left" nzTitle="" (nzOnClose)="close()">
     <ul nz-menu nzMode="inline" style="width: 232px">
       <li nz-submenu>
@@ -40,56 +33,62 @@
       <li nz-submenu nzTitle="Navigation Three" nzIcon="setting"></li>
     </ul>
   </nz-drawer>
-<!--  <img src="assets/imgs/menu.png" (mouseover)="open()">-->
-  <a nz-dropdown [nzDropdownMenu]="menu" (nzVisibleChange)="change($event)">
+  <a nz-dropdown [nzDropdownMenu]="menu">
     <img src="assets/imgs/menu/menu.svg"/>
   </a>
   <nz-dropdown-menu #menu="nzDropdownMenu">
-    <ul nz-menu style="background-color: #b1c3d5;">
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/repair_orders.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Repair Orders</span>
-        </span>
-      </li>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/work_orders.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Orders</span>
-        </span>
-      </li>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/clients.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clients</span>
-        </span>
-      </li>
-      <a [routerLink]="['/project']">
-        <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/projects.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</span>
-        </span>
+    <ul nz-menu style="background-color: #b1c3d5;  width:170px;height: 900px;">
+      <a [routerLink]="['/repair']">
+        <li nz-menu-item nz-submenu>
+          <span title>
+            <img src="assets/imgs/menu/work_orders.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work Orders</span>
+          </span>
+          <ul>
+            <li nz-menu-item>
+              <a [routerLink]="['/repair/contract/list']">Contracts</a>
+            </li>
+          </ul>
         </li>
       </a>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/departments.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Departments</span>
-        </span>
-      </li>
+      <a [routerLink]="['/client']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/clients.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clients</span>
+          </span>
+        </li>
+      </a>
+      <a [routerLink]="['/project']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/projects.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects</span>
+          </span>
+        </li>
+      </a>
+      <a [routerLink]="['/sys/org/list']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/departments.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Departments</span>
+          </span>
+        </li>
+      </a>
       <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/knowledge.svg">
           <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Knowledge</span>
         </span>
       </li>
-      <li nz-menu-item>
-        <span title>
-          <img src="assets/imgs/menu/accessories.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories</span>
-        </span>
-      </li>
+      <a [routerLink]="['/accessory']">
+        <li nz-menu-item>
+          <span title>
+            <img src="assets/imgs/menu/accessories.svg">
+            <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories</span>
+          </span>
+        </li>
+      </a>
       <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/communications.svg">
@@ -140,7 +139,9 @@
           <li nz-menu-item>
             <a [routerLink]="['/sys/role/list']">Roles</a>
           </li>
-          <li nz-menu-item>Change Password</li>
+          <li nz-menu-item>
+            <a [routerLink]="['/sys/user/update']">Change Password</a>
+          </li>
         </ul>
       </li>
       <li nz-menu-item nz-submenu>
@@ -158,46 +159,11 @@
     </ul>
   </nz-dropdown-menu>
   <div></div>
-
-  <!--<ul nz-menu nzMode="horizontal" style="border-bottom: none; background: #b1c3d5">
-    <li nz-submenu nzIcon="appstore" (mouseover)="open()" style="border-bottom: none; background: #b1c3d5">
-      <ul>
-        <li nz-menu-item>
-          <a [routerLink]="['/dashboard/v1']">Main Page</a>
-        </li>
-        <li nz-submenu nzTitle="Program">
-          <ul>
-            <li nz-menu-item><a [routerLink]="'/project'">Project</a></li>
-          </ul>
-        </li>
-        <li nz-submenu nzTitle="System">
-          <ul>
-            <li nz-menu-item><a [routerLink]="['/sys/user/list']">User</a></li>
-            <li nz-menu-item><a [routerLink]="['/sys/role/list']">Role</a></li>
-            <li nz-menu-item><a [routerLink]="['/sys/org/list']">Organization</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>-->
 </div>
-
 <div class="alain-default__nav-wrap">
   <ul class="alain-default__nav">
-    <!--&lt;!&ndash; Menu &ndash;&gt;
-    <li>
-      <div class="alain-default__nav-item" (click)="toggleCollapsedSidebar()">
-        <i nz-icon nzType="menu-{{ settings.layout.collapsed ? 'unfold' : 'fold' }}"></i>
-      </div>
-    </li>
-    &lt;!&ndash; Lock Page &ndash;&gt;
-    <li class="hidden-mobile">
-      <div class="alain-default__nav-item" routerLink="/passport/lock">
-        <i nz-icon nzType="lock"></i>
-      </div>
-    </li>-->
+
   </ul>
-  <!-- <header-search class="alain-default__search" [toggleChange]="searchToggleStatus"></header-search> -->
   <ul class="alain-default__nav">
     <li class="hidden-mobile">
       <div class="alain-default__nav-item">
@@ -205,39 +171,44 @@
       </div>
     </li>
     <li class="hidden-mobile">
-      <div class="alain-default__nav-item">
+      <div class="alain-default__nav-item"  nz-dropdown [nzDropdownMenu]="contact">
         <img src="assets/imgs/header/contact.svg"/>
+        <nz-dropdown-menu #contact="nzDropdownMenu">
+          <div nz-menu>
+            <div nz-menu-item>
+              Toll Free
+            </div>
+            <div nz-menu-item>
+              Customer Service
+            </div>
+          </div>
+        </nz-dropdown-menu>
       </div>
     </li>
-    <!-- Notify -->
-    <!--<li>
-      <header-notify></header-notify>
-    </li>-->
-    <!-- Task -->
     <li class="hidden-mobile">
       <header-task></header-task>
     </li>
-    <!-- Settings -->
     <li class="hidden-mobile">
-      <div
-        class="alain-default__nav-item"
-        nz-dropdown
-        [nzDropdownMenu]="settingsMenu"
-        nzTrigger="click"
-        nzPlacement="bottomRight">
-<!--        <i nz-icon nzType="setting"></i>-->
+      <div class="alain-default__nav-item" nz-dropdown [nzDropdownMenu]="settingsMenu" nzPlacement="bottomRight">
         <img src="assets/imgs/header/settings.svg"/>
       </div>
       <nz-dropdown-menu #settingsMenu="nzDropdownMenu">
-        <div nz-menu style="width:200px;">
+        <div nz-menu>
+          <a routerLink="['/sys/org/list']">
+            <div nz-menu-item>
+              Departments
+            </div>
+          </a>
           <div nz-menu-item>
-            <header-fullscreen></header-fullscreen>
+            Accounts
           </div>
+          <a routerLink="['/sys/basecode/list']">
+            <div nz-menu-item>
+              Data Dictionary
+            </div>
+          </a>
           <div nz-menu-item>
-            <header-storage></header-storage>
-          </div>
-          <div nz-menu-item>
-            <header-i18n></header-i18n>
+            Logs
           </div>
         </div>
       </nz-dropdown-menu>

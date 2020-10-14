@@ -3,7 +3,7 @@ import {BaseModule} from './base.module';
 /**
  * The data model class for Project
  *
- * @Author Kevin Zhijun Wang
+ * @Author Kevin Zhijun Wang, Yonggang Su
  * Created on 2020/08/10
  */
 export class Project extends BaseModule {
@@ -12,13 +12,13 @@ export class Project extends BaseModule {
   description?: string;
   address?: string;
   clientId?: number;
-  contractStartTime?: Date;
-  contractEndTime?: Date;
-  deliveryTime?: Date;
-  acceptTime?: Date;
+  contractStartTime?: string;
+  contractEndTime?: string;
+  deliveryTime?: string;
+  acceptTime?: string;
   guaranteeType?: string;
   guaranteeMonth?: number;
-  guaranteeDueTime?: Date;
+  guaranteeDueTime?: string;
   staffId?: number;
   fileId: number;
 }

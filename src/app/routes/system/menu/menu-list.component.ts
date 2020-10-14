@@ -36,7 +36,6 @@ export class MenuListComponent extends BaseComponent implements OnInit {
   selectedRows: STData[] = [];
   menu: Menu = new Menu();
 
-  total = 0;
   totalCallNumber = 0;
   loading = false;
   expandForm = false;

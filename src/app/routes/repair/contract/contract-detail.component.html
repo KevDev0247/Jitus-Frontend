@@ -1,0 +1,77 @@
+<nz-card [nzBordered]="false">
+  <page-header [title]="contract.id ? 'Edit Contract' : 'Create Contract'"></page-header>
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="Sign Location" error="Please enter the sign location">
+      <input nz-input formControlName="signPlace" placeholder="Please enter the sign location" [(ngModel)]="contract.signPlace"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Contract Start" error="Please enter Contract Start Time">
+      <nz-date-picker formControlName="startDate" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled="false"
+                      [(ngModel)]="startDate">
+      </nz-date-picker>
+    </se>
+    <se label="Contract End" error="Please enter contract end date">
+      <nz-date-picker formControlName="endDate" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled="false"
+                      [(ngModel)]="endDate">
+      </nz-date-picker>
+    </se>
+    <se label="Project" error="Please enter the project">
+      <input nz-input formControlName="projectId" placeholder="Please enter the project" [(ngModel)]="contract.projectId"
+             style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <se label="Client" error="Please enter the client">
+      <input nz-input formControlName="client" placeholder="Please enter the client" [(ngModel)]="contract.clientId"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Content" error="Please enter the content">
+      <input nz-input formControlName="content" placeholder="Please enter the content" [(ngModel)]="contract.content"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Pattern" error="Please enter the pattern">
+      <input nz-input formControlName="pattern" placeholder="Please enter the pattern" [(ngModel)]="contract.pattern"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Name" error="Please enter the name">
+      <input nz-input formControlName="name" placeholder="Please enter the name" [(ngModel)]="contract.name"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Address" error="Please enter the address">
+      <input nz-input formControlName="signPlace" placeholder="Please enter the sign location" [(ngModel)]="contract.signPlace"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Phone" error="Please enter the phone number">
+      <input nz-input formControlName="telno" placeholder="Please enter the phone number" [(ngModel)]="contract.telno"
+             style="width: calc(100% - 400px);"/>
+    </se>
+    <se label="Sign Date" error="Please enter the sign date">
+      <nz-date-picker formControlName="signDate" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled="false"
+                      [(ngModel)]="signDate">
+      </nz-date-picker>
+    </se>
+    <se label="Signatory" error="Please enter the signatory">
+      <input nz-input formControlName="signmanId" placeholder="Please enter the sign location" [(ngModel)]="contract.signmanId"
+             style="width: calc(100% - 400px);" type="number"/>
+    </se>
+    <!--<se label="Status" error="Please enter the status">
+      <input nz-input formControlName="status" placeholder="Please enter the status type" [(ngModel)]="contract.status"
+             style="width: calc(100% - 400px);" type="number"/>
+    </se>-->
+    <se label="Type" error="Please select contract type" required>
+      <nz-input-group>
+        <nz-select formControlName="status" nzPlaceHolder="Please select contract type" [(ngModel)]="contract.status"
+          style="width: calc(100% - 400px);">
+          <nz-option *ngFor="let o of statusList" [nzLabel]="o.text" [nzValue]="o.value"> </nz-option>
+        </nz-select>
+      </nz-input-group>
+    </se>
+    <se label="Price" error="Please enter the price">
+      <input nz-input formControlName="price" placeholder="Please enter the price" [(ngModel)]="contract.price"
+             style="width: calc(100% - 400px);" type="text"/>
+    </se>
+    <se>
+      <button *ngIf="contract.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
+      <button *ngIf="!contract.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Save</button>
+      <button nz-button (click)="goBack()">Back</button>
+    </se>
+  </form>
+</nz-card>

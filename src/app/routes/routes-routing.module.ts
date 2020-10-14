@@ -25,8 +25,8 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutDefaultComponent,
-    // canActivate: [SimpleGuard],
-    // canActivateChild: [SimpleGuard],
+    canActivate: [SimpleGuard],
+    canActivateChild: [SimpleGuard],
     children: [
       { path: '', redirectTo: 'dashboard/v1', pathMatch: 'full' },
       { path: 'dashboard', redirectTo: 'dashboard/v1', pathMatch: 'full' },
@@ -35,6 +35,8 @@ const routes: Routes = [
       { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
       { path: 'staff', loadChildren: () => import('./staff/staff.module').then(m => m.StaffModule) },
       { path: 'client', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) },
+      { path: 'repair', loadChildren: () => import('./repair/repair.module').then(m => m.RepairModule)},
+      { path: 'accessory', loadChildren: () => import('./accessory/accessory.module').then(m => m.AccessoryModule)},
     ],
   },
   // passport
@@ -45,26 +47,25 @@ const routes: Routes = [
       {
         path: 'login',
         component: UserLoginComponent,
-        data: { title: '登录', titleI18n: 'app.login.login' },
+        data: { title: 'Login', titleI18n: 'app.login.login' },
       },
       {
         path: 'register',
         component: UserRegisterComponent,
-        data: { title: '注册', titleI18n: 'app.register.register' },
+        data: { title: 'Register', titleI18n: 'app.register.register' },
       },
       {
         path: 'register-result',
         component: UserRegisterResultComponent,
-        data: { title: '注册结果', titleI18n: 'app.register.register' },
+        data: { title: 'Register Result', titleI18n: 'app.register.register' },
       },
       {
         path: 'lock',
         component: UserLockComponent,
-        data: { title: '锁屏', titleI18n: 'app.lock' },
+        data: { title: 'Lock', titleI18n: 'app.lock' },
       },
     ],
   },
-  // 单页不包裹Layout
   { path: '**', redirectTo: 'exception/404' },
 ];
 

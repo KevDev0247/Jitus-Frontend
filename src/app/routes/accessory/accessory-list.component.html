@@ -1,0 +1,150 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>Accessories</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">名称</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    (change)="stChange($event)"
+  ></st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="type">Type</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.type"
+        name="type"
+        placeholder="Please enter"
+        id="type" type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="name">name</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.name"
+        name="name"
+        placeholder="Please enter" id="name"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="code">code</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.code"
+        name="code"
+        placeholder="Please enter"
+        id="code"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="spec">Spec</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.spec"
+        name="spec"
+        placeholder="Please enter"
+        id="spec"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="model">Model</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.model"
+        name="model"
+        placeholder="Please enter"
+        id="model"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="unit">Unit</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.unit"
+        name="unit"
+        placeholder="Please enter"
+        id="unit"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="count">Count</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.count"
+        name="count"
+        placeholder="Please enter"
+        id="count"
+        type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="safeCount">Safe Count</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.safeCount"
+        name="safeCount"
+        placeholder="Please enter"
+        id="safeCount"
+        type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="status">Status</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.status"
+        name="status"
+        placeholder="请输入"
+        id="status"
+        type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="isReturn"></nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="accessory.isReturn"
+        name="isReturn"
+        placeholder="Please enter"
+        id="isReturn"
+        type="number"
+      />
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>

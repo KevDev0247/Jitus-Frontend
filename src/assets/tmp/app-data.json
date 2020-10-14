@@ -1,27 +1,27 @@
 {
   "app": {
-    "name": "kniot",
-    "description": "Kniot Web"
+    "name": "jitlantis",
+    "description": "Jitlantis Cloud"
   },
   "user": {
     "name": "Admin",
     "avatar": "./assets/tmp/img/avatar.jpg",
-    "email": "admin@knoit.com"
+    "email": "admin@jitlantis.com"
   },
   "menu": [
     {
-      "text": "主导航",
+      "text": "Main",
       "i18n": "menu.main",
       "group": true,
       "hideInBreadcrumb": true,
       "children": [
         {
-          "text": "仪表盘",
+          "text": "Dashboard",
           "i18n": "menu.dashboard",
           "icon": "anticon-dashboard",
           "children": [
             {
-              "text": "仪表盘V1",
+              "text": "Dashboard/v1",
               "link": "/dashboard/v1",
               "i18n": "menu.dashboard.v1"
             }

@@ -26,7 +26,13 @@
   <button nz-button (click)="download()">Export</button>
   <button nz-button (click)="import()">Import</button>
   <input type="file" (change)="change($event)" multiple="false" class="ml-sm">
-  <st #st [columns]="columns" [data]="data" [loading]="loading" [total]="total" (change)="stChange($event)"></st>
+  <st
+    #st
+    [columns]="columns"
+    [data]="data"
+    [loading]="loading"
+    (change)="stChange($event)">
+  </st>
 </nz-card>
 <ng-template #modalContent>
   <nz-tabset>
@@ -34,19 +40,39 @@
       <nz-form-item>
         <nz-form-label nzFor="text">Menu Name</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.text" name="text" placeholder="Please enter" id="text_1"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.text"
+            name="text"
+            placeholder="Please enter"
+            id="text_1"/>
         </nz-form-control>
         <nz-form-label nzFor="i18n">Menu Code</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.i18n" name="i18n" placeholder="Please enter" id="i18n_1"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.i18n"
+            name="i18n"
+            placeholder="Please enter"
+            id="i18n_1"/>
         </nz-form-control>
         <nz-form-label nzFor="link">Menu Link</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.link" name="link" placeholder="Please enter" id="link_1"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.link"
+            name="link"
+            placeholder="Please enter"
+            id="link_1"/>
         </nz-form-control>
         <nz-form-label nzFor="icon">Menu Icon</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.icon" name="icon" placeholder="Please enter" id="icon_1"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.icon"
+            name="icon"
+            placeholder="Please enter"
+            id="icon_1"/>
         </nz-form-control>
       </nz-form-item>
     </nz-tab>
@@ -59,24 +85,48 @@
           </nz-select>
         </nz-form-control>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.text" name="text" placeholder="Please enter" id="text_2"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.text"
+            name="text"
+            placeholder="Please enter"
+            id="text_2"/>
         </nz-form-control>
         <nz-form-label nzFor="i18n">Menu Code</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.i18n" name="i18n" placeholder="Please enter" id="i18n_2"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.i18n"
+            name="i18n"
+            placeholder="Please enter"
+            id="i18n_2"/>
         </nz-form-control>
         <nz-form-label nzFor="link">Menu Link</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.link" name="link" placeholder="Please enter" id="link_2"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.link"
+            name="link"
+            placeholder="Please enter"
+            id="link_2"/>
         </nz-form-control>
         <nz-form-label nzFor="icon">Menu Icon</nz-form-label>
         <nz-form-control>
-          <input nz-input [(ngModel)]="menu.icon" name="icon" placeholder="Please enter" id="icon_2"/>
+          <input
+            nz-input
+            [(ngModel)]="menu.icon"
+            name="icon"
+            placeholder="Please enter"
+            id="icon_2"/>
         </nz-form-control>
         <nz-form-label nzFor="createTime">Create Time</nz-form-label>
         <nz-form-control>
-          <nz-date-picker formControlName="createTime" nzShowTime nzFormat="YYYY-MM-DD HH:MM:SS"
-                          nzDisabled=false [(ngModel)]="menu.createTime">
+          <nz-date-picker
+            formControlName="createTime"
+            nzShowTime
+            nzFormat="YYYY-MM-DD HH:MM:SS"
+            nzDisabled=false
+            [(ngModel)]="menu.createTime">
           </nz-date-picker>
         </nz-form-control>
       </nz-form-item>

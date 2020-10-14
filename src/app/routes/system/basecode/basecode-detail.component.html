@@ -1,6 +1,15 @@
-<page-header [title]="basecode.id? 'Edit Basic Data':'Create Basic Data'">
-</page-header>
 <nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a routerLink="/sys/basecode/list">Data Dictionary</a>
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        Edit Data Dictionary
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Data Type ID" error="Please enter basic data type id" required>
       <input nz-input formControlName="typeid" placeholder="Please enter basic data type id" [(ngModel)]="basecode.typeid"

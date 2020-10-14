@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -73,6 +73,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="D:\Jitus-Frontend\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
     <property name="ts.external.directory.path" value="D:\Jitlantis-Frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -196,6 +197,33 @@
       <workItem from="1599275772672" duration="16000" />
       <workItem from="1599322888581" duration="8454000" />
       <workItem from="1599405783188" duration="3924000" />
+      <workItem from="1599442616047" duration="3689000" />
+      <workItem from="1599485293873" duration="2510000" />
+      <workItem from="1599495299953" duration="18921000" />
+      <workItem from="1599572670538" duration="11419000" />
+      <workItem from="1599657576918" duration="2832000" />
+      <workItem from="1599772640069" duration="5991000" />
+      <workItem from="1599801075494" duration="428000" />
+      <workItem from="1599961924314" duration="599000" />
+      <workItem from="1600045016811" duration="2310000" />
+      <workItem from="1600094713436" duration="10733000" />
+      <workItem from="1600230121508" duration="6031000" />
+      <workItem from="1600284760728" duration="1840000" />
+      <workItem from="1600394288548" duration="8567000" />
+      <workItem from="1600532437053" duration="3230000" />
+      <workItem from="1600798590267" duration="4743000" />
+      <workItem from="1601323662597" duration="1479000" />
+      <workItem from="1602111646495" duration="3838000" />
+      <workItem from="1602175260603" duration="616000" />
+      <workItem from="1602200298009" duration="6788000" />
+      <workItem from="1602220813884" duration="604000" />
+      <workItem from="1602273274743" duration="19000" />
+      <workItem from="1602294640497" duration="1481000" />
+      <workItem from="1602365467355" duration="594000" />
+      <workItem from="1602443176966" duration="15341000" />
+      <workItem from="1602517180621" duration="1508000" />
+      <workItem from="1602521997286" duration="20098000" />
+      <workItem from="1602624247783" duration="3297000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -283,136 +311,6 @@
     <MESSAGE value="New project files" />
     <MESSAGE value="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab" />
     <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="311" y="115" key="#Inspections" timestamp="1596502771450">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="311" y="115" key="#Inspections/0.0.1368.872@0.0.1368.872" timestamp="1596502771450" />
-    <state x="896" y="350" key="#TSLint" timestamp="1596838205513">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="896" y="350" key="#TSLint/0.0.1368.872@0.0.1368.872" timestamp="1596838205513" />
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1597852681422">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="832" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1368.872@0.0.1368.872" timestamp="1597852681422" />
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598717949280">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="73" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1598717949280" />
-    <state x="440" y="139" key="#xdebugger.evaluate" timestamp="1597873517869">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="440" y="139" key="#xdebugger.evaluate/0.0.1368.872@0.0.1368.872" timestamp="1597873517869" />
-    <state x="272" y="2" key="CommitChangelistDialog2" timestamp="1596309784204">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="272" y="2" key="CommitChangelistDialog2/0.0.1368.872@0.0.1368.872" timestamp="1596309784204" />
-    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog" timestamp="1597603356175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="93" y="93" width="1181" height="685" key="DiffContextDialog/0.0.1368.872@0.0.1368.872" timestamp="1597603356175" />
-    <state x="466" y="192" key="FileChooserDialogImpl" timestamp="1598133635223">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="466" y="192" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1598133635223" />
-    <state width="1348" height="331" key="GridCell.Tab.0.bottom" timestamp="1599337573639">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="331" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1599337573639" />
-    <state width="1348" height="331" key="GridCell.Tab.0.center" timestamp="1599337573639">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="331" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1599337573639" />
-    <state width="1348" height="331" key="GridCell.Tab.0.left" timestamp="1599337573639">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="331" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1599337573639" />
-    <state width="1348" height="331" key="GridCell.Tab.0.right" timestamp="1599337573639">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="331" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1599337573639" />
-    <state width="1348" height="349" key="GridCell.Tab.1.bottom" timestamp="1597877399174">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.1.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597877399174" />
-    <state width="1348" height="349" key="GridCell.Tab.1.center" timestamp="1597877399173">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.1.center/0.0.1368.872@0.0.1368.872" timestamp="1597877399173" />
-    <state width="1348" height="349" key="GridCell.Tab.1.left" timestamp="1597877399173">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.1.left/0.0.1368.872@0.0.1368.872" timestamp="1597877399173" />
-    <state width="1348" height="349" key="GridCell.Tab.1.right" timestamp="1597877399173">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.1.right/0.0.1368.872@0.0.1368.872" timestamp="1597877399173" />
-    <state width="1348" height="349" key="GridCell.Tab.2.bottom" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.2.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state width="1348" height="349" key="GridCell.Tab.2.center" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.2.center/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state width="1348" height="349" key="GridCell.Tab.2.left" timestamp="1597877399174">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.2.left/0.0.1368.872@0.0.1368.872" timestamp="1597877399174" />
-    <state width="1348" height="349" key="GridCell.Tab.2.right" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.2.right/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state width="1348" height="349" key="GridCell.Tab.3.bottom" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.3.bottom/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state width="1348" height="349" key="GridCell.Tab.3.center" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.3.center/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state width="1348" height="349" key="GridCell.Tab.3.left" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.3.left/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state width="1348" height="349" key="GridCell.Tab.3.right" timestamp="1597877399175">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state width="1348" height="349" key="GridCell.Tab.3.right/0.0.1368.872@0.0.1368.872" timestamp="1597877399175" />
-    <state x="131" y="71" key="MergeDialog" timestamp="1596307879599">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="131" y="71" key="MergeDialog/0.0.1368.872@0.0.1368.872" timestamp="1596307879599" />
-    <state x="323" y="198" key="MultipleFileMergeDialog" timestamp="1596310056893">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="323" y="198" key="MultipleFileMergeDialog/0.0.1368.872@0.0.1368.872" timestamp="1596310056893" />
-    <state x="186" y="81" key="SettingsEditor" timestamp="1596474480653">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1596474480653" />
-    <state x="691" y="225" key="VcsDiffUtil.ChangesDialog" timestamp="1597603353653">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="691" y="225" key="VcsDiffUtil.ChangesDialog/0.0.1368.872@0.0.1368.872" timestamp="1597603353653" />
-    <state x="896" y="281" key="cloudConfig.SelfSettingsDialog" timestamp="1599167973372">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="896" y="281" key="cloudConfig.SelfSettingsDialog/0.0.1368.872@0.0.1368.872" timestamp="1599167973372" />
-    <state x="93" y="93" width="1181" height="685" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597594001238">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="93" y="93" width="1181" height="685" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1368.872@0.0.1368.872" timestamp="1597594001238" />
-    <state x="-103" y="109" width="1061" height="526" key="dock-window-1" timestamp="1597957765751">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="-103" y="109" width="1061" height="526" key="dock-window-1/0.0.1368.872@0.0.1368.872" timestamp="1597957765751" />
-    <state x="692" y="188" width="672" height="678" key="search.everywhere.popup" timestamp="1597622291848">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="692" y="188" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1597622291848" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
