@@ -66,8 +66,7 @@ export class DefaultInterceptor implements HttpInterceptor {
       case 200:
         break;
       case 401:
-        this.notification.error(`request time out`, ``);
-        // 清空 token 信息
+        this.notification.error(`Invalid username or password, please login again`, ``);
         (this.injector.get(DA_SERVICE_TOKEN) as ITokenService).clear();
         this.goTo('/passport/login');
         break;
