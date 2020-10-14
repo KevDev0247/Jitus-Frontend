@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
-import {NzUploadModule} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {NzUploadModule} from 'ng-zorro-antd';
 import {ProjectDetailComponent} from './project-detail.component';
 import {ProjectListComponent} from './project-list.component';
 import {ProjectRoutingModule} from './project-routing.module';
