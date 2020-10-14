@@ -32,7 +32,6 @@ export class LogListComponent implements OnInit {
   expandForm = false;
   loading = false;
   totalCallNo = 0;
-  total = 0;
 
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
