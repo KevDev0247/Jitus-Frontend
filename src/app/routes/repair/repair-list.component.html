@@ -159,7 +159,6 @@
 </nz-modal>
 
 <nz-modal [(nzVisible)]="detailIsVisible" nzTitle="Details" nzWidth="900" (nzOnCancel)="handleCancel()">
-<!--  <app-repair-detail></app-repair-detail>-->
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Repair Company" error="Please enter the repair company">
       <input
@@ -170,7 +169,7 @@
         style="width: calc(100% - 400px);"
       />
     </se>
-    <se label="Repair Date" error="Please enter the repair date">
+    <!--<se label="Repair Date" error="Please enter the repair date">
       <nz-date-picker
         formControlName="fixDate"
         nzShowTime
@@ -179,7 +178,7 @@
         [(ngModel)]="repair.fixDate"
       >
       </nz-date-picker>
-    </se>
+    </se>-->
     <se label="Project" error="Please enter the project">
       <input
         nz-input
