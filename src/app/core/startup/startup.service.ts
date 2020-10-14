@@ -12,8 +12,7 @@ import { ICONS_AUTO } from '../../../style-icons-auto';
 import { ICONS } from '../../../style-icons';
 
 /**
- * 用于应用启动时
- * 一般用来获取应用所需要的基础数据等
+ * The class to retrieve foundation data during startup
  */
 @Injectable()
 export class StartupService {

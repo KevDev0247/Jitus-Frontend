@@ -3,7 +3,7 @@
     <nz-breadcrumb nz-page-header-breadcrumb>
       <nz-breadcrumb-item>Current</nz-breadcrumb-item>
       <nz-breadcrumb-item>
-        <a routerLink="/sys/user/list">Users</a>
+        <a>Users</a>
       </nz-breadcrumb-item>
     </nz-breadcrumb>
   </nz-page-header>
@@ -29,10 +29,6 @@
       <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
         <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
         <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
-<!--        <a (click)="expandForm =! expandForm">-->
-<!--          {{ expandForm? 'Collapse' : 'Expand'}}-->
-<!--          <i nz-icon [nzType]="expandForm ? 'up' : 'down'"></i>-->
-<!--        </a>-->
       </div>
     </div>
   </form>
@@ -40,17 +36,6 @@
     <i nz-icon nzType="plus"></i>
     <span>Create</span>
   </button>
-  <!--<ng-container *ngIf="selectedRows.length > 0">
-    <button nz-button nz-dropdown [nzDropdownMenu]="batchMenu" nzPlacement="bottomLeft">
-      More Actions <i nz-icon nzType="down"></i>
-    </button>
-    <nz-dropdown-menu #batchMenu="nzDropdownMenu">
-      <ul nz-menu>
-        <li nz-menu-item (click)="remove()">Delete</li>
-        <li nz-menu-item (click)="approval()">Batch Approval</li>
-      </ul>
-    </nz-dropdown-menu>
-  </ng-container>-->
   <st #st [columns]="columns" [data]="data" [loading]="loading" [total]="total" (change)="stChange($event)">
     <ng-template st-row="status" let-i>
       <nz-badge [nzStatus]="i.statusType" [nzText]="i.statusText"></nz-badge>

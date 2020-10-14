@@ -10,8 +10,7 @@ export abstract class BaseComponent {
         }
         this.modalSrv.confirm({
             nzTitle: 'Are you sure to delete?',
-            // nzContent: '<b color="red">此操作不可逆 </b>',
-            nzContent: '<b>' + content + '</b> <br/> <font color="red"><b>此操作不可逆</b> </font>',
+            nzContent: '<b>' + content + '</b> <br/> <font color="red"><b>This action is irreversible</b> </font>',
             nzOkText: 'OK',
             nzOkType: 'danger',
             nzOnOk: () => {
@@ -23,5 +22,6 @@ export abstract class BaseComponent {
             nzOnCancel: () => console.log('Cancel')
         });
     }
+
     remove(id?: number) { }
 }

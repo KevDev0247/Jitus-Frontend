@@ -1,9 +1,8 @@
-<page-header [title]="staff.id? 'Edit Staff':'Create Staff'">
-</page-header>
+<page-header [title]="staff.id? 'Edit Staff':'Create Staff'"></page-header>
 <nz-card [nzBordered]="false">
   <form nz-form [formGroup]="formGroup" se-container="1" labelWidth="200">
     <se label="EmployeeId" error="Please enter your Employee ID">
-      <input nz-input formControlName="scode" placeholder="Please enter your Employee ID" [(ngModel)]="staff.scode"
+      <input nz-input formControlName="scode" placeholder="Please enter your Employee ID" [(ngModel)]="staff.sCode"
              style="width: calc(100% - 400px)"/>
     </se>
     <se label="Name" error="Please enter your name">

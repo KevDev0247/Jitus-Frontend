@@ -4,7 +4,7 @@ import { NzMessageService } from 'ng-zorro-antd';
 import { NoticeItem, NoticeIconList } from '@delon/abc';
 
 /**
- * 菜单通知
+ * Menu Notification
  */
 @Component({
   selector: 'header-notify',
@@ -25,25 +25,25 @@ import { NoticeItem, NoticeIconList } from '@delon/abc';
 export class HeaderNotifyComponent {
   data: NoticeItem[] = [
     {
-      title: '通知',
+      title: 'Notification',
       list: [],
-      emptyText: '你已查看所有通知',
+      emptyText: 'Please check all notifications',
       emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg',
-      clearText: '清空通知',
+      clearText: 'Clear notification',
     },
     {
-      title: '消息',
+      title: 'Message',
       list: [],
-      emptyText: '您已读完所有消息',
+      emptyText: 'Please check all messages',
       emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg',
-      clearText: '清空消息',
+      clearText: 'Clear messages',
     },
     {
-      title: '待办',
+      title: 'Tasks',
       list: [],
-      emptyText: '你已完成所有待办',
+      emptyText: 'Please check all tasks',
       emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/HsIsxMZiWKrNUavQUXqx.svg',
-      clearText: '清空待办',
+      clearText: 'Clear tasks',
     },
   ];
   count = 5;
@@ -82,94 +82,94 @@ export class HeaderNotifyComponent {
         {
           id: '000000001',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
-          title: '你收到了 14 份新周报',
+          title: '0',
           datetime: '2017-08-09',
-          type: '通知',
+          type: 'A',
         },
         {
           id: '000000002',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/OKJXDXrmkNshAMvwtvhu.png',
-          title: '你推荐的 曲妮妮 已通过第三轮面试',
+          title: '1',
           datetime: '2017-08-08',
-          type: '通知',
+          type: 'B',
         },
         {
           id: '000000003',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/kISTdvpyTAhtGxpovNWd.png',
-          title: '这种模板可以区分多种通知类型',
+          title: '2',
           datetime: '2017-08-07',
           read: true,
-          type: '通知',
+          type: 'C',
         },
         {
           id: '000000004',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/GvqBnKhFgObvnSGkDsje.png',
-          title: '左侧图标用于区分不同的类型',
+          title: '3',
           datetime: '2017-08-07',
-          type: '通知',
+          type: 'D',
         },
         {
           id: '000000005',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
-          title: '内容不要超过两行字，超出时自动截断',
+          title: '4',
           datetime: '2017-08-07',
-          type: '通知',
+          type: 'E',
         },
         {
           id: '000000006',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-          title: '曲丽丽 评论了你',
-          description: '描述信息描述信息描述信息',
+          title: '5',
+          description: '55',
           datetime: '2017-08-07',
-          type: '消息',
+          type: 'F',
         },
         {
           id: '000000007',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-          title: '朱偏右 回复了你',
-          description: '这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像',
+          title: '6',
+          description: '66',
           datetime: '2017-08-07',
-          type: '消息',
+          type: 'G',
         },
         {
           id: '000000008',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-          title: '标题',
-          description: '这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像',
+          title: '7',
+          description: '77',
           datetime: '2017-08-07',
-          type: '消息',
+          type: 'H',
         },
         {
           id: '000000009',
-          title: '任务名称',
-          description: '任务需要在 2017-01-12 20:00 前启动',
-          extra: '未开始',
+          title: '8',
+          description: '88',
+          extra: '888',
           status: 'todo',
-          type: '待办',
+          type: 'I',
         },
         {
           id: '000000010',
-          title: '第三方紧急代码变更',
-          description: '冠霖提交于 2017-01-06，需在 2017-01-07 前完成代码变更任务',
-          extra: '马上到期',
+          title: '9',
+          description: '99',
+          extra: '999',
           status: 'urgent',
-          type: '待办',
+          type: 'J',
         },
         {
           id: '000000011',
-          title: '信息安全考试',
-          description: '指派竹尔于 2017-01-09 前完成更新并发布',
-          extra: '已耗时 8 天',
+          title: '1',
+          description: '11',
+          extra: '111',
           status: 'doing',
-          type: '待办',
+          type: 'K',
         },
         {
           id: '000000012',
-          title: 'ABCD 版本发布',
-          description: '冠霖提交于 2017-01-06，需在 2017-01-07 前完成代码变更任务',
-          extra: '进行中',
+          title: '2',
+          description: '22',
+          extra: '222',
           status: 'processing',
-          type: '待办',
+          type: 'M',
         },
       ]);
       this.loading = false;
@@ -178,10 +178,10 @@ export class HeaderNotifyComponent {
   }
 
   clear(type: string) {
-    this.msg.success(`清空了 ${type}`);
+    this.msg.success(`Clear ${type}`);
   }
 
   select(res: any) {
-    this.msg.success(`点击了 ${res.title} 的 ${res.item.title}`);
+    this.msg.success(`Click ${res.item.title} in ${res.title} `);
   }
 }

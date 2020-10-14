@@ -55,6 +55,10 @@ export class UserListComponent implements OnInit {
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'ID', index: 'id'},
     { title: 'Name', index: 'name'},
+    { title: 'Username', index: 'username' },
+    { title: 'Position', index: 'profession' },
+    { title: 'Phone', index: 'telno' },
+    { title: 'Company', index: 'company' },
     { title: 'Email', index: 'email'},
     {
       title: 'Status',
@@ -152,6 +156,7 @@ export class UserListComponent implements OnInit {
   }
 
   add(templateRef: TemplateRef<{}>) {
+    this.user = new User();
     this.modalService.create({
       nzTitle: 'New User',
       nzContent: templateRef,

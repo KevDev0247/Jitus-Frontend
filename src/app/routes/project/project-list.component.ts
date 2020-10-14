@@ -45,15 +45,12 @@ export class ProjectListComponent implements OnInit {
     { title: 'Description', index: 'description' },
     { title: 'Address', index: 'address' },
     { title: 'Client', index: 'client' },
-    { title: 'Contract Start Time', index: 'contractStartTime' },
-    { title: 'Contract End Time', index: 'contractEndTime' },
     { title: 'Delivery Time', index: 'deliveryTime' },
     { title: 'Accept Time', index: 'acceptTime' },
     { title: 'Guarantee Type', index: 'guaranteeType' },
     { title: 'Guarantee Month', index: 'guaranteeMonth' },
     { title: 'Guarantee Due Time', index: 'guaranteeDueTime' },
     { title: 'Staff', index: 'staffId' },
-    { title: 'File', index: 'fileId' },
     {
       title: 'Operations',
       buttons: [

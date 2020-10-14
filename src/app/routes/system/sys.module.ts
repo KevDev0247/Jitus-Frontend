@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
 import {BasecodeDetailComponent} from './basecode/basecode-detail.component';
 import {BasecodeListComponent} from './basecode/basecode-list.component';
+import {LogListComponent} from './log/log-list.component';
 import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
 import { MenuComponent } from './menu/menu.component';
@@ -33,6 +34,7 @@ const COMPONENTS = [
   OrgListComponent,
   BasecodeListComponent,
   BasecodeDetailComponent,
+  LogListComponent,
 ];
 const COMPONENTS_NOROUNT = [];
 

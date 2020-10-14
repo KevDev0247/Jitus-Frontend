@@ -1,16 +1,16 @@
 # ShareModule
 
-**应** 包含定义：
+**Must** include definition：
 
-+ 应用通用自定义业务组件
++ Application shared modules
 
-**应** 导出所有包含的模块。
+**Must** export all shared modules
 
-**不应** 有 `providers` 属性。
+**Must Not** contain `providers` properties
 
-## 自定义全局组件或指令
+## Custom module or command
 
-每一个组件或指令应该有一个完整的说明文件，**建议**一个合理的目录结构应该是：
+Every module must have a clear documentation. A reasonable structure should look like this:
 
 ```
 ├── components

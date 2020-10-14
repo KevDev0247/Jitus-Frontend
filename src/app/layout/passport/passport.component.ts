@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class LayoutPassportComponent {
   links = [
     {
-      title: '帮助',
+      title: 'Help',
       href: '',
     },
     {
-      title: '隐私',
+      title: 'Privacy',
       href: '',
     },
     {
-      title: '条款',
+      title: 'Terms',
       href: '',
     },
   ];

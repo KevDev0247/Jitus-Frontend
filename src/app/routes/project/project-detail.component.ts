@@ -4,7 +4,10 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
 import {Project} from '../../common/model/project';
+import {ClientService} from '../../common/service/client.service';
+import {ContractService} from '../../common/service/contract.service';
 import {ProjectService} from '../../common/service/project.service';
+import {CommonUtils} from '../../common/util/common.utils';
 
 /**
  * The component class that define and control the views of the ProjectDetail component
@@ -21,29 +24,38 @@ export class ProjectDetailComponent implements OnInit {
   formGroup: FormGroup;
   id: any;
   project: Project = new Project();
-  contractStartTime?: Date;
-  contractEndTime?: Date;
+  comUtils: CommonUtils = new CommonUtils();
+  deliveryTime?: Date;
+  acceptTime?: Date;
+  guaranteeDueTime?: Date;
 
   listOfOption: Array<{ value: string; text: string}> = [
     { value: '11', text: '11' },
     { value: '22', text: '22' },
   ];
+  contractOptions: Array<{ id: number; name: string }> = [];
+  clientOptions: Array<{ id: number; name: string }> = [];
   listOfTagOption: any;
+  contractOption: any;
+  clientOption: any;
   selectedValue = null;
   nzFilterOption = () => true;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService,
               private cdr: ChangeDetectorRef, public activatedRoute: ActivatedRoute,
               private router: Router, private projectService: ProjectService,
+              private contractService: ContractService, private clientService: ClientService,
               private httpClient: HttpClient) {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params.id;
     });
     if (this.id) {
-      this.projectService.getDetails(this.id).subscribe((response: any) => {
-        this.project = response.data;
+      this.projectService.getDetails(this.id).subscribe((res: any) => {
+        this.project = res.data;
       });
     }
+    this.getContractOptions('');
+    this.getClientOptions('');
   }
 
   ngOnInit(): void {
@@ -52,6 +64,7 @@ export class ProjectDetailComponent implements OnInit {
       contractId: [null, []],
       description: [null, []],
       listOfTagOption: [null, []],
+      contractOption: [null, []],
       address: [null, []],
       clientId: [null, []],
       createTime: [null, []],
@@ -66,23 +79,6 @@ export class ProjectDetailComponent implements OnInit {
       staffId: [null, []],
       fileId: [null, []],
     });
-
-    // const children: Array<{ label: string; value: string }> = [];
-    // for (let i = 10; i < 36; i++) {
-    //   children.push({ label: i.toString(36) + i, value: i.toString(36) + i });
-    // }
-    // this.listOfOption = children;
-  }
-
-  create() {
-    console.log('>>>>>res options>>>>', this.listOfTagOption);
-    // this.project.contractStartTime = this.transFormDateTimeStr(this.contractStartTime);
-    // this.project.contractEndTime = this.transFormDateTimeStr(this.contractEndTime);
-    // this.projectService.create(this.project).subscribe(res => {
-    //   if (res.data) {
-    //     this.router.navigate(['/pro/list']);
-    //   }
-    // });
   }
 
   update() {
@@ -93,20 +89,47 @@ export class ProjectDetailComponent implements OnInit {
     })
   }
 
-  transformDateTimeStr(d: Date) {
-    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' '
-      + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+  search(value: string, type: number): void {
+    if (type === 1) {
+      this.getContractOptions(value);
+    }
+    if (type === 2) {
+      this.getClientOptions(value);
+    }
   }
 
-  search(value: string): void {
-    const children: Array<{ value: string; text: string}> = [];
-    for (let i = 10; i < 36; i++) {
-      children.push({ value: i.toString(36) + '66', text: i.toString(36) + i })
+  save() {
+    this.project.deliveryTime = this.comUtils.transFormDateTimeStr(this.deliveryTime);
+    this.project.acceptTime = this.comUtils.transFormDateTimeStr(this.acceptTime);
+    this.project.guaranteeDueTime = this.comUtils.transFormDateTimeStr(this.guaranteeDueTime);
+    if (this.project.id) {
+      this.projectService.update(this.project).subscribe(res => {
+        if (res.data) {
+          this.router.navigate(['/project/list']);
+        }
+      });
+    } else {
+      this.projectService.create(this.project).subscribe(res => {
+        if (res.data) {
+          this.router.navigate(['/project/list']);
+        }
+      });
     }
-    this.listOfOption = children;
   }
 
   goBack() {
     window.history.back();
+  }
+
+  getContractOptions(name: string) {
+    this.contractService.getOptionList(name).subscribe(res => {
+      this.contractOptions = res.list;
+    });
+  }
+
+  getClientOptions(info: string) {
+    this.clientService.getOptionList(info).subscribe(res => {
+      this.clientOption = res.list;
+    });
   }
 }

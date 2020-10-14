@@ -42,7 +42,6 @@
     [columns]="columns"
     [data]="data"
     [loading]="loading"
-    [total]="total"
     (change)="stChange($event)">
   </st>
 </nz-card>
@@ -50,7 +49,7 @@
   <nz-form-item>
     <nz-form-label nzFor="sCode">Employee ID</nz-form-label>
     <nz-form-control>
-      <input nz-input [(ngModel)]="staff.scode" placeholder="Please enter" id="sCode"/>
+      <input nz-input [(ngModel)]="staff.sCode" placeholder="Please enter" id="sCode"/>
     </nz-form-control>
     <nz-form-label nzFor="name">Name</nz-form-label>
     <nz-form-control>

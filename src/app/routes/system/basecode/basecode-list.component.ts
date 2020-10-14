@@ -37,7 +37,6 @@ export class BasecodeListComponent implements OnInit {
   loading = false;
   expandForm = false;
   totalCallNo = 0;
-  total = 0;
 
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
@@ -58,7 +57,7 @@ export class BasecodeListComponent implements OnInit {
         {
           text: 'Delete',
           click: (item: any) => {
-            this.showDeleteConfirm(item.id);
+            this.showDeleteConfirm(item.basecode);
           },
         },
       ],
@@ -105,8 +104,14 @@ export class BasecodeListComponent implements OnInit {
       nzContent: tpl,
       nzOnOk: () => {
         this.loading = true;
-        this.basecodeService.create(this.basecode)
-          .subscribe(() => this.getData());
+        this.basecodeService.create(this.basecode).subscribe(res => {
+          if (res.data) {
+            this.messageService.success('Creation successful');
+            this.getData();
+          } else {
+            this.messageService.success('Creation failed');
+          }
+        });
       },
     });
   }
@@ -121,14 +126,14 @@ export class BasecodeListComponent implements OnInit {
     this.getData();
   }
 
-  remove(id: number) {
+  remove(id: string) {
     this.basecodeService.delete(id).subscribe(() => {
       this.getData();
       this.st.clearCheck();
     })
   }
 
-  showDeleteConfirm(id: number): void {
+  showDeleteConfirm(id: string): void {
     this.modalService.confirm({
       nzTitle: 'Are you sure to delete?',
       nzContent: '<b style="color: : red;">This action is irreversible</b>',

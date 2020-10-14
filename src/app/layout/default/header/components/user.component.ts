@@ -13,13 +13,20 @@ import { DA_SERVICE_TOKEN, ITokenService } from '@delon/auth';
       [nzDropdownMenu]="userMenu"
     >
       <nz-avatar [nzSrc]="avatar" nzSize="small" class="mr-sm"></nz-avatar>
-<!--      {{ settings.user.name }}-->
     </div>
     <nz-dropdown-menu #userMenu="nzDropdownMenu">
-      <div nz-menu class="width-sm">
+      <div nz-menu style="width: 180px">
+        <div nz-menu-item>
+          <img src="assets/imgs/header/department.svg">
+          &nbsp;&nbsp;Change Department
+        </div>
+        <div nz-menu-item (click)="updatePassword()">
+          <i nz-icon nzType="logout" class="mr-sm"></i>
+          Change Password
+        </div>
         <div nz-menu-item (click)="logout()">
           <i nz-icon nzType="logout" class="mr-sm"></i>
-          {{ 'menu.account.logout' | translate }}
+          Logout
         </div>
       </div>
     </nz-dropdown-menu>
@@ -35,6 +42,10 @@ export class HeaderUserComponent {
     private router: Router,
     @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService,
   ) {}
+
+  updatePassword() {
+    this.router.navigate(['/sys/user/update']);
+  }
 
   logout() {
     this.tokenService.clear();

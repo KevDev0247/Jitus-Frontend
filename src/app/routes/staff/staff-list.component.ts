@@ -35,7 +35,6 @@ export class StaffListComponent implements OnInit {
 
   selectedRows: STData[] = [];
   totalCallNo = 0;
-  total = 0;
   expandForm = 0;
 
   @ViewChild('st', { static: true }) st: STComponent;
