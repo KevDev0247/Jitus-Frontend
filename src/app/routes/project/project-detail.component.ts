@@ -17,13 +17,33 @@ import {CommonUtils} from '../../common/util/common.utils';
  */
 @Component({
   selector: 'app-project-detail',
-  templateUrl: './project-detail.component.html'
+  templateUrl: './project-detail.component.html',
+  styles: [
+    `
+      :host ::ng-deep .upload-list-inline .ant-upload-list-item {
+        float: left;
+        width: 200px;
+        margin-right: 8px;
+      }
+      :host ::ng-deep .upload-list-inline [class*='-upload-list-rtl'] .ant-upload-list-item {
+        float: right;
+      }
+      :host ::ng-deep .upload-list-inline .ant-upload-animate-enter {
+        animation-name: uploadAnimateInlineIn;
+      }
+      :host ::ng-deep .upload-list-inline .ant-upload-animate-leave {
+        animation-name: uploadAnimateInlineOut;
+      }
+    `,
+  ],
 })
 export class ProjectDetailComponent implements OnInit {
 
   formGroup: FormGroup;
   id: any;
+  result: any;
   project: Project = new Project();
+  fileList = [];
   comUtils: CommonUtils = new CommonUtils();
   deliveryTime?: Date;
   acceptTime?: Date;
@@ -99,22 +119,23 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   save() {
-    this.project.deliveryTime = this.comUtils.transFormDateTimeStr(this.deliveryTime);
-    this.project.acceptTime = this.comUtils.transFormDateTimeStr(this.acceptTime);
-    this.project.guaranteeDueTime = this.comUtils.transFormDateTimeStr(this.guaranteeDueTime);
-    if (this.project.id) {
-      this.projectService.update(this.project).subscribe(res => {
-        if (res.data) {
-          this.router.navigate(['/project/list']);
-        }
-      });
-    } else {
-      this.projectService.create(this.project).subscribe(res => {
-        if (res.data) {
-          this.router.navigate(['/project/list']);
-        }
-      });
-    }
+    console.log('>>>>res', this.result);
+    // this.project.deliveryTime = this.comUtils.transFormDateTimeStr(this.deliveryTime);
+    // this.project.acceptTime = this.comUtils.transFormDateTimeStr(this.acceptTime);
+    // this.project.guaranteeDueTime = this.comUtils.transFormDateTimeStr(this.guaranteeDueTime);
+    // if (this.project.id) {
+    //   this.projectService.update(this.project).subscribe(res => {
+    //     if (res.data) {
+    //       this.router.navigate(['/project/list']);
+    //     }
+    //   });
+    // } else {
+    //   this.projectService.create(this.project).subscribe(res => {
+    //     if (res.data) {
+    //       this.router.navigate(['/project/list']);
+    //     }
+    //   });
+    // }
   }
 
   goBack() {
@@ -131,5 +152,20 @@ export class ProjectDetailComponent implements OnInit {
     this.clientService.getOptionList(info).subscribe(res => {
       this.clientOption = res.list;
     });
+  }
+
+  handleChange(info: any): void {
+    // if (info.file.status !== 'uploading') {
+    //   console.log(info.file, info.fileList);
+    // }
+    // if (info.file.status === 'done') {
+    //   this.msg.success(`${info.file.name} file uploaded successfully`);
+    // } else if (info.file.status === 'error') {
+    //   this.msg.error(`${info.file.name} file upload failed.`);
+    // }
+
+    if (info.file.status === 'done') {
+      console.log('>>>Res info', info.file.response);
+    }
   }
 }
