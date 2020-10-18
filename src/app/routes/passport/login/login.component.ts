@@ -22,7 +22,7 @@ export class UserLoginComponent implements OnDestroy {
     name: 'admin',
     email: `admin@gmail.com`,
     id: 10000,
-    time: + new Date(),
+    time: +new Date(),
   }
 
   constructor(
@@ -38,7 +38,7 @@ export class UserLoginComponent implements OnDestroy {
     private startupSrv: StartupService,
     public http: _HttpClient,
     public msg: NzMessageService,
-    private userService: UserService
+    private userService: UserService,
   ) {
     this.form = fb.group({
       userName: [null, [Validators.required, Validators.minLength(4)]],
@@ -137,7 +137,9 @@ export class UserLoginComponent implements OnDestroy {
         // Clear url reuse info
         this.reuseTabService.clear();
         // Set user Token info
-        this.tokenService.set(response.user);
+        this.tokenService.set({
+          token: response.token,
+        });
         // Retrieve StartupService, to avoid the situation when user info is impacted by user authorization
         this.startupSrv.load().then(() => {
           let url = this.tokenService.referrer!.url || '/';
