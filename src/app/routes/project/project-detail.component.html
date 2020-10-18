@@ -63,9 +63,16 @@
       <input nz-input formControlName="staffId" placeholder="Please enter guarantee staff" [(ngModel)]="project.staffId"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="File" error="Please input file">
-      <input nz-input formControlName="fileId" placeholder="Please enter file" [(ngModel)]="project.fileId"
-        style="width: calc(100% - 400px);"/>
+    <se label="File">
+      <div class="clearfix">
+        <nz-upload class="upload-list-inline" nzAction="http://localhost:8080/file/uploadoos" nzListType="picture" [(nzFileList)]="fileList"
+          (nzChange)="handleChange($event)" [nzShowButton]="fileList.length < 1"
+        >
+          <button nz-button>
+            <span><i nz-icon nzType="upload"></i> 上传</span>
+          </button>
+        </nz-upload>
+      </div>
     </se>
     <se>
       <button *ngIf="project.id" nz-button nzType="primary" (click)="save()" [disabled]="formGroup.invalid">Submit</button>
