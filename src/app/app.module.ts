@@ -85,6 +85,7 @@ import {ClientService} from './common/service/client.service';
 import {ContractService} from './common/service/contract.service';
 import {EvaluateService} from './common/service/evaluate.service';
 import {LogService} from './common/service/log.service';
+import {MessageService} from './common/service/message.service';
 import {OrganizationService} from './common/service/organization.service';
 import {ProjectService} from './common/service/project.service';
 import {RepairRecordService} from './common/service/repair-record.service';
@@ -148,6 +149,7 @@ import { RoleService } from './common/service/role.service';
     AccessoryService,
     LogService,
     BasecodeService,
+    MessageService,
     NzMenuService,
     NzMenuBaseService,
   ],
