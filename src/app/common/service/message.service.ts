@@ -28,7 +28,7 @@ export class MessageService {
   }
 
   getQueryList(param1: number, param2: string, param3: number, param4: number) {
-    return this.http.get(this.getServiceUrl() + '/queryList', {
+    return this.http.get(this.getServiceUrl() + '/querySysMessageList', {
       type: param1,
       content: param2,
       userId: param3,
