@@ -5,6 +5,7 @@ import {BasecodeListComponent} from './basecode/basecode-list.component';
 import {LogListComponent} from './log/log-list.component';
 import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
+import {MessageListComponent} from './message/message.list.component';
 import {OrgListComponent} from './organization/org-list.component';
 import { RoleListComponent } from './role/role-list.component';
 import { UserDetailComponent } from './user/user-detail.component';
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'log',
     children: [{ path: 'list', component: LogListComponent }],
+  },
+  {
+    path: 'message',
+    children: [{ path: 'list', component: MessageListComponent }],
   }
 ];
 
