@@ -24,10 +24,10 @@
       <input nz-input formControlName="address" placeholder="Please enter address" [(ngModel)]="project.address"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Client" error="Please enter client">
+    <!--<se label="Client" error="Please enter client">
       <input nz-input formControlName="clientId" placeholder="Please enter client" [(ngModel)]="project.clientId"
         style="width: calc(100% - 400px);" type="number"/>
-    </se>
+    </se>-->
     <se label="Client" error="Please select client" required>
       <nz-input-group>
         <nz-select formControlName="clientId" nzShowSearch nzPlaceHolder="Please select client" [(ngModel)]="project.clientId"
