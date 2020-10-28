@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { DOMAIN_SERVER_URL } from '../constants';
 import { _HttpClient } from '@delon/theme';
 @Injectable()
-export class SysAttachmentsService {
+export class AttachmentsService {
   constructor(private http: _HttpClient) {}
 
   getServiceUrl(): string {
@@ -24,7 +24,7 @@ export class SysAttachmentsService {
   detail(attachmentsId: number) {
     return this.http.get(this.getServiceUrl() + '/detail?id=' + attachmentsId);
   }
-  
+
   getQueryList(name: string, type: string, userId: number) {
     return this.http.get(this.getServiceUrl() + '/queryStsAttachmentsList', { name, type, userId });
   }
