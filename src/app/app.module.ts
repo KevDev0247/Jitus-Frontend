@@ -80,6 +80,7 @@ const INTERCEPTOR_PROVIDES = [
 // #region Startup Service
 import { StartupService } from '@core';
 import {AccessoryService} from './common/service/accessory.service';
+import {AttachmentsService} from './common/service/attachments.service';
 import {BasecodeService} from './common/service/basecode.service';
 import {ClientService} from './common/service/client.service';
 import {ContractService} from './common/service/contract.service';
@@ -150,6 +151,7 @@ import { RoleService } from './common/service/role.service';
     LogService,
     BasecodeService,
     MessageService,
+    AttachmentsService,
     NzMenuService,
     NzMenuBaseService,
   ],
