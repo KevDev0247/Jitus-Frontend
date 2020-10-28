@@ -52,7 +52,7 @@
   <nz-tabset style="height: 220px;" [nzTabPosition]="nzTabPosition" [(nzSelectedIndex)]="selectedIndex">
     <nz-tab *ngFor="let tab of tabs" (nzClick)="log(['click', tab])" [nzTitle]="">
       <ng-template #titleTemplate>
-        <i nz-icon [nzType]="tab.icon"></i>
+        <i nz-icon [nzType]="tab.status"></i>
         {{ tab.name | repairStatus }}
         <nz-badge [nzCount]="tab.num"></nz-badge>
       </ng-template>
