@@ -30,4 +30,8 @@ export class RepairService {
   getQueryList(info: string, code: string, name: string, status: number) {
     return this.http.get(this.getServiceUrl() + '/queryRepairList', { info, code, name, status });
   }
+
+  getRepairStatusCounts() {
+    return this.http.get(this.getServiceUrl() + '/getRepairCountByStatus');
+  }
 }
