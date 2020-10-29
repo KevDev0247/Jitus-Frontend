@@ -75,12 +75,14 @@
           </span>
         </li>
       </a>
-      <li nz-menu-item>
+      <a [routerLink]="['/sys/attachment/list']">
+        <li nz-menu-item>
         <span title>
           <img src="assets/imgs/menu/knowledge.svg">
           <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Knowledge</span>
         </span>
-      </li>
+        </li>
+      </a>
       <a [routerLink]="['/accessory']">
         <li nz-menu-item>
           <span title>
@@ -126,14 +128,14 @@
             <a [routerLink]="['/sys/user/list']">Users</a>
           </li>
           <li nz-menu-item>
-            <a [routerLink]="['/sys/org/list']">Organizations</a>
+            <a [routerLink]="['/sys/org/list']">Departments</a>
           </li>
         </ul>
       </li>
       <li nz-menu-item nz-submenu>
         <span title>
           <img src="assets/imgs/menu/settings.svg">
-          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Settings</span>
+          <span style="color: #23282E">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System</span>
         </span>
         <ul>
           <li nz-menu-item>
@@ -199,9 +201,11 @@
               Departments
             </div>
           </a>
-          <div nz-menu-item>
-            Accounts
-          </div>
+          <a [routerLink]="['/sys/user/list']">
+            <div nz-menu-item>
+              Accounts
+            </div>
+          </a>
           <a routerLink="['/sys/basecode/list']">
             <div nz-menu-item>
               Data Dictionary
