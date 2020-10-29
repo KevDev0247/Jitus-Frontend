@@ -9,7 +9,7 @@ import {AttachmentsService} from 'src/app/common/service/attachments.service';
   selector: 'app-attachment-detail',
   templateUrl: './attachment-detail.component.html',
 })
-export class SysAttachmentsDetailComponent implements OnInit {
+export class AttachmentsDetailComponent implements OnInit {
 
   form: FormGroup;
   attachments: Attachments = new Attachments();
