@@ -19,10 +19,16 @@ import { _HttpClient } from '@delon/theme';
 })
 export class DashboardV1Component implements OnInit {
 
-  offlineChartData: any[];
-  chart = '';
-  hGutter = 32;
-  vGutter = 32;
+  menus: Array<{ id: number; name: string }> = [
+    { id: 1, name: 'Work Orders' },
+    { id: 2, name: 'Departments' },
+    { id: 3, name: 'Projects' },
+    { id: 4, name: 'Knowledge' },
+    { id: 5, name: 'Information' },
+    { id: 6, name: 'Accessory' },
+    { id: 1, name: 'Work Orders' },
+  ];
+  isVisible = false;
 
   customStyle = {
     border: '0px',
@@ -58,7 +64,15 @@ export class DashboardV1Component implements OnInit {
     },
   ];
 
-  constructor(private http: _HttpClient, private cdr: ChangeDetectorRef) {}
+  constructor(private changeDetectorRef: ChangeDetectorRef) {}
 
   ngOnInit(): void { }
+
+  handleOpen(): void {
+    this.isVisible = true;
+  }
+
+  handleCancel() {
+    this.isVisible = false;
+  }
 }
