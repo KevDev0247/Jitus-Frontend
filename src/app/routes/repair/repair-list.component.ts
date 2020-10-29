@@ -108,21 +108,13 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     },
   ];
 
-  tabs: Array<{ name: number, num: number }> = [
-    { name: 1, num: 5 },
-    { name: 2, num: 6 },
-    { name: 3, num: 7 },
-    { name: 4, num: 8 },
-    { name: 5, num: 9 },
-    { name: 6, num: 10 },
-    { name: 7, num: 11 },
-  ];
+  tabs: Array<{ status: number; number: number }> = [];
   nzTabPosition: NzTabPosition = 'left';
   selectedIndex = 0;
 
   log(args: any[]): void {
-    console.log(args[1].name);
-    this.q.param4 = args[1].name;
+    console.log(args[1].status);
+    this.q.param4 = args[1].status;
     this.getData();
   }
 
@@ -135,6 +127,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     private formBuilder: FormBuilder,
   ) {
     super(modalService);
+    this.getRepairStatusCounts();
   }
 
   ngOnInit(): void {
@@ -153,6 +146,10 @@ export class RepairListComponent extends BaseComponent implements OnInit {
       createTime: [null, []],
       updateTime: [null, []],
     });
+  }
+
+  getRepairStatusCounts() {
+    this.repairService.getRepairStatusCounts().subscribe(res => (this.tabs = res.data));
   }
 
   getData() {
@@ -186,10 +183,10 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     this.showModal(1);
   }
 
-  add(tpl: TemplateRef<{}>) {
+  add(templateRef: TemplateRef<{}>) {
     this.modalService.create({
       nzTitle: '',
-      nzContent: tpl,
+      nzContent: templateRef,
       nzOnOk: () => {
         this.loading = true;
         this.repairService.create(this.repair)
