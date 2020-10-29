@@ -98,10 +98,10 @@ export class BasecodeListComponent implements OnInit {
     }
   }
 
-  add(tpl: TemplateRef<{}>) {
+  add(templateRef: TemplateRef<{}>) {
     this.modalService.create({
       nzTitle: '',
-      nzContent: tpl,
+      nzContent: templateRef,
       nzOnOk: () => {
         this.loading = true;
         this.basecodeService.create(this.basecode).subscribe(res => {

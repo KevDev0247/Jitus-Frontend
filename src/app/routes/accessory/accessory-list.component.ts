@@ -100,10 +100,10 @@ export class AccessoryListComponent implements OnInit {
     this.router.navigate(['/accessory/detail']);
   }
 
-  add(tpl: TemplateRef<{}>) {
+  add(templateRef: TemplateRef<{}>) {
     this.modalService.create({
       nzTitle: '',
-      nzContent: tpl,
+      nzContent: templateRef,
       nzOnOk: () => {
         this.loading = true;
         this.accessoryService.create(this.accessory)

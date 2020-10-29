@@ -100,10 +100,10 @@ export class ContactListComponent implements OnInit {
     this.router.navigate(['/contact/detail']);
   }
 
-  add(tpl: TemplateRef<{}>) {
+  add(templateRef: TemplateRef<{}>) {
     this.modalService.create({
       nzTitle: '',
-      nzContent: tpl,
+      nzContent: templateRef,
       nzOnOk: () => {
         this.loading = true;
         this.contactService.create(this.contact)

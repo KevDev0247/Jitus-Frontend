@@ -110,10 +110,10 @@ export class ProjectListComponent implements OnInit {
     this.router.navigate(['/project/detail']);
   }
 
-  add(tpl: TemplateRef<{}>) {
+  add(templateRef: TemplateRef<{}>) {
     this.modalService.create({
       nzTitle: '',
-      nzContent: tpl,
+      nzContent: templateRef,
       nzOnOk: () => {
         this.loading = true;
         this.projectService.create(this.project)
