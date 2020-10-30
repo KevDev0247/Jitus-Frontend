@@ -7,7 +7,7 @@
           <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:-10px">
             <div nz-row nzType="flex" nzAlign="middle">
               <div nz-col nzSpan="12" class="p-md text-white">
-                <a (click)="handleOpen()">
+                <a (click)="handleOpen(1)">
                   <div class="h1 mt0">
                     <img src="../../../../assets/imgs/modules/add.svg"/>
                   </div>
@@ -101,7 +101,7 @@
           <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
             <div nz-row nzType="flex" nzAlign="middle">
               <div nz-col nzSpan="12" class="p-md text-white">
-                <a (click)="handleOpen()">
+                <a (click)="handleOpen(2)">
                   <div class="h1 mt0">
                     <img src="../../../../assets/imgs/modules/more.svg"/>
                   </div>
@@ -256,11 +256,11 @@
     </div>
   </nz-collapse>
 </div>
-<nz-modal [(nzVisible)]="isVisible" nzTitle="Service Modules" nzWidth="900" (nzOnCancel)="handleCancel()">
+<nz-modal [(nzVisible)]="isVisible" nzTitle="{{ title }}" nzWidth="900" (nzOnCancel)="handleCancel()">
   <nz-checkbox-wrapper style="width: 100%;" (nzOnChange)="log($event)">
     <div nz-row>
       <div nz-col nzSpan="6" *ngFor="let menu of menus">
-        <label nz-checkbox nzValue="menu.id" [ngModel]="true">{{ menu.name }}</label>
+        <label nz-checkbox nzValue="menu.id">{{ menu.name }}</label>
         <div *ngIf="menu.id === 3">
           <br />
           <br />
