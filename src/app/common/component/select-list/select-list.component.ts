@@ -81,7 +81,7 @@ export class SelectListComponent implements OnInit {
     },
   ];
 
-  columns_clients: STColumn[] = [
+  columns_client: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'Name', index: 'name' },
     { title: 'Phone', index: 'phone' },
