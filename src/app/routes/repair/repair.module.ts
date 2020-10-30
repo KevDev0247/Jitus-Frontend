@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
 import {NzTableModule} from 'ng-zorro-antd';
+import {SelectListComponent} from '../../common/component/select-list/select-list.component';
 import {PipeModule} from '../../common/pipe/pipe.module';
 import {ContractDetailComponent} from './contract/contract-detail.component';
 import {ContractListComponent} from './contract/contract-list.component';
