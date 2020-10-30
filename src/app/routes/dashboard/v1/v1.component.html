@@ -7,9 +7,11 @@
           <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:-10px">
             <div nz-row nzType="flex" nzAlign="middle">
               <div nz-col nzSpan="12" class="p-md text-white">
-                <div class="h1 mt0">
-                  <img src="../../../../assets/imgs/modules/add.svg"/>
-                </div>
+                <a (click)="handleOpen()">
+                  <div class="h1 mt0">
+                    <img src="../../../../assets/imgs/modules/add.svg"/>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -58,9 +60,11 @@
           <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:15px">
             <div nz-row nzType="flex" nzAlign="middle">
               <div nz-col nzSpan="12" class="p-md text-white">
-                <div class="h1 mt0">
-                  <img src="../../../../assets/imgs/modules/knowledge.svg"/>
-                </div>
+                <a routerLink="/sys/attachment/list">
+                  <div class="h1 mt0">
+                    <img src="../../../../assets/imgs/modules/knowledge.svg"/>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -97,9 +101,11 @@
           <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
             <div nz-row nzType="flex" nzAlign="middle">
               <div nz-col nzSpan="12" class="p-md text-white">
-                <div class="h1 mt0">
-                  <img src="../../../../assets/imgs/modules/more.svg"/>
-                </div>
+                <a (click)="handleOpen()">
+                  <div class="h1 mt0">
+                    <img src="../../../../assets/imgs/modules/more.svg"/>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -250,4 +256,17 @@
     </div>
   </nz-collapse>
 </div>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Service Modules" nzWidth="900" (nzOnCancel)="handleCancel()">
+  <nz-checkbox-wrapper style="width: 100%;" (nzOnChange)="log($event)">
+    <div nz-row>
+      <div nz-col nzSpan="6" *ngFor="let menu of menus">
+        <label nz-checkbox nzValue="menu.id" [ngModel]="true">{{ menu.name }}</label>
+        <div *ngIf="menu.id === 3">
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </nz-checkbox-wrapper>
+</nz-modal>
 
