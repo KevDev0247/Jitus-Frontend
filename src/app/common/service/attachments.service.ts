@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { DOMAIN_SERVER_URL } from '../constants';
 import { _HttpClient } from '@delon/theme';
+
 @Injectable()
 export class AttachmentsService {
-  constructor(private http: _HttpClient) {}
+
+  constructor(private http: _HttpClient) { }
 
   getServiceUrl(): string {
     return DOMAIN_SERVER_URL + '/sysAttachments';
