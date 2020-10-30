@@ -2,8 +2,8 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateR
 import {Router} from '@angular/router';
 import {STChange, STColumn, STComponent, STData} from '@delon/abc';
 import {NzMessageService, NzModalService} from 'ng-zorro-antd';
-import {Attachments} from '../../common/model/attachments';
-import {AttachmentsService} from '../../common/service/attachments.service';
+import {Attachments} from '../../../common/model/attachments';
+import {AttachmentsService} from '../../../common/service/attachments.service';
 
 @Component({
   selector: 'app-attachment-list',

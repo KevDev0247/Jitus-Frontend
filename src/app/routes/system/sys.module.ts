@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
-import {AttachmentsDetailComponent} from '../attachment/attachment-detail.component';
-import {AttachmentListComponent} from '../attachment/attachment-list.component';
+import {AttachmentsDetailComponent} from './attachment/attachment-detail.component';
+import {AttachmentListComponent} from './attachment/attachment-list.component';
 import {BasecodeDetailComponent} from './basecode/basecode-detail.component';
 import {BasecodeListComponent} from './basecode/basecode-list.component';
 import {LogListComponent} from './log/log-list.component';
