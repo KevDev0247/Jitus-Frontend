@@ -45,6 +45,7 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
+    { title: '', index: 'id', type: 'radio'},
     { title: 'ID', index: 'code' },
     { title: 'Name', index: 'name' },
     { title: 'Project', index: 'projectName' },
@@ -79,6 +80,11 @@ export class RepairListComponent extends BaseComponent implements OnInit {
           click: (item: any) => {
             this.router.navigate(['/repair/record/detail'], { queryParams: { id: item.id, status: item.status } });
           },
+        },
+        {
+          text: 'btn',
+          type: 'link',
+          click: event => console.log('btn click', event),
         },
         {
           text: 'More',
@@ -163,10 +169,11 @@ export class RepairListComponent extends BaseComponent implements OnInit {
       });
   }
 
-  stChange(e: STChange) {
-    switch (e.type) {
+  stChange(event: STChange) {
+    console.log('change', event);
+    switch (event.type) {
       case 'checkbox':
-        this.selectedRows = e.checkbox!;
+        this.selectedRows = event.checkbox!;
         this.totalCallNo = this.selectedRows.reduce((total, cv) => total + cv.callNo, 0);
         this.changeDetectorRef.detectChanges();
         break;
@@ -253,5 +260,9 @@ export class RepairListComponent extends BaseComponent implements OnInit {
 
   close(): void {
     this.isVisible = false;
+  }
+
+  _click(event: STChange): void {
+    console.log('click', event);
   }
 }
