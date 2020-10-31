@@ -13,7 +13,7 @@ import {ProjectRoutingModule} from './project-routing.module';
  * Created on 2020/08/11
  */
 const COMPONENTS = [];
-const COMPONENTS_NOROUNT = [ProjectListComponent, ProjectDetailComponent, SelectListComponent];
+const COMPONENTS_NOROUNT = [ProjectListComponent, ProjectDetailComponent];
 
 @NgModule({
   imports: [
