@@ -1,0 +1,63 @@
+<nz-spin [nzSpinning]="isLoadingUser">
+  <div class="main" *ngIf="user">
+    <div class="left">
+      <form nz-form nzLayout="vertical" #f="ngForm" (submit)="save()" se-container="1">
+        <se label="Email" error="Please enter your email!">
+          <input nz-input type="email" [(ngModel)]="user.email" name="email" required />
+        </se>
+        <se label="Nickname" error="Please enter your !">
+          <input nz-input [(ngModel)]="user.name" name="name" required />
+        </se>
+        <se label="Introduction">
+          <textarea
+            nz-input
+            [(ngModel)]="user.profile"
+            name="profile"
+            [nzAutosize]="{ minRows: 4, maxRows: 10 }"
+            placeholder="Introduction"
+          ></textarea>
+        </se>
+        <se label="Country/Region">
+          <nz-select [(ngModel)]="user.country" name="country" required>
+            <nz-option nzLabel="Canada" nzValue="Canada"></nz-option>
+          </nz-select>
+        </se>
+        <se label="Province">
+          <div class="d-flex justify-content-between">
+            <nz-select
+              [(ngModel)]="user.geographic.province.key"
+              (ngModelChange)="chosenProvince($event)"
+              name="geographic.province.key"
+              required
+              class="width-50 mr-sm"
+            >
+              <nz-option *ngFor="let p of provinces" [nzLabel]="p.name" [nzValue]="p.id"></nz-option>
+            </nz-select>
+            <nz-select [(ngModel)]="user.geographic.city.key" name="geographic.city.key" required class="width-50">
+              <nz-option *ngFor="let p of cities" [nzLabel]="p.name" [nzValue]="p.id"></nz-option>
+            </nz-select>
+          </div>
+        </se>
+        <se label="Address" error="Please enter your address!">
+          <input nz-input [(ngModel)]="user.address" name="address" required />
+        </se>
+        <se label="Phone" error="Please enter your phone number!">
+          <input nz-input [(ngModel)]="user.phone" name="phone" required />
+        </se>
+        <se>
+          <button nz-button nzType="primary" [disabled]="f.invalid">Change basic information</button>
+        </se>
+      </form>
+    </div>
+    <div class="right">
+      <div class="avatar_title">Avatar</div>
+      <div class="avatar"><img src="{{ user.avatar }}" alt="Avatar" /></div>
+      <nz-upload nzAction="/user/avatar" [nzShowUploadList]="false">
+        <button nz-button class="button_view">
+          <i nz-icon nzType="upload"></i>
+          <span>Change Avatar</span>
+        </button>
+      </nz-upload>
+    </div>
+  </div>
+</nz-spin>
