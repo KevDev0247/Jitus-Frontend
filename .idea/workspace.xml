@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/routes/system/user/settings.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routes/system/user/settings.component.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routes/system/user/settings.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/project/project.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/project/project.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +236,7 @@
       <workItem from="1603852094946" duration="3766000" />
       <workItem from="1603923805328" duration="5892000" />
       <workItem from="1603987531579" duration="15511000" />
-      <workItem from="1604077276211" duration="11287000" />
+      <workItem from="1604077276211" duration="15033000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
