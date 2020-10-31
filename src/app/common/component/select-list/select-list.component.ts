@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {STColumn, STComponent} from '@delon/abc/public_api';
-import {NzMessageService} from 'ng-zorro-antd/ng-zorro-antd.module';
+import {STColumn, STComponent} from '@delon/abc';
+import {NzMessageService} from 'ng-zorro-antd';
 import {Contract} from '../../model/contract';
 import {ClientService} from '../../service/client.service';
 import {ContractService} from '../../service/contract.service';
