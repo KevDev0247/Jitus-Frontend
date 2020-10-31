@@ -6,14 +6,13 @@
       <input nz-input formControlName="name" placeholder="Please enter name" [(ngModel)]="project.name"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Contract" error="Please select contract" required>
-      <nz-input-group>
-        <nz-select formControlName="contractId" nzShowSearch nzServerSearch nzPlaceHolder="Please select contract" [(ngModel)]="project.contractId"
-                   [nzShowArrow]="false" [nzFilterOption]="nzFilterOption" (nzOnSearch)="search($event, 1)"
-                   style="width: calc(100% - 400px);">
-          <nz-option *ngFor="let o of contractOptions" [nzLabel]="o.name" [nzValue]="o.id"> </nz-option>
-        </nz-select>
+    <se label="Contract" error="Please select contract">
+      <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixButton1" style="width: calc(100% - 400px);">
+        <input type="text" nz-input placeholder="Please select contract" formControlName="contractId" [(ngModel)]="contractName" disabled/>
       </nz-input-group>
+      <ng-template #suffixButton1>
+        <button nz-button nzType="primary" nzSize="default" nzSearch (click)="handleOpen(1)">Please select</button>
+      </ng-template>
     </se>
     <se label="Description" error="Please enter description">
       <textarea nz-input formControlName="description" placeholder="Please enter description" [(ngModel)]="project.description"
