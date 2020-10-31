@@ -10,6 +10,8 @@ import { MenuListComponent } from './menu/menu-list.component';
 import {MessageListComponent} from './message/message.list.component';
 import {OrgListComponent} from './organization/org-list.component';
 import { RoleListComponent } from './role/role-list.component';
+import {ProjectAccountSettingsBaseComponent} from './user/base/base.component';
+import {ProjectAccountSettingsComponent} from './user/settings/settings.component';
 import { UserDetailComponent } from './user/user-detail.component';
 import { UserListComponent } from './user/user-list.component';
 import { UserUpdateComponent } from './user/user-update.component';
@@ -27,6 +29,7 @@ const routes: Routes = [
       { path: 'list', component: UserListComponent },
       { path: 'detail', component: UserDetailComponent },
       { path: 'update', component: UserUpdateComponent },
+      { path: 'setting', component: ProjectAccountSettingsBaseComponent },
     ],
   },
   {
@@ -64,6 +67,18 @@ const routes: Routes = [
     children: [
       { path: 'list', component: AttachmentListComponent },
       { path: 'detail', component: AttachmentsDetailComponent },
+    ],
+  },
+  {
+    path: 'settings',
+    component: ProjectAccountSettingsComponent,
+    children: [
+      { path: '', redirectTo: 'base', pathMatch: 'full' },
+      {
+        path: 'base',
+        component: ProjectAccountSettingsBaseComponent,
+        data: { titleI18n: 'project-account-settings' },
+      },
     ],
   },
 ];

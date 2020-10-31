@@ -9,7 +9,7 @@ import {zip} from 'rxjs';
   styleUrls: ['./base.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectAccountBaseComponent implements OnInit {
+export class ProjectAccountSettingsBaseComponent implements OnInit {
 
   avatar = '';
   isLoadingUser = true;

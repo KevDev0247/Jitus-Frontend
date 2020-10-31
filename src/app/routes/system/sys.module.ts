@@ -14,6 +14,8 @@ import {OrgListComponent} from './organization/org-list.component';
 import { RoleListComponent } from './role/role-list.component';
 import { RoleComponent } from './role/role.component';
 import { SysRoutingModule } from './sys-routing.module';
+import {ProjectAccountSettingsBaseComponent} from './user/base/base.component';
+import {ProjectAccountSettingsComponent} from './user/settings/settings.component';
 import { UserDetailComponent } from './user/user-detail.component';
 import { UserListComponent } from './user/user-list.component';
 import { UserUpdateComponent } from './user/user-update.component';
@@ -41,6 +43,8 @@ const COMPONENTS = [
   MessageListComponent,
   AttachmentListComponent,
   AttachmentsDetailComponent,
+  ProjectAccountSettingsBaseComponent,
+  ProjectAccountSettingsComponent,
 ];
 const COMPONENTS_NOROUNT = [];
 
