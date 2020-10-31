@@ -1,4 +1,4 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnDestroy} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnDestroy} from '@angular/core';
 import {ActivationEnd, Router} from '@angular/router';
 import {fromEvent, Subscription} from 'rxjs';
 import {debounceTime, filter} from 'rxjs/operators';
@@ -38,7 +38,7 @@ export class ProjectAccountSettingsComponent implements AfterViewInit, OnDestroy
 
   constructor(
     private router: Router,
-    private changeDetectorRef,
+    private changeDetectorRef: ChangeDetectorRef,
     private elementRef: ElementRef
   ) {
     this.router$ = this.router.events.pipe(filter(event => event instanceof ActivationEnd))

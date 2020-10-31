@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {_HttpClient} from '@delon/theme';
 import {NzMessageService} from 'ng-zorro-antd';
 import {zip} from 'rxjs';
@@ -20,8 +20,8 @@ export class ProjectAccountSettingsBaseComponent implements OnInit {
 
   constructor(
     private http: _HttpClient,
-    private changeDetectionRef,
-    private messageService: NzMessageService
+    private changeDetectionRef: ChangeDetectorRef,
+    private messageService: NzMessageService,
   ) { }
 
   ngOnInit(): void {
