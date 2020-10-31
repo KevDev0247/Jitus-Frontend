@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
 import {NzUploadModule} from 'ng-zorro-antd';
+import {SelectListComponent} from '../../common/component/select-list/select-list.component';
 import {ProjectDetailComponent} from './project-detail.component';
 import {ProjectListComponent} from './project-list.component';
 import {ProjectRoutingModule} from './project-routing.module';
@@ -12,7 +13,7 @@ import {ProjectRoutingModule} from './project-routing.module';
  * Created on 2020/08/11
  */
 const COMPONENTS = [];
-const COMPONENTS_NOROUNT = [ProjectListComponent, ProjectDetailComponent];
+const COMPONENTS_NOROUNT = [ProjectListComponent, ProjectDetailComponent, SelectListComponent];
 
 @NgModule({
   imports: [
