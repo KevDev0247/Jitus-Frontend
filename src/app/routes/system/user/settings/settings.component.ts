@@ -5,8 +5,8 @@ import {debounceTime, filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-account-settings',
-  templateUrl: './project-account-settings.component.html',
-  styleUrls: ['project-account-settings.component.less'],
+  templateUrl: './settings.component.html',
+  styleUrls: ['settings.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectAccountSettingsComponent implements AfterViewInit, OnDestroy {
