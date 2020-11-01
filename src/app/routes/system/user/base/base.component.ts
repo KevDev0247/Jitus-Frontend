@@ -3,6 +3,12 @@ import {_HttpClient} from '@delon/theme';
 import {NzMessageService} from 'ng-zorro-antd';
 import {zip} from 'rxjs';
 
+/**
+ * The component class that define and control the views of the base.
+ *
+ * @Author Kevin Zhijun Wang
+ * Created on 2020/10/31
+ */
 @Component({
   selector: 'app-account-settings-base',
   templateUrl: './base.component.html',
