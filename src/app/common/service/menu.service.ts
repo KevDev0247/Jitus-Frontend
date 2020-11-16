@@ -48,4 +48,12 @@ export class MenuService {
   getFirstMenuList() {
     return this.http.get(this.getServiceUrl() + '/firstMenuList');
   }
+
+  getMainMenuList(userId: number, isShow: number) {
+    return this.http.get(this.getServiceUrl() + '/getMainMenus?userId=' + userId + '&isShow=' + isShow);
+  }
+
+  updateMainMenu(umids: any) {
+    return this.http.get(this.getServiceUrl() + '/updateMainMenu', umids);
+  }
 }
