@@ -1,0 +1,59 @@
+<nz-card [nzBordered]="false" *ngIf="type === 1">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Contract Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param3" name="param3" placeholder="Contract Name" id="contractName"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Contract Content</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Contract Content" id="contractContent"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <st #st [columns]="columns_contract" [data]="data_contract" [loading]="loading">
+    <ng-template st-row="status" let-i>
+      <nz-badge [nzStatus]="i.statusType" [nzText]="i.statusText"></nz-badge>
+    </ng-template>
+  </st>
+</nz-card>
+
+<nz-card [nzBordered]="false" *ngIf="type === 2">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Contract Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Client Name" id="clientName"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Contract Content</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Client Email" id="clientEmail"/>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <st #st [columns]="columns_client" [data]="data_client" [loading]="loading"></st>
+</nz-card>

@@ -49,6 +49,15 @@
     [loading]="loading"
     (change)="stChange($event)">
   </st>
+  <nz-tabset style="height: 220px;" [nzTabPosition]="nzTabPosition" [(nzSelectedIndex)]="selectedIndex">
+    <nz-tab *ngFor="let tab of tabs" (nzClick)="log(['click', tab])" [nzTitle]="">
+      <ng-template #titleTemplate>
+        <i nz-icon [nzType]="tab.icon"></i>
+        {{ tab.status | repairStatus }}
+        <nz-badge [nzCount]="tab.number"></nz-badge>
+      </ng-template>
+    </nz-tab>
+  </nz-tabset>
 </nz-card>
 <ng-template #modalContent>
   <nz-form-item>
@@ -151,6 +160,7 @@
   <br />
   <br />
   <app-repair-progress [index]="status"></app-repair-progress>
+  <app-select-list></app-select-list>
   <br />
   <br />
   <br />

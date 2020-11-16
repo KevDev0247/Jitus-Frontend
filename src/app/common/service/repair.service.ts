@@ -27,7 +27,15 @@ export class RepairService {
     return this.http.get(this.getServiceUrl() + '/detail?id=' + id)
   }
 
-  getQueryList(info: string, code: string, name: string) {
-    return this.http.get(this.getServiceUrl() + '/queryRepairList', { info, code, name });
+  getQueryList(info: string, code: string, name: string, status: number) {
+    return this.http.get(this.getServiceUrl() + '/queryRepairList', { info, code, name, status });
+  }
+
+  getRepairStatusCounts() {
+    return this.http.get(this.getServiceUrl() + '/getRepairCountByStatus');
+  }
+
+  approve(repairId: number) {
+    return this.http.get(this.getServiceUrl() + '/approve?id=' + repairId)
   }
 }

@@ -1,0 +1,70 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a>Message Center</a>
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Type</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Content</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <st #st [columns]="columns" [data]="data" [loading]="loading" (change)="stChange($event)"></st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="ptype">Platform Type. 1: System 2: SMS</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="message.ptype" name="ptype" placeholder="Please enter" id="ptype" type="number" />
+    </nz-form-control>
+    <nz-form-label nzFor="type">Message Type. 1: Work Orders 2: Project</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="message.type" name="type" placeholder="Please enter" id="type" type="number" />
+    </nz-form-control>
+    <nz-form-label nzFor="content">Content</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="message.content" name="content" placeholder="Please enter" id="content" />
+    </nz-form-control>
+    <nz-form-label nzFor="userId">User ID</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="message.userId" name="userId" placeholder="Please enter" id="userId" type="number" />
+    </nz-form-control>
+    <nz-form-label nzFor="isRead">isRead. 0: Is Not Read 1: Is Read</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="message.isRead" name="isRead" placeholder="Please enter" id="isRead" type="number" />
+    </nz-form-control>
+    <nz-form-label nzFor="createUserId">Creator ID</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="message.createUserId"
+        name="createUserId"
+        placeholder="Please enter"
+        id="createUserId"
+        type="number"
+      />
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>

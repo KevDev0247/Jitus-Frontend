@@ -15,9 +15,11 @@ export class RepairStatusPipe implements PipeTransform {
     } else if (value === 4) {
       return 'Repairing';
     } else if (value === 5) {
-      return 'Feedbacking';
-    } else if (value === 6) {
       return 'Completed';
+    } else if (value === 6) {
+      return 'Feedbacking';
+    } else if (value === 7) {
+      return 'Reviewing';
     } else {
       return '';
     }

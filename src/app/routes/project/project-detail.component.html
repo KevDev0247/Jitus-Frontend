@@ -6,14 +6,13 @@
       <input nz-input formControlName="name" placeholder="Please enter name" [(ngModel)]="project.name"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Contract" error="Please select contract" required>
-      <nz-input-group>
-        <nz-select formControlName="contractId" nzShowSearch nzServerSearch nzPlaceHolder="Please select contract" [(ngModel)]="project.contractId"
-                   [nzShowArrow]="false" [nzFilterOption]="nzFilterOption" (nzOnSearch)="search($event, 1)"
-                   style="width: calc(100% - 400px);">
-          <nz-option *ngFor="let o of contractOptions" [nzLabel]="o.name" [nzValue]="o.id"> </nz-option>
-        </nz-select>
+    <se label="Contract" error="Please select contract">
+      <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixButton1" style="width: calc(100% - 400px);">
+        <input type="text" nz-input placeholder="Please select contract" formControlName="contractId" [(ngModel)]="contractName" disabled/>
       </nz-input-group>
+      <ng-template #suffixButton1>
+        <button nz-button nzType="primary" nzSize="default" nzSearch (click)="handleOpen(1)">Please select</button>
+      </ng-template>
     </se>
     <se label="Description" error="Please enter description">
       <textarea nz-input formControlName="description" placeholder="Please enter description" [(ngModel)]="project.description"
@@ -24,10 +23,10 @@
       <input nz-input formControlName="address" placeholder="Please enter address" [(ngModel)]="project.address"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="Client" error="Please enter client">
+    <!--<se label="Client" error="Please enter client">
       <input nz-input formControlName="clientId" placeholder="Please enter client" [(ngModel)]="project.clientId"
         style="width: calc(100% - 400px);" type="number"/>
-    </se>
+    </se>-->
     <se label="Client" error="Please select client" required>
       <nz-input-group>
         <nz-select formControlName="clientId" nzShowSearch nzPlaceHolder="Please select client" [(ngModel)]="project.clientId"
@@ -63,9 +62,16 @@
       <input nz-input formControlName="staffId" placeholder="Please enter guarantee staff" [(ngModel)]="project.staffId"
         style="width: calc(100% - 400px);"/>
     </se>
-    <se label="File" error="Please input file">
-      <input nz-input formControlName="fileId" placeholder="Please enter file" [(ngModel)]="project.fileId"
-        style="width: calc(100% - 400px);"/>
+    <se label="File">
+      <div class="clearfix">
+        <nz-upload class="upload-list-inline" nzAction="http://localhost:8080/file/uploadoos" nzListType="picture" [(nzFileList)]="fileList"
+          (nzChange)="handleChange($event)" [nzShowButton]="fileList.length < 1"
+        >
+          <button nz-button>
+            <span><i nz-icon nzType="upload"></i> 上传</span>
+          </button>
+        </nz-upload>
+      </div>
     </se>
     <se>
       <button *ngIf="project.id" nz-button nzType="primary" (click)="save()" [disabled]="formGroup.invalid">Submit</button>

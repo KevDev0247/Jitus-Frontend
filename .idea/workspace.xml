@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="Less File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -61,6 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/menu" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,19 +80,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
-      <recent name="D:\Jitus-Frontend\src\app\routes\system\user" />
-      <recent name="D:\Jitus-Frontend\src\app\common\component" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\workflow" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\header" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\app\routes\system\user\settings" />
+      <recent name="D:\Jitlantis-Frontend\src\app\routes\system" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -224,6 +228,20 @@
       <workItem from="1602517180621" duration="1508000" />
       <workItem from="1602521997286" duration="20098000" />
       <workItem from="1602624247783" duration="3297000" />
+      <workItem from="1602733219192" duration="1191000" />
+      <workItem from="1602988878868" duration="1553000" />
+      <workItem from="1603309994919" duration="9421000" />
+      <workItem from="1603371904282" duration="6009000" />
+      <workItem from="1603562605671" duration="1679000" />
+      <workItem from="1603852094946" duration="3766000" />
+      <workItem from="1603923805328" duration="5892000" />
+      <workItem from="1603987531579" duration="15511000" />
+      <workItem from="1604077276211" duration="15035000" />
+      <workItem from="1604155845463" duration="11417000" />
+      <workItem from="1604203103288" duration="1078000" />
+      <workItem from="1605284982229" duration="5106000" />
+      <workItem from="1605478297097" duration="741000" />
+      <workItem from="1605535837264" duration="3732000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>

@@ -1,0 +1,39 @@
+<nz-card [nzBordered]="false">
+  <page-header [title]="attachments.fileid ? 'Edit File' : 'Create File'"> </page-header>
+  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="File Name" error="Please enter file name">
+      <input
+        nz-input
+        formControlName="filename"
+        placeholder="Please enter file name"
+        [(ngModel)]="attachments.filename"
+        style="width: calc(100% - 400px);"
+      />
+    </se>
+    <se label="Shares" error="Please enter share counts">
+      <input
+        nz-input
+        formControlName="shareCount"
+        placeholder="Please enter share counts"
+        [(ngModel)]="attachments.shareCount"
+        style="width: calc(100% - 400px);"
+        type="number"
+      />
+    </se>
+    <se label="Downloads" error="Please enter download counts">
+      <input
+        nz-input
+        formControlName="downCount"
+        placeholder="Please enter share counts"
+        [(ngModel)]="attachments.downCount"
+        style="width: calc(100% - 400px);"
+        type="number"
+      />
+    </se>
+    <se>
+      <button *ngIf="attachments.id" nz-button nzType="primary" (click)="save()" [disabled]="form.invalid">Submit</button>
+      <button *ngIf="!attachments.id" nz-button nzType="primary" class="ml-sm" (click)="save()">Save</button>
+      <button nz-button (click)="goBack()">Back</button>
+    </se>
+  </form>
+</nz-card>

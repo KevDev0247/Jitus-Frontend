@@ -1,0 +1,146 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>Knowledge</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">File Name</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">File Format</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>New</span>
+  </button>
+
+  <st #st [columns]="columns" [data]="data" [loading]="loading" (change)="stChange($event)"> </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="fileid">File ID</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.fileid" name="fileid" placeholder="Please enter" id="fileid" type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="filename">File Name</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.filename" name="filename" placeholder="Please enter" id="filename" />
+    </nz-form-control>
+    <nz-form-label nzFor="fileurl">Original</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.fileurl" name="fileurl" placeholder="Please enter" id="fileurl" />
+    </nz-form-control>
+    <nz-form-label nzFor="fileurlb">Extra Large</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.fileurlb" name="fileurlb" placeholder="Please enter" id="fileurlb" />
+    </nz-form-control>
+    <nz-form-label nzFor="fileurll">Large</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.fileurll" name="fileurll" placeholder="Please enter" id="fileurll" />
+    </nz-form-control>
+    <nz-form-label nzFor="fileurlm">Medium</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.fileurlm" name="fileurlm" placeholder="Please enter" id="fileurlm" />
+    </nz-form-control>
+    <nz-form-label nzFor="fileurls">Small</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.fileurls" name="fileurls" placeholder="Please enter" id="fileurls" />
+    </nz-form-control>
+    <nz-form-label nzFor="filetype">File Type</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.filetype" name="filetype" placeholder="Please enter" id="filetype" />
+    </nz-form-control>
+    <nz-form-label nzFor="filesize">File Size</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.filesize" name="filesize" placeholder="Please enter" id="filesize" type="number"/>
+    </nz-form-control>
+    <nz-form-label nzFor="localpath">Local Path</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.localpath" name="localpath" placeholder="Please enter" id="localpath" />
+    </nz-form-control>
+    <nz-form-label nzFor="previewurl">Preview Url</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.previewurl" name="previewurl" placeholder="Please enter" id="previewurl" />
+    </nz-form-control>
+    <nz-form-label nzFor="pdfurl">PDF Url</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.pdfurl" name="pdfurl" placeholder="Please enter" id="pdfurl" />
+    </nz-form-control>
+    <nz-form-label nzFor="downloadurl">Download Url</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.downloadurl" name="downloadurl" placeholder="Please enter" id="downloadurl"/>
+    </nz-form-control>
+    <nz-form-label nzFor="shareCount">Shares</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="attachments.shareCount"
+        name="shareCount"
+        placeholder="Please enter"
+        id="shareCount"
+        type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="downCount">Downloads</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="attachments.downCount"
+        name="downCount"
+        placeholder="Please enter"
+        id="downCount"
+        type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="status">Status (0: Deleted, 1: Valid)</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.status" name="status" placeholder="Please enter" id="status" />
+    </nz-form-control>
+    <nz-form-label nzFor="userId">User</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="attachments.userId"
+        name="userId"
+        placeholder="Please enter"
+        id="userId"
+        type="number"
+      />
+    </nz-form-control>
+    <nz-form-label nzFor="extension">Extension</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="attachments.extension" name="extension" placeholder="Please enter" id="extension" />
+    </nz-form-control>
+    <nz-form-label nzFor="createdtime">Create</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="createdtime"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled="false"
+        [(ngModel)]="attachments.createdtime"
+      >
+      </nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>

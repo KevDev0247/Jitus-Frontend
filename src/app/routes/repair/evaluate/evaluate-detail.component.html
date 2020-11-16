@@ -10,10 +10,10 @@
       <input nz-input formControlName="rate" placeholder="Please enter rating" [(ngModel)]="evaluate.rate"
         style="width: calc(100% - 400px);" type="number"/>
     </se>
-    <se label="User" error="Please enter user">
+    <!--<se label="User" error="Please enter user">
       <input nz-input formControlName="userId" placeholder="Please enter user" [(ngModel)]="evaluate.userId"
         style="width: calc(100% - 400px);" type="number"/>
-    </se>
+    </se>-->
     <se>
       <button *ngIf="!evaluate.id" nz-button class="ml-sm" nzType="primary" (click)="save()">Save</button>
       <button nz-button (click)="goBack()">Back</button>

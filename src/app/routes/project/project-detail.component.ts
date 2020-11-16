@@ -3,6 +3,7 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
+import {type} from 'os';
 import {Project} from '../../common/model/project';
 import {ClientService} from '../../common/service/client.service';
 import {ContractService} from '../../common/service/contract.service';
@@ -17,17 +18,44 @@ import {CommonUtils} from '../../common/util/common.utils';
  */
 @Component({
   selector: 'app-project-detail',
-  templateUrl: './project-detail.component.html'
+  templateUrl: './project-detail.component.html',
+  styles: [
+    `
+      :host ::ng-deep .upload-list-inline .ant-upload-list-item {
+        float: left;
+        width: 200px;
+        margin-right: 8px;
+      }
+      :host ::ng-deep .upload-list-inline [class*='-upload-list-rtl'] .ant-upload-list-item {
+        float: right;
+      }
+      :host ::ng-deep .upload-list-inline .ant-upload-animate-enter {
+        animation-name: uploadAnimateInlineIn;
+      }
+      :host ::ng-deep .upload-list-inline .ant-upload-animate-leave {
+        animation-name: uploadAnimateInlineOut;
+      }
+    `,
+  ],
 })
 export class ProjectDetailComponent implements OnInit {
 
   formGroup: FormGroup;
   id: any;
+  result: any;
   project: Project = new Project();
+  fileList = [];
   comUtils: CommonUtils = new CommonUtils();
   deliveryTime?: Date;
   acceptTime?: Date;
   guaranteeDueTime?: Date;
+
+  contractName: string;
+  clientName: string;
+  title: string;
+  category = 'project';
+  typeId = 0;
+  isVisible = false;
 
   listOfOption: Array<{ value: string; text: string}> = [
     { value: '11', text: '11' },
@@ -89,32 +117,33 @@ export class ProjectDetailComponent implements OnInit {
     })
   }
 
-  search(value: string, type: number): void {
-    if (type === 1) {
+  search(value: string, typeId: number): void {
+    if (typeId === 1) {
       this.getContractOptions(value);
     }
-    if (type === 2) {
+    if (typeId === 2) {
       this.getClientOptions(value);
     }
   }
 
   save() {
-    this.project.deliveryTime = this.comUtils.transFormDateTimeStr(this.deliveryTime);
-    this.project.acceptTime = this.comUtils.transFormDateTimeStr(this.acceptTime);
-    this.project.guaranteeDueTime = this.comUtils.transFormDateTimeStr(this.guaranteeDueTime);
-    if (this.project.id) {
-      this.projectService.update(this.project).subscribe(res => {
-        if (res.data) {
-          this.router.navigate(['/project/list']);
-        }
-      });
-    } else {
-      this.projectService.create(this.project).subscribe(res => {
-        if (res.data) {
-          this.router.navigate(['/project/list']);
-        }
-      });
-    }
+    console.log('>>>>res', this.result);
+    // this.project.deliveryTime = this.comUtils.transFormDateTimeStr(this.deliveryTime);
+    // this.project.acceptTime = this.comUtils.transFormDateTimeStr(this.acceptTime);
+    // this.project.guaranteeDueTime = this.comUtils.transFormDateTimeStr(this.guaranteeDueTime);
+    // if (this.project.id) {
+    //   this.projectService.update(this.project).subscribe(res => {
+    //     if (res.data) {
+    //       this.router.navigate(['/project/list']);
+    //     }
+    //   });
+    // } else {
+    //   this.projectService.create(this.project).subscribe(res => {
+    //     if (res.data) {
+    //       this.router.navigate(['/project/list']);
+    //     }
+    //   });
+    // }
   }
 
   goBack() {
@@ -131,5 +160,47 @@ export class ProjectDetailComponent implements OnInit {
     this.clientService.getOptionList(info).subscribe(res => {
       this.clientOption = res.list;
     });
+  }
+
+  handleChange(info: any): void {
+    // if (info.file.status !== 'uploading') {
+    //   console.log(info.file, info.fileList);
+    // }
+    // if (info.file.status === 'done') {
+    //   this.msg.success(`${info.file.name} file uploaded successfully`);
+    // } else if (info.file.status === 'error') {
+    //   this.msg.error(`${info.file.name} file upload failed.`);
+    // }
+
+    if (info.file.status === 'done') {
+      console.log('>>>Res info', info.file.response);
+    }
+  }
+
+  handleCancel() {
+    this.isVisible = false;
+  }
+
+  handleOpen(typeId?: number) {
+    this.typeId = typeId;
+    if (typeId === 1) {
+      this.title = 'Contract';
+    }
+    if (typeId === 2) {
+      this.title = 'Client';
+    }
+    this.isVisible = true;
+  }
+
+  getChildEvent(index: any) {
+    if (index.type === 1) {
+      this.contractName = index.item.name;
+      this.project.contractId = index.item.id;
+    }
+    if (index.type === 2) {
+      this.clientName = index.item.name;
+      this.project.clientId = index.item.id;
+    }
+    this.isVisible = false;
   }
 }

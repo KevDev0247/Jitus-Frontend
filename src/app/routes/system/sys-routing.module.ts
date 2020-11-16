@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {AttachmentsDetailComponent} from './attachment/attachment-detail.component';
+import {AttachmentListComponent} from './attachment/attachment-list.component';
 import {BasecodeDetailComponent} from './basecode/basecode-detail.component';
 import {BasecodeListComponent} from './basecode/basecode-list.component';
 import {LogListComponent} from './log/log-list.component';
 import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
+import {MessageListComponent} from './message/message.list.component';
 import {OrgListComponent} from './organization/org-list.component';
 import { RoleListComponent } from './role/role-list.component';
+import {ProjectAccountSettingsBaseComponent} from './user/base/base.component';
+import {ProjectAccountSettingsComponent} from './user/settings/settings.component';
 import { UserDetailComponent } from './user/user-detail.component';
 import { UserListComponent } from './user/user-list.component';
 import { UserUpdateComponent } from './user/user-update.component';
@@ -24,6 +29,7 @@ const routes: Routes = [
       { path: 'list', component: UserListComponent },
       { path: 'detail', component: UserDetailComponent },
       { path: 'update', component: UserUpdateComponent },
+      { path: 'setting', component: ProjectAccountSettingsBaseComponent },
     ],
   },
   {
@@ -51,7 +57,30 @@ const routes: Routes = [
   {
     path: 'log',
     children: [{ path: 'list', component: LogListComponent }],
-  }
+  },
+  {
+    path: 'message',
+    children: [{ path: 'list', component: MessageListComponent }],
+  },
+  {
+    path: 'attachment',
+    children: [
+      { path: 'list', component: AttachmentListComponent },
+      { path: 'detail', component: AttachmentsDetailComponent },
+    ],
+  },
+  {
+    path: 'settings',
+    component: ProjectAccountSettingsComponent,
+    children: [
+      { path: '', redirectTo: 'base', pathMatch: 'full' },
+      {
+        path: 'base',
+        component: ProjectAccountSettingsBaseComponent,
+        data: { titleI18n: 'project-account-settings' },
+      },
+    ],
+  },
 ];
 
 @NgModule({

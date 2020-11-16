@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {SharedModule} from '@shared';
 import {NzUploadModule} from 'ng-zorro-antd';
+import {SelectListComponent} from '../../common/component/select-list/select-list.component';
 import {ProjectDetailComponent} from './project-detail.component';
 import {ProjectListComponent} from './project-list.component';
 import {ProjectRoutingModule} from './project-routing.module';

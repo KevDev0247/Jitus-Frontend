@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared';
+import {AttachmentsDetailComponent} from './attachment/attachment-detail.component';
+import {AttachmentListComponent} from './attachment/attachment-list.component';
 import {BasecodeDetailComponent} from './basecode/basecode-detail.component';
 import {BasecodeListComponent} from './basecode/basecode-list.component';
 import {LogListComponent} from './log/log-list.component';
@@ -7,10 +9,13 @@ import { MenuDetailComponent } from './menu/menu-detail.component';
 import { MenuListComponent } from './menu/menu-list.component';
 import { MenuComponent } from './menu/menu.component';
 import { RoleMenuListComponent } from './menu/role-menu-list.component';
+import {MessageListComponent} from './message/message.list.component';
 import {OrgListComponent} from './organization/org-list.component';
 import { RoleListComponent } from './role/role-list.component';
 import { RoleComponent } from './role/role.component';
 import { SysRoutingModule } from './sys-routing.module';
+import {ProjectAccountSettingsBaseComponent} from './user/base/base.component';
+import {ProjectAccountSettingsComponent} from './user/settings/settings.component';
 import { UserDetailComponent } from './user/user-detail.component';
 import { UserListComponent } from './user/user-list.component';
 import { UserUpdateComponent } from './user/user-update.component';
@@ -35,6 +40,11 @@ const COMPONENTS = [
   BasecodeListComponent,
   BasecodeDetailComponent,
   LogListComponent,
+  MessageListComponent,
+  AttachmentListComponent,
+  AttachmentsDetailComponent,
+  ProjectAccountSettingsBaseComponent,
+  ProjectAccountSettingsComponent,
 ];
 const COMPONENTS_NOROUNT = [];
 
