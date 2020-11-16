@@ -34,4 +34,8 @@ export class RepairService {
   getRepairStatusCounts() {
     return this.http.get(this.getServiceUrl() + '/getRepairCountByStatus');
   }
+
+  approve(repairId: number) {
+    return this.http.get(this.getServiceUrl() + '/approve?id=' + repairId)
+  }
 }
