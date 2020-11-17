@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import {NzMessageService} from 'ng-zorro-antd';
+import {MenuService} from '../../../common/service/menu.service';
 
 @Component({
   selector: 'app-dashboard-v1',
@@ -18,18 +20,14 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 })
 export class DashboardV1Component implements OnInit {
 
-  title: string;
+  menus: any[] = [];
+  addedMenus: any[] = [];
+  allMenus: any[] = [];
+  menuIds: string[];
 
-  menus: Array<{ id: number; name: string }> = [
-    { id: 1, name: 'Work Orders' },
-    { id: 2, name: 'Departments' },
-    { id: 3, name: 'Projects' },
-    { id: 4, name: 'Knowledge' },
-    { id: 5, name: 'Information' },
-    { id: 6, name: 'Accessory' },
-    { id: 1, name: 'Work Orders' },
-  ];
   isVisible = false;
+  title: string;
+  type: number;
 
   customStyle = {
     border: '0px',
@@ -65,18 +63,60 @@ export class DashboardV1Component implements OnInit {
     },
   ];
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) {}
+  constructor(
+    private changeDetectorRef: ChangeDetectorRef,
+    private menuService: MenuService,
+    private messageService: NzMessageService
+  ) {
+    this.getMainMenusList(2, 1);
+  }
 
   ngOnInit(): void { }
 
+  getMainMenusList(userId: number, isShow: number) {
+    this.menuService.getMainMenuList(userId, isShow)
+      .subscribe(response => {
+        this.menus = response.data;
+        this.changeDetectorRef.detectChanges();
+      });
+  }
+
+  getAddMainMenuList(userId: number, isShow: number) {
+    this.menuService.getMainMenuList(userId, isShow)
+      .subscribe(response => {
+        this.addedMenus = response.data;
+        this.changeDetectorRef.detectChanges();
+      });
+  }
+
+  getAllMainMenuList(userId: number, isShow: number) {
+    this.menuService.getMainMenuList(userId, isShow)
+      .subscribe(response => {
+        this.allMenus = response.data;
+        this.changeDetectorRef.detectChanges();
+      });
+  }
+
   handleOpen(type: number): void {
+    this.type = type;
     if (type === 1) {
-      this.title = 'Add Service Modules';
+      this.title = 'Add Modules';
+      this.getAddMainMenuList(2, 0);
     }
     if (type === 2) {
-      this.title = 'All Service Modules';
+      this.title = 'All Modules';
+      this.getAllMainMenuList(2, -1);
     }
     this.isVisible = true;
+  }
+
+  handleOk() {
+    this.menuService.addMainMenu(this.menuIds)
+      .subscribe(response => {
+        this.getMainMenusList(2, 1);
+        this.isVisible = false;
+        this.messageService.success("Module add successful");
+      });
   }
 
   handleCancel() {
@@ -84,6 +124,6 @@ export class DashboardV1Component implements OnInit {
   }
 
   log(value: string[]): void {
-    console.log(value);
+    this.menuIds = value;
   }
 }
