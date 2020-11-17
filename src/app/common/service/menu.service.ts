@@ -53,7 +53,7 @@ export class MenuService {
     return this.http.get(this.getServiceUrl() + '/getMainMenus?userId=' + userId + '&isShow=' + isShow);
   }
 
-  updateMainMenu(umids: any) {
-    return this.http.get(this.getServiceUrl() + '/updateMainMenu', umids);
+  addMainMenu(umids: any) {
+    return this.http.get(this.getServiceUrl() + '/addMainMenu', umids);
   }
 }
