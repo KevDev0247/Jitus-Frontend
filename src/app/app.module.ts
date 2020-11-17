@@ -115,6 +115,7 @@ import { LayoutModule } from './layout/layout.module';
 import { UserService } from './common/service/user.service';
 import { MenuService } from './common/service/menu.service';
 import { RoleService } from './common/service/role.service';
+import { SelectListComponent } from './common/component/select-list/select-list.component';
 
 @NgModule({
   declarations: [AppComponent],
