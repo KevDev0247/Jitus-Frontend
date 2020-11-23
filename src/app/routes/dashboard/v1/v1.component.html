@@ -16,118 +16,116 @@
           </div>
         </div>
 
+        <div *ngFor="let menu of menus">
+          <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right: 20px">
+            <div nz-row nzType="flex" nzAlign="middle">
+              <div nz-col nzSpan="12" class="p-md text-black">
+                <a routerLink="{{ menu.link }}">
+                  <div class="h1 mt0">
+                    <img src="assets/imgs/{{ menu.icon }}.png"/>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-
-      </div>
-
-      <div *ngFor="let menu of menus">
-        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right: 20px">
+        <!--<div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
           <div nz-row nzType="flex" nzAlign="middle">
-            <div nz-col nzSpan="12" class="p-md text-black">
-              <a routerLink="{{ menu.link }}">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a routerLink="/repair">
                 <div class="h1 mt0">
-                  <img src="assets/imgs/{{ menu.icon }}.png"/>
+                  <img src="../../../../assets/imgs/modules/work_orders.svg"/>
                 </div>
               </a>
             </div>
           </div>
         </div>
-      </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:40px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a routerLink="/sys/org/list">
+                <div class="h1 mt0">
+                  <img src="../../../../assets/imgs/modules/departments.svg"/>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <div class="h1 mt0">
+                <img src="../../../../assets/imgs/modules/projects.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:10px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a routerLink="/client/list">
+                <div class="h1 mt0">
+                  <img src="../../../../assets/imgs/modules/clients.svg"/>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:15px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a routerLink="/sys/attachment/list">
+                <div class="h1 mt0">
+                  <img src="../../../../assets/imgs/modules/knowledge.svg"/>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:40px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a routerLink="/sys/message/list">
+                <div class="h1 mt0">
+                  <img src="../../../../assets/imgs/modules/communications.svg"/>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a routerLink="/accessory"></a>
+              <div class="h1 mt0">
+                <img src="../../../../assets/imgs/modules/accessories.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <div class="h1 mt0">
+                <img src="../../../../assets/imgs/modules/analysis.svg"/>
+              </div>
+            </div>
+          </div>
+        </div>-->
 
-      <!--<div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a routerLink="/repair">
-              <div class="h1 mt0">
-                <img src="../../../../assets/imgs/modules/work_orders.svg"/>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:40px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a routerLink="/sys/org/list">
-              <div class="h1 mt0">
-                <img src="../../../../assets/imgs/modules/departments.svg"/>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <div class="h1 mt0">
-              <img src="../../../../assets/imgs/modules/projects.svg"/>
+        <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
+          <div nz-row nzType="flex" nzAlign="middle">
+            <div nz-col nzSpan="12" class="p-md text-white">
+              <a (click)="handleOpen(2)">
+                <div class="h1 mt0">
+                  <img src="../../../../assets/imgs/modules/more.svg"/>
+                </div>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:10px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a routerLink="/client/list">
-              <div class="h1 mt0">
-                <img src="../../../../assets/imgs/modules/clients.svg"/>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:15px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a routerLink="/sys/attachment/list">
-              <div class="h1 mt0">
-                <img src="../../../../assets/imgs/modules/knowledge.svg"/>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:40px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a routerLink="/sys/message/list">
-              <div class="h1 mt0">
-                <img src="../../../../assets/imgs/modules/communications.svg"/>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a routerLink="/accessory"></a>
-            <div class="h1 mt0">
-              <img src="../../../../assets/imgs/modules/accessories.svg"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <div class="h1 mt0">
-              <img src="../../../../assets/imgs/modules/analysis.svg"/>
-            </div>
-          </div>
-        </div>
-      </div>-->
 
-      <div nz-col nzXs="24" nzSm="12" nzMd="2" class="mb-md" style="margin-right:20px">
-        <div nz-row nzType="flex" nzAlign="middle">
-          <div nz-col nzSpan="12" class="p-md text-white">
-            <a (click)="handleOpen(2)">
-              <div class="h1 mt0">
-                <img src="../../../../assets/imgs/modules/more.svg"/>
-              </div>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
 
