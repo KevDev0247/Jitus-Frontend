@@ -12,6 +12,9 @@
 ## Architecture
 ![Architecture](https://user-images.githubusercontent.com/58012125/90318700-47740000-df00-11ea-98ee-29f74af087fe.png)
 
+## Gallery
+![Dashboard](https://user-images.githubusercontent.com/58012125/99997466-32263180-2d8b-11eb-8bf2-ba7d9067836b.png)
+
 ## Contributions:
 - Product Management: Feng Yuan
 - Marketing: Feng Yuan
