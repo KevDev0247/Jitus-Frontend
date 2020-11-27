@@ -2,6 +2,8 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@an
 import {_HttpClient} from '@delon/theme';
 import {NzMessageService} from 'ng-zorro-antd';
 import {zip} from 'rxjs';
+import {User} from '../../../../common/model/user';
+import {UserService} from '../../../../common/service/user.service';
 
 /**
  * The component class that define and control the views of the base.
@@ -19,7 +21,7 @@ export class ProjectAccountSettingsBaseComponent implements OnInit {
 
   avatar = '';
   isLoadingUser = true;
-  user: any;
+  user: User = new User;
 
   provinces: any[] = [];
   cities: any[] = [];
@@ -28,31 +30,28 @@ export class ProjectAccountSettingsBaseComponent implements OnInit {
     private http: _HttpClient,
     private changeDetectionRef: ChangeDetectorRef,
     private messageService: NzMessageService,
+    private userService: UserService,
   ) { }
 
   ngOnInit(): void {
-    zip(this.http.get('/user/current'), this.http.get('/geo/province'))
-      .subscribe(([user, provinces]: any) => {
+    this.userService.getDetails(2)
+      .subscribe(res => {
         this.isLoadingUser = false;
-        this.user = user;
-        this.provinces = provinces;
-        this.chosenProvince(user.geographic.province.key, false);
+        this.user = res.data;
         this.changeDetectionRef.detectChanges();
       });
   }
 
-  chosenProvince(pid: string, cleanCity = true) {
-    this.http.get( `/geo/${pid}`).subscribe((response: any) => {
-      this.cities = response;
-      if (cleanCity) {
-        this.user.geographic.city.key = '';
-        this.changeDetectionRef.detectChanges();
-      }
-    });
-  }
+  chosenProvince(pid: string, cleanCity = true) { }
 
   save() {
-    this.messageService.success(JSON.stringify(this.user));
-    return false;
+    this.userService.update(this.user).subscribe(res => {
+      if (res.data) {
+        this.messageService.success('Update successful');
+      } else {
+        this.messageService.success('Update failed');
+      }
+    });
+    this.changeDetectionRef.detectChanges();
   }
 }
