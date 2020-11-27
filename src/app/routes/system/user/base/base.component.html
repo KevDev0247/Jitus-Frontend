@@ -1,5 +1,5 @@
 <nz-spin [nzSpinning]="isLoadingUser">
-  <div class="main" *ngIf="user">
+  <div class="main">
     <div class="left">
       <form nz-form nzLayout="vertical" #f="ngForm" (submit)="save()" se-container="1">
         <se label="Email" error="Please enter your email!">
@@ -17,12 +17,12 @@
             placeholder="Introduction"
           ></textarea>
         </se>
-        <se label="Country/Region">
+        <!--<se label="Country/Region">
           <nz-select [(ngModel)]="user.country" name="country" required>
             <nz-option nzLabel="Canada" nzValue="Canada"></nz-option>
           </nz-select>
-        </se>
-        <se label="Province">
+        </se>-->
+        <!--<se label="Province">
           <div class="d-flex justify-content-between">
             <nz-select
               [(ngModel)]="user.geographic.province.key"
@@ -37,19 +37,19 @@
               <nz-option *ngFor="let p of cities" [nzLabel]="p.name" [nzValue]="p.id"></nz-option>
             </nz-select>
           </div>
-        </se>
+        </se>-->
         <se label="Address" error="Please enter your address!">
           <input nz-input [(ngModel)]="user.address" name="address" required />
         </se>
         <se label="Phone" error="Please enter your phone number!">
-          <input nz-input [(ngModel)]="user.phone" name="phone" required />
+          <input nz-input [(ngModel)]="user.telno" name="phone" required />
         </se>
         <se>
           <button nz-button nzType="primary" [disabled]="f.invalid">Change basic information</button>
         </se>
       </form>
     </div>
-    <div class="right">
+    <!--<div class="right">
       <div class="avatar_title">Avatar</div>
       <div class="avatar"><img src="{{ user.avatar }}" alt="Avatar" /></div>
       <nz-upload nzAction="/user/avatar" [nzShowUploadList]="false">
@@ -58,6 +58,6 @@
           <span>Change Avatar</span>
         </button>
       </nz-upload>
-    </div>
+    </div>-->
   </div>
 </nz-spin>
