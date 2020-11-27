@@ -168,7 +168,12 @@
   <div *nzModalFooter></div>
 </nz-modal>
 
-<nz-modal [(nzVisible)]="detailIsVisible" nzTitle="Details" nzWidth="900" (nzOnCancel)="handleCancel()">
+<nz-modal
+  [(nzVisible)]="detailIsVisible"
+  nzTitle="{{ repair.id ? 'Approve Work Order' : 'Create Work Order'}}"
+  nzWidth="900"
+  (nzOnCancel)="handleCancel()"
+>
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Repair Company" error="Please enter the repair company">
       <input
@@ -248,12 +253,7 @@
     </se>
   </form>
   <div *nzModalFooter>
-    <button
-      nz-button
-      nzType="primary"
-      (click)="handleOk()"
-      [nzLoading]="isOkLoading"
-    >OK</button>
+    <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isOkLoading">Approve</button>
   </div>
 </nz-modal>
 
