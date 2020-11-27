@@ -81,11 +81,11 @@ export class RepairListComponent extends BaseComponent implements OnInit {
             this.router.navigate(['/repair/record/detail'], { queryParams: { id: item.id, status: item.status } });
           },
         },
-        {
-          text: 'btn',
-          type: 'link',
-          click: event => console.log('btn click', event),
-        },
+        // {
+        //   text: 'btn',
+        //   type: 'link',
+        //   click: event => console.log('btn click', event),
+        // },
         {
           text: 'More',
           children: [
@@ -225,15 +225,18 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     }
   }
 
-  handleOk(): void {
+  approve(): void {
     if (this.repairId) {
-      this.repairService.update(this.repair).subscribe(res => {
+      this.repairService.approve(this.repair.id).subscribe(res => {
         if (res.data) {
           this.isVisible = false;
+          this.q.param4 = 2;
+          this.selectedIndex = 1;
           this.getData();
-          this.messageService.success("Edit Successful");
+          this.getRepairStatusCounts();
+          this.messageService.success("Approval Successful");
         } else {
-          this.messageService.error('Edit Failed');
+          this.messageService.error('Approval Failed');
         }
       });
     } else {
