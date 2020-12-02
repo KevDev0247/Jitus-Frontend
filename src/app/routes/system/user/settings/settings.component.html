@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" style="margin-top: -20px">
   <div class="menu">
     <ul nz-menu [nzMode]="mode">
       <li *ngFor="let mode of menus" nz-menu-item [nzSelected]="mode.selected" (click)="toAccount(mode)">{{ mode.title }}</li>
