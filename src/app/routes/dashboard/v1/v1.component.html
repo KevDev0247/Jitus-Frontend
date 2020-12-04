@@ -175,7 +175,7 @@
                 <img src="assets/imgs/information/upcoming_icon.svg"
                      style="float: right; margin-top: -5px; margin-right: 50px; width: 90px;"/>
                 <div style="display: inline-block;">
-                  <img src="assets/imgs/digits/1.svg" style="margin-left: 10px"/>
+                  <img src="assets/imgs/digits/{{ tRCount }}.svg" style="margin-left: 10px"/>
                   <div style="width: 100px; height: 25px; margin-top: 10px; margin-left: 2px; background-color: #D5E2F0; border-radius: 20px;  float: left; list-style-type: none">
                     <img style="margin-left: 5px" src="assets/imgs/ts.png"/>
                     Orders
@@ -197,7 +197,7 @@
                 <img src="assets/imgs/information/exceptions_icon.svg"
                      style="float: right; margin-top: -5px; margin-right: 60px; width: 90px;"/>
                 <div style="display: inline-block;">
-                  <img src="assets/imgs/digits/1.svg" style="margin-left: 10px"/>
+                  <img src="assets/imgs/digits/{{ eRCount }}.svg" style="margin-left: 10px"/>
                   <div style="width: 100px; height: 25px; margin-top: 10px; margin-left: 2px; background-color: #D5E2F0; border-radius: 20px;  float: left; list-style-type: none">
                     <img style="margin-left: 5px" src="assets/imgs/ts.png"/>
                     Orders
@@ -258,7 +258,7 @@
   <nz-collapse [nzBordered]="false">
     <div style="padding-left: 30px; padding-right: 20px; padding-top: 10px">
       <nz-badge nzStatus="default" nzText="Notifications"></nz-badge>
-      <nz-table #basicTable>
+      <nz-table [nzFrontPagination]="false" [nzShowPagination]="false" [nzData]="notifications">
         <thead>
           <tr>
             <th>Date</th>
@@ -269,6 +269,14 @@
           </tr>
         </thead>
         <tbody>
+          <tr *ngFor="let data of notifications">
+            <th>{{ data.createTime }}</th>
+            <th>{{ data.name }}</th>
+            <th>{{ data.content }}</th>
+            <th>{{ data.company }}</th>
+            <th>{{ data.name }}</th>
+            <th>{{ data?.remark }}</th>
+          </tr>
         </tbody>
       </nz-table>
     </div>
