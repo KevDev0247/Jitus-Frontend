@@ -36,7 +36,7 @@ export class AttachmentListComponent implements OnInit {
   columns: STColumn[] = [
     { title: '', index: '', type: 'checkbox'},
     { title: 'File ID', index: 'fileid'},
-    { title: 'Shares', index: 'shareCount'},
+    // { title: 'Shares', index: 'shareCount'},
     { title: 'Downloads', index: 'downloadCount'},
     { title: 'Users', index: 'userId'},
     { title: 'Extension', index: 'extensions'},
@@ -45,7 +45,7 @@ export class AttachmentListComponent implements OnInit {
       title: 'Operations',
       buttons: [
         {
-          text: 'Details',
+          text: 'Download',
           click: (item: any) => {
             this.router.navigate(['/sys/attachment/detail'], { queryParams: { id: item.fileid } });
           },
@@ -139,5 +139,15 @@ export class AttachmentListComponent implements OnInit {
     this.q.param2 = '';
     this.q.param3 = '';
     this.getData();
+  }
+
+  download(url, id?: number) {
+    window.open(url);
+    this.attachmentService.addDownloadCount(id)
+      .subscribe(response => {
+        if (response.data) {
+          this.getData();
+        }
+      });
   }
 }
