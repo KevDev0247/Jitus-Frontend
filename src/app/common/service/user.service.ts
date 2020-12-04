@@ -56,4 +56,8 @@ export class UserService {
   login(name?: string, password?: string) {
     return this.http.post(DOMAIN_SERVER_URL + '/login?_allow_anonymous=true', { name, password })
   }
+
+  getIndex() {
+    return this.http.get(DOMAIN_SERVER_URL + '/index/getData');
+  }
 }
