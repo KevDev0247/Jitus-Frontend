@@ -30,4 +30,8 @@ export class AttachmentsService {
   getQueryList(name: string, type: string, userId: number) {
     return this.http.get(this.getServiceUrl() + '/queryStsAttachmentsList', { name, type, userId });
   }
+
+  addDownloadCount(attachmentsId: number) {
+    return this.http.get(this.getServiceUrl() + '/addDownloadCount?id=' + attachmentsId);
+  }
 }
