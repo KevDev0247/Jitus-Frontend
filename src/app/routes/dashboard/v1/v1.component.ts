@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import {NzMessageService} from 'ng-zorro-antd';
 import {MenuService} from '../../../common/service/menu.service';
+import {UserService} from '../../../common/service/user.service';
 
 @Component({
   selector: 'app-dashboard-v1',
@@ -24,6 +25,10 @@ export class DashboardV1Component implements OnInit {
   addedMenus: any[] = [];
   allMenus: any[] = [];
   menuIds: string[];
+
+  notifications: any[] = [];
+  eRCount: number;
+  tRCount: number;
 
   isVisible = false;
   title: string;
@@ -66,9 +71,11 @@ export class DashboardV1Component implements OnInit {
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private menuService: MenuService,
-    private messageService: NzMessageService
+    private messageService: NzMessageService,
+    private userService: UserService,
   ) {
     this.getMainMenusList(2, 1);
+    this.getIndexData();
   }
 
   ngOnInit(): void { }
@@ -93,6 +100,16 @@ export class DashboardV1Component implements OnInit {
     this.menuService.getMainMenuList(userId, isShow)
       .subscribe(response => {
         this.allMenus = response.data;
+        this.changeDetectorRef.detectChanges();
+      });
+  }
+
+  getIndexData() {
+    this.userService.getIndex()
+      .subscribe(response => {
+        this.notifications = response.notifications;
+        this.eRCount = response.eRCount;
+        this.tRCount = response.tRCount;
         this.changeDetectorRef.detectChanges();
       });
   }
