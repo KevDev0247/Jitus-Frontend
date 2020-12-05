@@ -18,15 +18,15 @@ export class ProductService {
   }
 
   create(product: any) {
-    return this.http.post(this.getServiceUrl() + '/create', product);
+    return this.http.post(this.getServiceUrl() + '/createProduct', product);
   }
 
   update(product: any) {
-    return this.http.post(this.getServiceUrl() + '/update', product);
+    return this.http.post(this.getServiceUrl() + '/updateProduct', product);
   }
 
   delete(productId: number) {
-    return this.http.get(this.getServiceUrl() + '/delete?productId=' + productId);
+    return this.http.get(this.getServiceUrl() + '/deleteProduct?productId=' + productId);
   }
 
   detail(productId: number) {
@@ -34,6 +34,6 @@ export class ProductService {
   }
 
   getQueryList(param1: string, param2: string, param3: string) {
-    return this.http.get(this.getServiceUrl() + '/queryList', { spec: param1, serialNo: param2, type: param3 });
+    return this.http.get(this.getServiceUrl() + '/queryProductList', { spec: param1, serialNo: param2, type: param3 });
   }
 }
