@@ -6,6 +6,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/common/model/Product';
 import { ProductService } from 'src/app/common/service/product.service';
 
+/**
+ * The component class that define and control the views of the ProductDetail component
+ *
+ * @Author Yonggang Su
+ * Created on 2020/12/06
+ */
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
