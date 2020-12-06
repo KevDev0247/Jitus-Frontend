@@ -166,13 +166,13 @@
   <ul class="alain-default__nav">
 
   </ul>
-  <ul class="alain-default__nav">
-    <li class="hidden-mobile">
+  <div class="alain-default__nav">
+    <div class="hidden-mobile">
       <div class="alain-default__nav-item">
         <img src="assets/imgs/header/home.svg"/>
       </div>
-    </li>
-    <li class="hidden-mobile">
+    </div>
+    <div class="hidden-mobile">
       <div class="alain-default__nav-item"  nz-dropdown [nzDropdownMenu]="contact">
         <img src="assets/imgs/header/contact.svg"/>
         <nz-dropdown-menu #contact="nzDropdownMenu">
@@ -186,11 +186,11 @@
           </div>
         </nz-dropdown-menu>
       </div>
-    </li>
-    <li class="hidden-mobile">
+    </div>
+    <div class="hidden-mobile">
       <header-task></header-task>
-    </li>
-    <li class="hidden-mobile">
+    </div>
+    <div class="hidden-mobile">
       <div class="alain-default__nav-item" nz-dropdown [nzDropdownMenu]="settingsMenu" nzPlacement="bottomRight">
         <img src="assets/imgs/header/settings.svg"/>
       </div>
@@ -216,17 +216,17 @@
           </div>
         </div>
       </nz-dropdown-menu>
-    </li>
-    <li class="hidden-mobile">
+    </div>
+    <div class="hidden-mobile">
       <div class="alain-default__nav-item">
         <img src="assets/imgs/header/help.svg"/>
       </div>
-    </li>
-    <li class="hidden-mobile">
+    </div>
+    <div class="hidden-mobile">
       <header-user></header-user>
-    </li>
-    <li class="hidden-mobile">
+    </div>
+    <div class="hidden-mobile">
       <img src="assets/imgs/logo.svg" style="width: 150px; height: 40px"/>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
