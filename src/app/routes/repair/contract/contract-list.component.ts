@@ -32,22 +32,17 @@ export class ContractListComponent implements OnInit {
   expandForm = false;
 
   @ViewChild('st', { static: true }) st: STComponent;
-  status = [
+  statusList = [
     {
       id: 0,
-      text: 'Broker Agreement',
-      value: false,
       type: 'info',
-      checked: false,
     },
     {
       id: 1,
-      text: 'Cooperation Agreement',
-      value: false,
       type: 'info',
-      checked: false,
     }
   ];
+
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'Location', index: 'signPlace' },
@@ -66,9 +61,9 @@ export class ContractListComponent implements OnInit {
     {
       title: 'Type',
       index: 'status',
-      render: 'status',
+      render: 'statusList',
       filter: {
-        menus: this.status,
+        menus: this.statusList,
         fn: (filter: any, record: any) => record.status === filter.id,
       },
     },
@@ -113,13 +108,13 @@ export class ContractListComponent implements OnInit {
       .subscribe((res: any) => {
         this.data = res.list;
         this.data.map(i => {
-          const statusItem = this.status[+i.status];
+          const statusItem = this.statusList[+i.status];
           if (statusItem) {
-            i.statusText = statusItem.text;
             i.statusType = statusItem.type;
             return i;
           }
         });
+        console.log('>>>res8888', this.data);
         this.loading = false;
         this.changeDetectorRef.detectChanges();
       });
