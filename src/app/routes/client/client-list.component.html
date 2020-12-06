@@ -47,12 +47,10 @@
       <span>New</span>
     </button>
 
-    <st
-      #st
-      [columns]="columns"
-      [data]="data"
-      [loading]="loading"
-      (change)="stChange($event)">
+    <st #st [columns]="columns" [data]="data" [loading]="loading" (change)="stChange($event)">
+      <ng-template st-row="roleIds" let-i>
+        <ng-badge [nzStatus]="i.statusType" [nzText]="i.statusText"></ng-badge>
+      </ng-template>
     </st>
   </div>
 </nz-card>
