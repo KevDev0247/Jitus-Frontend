@@ -30,6 +30,24 @@ export class ClientListComponent implements OnInit {
   expandForm = false;
   totalCallNo = 0;
 
+  roleIds = [
+    {
+      id: 7,
+      text: 'Commercial Client',
+      type: 'info'
+    },
+    {
+      id: 8,
+      text: 'Individual Client',
+      type: 'info'
+    },
+    {
+      id: 9,
+      text: 'Corporate Client',
+      type: 'info'
+    },
+  ];
+
   @ViewChild('st', { static: true }) st: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
@@ -37,7 +55,15 @@ export class ClientListComponent implements OnInit {
     { title: 'Phone', index: 'telno' },
     { title: 'Area', index: 'area' },
     { title: 'Address', index: 'address' },
-    { title: 'Client Type', index: 'roleId' },
+    {
+      title: 'Client Type',
+      index: 'roleId',
+      render: 'roleIds',
+      filter: {
+        menus: this.roleIds,
+        fn: (filter: any, record: any) => record.roleId === filter.id,
+      },
+    },
     {
       title: 'Operations',
       buttons: [
@@ -74,6 +100,14 @@ export class ClientListComponent implements OnInit {
     this.clientService.getQueryList(this.query.param1, this.query.param2)
       .subscribe((response: any) => {
         this.data = response.data;
+        this.data.map(i => {
+          const statusItem = this.roleIds[+i.roleId - 7];
+          if (statusItem) {
+            i.statusText = statusItem.text;
+            i.statusType = statusItem.type;
+            return i;
+          }
+        });
         this.loading = false;
         this.changeDetectorRef.detectChanges();
       });
