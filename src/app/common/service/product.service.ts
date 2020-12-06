@@ -6,7 +6,7 @@ import { _HttpClient } from '@delon/theme';
  * The service class for product module
  *
  * @Author Kevin Zhijun Wang
- * Created on 2020/07/31
+ * Created on 2020/12/04
  */
 @Injectable()
 export class ProductService {

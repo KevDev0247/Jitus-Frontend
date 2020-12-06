@@ -88,6 +88,7 @@ import {EvaluateService} from './common/service/evaluate.service';
 import {LogService} from './common/service/log.service';
 import {MessageService} from './common/service/message.service';
 import {OrganizationService} from './common/service/organization.service';
+import {ProductService} from './common/service/product.service';
 import {ProjectService} from './common/service/project.service';
 import {RepairRecordService} from './common/service/repair-record.service';
 import {RepairService} from './common/service/repair.service';
@@ -141,6 +142,7 @@ import { SelectListComponent } from './common/component/select-list/select-list.
     RoleService,
     MenuService,
     ProjectService,
+    ProductService,
     StaffService,
     ClientService,
     ContractService,
