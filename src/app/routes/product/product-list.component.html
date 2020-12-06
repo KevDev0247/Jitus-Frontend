@@ -1,0 +1,83 @@
+<nz-card [nzBordered]="false">
+  <nz-page-header class="site-page-header" nzTitle="">
+    <nz-breadcrumb nz-page-header-breadcrumb>
+      <nz-breadcrumb-item>Current</nz-breadcrumb-item>
+      <nz-breadcrumb-item>Products</nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </nz-page-header>
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Specs</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Serial Number</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <button nz-button (click)="create()" [nzType]="'primary'">
+    <i nz-icon nzType="plus"></i>
+    <span>新建</span>
+  </button>
+
+  <st #st [columns]="columns" [data]="data" [loading]="loading" (change)="stChange($event)"> </st>
+</nz-card>
+<ng-template #modalContent>
+  <nz-form-item>
+    <nz-form-label nzFor="title">Name</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="product.title" name="title" placeholder="Please enter" id="title" />
+    </nz-form-control>
+    <nz-form-label nzFor="Specs">Specs</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="product.serialNo" name="serialNo" placeholder="Please enter" id="serialNo" />
+    </nz-form-control>
+    <nz-form-label nzFor="serialNo">Serial Number</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="product.dept" name="dept" placeholder="Please enter" id="dept" />
+    </nz-form-control>
+    <nz-form-label nzFor="type">Type</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="product.type" name="type" placeholder="Please enter" id="type" />
+    </nz-form-control>
+    <nz-form-label nzFor="brand">Brand</nz-form-label>
+    <nz-form-control>
+      <input nz-input [(ngModel)]="product.brand" name="brand" placeholder="Please enter" id="brand" />
+    </nz-form-control>
+    <nz-form-label nzFor="produceTime">Manufacturing Date</nz-form-label>
+    <nz-form-control>
+      <nz-date-picker
+        formControlName="produceTime"
+        nzShowTime
+        nzFormat="YYYY-MM-DD HH:mm:ss"
+        nzDisabled="false"
+        [(ngModel)]="product.produceTime"
+      >
+      </nz-date-picker>
+    </nz-form-control>
+    <nz-form-label nzFor="description">Description</nz-form-label>
+    <nz-form-control>
+      <input
+        nz-input
+        [(ngModel)]="product.description"
+        name="description"
+        placeholder="Please enter"
+        id="description"
+      />
+    </nz-form-control>
+  </nz-form-item>
+</ng-template>
