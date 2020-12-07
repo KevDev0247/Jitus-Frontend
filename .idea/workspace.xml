@@ -21,7 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/imgs/login-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/v1/v1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/general/arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/general/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/ts.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +68,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/imgs/general" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -83,11 +87,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\general" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\header" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\digits" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\workflow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Jitlantis-Frontend\src\app\routes\system\user\settings" />
@@ -251,7 +255,7 @@
       <workItem from="1606492309123" duration="3662000" />
       <workItem from="1607104336707" duration="7034000" />
       <workItem from="1607276594206" duration="6530000" />
-      <workItem from="1607290685117" duration="10904000" />
+      <workItem from="1607290685117" duration="11210000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
