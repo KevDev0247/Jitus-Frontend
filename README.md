@@ -7,10 +7,10 @@
 - Ying Quan: UI & UX designer
 
 ## System Design
-![System Design](https://user-images.githubusercontent.com/58012125/90318570-5f974f80-deff-11ea-908b-413f72bf750d.png)
+![jitlantis_system_design](https://user-images.githubusercontent.com/58012125/101298503-468f1300-37fc-11eb-8174-fc6e0791b9ee.png)
 
 ## Architecture
-![Architecture](https://user-images.githubusercontent.com/58012125/90318700-47740000-df00-11ea-98ee-29f74af087fe.png)
+![jitlantis_architecture](https://user-images.githubusercontent.com/58012125/101298466-19dafb80-37fc-11eb-82e1-5138935afdf2.png)
 
 ## Gallery
 ![Dashboard](https://user-images.githubusercontent.com/58012125/99997466-32263180-2d8b-11eb-8bf2-ba7d9067836b.png)
