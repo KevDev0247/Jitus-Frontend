@@ -33,6 +33,7 @@ const routes: Routes = [
       { path: 'dashboard/v1', component: DashboardV1Component },
       { path: 'sys', loadChildren: () => import('./system/sys.module').then(m => m.SysModule) },
       { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
+      { path: 'product', loadChildren: () => import('./product/product.module').then(m => m.ProductModule) },
       { path: 'staff', loadChildren: () => import('./staff/staff.module').then(m => m.StaffModule) },
       { path: 'client', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) },
       { path: 'repair', loadChildren: () => import('./repair/repair.module').then(m => m.RepairModule)},
