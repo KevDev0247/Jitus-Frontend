@@ -6,9 +6,9 @@ Together we hold the vision to modernize JIT manufacturing process with a focus 
 We aim to integrate Maintenance workflow into an SaaS web platform to bring convenience to both manufacturers and their customers. 
 COVID-19 pandemic has had a profound impact on manufacturers all over the world, and we hope our product can make a difference in manufacturing sector. 
 - Feng Yuan: Cofounder, Product Manager, Marketing Director
-- Yonggang Su: Cofounder, System Architect, Full stack developer
+- Yonggang Su: Cofounder, System Architect, Full Stack Developer
 - Kevin Zhijun Wang: Cofounder, Full Stack Developer
-- Ying Quan: Cofounder, UI & UX designer, Business Analyst
+- Ying Quan: Cofounder, UI & UX Designer, Business Analyst
 
 ## System Design
 ![jitlantis_system_design](https://user-images.githubusercontent.com/58012125/101298503-468f1300-37fc-11eb-8174-fc6e0791b9ee.png)
