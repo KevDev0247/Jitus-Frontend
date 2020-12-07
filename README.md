@@ -1,9 +1,7 @@
 # Jitlantis-Frontend
 
 ## About us
-We are a group of 4 individuals enthusiastic about web technologies, industrial engineering, and management engineering. 
-Feng and Ying's expertise in industrial engineering and management engineering have optimized our business logic, which is the core of this application. 
-With Kevin and Yonggang's knowledge in software engineering and Full Stack Development, we were able to bring maintenance workflow into a web context.
+We are a group of 4 individuals enthusiastic about web technologies, industrial engineering, and management engineering.
 Together we hold the vision to modernize JIT manufacturing process with a focus on Total Productive Maintenance (TPM). 
 We aim to integrate Maintenance workflow into an SaaS web platform to bring convenience to both manufacturers and their customers. 
 COVID-19 pandemic has had a profound impact on manufacturers all over the world, and we hope our product can make a difference in manufacturing sector. 
