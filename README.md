@@ -1,10 +1,16 @@
 # Jitlantis-Frontend
 
-## Jitlantis Team
+## About us
+We are a group of 4 individuals enthusiastic about web technologies, industrial engineering, and management engineering. 
+Feng and Ying's expertise in industrial engineering and management engineering have optimized our business logic, which is the core of this application. 
+With Kevin and Yonggang's knowledge in software engineering and Full Stack Development, we were able to bring maintenance workflow into a web context.
+Together we hold the vision to modernize JIT manufacturing process with a focus on Total Productive Maintenance (TPM). 
+We aim to integrate Maintenance workflow into an SaaS web platform to bring convenience to both manufacturers and their customers. 
+COVID-19 pandemic has had a profound impact on manufacturers all over the world, and we hope our product can make a difference in manufacturing sector. 
 - Feng Yuan: Cofounder, Product Manager, Marketing Director
-- Yonggang Su: Cofounder, System Architect, Full stack developer, Mobile Developer
-- Kevin Zhijun Wang: Cofounder, Full stack developer
-- Ying Quan: UI & UX designer
+- Yonggang Su: Cofounder, System Architect, Full stack developer
+- Kevin Zhijun Wang: Cofounder, Full Stack Developer
+- Ying Quan: Cofounder, UI & UX designer, Business Analyst
 
 ## System Design
 ![jitlantis_system_design](https://user-images.githubusercontent.com/58012125/101298503-468f1300-37fc-11eb-8174-fc6e0791b9ee.png)
@@ -18,8 +24,8 @@
 ## Contributions:
 - Product Management: Feng Yuan
 - Marketing: Feng Yuan
-- Requirement Analysis: Feng Yuan, Yongggang Su, Kevin Zhijun Wang
-- Business Logic Design: Feng Yuan
+- Requirement Analysis: Feng Yuan, Ying Quan, Yongggang Su, Kevin Zhijun Wang
+- Business Logic Design: Feng Yuan, Ying Quan
 - System Design: Yonggang Su
 - Database Design: Yonggang Su, Kevin Zhijun Wang
 - Web Frontend Development: Yonggang Su, Kevin Zhijun Wang
