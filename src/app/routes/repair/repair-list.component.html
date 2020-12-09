@@ -5,43 +5,65 @@
       <nz-breadcrumb-item>Work Orders</nz-breadcrumb-item>
     </nz-breadcrumb>
   </nz-page-header>
-  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
-    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
-      <div nz-col nzMd="8" nzSm="24">
-        <nz-form-item>
-          <nz-form-label nzFor="name">Key Words</nz-form-label>
-          <nz-form-control>
-            <input
-              nz-input
-              [(ngModel)]="q.param1"
-              name="param3"
-              placeholder="Please enter" id="param1"/>
-          </nz-form-control>
-        </nz-form-item>
-      </div>
-      <div nz-col nzMd="8" nzSm="24">
-        <nz-form-item>
-          <nz-form-label nzFor="text">Work Order ID</nz-form-label>
-          <nz-form-control>
-            <input
-              nz-input
-              [(ngModel)]="q.param2"
-              name="param2"
-              placeholder="Please enter"
-              id="param2" />
-          </nz-form-control>
-        </nz-form-item>
-      </div>
-      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
-        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
-        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
-      </div>
-    </div>
-  </form>
   <button nz-button (click)="create()" [nzType]="'primary'">
     <i nz-icon nzType="plus"></i>
     <span>New</span>
   </button>
+  <nz-content class="outer-content">
+    <nz-sider>
+      <ul nz-menu nzMode="inline" class="sider-menu">
+        <li nz-submenu nzOpen nzTitle="Records" nzIcon="user">
+          <ul>
+            <a [routerLink]="['/repair']">
+              <li nz-menu-item>Work Orders</li>
+            </a>
+          </ul>
+          <ul>
+            <a [routerLink]="['/repair/contract/list']">
+              <li nz-menu-item>Contracts</li>
+            </a>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout class="inner-content" style="background: white">
+      <div style="padding-left: 20px">
+        <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+          <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+            <div nz-col nzMd="8" nzSm="24">
+              <nz-form-item>
+                <nz-form-label nzFor="name">Key Words</nz-form-label>
+                <nz-form-control>
+                  <input
+                    nz-input
+                    [(ngModel)]="q.param1"
+                    name="param3"
+                    placeholder="Please enter" id="param1"/>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+            <div nz-col nzMd="8" nzSm="24">
+              <nz-form-item>
+                <nz-form-label nzFor="text">Work Order ID</nz-form-label>
+                <nz-form-control>
+                  <input
+                    nz-input
+                    [(ngModel)]="q.param2"
+                    name="param2"
+                    placeholder="Please enter"
+                    id="param2" />
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+              <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+              <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nz-layout>
+  </nz-content>
   <st
     #st
     [columns]="columns"
