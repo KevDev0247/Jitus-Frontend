@@ -179,4 +179,8 @@ export class ContractListComponent implements OnInit {
       nzOnCancel: ()  => console.log('Cancel'),
     });
   }
+
+  goBack() {
+    window.history.back();
+  }
 }
