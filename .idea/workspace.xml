@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/contract/contract-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/contract/contract-list.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,7 +250,7 @@
       <workItem from="1607276594206" duration="6530000" />
       <workItem from="1607290685117" duration="11668000" />
       <workItem from="1607409032592" duration="3000" />
-      <workItem from="1607532687389" duration="888000" />
+      <workItem from="1607532687389" duration="1213000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
