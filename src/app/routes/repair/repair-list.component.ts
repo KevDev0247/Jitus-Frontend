@@ -268,4 +268,8 @@ export class RepairListComponent extends BaseComponent implements OnInit {
   _click(event: STChange): void {
     console.log('click', event);
   }
+
+  goBack() {
+    window.history.back();
+  }
 }
