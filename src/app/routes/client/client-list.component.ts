@@ -12,7 +12,7 @@ import { ClientService } from '../../common/service/client.service';
 })
 export class ClientListComponent implements OnInit {
 
-  query: any = {
+  q: any = {
     pi: 0,
     ps: 0,
     sorter: '',
@@ -97,7 +97,7 @@ export class ClientListComponent implements OnInit {
 
   getData() {
     this.loading = true;
-    this.clientService.getQueryList(this.query.param1, this.query.param2)
+    this.clientService.getQueryList(this.q.param1, this.q.param2)
       .subscribe((response: any) => {
         this.data = response.data;
         this.data.map(i => {
@@ -150,8 +150,8 @@ export class ClientListComponent implements OnInit {
   }
 
   reset() {
-    this.query.param1 = '';
-    this.query.param2 = '';
+    this.q.param1 = '';
+    this.q.param2 = '';
     this.getData();
   }
 
