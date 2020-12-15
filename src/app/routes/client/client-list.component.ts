@@ -43,7 +43,7 @@ export class ClientListComponent implements OnInit {
     },
     {
       id: 9,
-      text: 'Corporate Client',
+      text: 'Third Party',
       type: 'info'
     },
   ];

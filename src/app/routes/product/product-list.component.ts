@@ -46,7 +46,6 @@ export class ProductListComponent implements OnInit {
     { title: 'Type', index: 'type' },
     { title: 'Brand', index: 'brand' },
     { title: 'Manufacturing Date', index: 'produceTime' },
-    { title: 'Description', index: 'description' },
     {
       title: 'Operations',
       buttons: [

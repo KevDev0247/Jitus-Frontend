@@ -27,8 +27,8 @@ export class DashboardV1Component implements OnInit {
   menuIds: string[];
 
   notifications: any[] = [];
-  eRCount: number;
-  tRCount: number;
+  eRCount: number = -1;
+  tRCount: number = -1;
 
   isVisible = false;
   title: string;
