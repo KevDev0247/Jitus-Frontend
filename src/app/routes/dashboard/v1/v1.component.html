@@ -175,7 +175,7 @@
                 <img src="assets/imgs/information/upcoming_icon.svg"
                      style="float: right; margin-top: -5px; margin-right: 50px; width: 90px;"/>
                 <div style="display: inline-block;">
-                  <img src="assets/imgs/digits/{{ tRCount }}.svg" style="margin-left: 10px"/>
+                  <img src="assets/imgs/{{ tRCount }}.png" *ngIf="tRCount !== -1" />
                   <div style="width: 100px; height: 25px; margin-top: 10px; margin-left: 2px; background-color: #D5E2F0; border-radius: 20px;  float: left; list-style-type: none">
                     <img style="margin-left: 5px" src="assets/imgs/general/warning_icon.svg"/>
                     Orders
@@ -197,7 +197,7 @@
                 <img src="assets/imgs/information/exceptions_icon.svg"
                      style="float: right; margin-top: -5px; margin-right: 60px; width: 90px;"/>
                 <div style="display: inline-block;">
-                  <img src="assets/imgs/digits/{{ eRCount }}.svg" style="margin-left: 10px"/>
+                  <img src="assets/imgs/{{ eRCount }}.svg" *ngIf="eRCount !== -1" />
                   <div style="width: 100px; height: 25px; margin-top: 10px; margin-left: 2px; background-color: #D5E2F0; border-radius: 20px;  float: left; list-style-type: none">
                     <img style="margin-left: 5px" src="assets/imgs/general/warning_icon.svg"/>
                     Orders
