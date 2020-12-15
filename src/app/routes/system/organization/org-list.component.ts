@@ -49,26 +49,18 @@ export class OrgListComponent extends BaseComponent implements OnInit {
     { title: 'Type', index: 'orgType' },
     { title: 'Status', index: 'orgStatus' },
     { title: 'Parent Number', index: 'orgParentNo' },
-    { title: 'Order', index: 'sort' },
-    { title: 'Remark', index: 'remark' },
     { title: 'Found Date', index: 'orgFoundDate' },
     { title: 'Dissolve Date', index: 'orgDissolveDate' },
     {
       title: 'Operations',
       buttons: [
         {
-          text: 'View',
-          click: (item: any) => {
-            this.router.navigate(['/sys/org/detail'], { queryParams: { id: item.id } })
-          },
-        },
-        {
           text: 'Delete',
           click: (item: any) => {
             console.log(">>>>>parent no", item.orgParentNo);
             let content = ''
             if (item.orgParentNo === '0') {
-              content = 'Delete All child nodes';
+              content = "Delete All child nodes";
             }
             this.showDeleteConfirm(item.id, content);
           },
