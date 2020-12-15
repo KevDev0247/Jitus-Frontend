@@ -6,7 +6,6 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
     <div
       class="alain-default__nav-item"
       nz-dropdown
-      [nzDropdownMenu]="taskMenu"
       nzTrigger="click"
       nzPlacement="bottomRight"
       (nzVisibleChange)="change()"
@@ -15,7 +14,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
         <img src="assets/imgs/message.png"/>
       </nz-badge>
     </div>
-    <nz-dropdown-menu #taskMenu="nzDropdownMenu">
+    <!--<nz-dropdown-menu #taskMenu="nzDropdownMenu">
       <div nz-menu class="wd-lg">
         <div *ngIf="loading" class="mx-lg p-lg"><nz-spin></nz-spin></div>
         <nz-card *ngIf="!loading" nzTitle="Notifications" nzBordered="false" class="ant-card__body-nopadding">
@@ -102,7 +101,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
           </div>
         </nz-card>
       </div>
-    </nz-dropdown-menu>
+    </nz-dropdown-menu>-->
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
