@@ -14,6 +14,10 @@
       <input nz-input formControlName="address" placeholder="Please enter the address" [(ngModel)]="client.address"
              style="width: calc(100% - 400px);"/>
     </se>
+    <se label="company" error="Please enter company">
+      <input nz-input formControlName="company" placeholder="Please enter company" [(ngModel)]="client.company"
+        style="width: calc(100% - 400px);"/>
+    </se>
     <se>
       <button *ngIf="client.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
       <button *ngIf="!client.id" nz-button class="ml-sm">Save</button>

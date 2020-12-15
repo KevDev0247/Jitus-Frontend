@@ -39,6 +39,7 @@ export class ClientDetailComponent implements OnInit{
       telno: [null, []],
       area: [null, []],
       roleId: [null, []],
+      company: [null, []],
       address: [null, []],
       remark: [null, []],
       createTime: [null, []],
