@@ -1,6 +1,10 @@
 <nz-card [nzBordered]="false">
   <page-header [title]="contract.id ? 'Edit Contract' : 'Create Contract'"></page-header>
   <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+    <se label="Name" error="Please enter name">
+      <input nz-input formControlName="name" placeholder="Please enter name" [(ngModel)]="contract.name"
+        style="width: calc(100% - 400px);"/>
+    </se>
     <se label="Sign Location" error="Please enter the sign location">
       <input nz-input formControlName="signPlace" placeholder="Please enter the sign location" [(ngModel)]="contract.signPlace"
              style="width: calc(100% - 400px);"/>
@@ -15,10 +19,10 @@
                       [(ngModel)]="endDate">
       </nz-date-picker>
     </se>
-    <se label="Project" error="Please enter the project">
+<!--    <se label="Project" error="Please enter the project">
       <input nz-input formControlName="projectId" placeholder="Please enter the project" [(ngModel)]="contract.projectId"
              style="width: calc(100% - 400px);" type="number"/>
-    </se>
+    </se>-->
     <se label="Client" error="Please enter the client">
       <input nz-input formControlName="client" placeholder="Please enter the client" [(ngModel)]="contract.clientId"
              style="width: calc(100% - 400px);"/>
@@ -29,10 +33,6 @@
     </se>
     <se label="Pattern" error="Please enter the pattern">
       <input nz-input formControlName="pattern" placeholder="Please enter the pattern" [(ngModel)]="contract.pattern"
-             style="width: calc(100% - 400px);"/>
-    </se>
-    <se label="Name" error="Please enter the name">
-      <input nz-input formControlName="name" placeholder="Please enter the name" [(ngModel)]="contract.name"
              style="width: calc(100% - 400px);"/>
     </se>
     <se label="Address" error="Please enter the address">
