@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/repair/repair-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/repair/repair-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/default/header/components/task.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/default/header/components/task.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/client/client-detail.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +255,8 @@
       <workItem from="1607276594206" duration="6530000" />
       <workItem from="1607290685117" duration="11668000" />
       <workItem from="1607409032592" duration="3000" />
-      <workItem from="1607532687389" duration="5518000" />
+      <workItem from="1607532687389" duration="6354000" />
+      <workItem from="1608048560438" duration="1474000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
@@ -311,12 +314,12 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
+    <option name="COLUMN_ID_ORDER">
       <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
       </list>
     </option>
   </component>
