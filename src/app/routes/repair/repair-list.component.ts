@@ -51,8 +51,8 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     { title: 'Project', index: 'projectName' },
     { title: 'Contact', index: 'contactName' },
     { title: 'Phone', index: 'telno' },
-    { title: 'Product', index: 'productName' },
-    { title: 'Staff', index: 'staffId' },
+    { title: 'Equipment', index: 'productName' },
+    // { title: 'Staff', index: 'staffId' },
     {
       title: 'Operations',
       buttons: [
