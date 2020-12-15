@@ -44,20 +44,8 @@ export class ContractListComponent implements OnInit {
   ];
 
   columns: STColumn[] = [
-    { title: '', index: 'key', type: 'checkbox' },
-    { title: 'Location', index: 'signPlace' },
-    { title: 'Start', index: 'startDate' },
-    { title: 'End', index: 'endDate' },
-    { title: 'Project', index: 'projectId' },
-    { title: 'Client', index: 'clientId' },
-    { title: 'Content', index: 'content' },
-    { title: 'Model', index: 'pattern' },
     { title: 'Name', index: 'name' },
-    { title: 'Address', index: 'address' },
-    { title: 'Phone', index: 'telno' },
-    { title: 'Sign Date', index: 'signDate' },
-    { title: 'Signatory', index: 'signmanId' },
-    { title: 'Price', index: 'price' },
+    { title: 'Model', index: 'pattern' },
     {
       title: 'Type',
       index: 'status',
@@ -67,6 +55,16 @@ export class ContractListComponent implements OnInit {
         fn: (filter: any, record: any) => record.status === filter.id,
       },
     },
+    { title: 'Price', index: 'price' },
+    { title: 'Location', index: 'signPlace' },
+    { title: 'Start Date', index: 'startDate' },
+    { title: 'End Date', index: 'endDate' },
+    { title: 'Sign Date', index: 'signDate' },
+
+    // { title: 'Address', index: 'address' },
+    // { title: 'Phone', index: 'telno' },
+    // { title: 'Signatory', index: 'signmanId' },
+
     {
       title: 'Operations',
       buttons: [
