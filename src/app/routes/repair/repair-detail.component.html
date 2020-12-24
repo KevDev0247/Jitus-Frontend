@@ -8,8 +8,14 @@
            style="width: calc(100% - 400px);"/>
   </se>
   <se label="Equipment" error="Please enter equipment">
-    <input nz-input formControlName="installId" placeholder="Please enter your equipment" [(ngModel)]="repair.installId"
-      style="width: calc(100% - 400px);" type="number"/>
+    <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixEquipmentButton" style="width: calc(100% - 200px);">
+      <input nz-input formControlName="installId" placeholder="Please enter your equipment" [(ngModel)]="repair.installId"
+             style="width: calc(100% - 400px);" type="number"/>
+    </nz-input-group>
+    <ng-template #suffixEquipmentButton>
+      <button nz-button nzType="primary" nzSize="default" nzSearch (click)="open(4)">请选择</button>
+    </ng-template>
+  </se>
   <se label="Agency" error="Please enter agency" >
     <input nz-input formControlName="repairUnit" placeholder="Please enter agency" [(ngModel)]="repair.repairUnit"
            style="width: calc(100% - 400px);" />
@@ -20,11 +26,11 @@
     </nz-date-picker>
   </se>
   <se label="Project" error="Please enter project"  >
-    <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixButton2">
+    <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixProjectButton">
       <input nz-input formControlName="projectId" placeholder="Please enter project" [(ngModel)]="repair.projectId"
              style="width: calc(100% - 400px);" type="number" />
     </nz-input-group>
-    <nz-template #suffixButton2>
+    <nz-template #suffixProjectButton>
       <button nz-button nzType="primary" nzSize="default" nzSearch (click)="open(3)">Please choose</button>
     </nz-template>
   </se>
