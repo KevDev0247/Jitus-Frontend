@@ -20,8 +20,13 @@
     </nz-date-picker>
   </se>
   <se label="Project" error="Please enter project"  >
-    <input nz-input formControlName="projectId" placeholder="Please enter project" [(ngModel)]="repair.projectId"
-           style="width: calc(100% - 400px);" type="number" />
+    <nz-input-group nzSearch nzSize="default" [nzAddOnAfter]="suffixButton2">
+      <input nz-input formControlName="projectId" placeholder="Please enter project" [(ngModel)]="repair.projectId"
+             style="width: calc(100% - 400px);" type="number" />
+    </nz-input-group>
+    <nz-template #suffixButton2>
+      <button nz-button nzType="primary" nzSize="default" nzSearch (click)="open(3)">Please choose</button>
+    </nz-template>
   </se>
   <se label="Contact" error="Please enter contact"  >
     <input nz-input formControlName="contactId" placeholder="Please enter contact" [(ngModel)]="repair.contactId"
@@ -50,5 +55,10 @@
     <button *ngIf="!repair.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Submit</button>
   </se>
 </form>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="{{ title }} Choice List" nzWidth="900" (nzOnCancel)="handleCancel()">
+  <app-select-list *ngIf="type > 0" [type]="kind" (childEvent)="$event"></app-select-list>
+  <div *nzModalFooter></div>
+</nz-modal>
+
 
 
