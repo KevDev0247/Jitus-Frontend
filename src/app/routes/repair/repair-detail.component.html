@@ -1,4 +1,15 @@
 <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+  <se label="name" error="Please enter work order name">
+    <input nz-input formControlName="name" placeholder="Please enter work order name" [(ngModel)]="repair.name"
+           style="width: calc(100% - 400px);"/>
+  </se>
+  <se label="ID" error="Please enter work order ID">
+    <input nz-input formControlName="code" placeholder="Please enter work order ID" [(ngModel)]="repair.code"
+           style="width: calc(100% - 400px);"/>
+  </se>
+  <se label="Equipment" error="Please enter equipment">
+    <input nz-input formControlName="installId" placeholder="Please enter your equipment" [(ngModel)]="repair.installId"
+      style="width: calc(100% - 400px);" type="number"/>
   <se label="Agency" error="Please enter agency" >
     <input nz-input formControlName="repairUnit" placeholder="Please enter agency" [(ngModel)]="repair.repairUnit"
            style="width: calc(100% - 400px);" />
@@ -16,10 +27,6 @@
     <input nz-input formControlName="contactId" placeholder="Please enter contact" [(ngModel)]="repair.contactId"
            style="width: calc(100% - 400px);" type="number" />
   </se>
-  <se label="Client" error="Please enter client" >
-    <input nz-input formControlName="name" placeholder="Please enter client" [(ngModel)]="repair.name"
-           style="width: calc(100% - 400px);" />
-  </se>
   <se label="Address" error="Please enter address" >
     <input nz-input formControlName="address" placeholder="Please enter address" [(ngModel)]="repair.address"
            style="width: calc(100% - 400px);" />
@@ -27,10 +34,6 @@
   <se label="Phone" error="Please enter phone number" >
     <input nz-input formControlName="telno" placeholder="Please enter phone number" [(ngModel)]="repair.telno"
            style="width: calc(100% - 400px);" />
-  </se>
-  <se label="Product" error="Please enter installed product"  >
-    <input nz-input formControlName="installId" placeholder="Please enter installed product" [(ngModel)]="repair.installId"
-           style="width: calc(100% - 400px);" type="number" />
   </se>
   <se label="" error="Please enter" >
     <nz-date-picker formControlName="createTime" nzShowTime nzFormat="YYYY-MM-DD HH:mm:ss" nzDisabled=false
@@ -43,8 +46,8 @@
     </nz-date-picker>
   </se>
   <se>
-    <button *ngIf="repair.id" nz-button nzType="primary" (click)="update()" [disabled]="form.invalid">Submit</button>
-    <button *ngIf="!repair.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Save</button>
+    <button *ngIf="repair.id" nz-button nzType="primary" (click)="approve()" [disabled]="form.invalid">Approve</button>
+    <button *ngIf="!repair.id" nz-button class="ml-sm" nzType="primary" (click)="create()">Submit</button>
   </se>
 </form>
 
