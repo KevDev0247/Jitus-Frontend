@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
@@ -19,17 +19,18 @@ export class RepairDetailComponent implements OnInit {
   id: any;
   current = 2;
   @Input() repairId: number;
+  @Output() childEvent = new EventEmitter<any>();
 
   constructor(private fb: FormBuilder, private msg: NzMessageService, private cdr: ChangeDetectorRef,
-              public activedRoute: ActivatedRoute, private router: Router, private repairService: RepairService) {
-    this.activedRoute.queryParams.subscribe(params => {
+              public activatedRoute: ActivatedRoute, private router: Router, private repairService: RepairService) {
+    /*this.activatedRoute.queryParams.subscribe(params => {
       this.id = params.id;
     });
     if (this.id) {
       this.repairService.getDetails(this.repairId).subscribe((res: any) => {
         this.repair = res.data;
       });
-    }
+    }*/
   }
 
   ngOnInit(): void {
@@ -37,6 +38,7 @@ export class RepairDetailComponent implements OnInit {
     if (this.repairId) {
       this.repairService.getDetails(this.repairId).subscribe((res: any) => {
         this.repair = res.data;
+        this.cdr.detectChanges();
       })
     }
     this.form = this.fb.group({
@@ -45,6 +47,7 @@ export class RepairDetailComponent implements OnInit {
       projectId:  [null, []],
       contactId:  [null, []],
       name:  [null, []],
+      code: [null, []],
       address:  [null, []],
       telno:  [null, []],
       installId:  [null, []],
@@ -59,7 +62,10 @@ export class RepairDetailComponent implements OnInit {
     this.repair.fixDate = this.commonUtils.transFormDateTimeStr(this.fixDate);
     this.repairService.create(this.repair).subscribe(res => {
       if (res.data) {
-        this.router.navigate(['/repair/list']);
+        this.msg.success("creation successful");
+        this.childEvent.emit(2);
+      } else {
+        this.msg.error("creation failed")
       }
     });
   }
@@ -68,6 +74,16 @@ export class RepairDetailComponent implements OnInit {
     this.repairService.update(this.repair).subscribe(res => {
       if (res.data) {
         this.router.navigate(['/repair/list']);
+      }
+    })
+  }
+
+  approve() {
+    this.repairService.approve(this.repair.id).subscribe(res => {
+      if (res.data) {
+        this.msg.success("Approval successful");
+      } else {
+        this.msg.success("Approval failed");
       }
     })
   }
