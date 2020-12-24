@@ -16,10 +16,16 @@ export class RepairDetailComponent implements OnInit {
   fixDate: Date;
   repair: Repair = new Repair();
   commonUtils: CommonUtils = new CommonUtils();
-  id: any;
-  current = 2;
   @Input() repairId: number;
   @Output() childEvent = new EventEmitter<any>();
+
+  id: any;
+  current = 2;
+  isVisible = false;
+  kind = 'repair';
+  type: number;
+  title: string;
+  projectName: string;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService, private cdr: ChangeDetectorRef,
               public activatedRoute: ActivatedRoute, private router: Router, private repairService: RepairService) {
@@ -70,6 +76,14 @@ export class RepairDetailComponent implements OnInit {
     });
   }
 
+  open(type?: number) {
+    this.type = type;
+    if (type === 3) {
+      this.title = 'project';
+    }
+    this.isVisible = true;
+  }
+
   update() {
     this.repairService.update(this.repair).subscribe(res => {
       if (res.data) {
@@ -85,7 +99,15 @@ export class RepairDetailComponent implements OnInit {
       } else {
         this.msg.success("Approval failed");
       }
-    })
+    });
+  }
+
+  getChildEvent(index: any) {
+    if (index.type === 3) {
+      this.projectName = index.item.name;
+      this.repair.projectId = index.item.id;
+    }
+    this.isVisible = false;
   }
 
   goBack() {
