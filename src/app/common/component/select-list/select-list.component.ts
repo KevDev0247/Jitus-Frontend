@@ -4,6 +4,7 @@ import {NzMessageService} from 'ng-zorro-antd';
 import {Contract} from '../../model/contract';
 import {ClientService} from '../../service/client.service';
 import {ContractService} from '../../service/contract.service';
+import {ProjectService} from '../../service/project.service';
 
 @Component({
   selector: 'app-select-list',
@@ -26,9 +27,11 @@ export class SelectListComponent implements OnInit {
   contract: Contract = new Contract;
   data_contract: any[] = [];
   data_client: any[] = [];
+  data_project: any[] = [];
 
   loading = false;
   expandForm = false;
+  kind: string;
 
   @ViewChild('st', { static: true }) st: STComponent;
   @Output() childEvent = new EventEmitter;
@@ -101,11 +104,34 @@ export class SelectListComponent implements OnInit {
     },
   ];
 
+  columns_project: STColumn[] = [
+    { title: '', index: 'key', type: 'checkbox' },
+    { title: 'Name', index: 'name' },
+    { title: '交付日期', index: 'deliveryTime' },
+    { title: '验收日期', index: 'acceptTime' },
+    { title: '质保类型', index: 'guaranteeType' },
+    { title: '质保月', index: 'guaranteeMonth' },
+    { title: '质保到期日', index: 'guaranteeDueTime' },
+    {
+      title: '操作',
+      buttons: [
+        {
+          text: '确定',
+          click: (item: any) => {
+            const data = { type: 3, item };
+            this.childEvent.emit(data);
+          },
+        },
+      ],
+    },
+  ];
+
   constructor(
     public messageService: NzMessageService,
     private changeDetectorRef: ChangeDetectorRef,
     private contractService: ContractService,
-    private clientService: ClientService
+    private clientService: ClientService,
+    private projectService: ProjectService,
   ) {
     console.log('>>>res>>>', this.type);
   }
@@ -113,6 +139,9 @@ export class SelectListComponent implements OnInit {
   ngOnInit() {
     if (this.category === 'project') {
       this.getContractList();
+      this.getClientList();
+    }
+    if (this.kind === 'repair') {
       this.getClientList();
     }
   }
@@ -142,6 +171,14 @@ export class SelectListComponent implements OnInit {
         this.loading = false;
         this.changeDetectorRef.detectChanges();
       });
+  }
+
+  getProjectList() {
+    this.projectService.getQueryList(this.q.param1, this.q.param2).subscribe((res: any) => {
+      this.data_project = res.list;
+      this.loading = false;
+      this.changeDetectorRef.detectChanges();
+    });
   }
 
   getClientList() {
