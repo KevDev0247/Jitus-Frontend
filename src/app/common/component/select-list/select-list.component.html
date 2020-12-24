@@ -65,7 +65,7 @@
         <nz-form-item>
           <nz-form-label nzFor="name">Project Name</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="param1" />
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="projectName" />
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -73,7 +73,7 @@
         <nz-form-item>
           <nz-form-label nzFor="text">Key words</nz-form-label>
           <nz-form-control>
-            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="param2" />
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="projectKeyWords" />
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -85,4 +85,32 @@
   </form>
 
   <st #st [columns]="columns_project" [data]="data_project" [loading]="loading"> </st>
+</nz-card>
+
+<nz-card [nzBordered]="false" *ngIf="type === 4">
+  <form nz-form [nzLayout]="'inline'" (ngSubmit)="getData()" class="search__form">
+    <div nz-row [nzGutter]="{ xs: 8, sm: 8, md: 8, lg: 24, xl: 48, xxl: 48 }">
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="name">Specs</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param1" name="param1" placeholder="Please enter" id="productSpecs" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzMd="8" nzSm="24">
+        <nz-form-item>
+          <nz-form-label nzFor="text">Serial Number</nz-form-label>
+          <nz-form-control>
+            <input nz-input [(ngModel)]="q.param2" name="param2" placeholder="Please enter" id="productSerialNo" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col [nzSpan]="expandForm ? 24 : 8" [class.text-right]="expandForm">
+        <button nz-button type="submit" [nzType]="'primary'" [nzLoading]="loading">Search</button>
+        <button nz-button type="reset" (click)="reset()" class="mx-sm">Reset</button>
+      </div>
+    </div>
+  </form>
+  <st #st [columns]="columns_product" [data]="data_product" [loading]="loading"> </st>
 </nz-card>
