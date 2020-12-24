@@ -26,6 +26,7 @@ export class RepairDetailComponent implements OnInit {
   type: number;
   title: string;
   projectName: string;
+  productName: string;
 
   constructor(private fb: FormBuilder, private msg: NzMessageService, private cdr: ChangeDetectorRef,
               public activatedRoute: ActivatedRoute, private router: Router, private repairService: RepairService) {
@@ -81,6 +82,9 @@ export class RepairDetailComponent implements OnInit {
     if (type === 3) {
       this.title = 'project';
     }
+    if (type === 4) {
+      this.title = 'product';
+    }
     this.isVisible = true;
   }
 
@@ -102,10 +106,18 @@ export class RepairDetailComponent implements OnInit {
     });
   }
 
+  handleCancel(): void {
+    this.isVisible = false;
+  }
+
   getChildEvent(index: any) {
     if (index.type === 3) {
       this.projectName = index.item.name;
       this.repair.projectId = index.item.id;
+    }
+    if (index.type === 4) {
+      this.productName = index.item.title;
+      this.repair.installId = index.item.id;
     }
     this.isVisible = false;
   }
