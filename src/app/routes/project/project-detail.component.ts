@@ -46,6 +46,7 @@ export class ProjectDetailComponent implements OnInit {
   project: Project = new Project();
   fileList = [];
   comUtils: CommonUtils = new CommonUtils();
+  projectName: string;
   deliveryTime?: Date;
   acceptTime?: Date;
   guaranteeDueTime?: Date;
@@ -82,8 +83,8 @@ export class ProjectDetailComponent implements OnInit {
         this.project = res.data;
       });
     }
-    this.getContractOptions('');
-    this.getClientOptions('');
+    // this.getContractOptions('');
+    // this.getClientOptions('');
   }
 
   ngOnInit(): void {
