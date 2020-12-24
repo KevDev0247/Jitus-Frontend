@@ -4,6 +4,7 @@ import {NzMessageService} from 'ng-zorro-antd';
 import {Contract} from '../../model/contract';
 import {ClientService} from '../../service/client.service';
 import {ContractService} from '../../service/contract.service';
+import {ProductService} from '../../service/product.service';
 import {ProjectService} from '../../service/project.service';
 
 @Component({
@@ -28,6 +29,7 @@ export class SelectListComponent implements OnInit {
   data_contract: any[] = [];
   data_client: any[] = [];
   data_project: any[] = [];
+  data_product: any[] = [];
 
   loading = false;
   expandForm = false;
@@ -107,18 +109,40 @@ export class SelectListComponent implements OnInit {
   columns_project: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
     { title: 'Name', index: 'name' },
-    { title: '交付日期', index: 'deliveryTime' },
-    { title: '验收日期', index: 'acceptTime' },
-    { title: '质保类型', index: 'guaranteeType' },
-    { title: '质保月', index: 'guaranteeMonth' },
-    { title: '质保到期日', index: 'guaranteeDueTime' },
+    { title: 'Delivery Time', index: 'deliveryTime' },
+    { title: 'Accept Time', index: 'acceptTime' },
+    { title: 'Guarantee Type', index: 'guaranteeType' },
+    { title: 'Guarantee Month', index: 'guaranteeMonth' },
+    { title: 'Guarantee Due Time', index: 'guaranteeDueTime' },
     {
-      title: '操作',
+      title: 'Operations',
       buttons: [
         {
-          text: '确定',
+          text: 'OK',
           click: (item: any) => {
             const data = { type: 3, item };
+            this.childEvent.emit(data);
+          },
+        },
+      ],
+    },
+  ];
+
+  columns_product: STColumn[] = [
+    { title: '', index: 'key', type: 'checkbox' },
+    { title: 'Name', index: 'title' },
+    { title: 'Serial Number', index: 'serialNo' },
+    { title: 'Specs', index: 'spec' },
+    { title: 'Type', index: 'type' },
+    { title: 'Brand', index: 'brand' },
+    { title: 'Manufacturing Time', index: 'produceTime' },
+    {
+      title: 'Operations',
+      buttons: [
+        {
+          text: 'OK',
+          click: (item: any) => {
+            const data = { type: 4, item };
             this.childEvent.emit(data);
           },
         },
@@ -132,6 +156,7 @@ export class SelectListComponent implements OnInit {
     private contractService: ContractService,
     private clientService: ClientService,
     private projectService: ProjectService,
+    private productService: ProductService,
   ) {
     console.log('>>>res>>>', this.type);
   }
@@ -142,7 +167,7 @@ export class SelectListComponent implements OnInit {
       this.getClientList();
     }
     if (this.kind === 'repair') {
-      this.getClientList();
+      this.getProjectList();
     }
   }
 
@@ -176,6 +201,14 @@ export class SelectListComponent implements OnInit {
   getProjectList() {
     this.projectService.getQueryList(this.q.param1, this.q.param2).subscribe((res: any) => {
       this.data_project = res.list;
+      this.loading = false;
+      this.changeDetectorRef.detectChanges();
+    });
+  }
+
+  getProductList() {
+    this.productService.getQueryList(this.q.param1, this.q.param2, this.q.param3).subscribe((res: any) => {
+      this.data_product = res.list;
       this.loading = false;
       this.changeDetectorRef.detectChanges();
     });
