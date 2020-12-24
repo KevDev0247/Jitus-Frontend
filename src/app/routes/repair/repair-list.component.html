@@ -196,7 +196,13 @@
   nzWidth="900"
   (nzOnCancel)="handleCancel()"
 >
-  <form nz-form [formGroup]="form" se-container="1" labelWidth="200">
+  <app-repair-detail
+    [repairId]="repairId"
+    *ngIf="repairId !== 0"
+    (childEvent)="getChildEvent($event)"
+  ></app-repair-detail>
+  <app-repair-detail *ngIf="repairId === 0" (childEvent)="getChildEvent($event)"></app-repair-detail>
+  <!--<form nz-form [formGroup]="form" se-container="1" labelWidth="200">
     <se label="Repair Company" error="Please enter the repair company">
       <input
         nz-input
@@ -206,7 +212,7 @@
         style="width: calc(100% - 400px);"
       />
     </se>
-    <!--<se label="Repair Date" error="Please enter the repair date">
+    &lt;!&ndash;<se label="Repair Date" error="Please enter the repair date">
       <nz-date-picker
         formControlName="fixDate"
         nzShowTime
@@ -215,7 +221,7 @@
         [(ngModel)]="repair.fixDate"
       >
       </nz-date-picker>
-    </se>-->
+    </se>&ndash;&gt;
     <se label="Project" error="Please enter the project">
       <input
         nz-input
@@ -273,9 +279,9 @@
         type="number"
       />
     </se>
-  </form>
+  </form>-->
   <div *nzModalFooter>
-    <button nz-button nzType="primary" (click)="approve()" [nzLoading]="isOkLoading">Approve</button>
+<!--    <button nz-button nzType="primary" (click)="approve()" [nzLoading]="isOkLoading">Approve</button>-->
   </div>
 </nz-modal>
 
