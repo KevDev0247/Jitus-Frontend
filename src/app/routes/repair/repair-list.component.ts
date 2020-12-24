@@ -252,9 +252,25 @@ export class RepairListComponent extends BaseComponent implements OnInit {
     }
   }
 
+  getChildEvent(index: any) {
+    if (index === 1) {
+      this.isVisible = false;
+      this.q.param4 = 2;
+      this.selectedIndex = 1;
+    }
+    if (index === 2) {
+      this.isVisible = false;
+      this.q.param4 = 1;
+      this.selectedIndex = 0;
+    }
+    this.getData();
+    this.getRepairStatusCounts();
+  }
+
   handleCancel(): void {
     this.progressIsVisible = false;
     this.detailIsVisible = false;
+    this.selectedIndex = 0;
   }
 
   open(): void {
