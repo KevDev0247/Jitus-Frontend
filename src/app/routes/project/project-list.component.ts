@@ -47,7 +47,15 @@ export class ProjectListComponent implements OnInit {
     { title: 'Client', index: 'client' },
     { title: 'Delivery Time', index: 'deliveryTime' },
     { title: 'Accept Time', index: 'acceptTime' },
-    { title: 'Guarantee Type', index: 'guaranteeType' },
+    {
+      title: 'Guarantee Type',
+      index: 'guaranteeType',
+      format: (item, _col, index) => {
+        item.guaranteeType === '1' ? `${index + 1}: ${item.guaranteeType}` : `${index + 2}: ${item.guaranteeType}`;
+        return '1';
+      },
+      sort: true,
+    },
     { title: 'Guarantee Month', index: 'guaranteeMonth' },
     { title: 'Guarantee Due Time', index: 'guaranteeDueTime' },
     { title: 'Staff', index: 'staffId' },
