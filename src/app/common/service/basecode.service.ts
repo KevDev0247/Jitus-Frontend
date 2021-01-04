@@ -36,4 +36,8 @@ export class BasecodeService {
   getQueryList(param1: string, param2: string) {
     return this.http.get(this.getServiceUrl() + '/queryBasecodeList', { param1, param2 });
   }
+
+  getOptionList(typeId: string, info: string) {
+    return this.http.get(this.getServiceUrl() + '/optionList', { typeId, info });
+  }
 }
