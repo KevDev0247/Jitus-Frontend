@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {NzMessageService} from 'ng-zorro-antd';
 import {type} from 'os';
 import {Project} from '../../common/model/project';
+import {BasecodeService} from '../../common/service/basecode.service';
 import {ClientService} from '../../common/service/client.service';
 import {ContractService} from '../../common/service/contract.service';
 import {ProjectService} from '../../common/service/project.service';
@@ -46,6 +47,7 @@ export class ProjectDetailComponent implements OnInit {
   project: Project = new Project();
   fileList = [];
   comUtils: CommonUtils = new CommonUtils();
+  basecodeOptions: any[] = [];
   projectName: string;
   deliveryTime?: Date;
   acceptTime?: Date;
@@ -74,7 +76,7 @@ export class ProjectDetailComponent implements OnInit {
               private cdr: ChangeDetectorRef, public activatedRoute: ActivatedRoute,
               private router: Router, private projectService: ProjectService,
               private contractService: ContractService, private clientService: ClientService,
-              private httpClient: HttpClient) {
+              private basecodeService: BasecodeService, private httpClient: HttpClient) {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params.id;
     });
@@ -83,8 +85,7 @@ export class ProjectDetailComponent implements OnInit {
         this.project = res.data;
       });
     }
-    // this.getContractOptions('');
-    // this.getClientOptions('');
+    this.getBasecodeList();
   }
 
   ngOnInit(): void {
@@ -149,6 +150,12 @@ export class ProjectDetailComponent implements OnInit {
 
   goBack() {
     window.history.back();
+  }
+
+  getBasecodeList() {
+    this.basecodeService.getOptionList('01', '').subscribe(res => {
+      this.basecodeOptions = res.list;
+    });
   }
 
   getContractOptions(name: string) {
