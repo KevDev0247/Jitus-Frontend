@@ -49,6 +49,23 @@
       <input nz-input formControlName="guaranteeType" placeholder="Please enter guarantee type" [(ngModel)]="project.guaranteeType"
         style="width: calc(100% - 400px);"/>
     </se>
+    <se label="Guarantee Type" error="Please select guarantee type" required>
+      <nz-input-group>
+        <nz-select
+          formControlName="guaranteeType"
+          nzShowSearch
+          nzServerSearch
+          nzPlaceHolder="Please select guarantee type"
+          [(ngModel)]="project.guaranteeType"
+          [nzShowArrow]="false"
+          [nzFilterOption]="nzFilterOption"
+          (nzOnSearch)="search($event, 1)"
+          style="width: calc(100% - 400px);"
+        >
+          <nz-option *ngFor="let o of basecodeOptions" [nzLabel]="o.basecodename" [nzValue]="o.basecode"> </nz-option>
+        </nz-select>
+      </nz-input-group>
+    </se>
     <se label="Guarantee Month" error="Please enter guarantee month">
       <input nz-input formControlName="guaranteeMonth" placeholder="Please enter guarantee month" [(ngModel)]="project.guaranteeMonth"
         style="width: calc(100% - 400px);"/>
