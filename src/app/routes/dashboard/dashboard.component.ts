@@ -5,7 +5,7 @@ import {UserService} from '../../common/service/user.service';
 
 @Component({
   selector: 'app-dashboard-v1',
-  templateUrl: './v1.component.html',
+  templateUrl: './dashboard.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [
     `
