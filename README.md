@@ -3,7 +3,8 @@
 ## About us
 We are a group of 4 individuals enthusiastic about web technologies, industrial engineering, and management engineering.
 Together we hold the vision to modernize JIT manufacturing process with a focus on Total Productive Maintenance (TPM). 
-We aim to integrate Maintenance workflow into an SaaS web platform to bring convenience to both manufacturers and their customers. 
+We aim to contribute to Industry 4.0 by integrating Maintenance workflow into an SaaS web platform to bring convenience to both manufacturers and their customers. 
+This platform offers B2B solutions to industrial manufacturers as well as B2C solutions to small businesses that are in the manufacturing sector.
 COVID-19 pandemic has had a profound impact on manufacturers all over the world, and we hope our product can make a difference in manufacturing sector. 
 - Feng Yuan: Cofounder, Product Manager, Marketing Director
 - Yonggang Su: Cofounder, System Architect, Full Stack Developer
