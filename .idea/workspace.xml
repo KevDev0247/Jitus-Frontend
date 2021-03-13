@@ -21,10 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c97e6947-68a1-4da8-9b3c-ccf4112a711a" name="Default Changelist" comment="Revert &quot;Create UserService&quot;&#10;&#10;This reverts commit fcd597ab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/dashboard/v1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/routes.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/routes.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +89,11 @@
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Jitlantis-Frontend\src\app\routes\dashboard" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\general" />
       <recent name="D:\Jitlantis-Frontend\src\app\routes\system\user\settings" />
       <recent name="D:\Jitlantis-Frontend\src\app\routes\system" />
       <recent name="D:\Jitlantis-Frontend\src\assets\imgs\services" />
-      <recent name="D:\Jitlantis-Frontend\src\assets\imgs\menu" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -267,7 +263,8 @@
       <workItem from="1611855651319" duration="55000" />
       <workItem from="1612364746205" duration="661000" />
       <workItem from="1612882212444" duration="580000" />
-      <workItem from="1614488158433" duration="749000" />
+      <workItem from="1614488158433" duration="1356000" />
+      <workItem from="1615433698313" duration="393000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Create constants and renaming&quot;&#10;&#10;This reverts commit 4dfe4f99">
       <created>1596308068948</created>
